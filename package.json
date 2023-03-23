@@ -1,0 +1,22 @@
+{
+  "name": "kokyushobo",
+  "version": "1.0.0",
+  "description": "呼吸書房のソースコードです。",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feelingskyblue/kokyusyobo.git"
+  },
+  "author": "Minato KAZANO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/feelingskyblue/kokyusyobo/issues"
+  },
+  "homepage": "https://github.com/feelingskyblue/kokyusyobo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
