@@ -28,7 +28,7 @@
 :where(body) {
   block-size: 100%;
   block-size: 100dvb;
-  line-height: 1.5;
+  line-height: 1;
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -109,7 +109,31 @@
   border: 0 !important;
 }
 
-/* main CSS */
+/**/
+/* base CSS */
 body {
   background-color: #fafafa;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.9;
+  -webkit-text-size-adjust: none;
+  -ms-touch-action: none !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.fixed {
+  position: fixed;
+}
+
+p:not(:last-child), blockquote:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
 }

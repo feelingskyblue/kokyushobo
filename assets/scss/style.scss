@@ -33,7 +33,7 @@
 :where(body) {
 	block-size: 100%;
 	block-size: 100dvb;
-	line-height: 1.5;
+	line-height: 1;
 	font-family: system-ui, sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
@@ -112,7 +112,127 @@
 	border: 0 !important;
 }
 
-/* main CSS */
+/* Utility */
+$sp-width: 767px;
+$textColor: #000000;
+$subColor: #000000;
+
+// FlexBox
+@mixin flex($flex-wrap: nowrap) {
+	display: flex;
+	flex-wrap: $flex-wrap;
+}
+@mixin flexCentering($flex-wrap: nowrap) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: $flex-wrap;
+}
+
+/* base CSS */
+
 body {
   background-color: #fafafa;
+  color: $textColor;
+  font-size: 14px;
+  line-height: 1.9;
+  -webkit-text-size-adjust: none;
+  -ms-touch-action: none !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.fixed {
+  position: fixed;
+}
+
+p:not(:last-child), blockquote:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: $subColor;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.hide {
+  display: none !important;
+}
+
+.visibility-hidden {
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-desktop {
+  display: none !important;
+}
+
+.visible-desktop {
+  display: inherit !important;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+@media (max-width: $sp-width) {
+
+  body {
+    font-size: 13px;
+    line-height: 2.1;
+  }
+
+	.hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+
 }
