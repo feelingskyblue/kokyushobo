@@ -109,16 +109,21 @@
   border: 0 !important;
 }
 
-/**/
 /* base CSS */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
 body {
   background-color: #fafafa;
   color: #000000;
-  font-size: 14px;
-  line-height: 1.9;
+  font-family: Cochin, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
   -webkit-text-size-adjust: none;
-  -ms-touch-action: none !important;
-  -webkit-font-smoothing: antialiased;
+  touch-action: none !important;
 }
 
 body.fixed {
@@ -130,10 +135,76 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: #000000;
-  text-decoration: none;
+  color: #49aaa3;
 }
 
 a:hover {
   opacity: 0.8;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-desktop {
+  display: none !important;
+}
+
+.visible-desktop {
+  display: inherit !important;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.font-serif {
+  font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
 }

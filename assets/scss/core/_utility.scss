@@ -1,0 +1,18 @@
+// Utility
+$sp-width: 767px;
+$textColor: #000000;
+$keyColor: #49aaa3;
+$keyColorDark: #37807a;
+$subColor: #000000;
+
+// FlexBox
+@mixin flex($flex-wrap: nowrap) {
+	display: flex;
+	flex-wrap: $flex-wrap;
+}
+@mixin flexCentering($flex-wrap: nowrap) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: $flex-wrap;
+}
