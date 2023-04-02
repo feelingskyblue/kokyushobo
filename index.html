@@ -19,7 +19,7 @@ layout: layout.liquid
           <li><a href="#otherwork">other-work</a></li>
           <li><a href="#onlinestore">online-store</a></li>
         </ul>
-      </nav>
+      </nav> 
       <section class="home__news">
         <h2 class="heading heading--default">news</h2>
         <dl class="home__news-body">
@@ -30,15 +30,15 @@ layout: layout.liquid
     </section>
     <div class="home__firstview-bg__wrapper">
       <div class="home__firstview-bg">
-        <picture>
-          <img class="home__firstview-image" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
-          <figcaption>書籍表紙装画：佐野裕一</figcaption>
-        </picture>
+        <figure class="home__firstview-image">
+          <img src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
+          <figcaption>書籍表紙装画：佐野裕一さん</figcaption>
+        </figure>
         <div class="home__firstview-image__txt font-serif">
           <p>夜が明けると、村に人間は一人もいなかった。少年は、昨日まで人間だった蛾や蝙蝠や蛙の群れを引き連れて、森の奥へ帰っていった。彼らを近くの水辺に放し、昨日まで人間だった様々な種は、すべて母の根元に蒔いた。やがて、その一帯は花が咲き乱れ、蜜に誘われた鳥や獣の歌声で、いつまでも賑わうようになったという。</p>
           <div class="align-right">
             <a href="/novel/trees-light/">『すべての樹木は光』<span>詳細ページへ</span></a>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -48,6 +48,33 @@ layout: layout.liquid
   </section>
   <section id="webnovel" class="home__section page-width">
     <h2>web-novel</h2>
+    {%- for novel in collections.novel -%}
+      {%- if novel.data.tags contains 'book-paperplane' -%}
+        {% assign novels-paperplane = novels-paperplane | concat: novel %}
+      {%- elsif novel.data.tags contains 'book-eien' -%}
+        {% assign novels-eien = novels-eien | concat: novel %}
+      {%- elsif novel.data.tags contains 'improvise' -%}
+        {% assign novels-improvise = novels-improvise | concat: novel %}
+      {%- endif -%}
+    {%- endfor -%}
+    <section>
+      <h3>紙飛行機に眠る月</h3>
+      {% for novel in novels-paperplane %}
+        <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
+      {% endfor %}
+    </section>
+    <section>
+      <h3>永遠の不在をめぐる</h3>
+      {% for novel in novels-eien %}
+        <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
+      {% endfor %}
+    </section>
+    <section>
+      <h3>即興小説</h3>
+      {% for novel in novels-improvise %}
+        <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
+      {% endfor %}
+    </section>
   </section>
   <section id="otherwork" class="home__section page-width">
     <h2>other-work</h2>
@@ -58,15 +85,3 @@ layout: layout.liquid
     架空ストア
   </section>
 </div>
-
-
-小説をタグで絞り込めないかな
-あとできればMarkdownで改行を有効にしたいんだが。。
-{% for post in collections.post %}
-<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-<p>{{ post.content }}</p>
-{% endfor %}
-
-{% for novel in collections.novel %}
-<h2><a href="{{ novel.url }}">{{ novel.data.title }}</a></h2>
-{% endfor %}

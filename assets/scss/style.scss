@@ -108,41 +108,69 @@ a:hover {
 .home {
 	&__firstview {
 		width: 100%;
-		height: 100dvh;
-		max-height: 80rem;
+		//min-height: 95dvh;
+		//max-height: 80rem;
+		height: auto;
 		position: relative;
+		padding-top: 15vh;
 	}
 	&__firstview-txt {
 		width: 100%;
-		position: absolute;
+		position: relative;
 		background-color: $bgColor;
-		padding: 5rem;
+		padding: 4rem;
 		z-index: 10;
-		left: 0;
-		top: 20%;
 	}
 	&__firstview-bg {
-		position: relative;
+		//position: relative;
 		//画像中央クリッピング
+		
+	}
+	&__firstview-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+    height: 100%;
+		overflow: hidden;
+		@include flex;
+		img {
+			width: inherit;
+			height: inherit;
+			min-height: 100%;
+			min-width: 100%;
+			object-fit: cover;
+			object-position: center top;
+			display: block;
+		}
+		figcaption {
+			position: absolute;
+			bottom: 2rem;
+			left: 2rem;
+			color: $bgColor;
+			z-index: 6;
+			opacity: 0.7;
+			font-size: 1.2rem;
+		}
 		&::before {
 			width: 100%;
 			height: 100%;
 			position: absolute;
-			background-color: rgba($color: #000000, $alpha: 0.5);
+			background: transparent linear-gradient(180deg, #00000033 0%, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+			opacity: 0.5;
 			top: 0;
 			left: 0;
 			content: "";
 			z-index: 5;
 		}
-	}
-	&__firstview-image {
 		&__txt {
-			position: absolute;
-			bottom: 5rem;
-			right: 5rem;
+			position: relative;
+			margin: 4rem 4rem 0 auto;
+			padding-bottom: 4rem;
 			max-width: 42rem;
 			color: $bgColor;
 			z-index: 10;
+			font-size: 1.5rem;
 			a {
 				color: $bgColor;
 				font-size: 1.8rem;
