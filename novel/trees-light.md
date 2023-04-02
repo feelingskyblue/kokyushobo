@@ -14,6 +14,8 @@ tags:
 血みどろになって遁げなくてもいいのです
 宮沢賢治『小岩井農場　パート九』
 
+ふむ、画像も置けるね　とはいえこのへんは専用レイアウトファイルにしてあげたいかな。。
+<img class="home__firstview-image" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
 
 現在
 
