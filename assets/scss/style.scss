@@ -34,7 +34,7 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: $keyColor;
+  color: $keyColorDark;
 }
 
 a:hover {
@@ -90,8 +90,107 @@ a:hover {
 	font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
-@media (max-width: $sp-width) {
+.heading {
+	&--default {
+		font-size: 1.4rem;
+		font-weight: normal;
+	}
+}
 
+// Component
+.page-width {
+	max-width: 128rem;
+	margin: 0 auto;
+	padding: 0 4rem;
+}
+
+// TOP
+.home {
+	&__firstview {
+		width: 100%;
+		height: 100dvh;
+		max-height: 80rem;
+		position: relative;
+	}
+	&__firstview-txt {
+		width: 100%;
+		position: absolute;
+		background-color: $bgColor;
+		padding: 5rem;
+		z-index: 10;
+		left: 0;
+		top: 20%;
+	}
+	&__firstview-bg {
+		position: relative;
+		//画像中央クリッピング
+		&::before {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: rgba($color: #000000, $alpha: 0.5);
+			top: 0;
+			left: 0;
+			content: "";
+			z-index: 5;
+		}
+	}
+	&__firstview-image {
+		&__txt {
+			position: absolute;
+			bottom: 5rem;
+			right: 5rem;
+			max-width: 42rem;
+			color: $bgColor;
+			z-index: 10;
+			a {
+				color: $bgColor;
+				font-size: 1.8rem;
+				span {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+	&__nav {
+		@include flex;
+		align-items: center;
+		margin: 2rem 0 0.5rem;
+		.heading::after {
+			content: "｜";
+			opacity: 0.5;
+		}
+		&-list {
+			@include flex;
+			font-size: 1.6rem;
+			li {
+				&:not(:last-child)::after {
+					content: "/";
+					opacity: 0.3;
+					padding: 0 0.3em;
+				}
+			}
+		}
+	}
+	&__news {
+		@include flex;
+		align-items: center;
+		.heading::after {
+			content: "｜";
+			opacity: 0.5;
+		}
+		&-body {
+			@include flex;
+			align-items: center;
+			font-size: 1.3rem;
+			dt {
+				padding-right: 0.5em;
+			}
+		}
+	}
+}
+
+@media (max-width: $sp-width) {
   body {
     font-size: 1.3rem;
   }
