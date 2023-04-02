@@ -1,5 +1,8 @@
 ---
 title: 夢みる時差のために
+tags:
+  - improvise
+  - book-eien
 ---
 
 　骨董品屋の片隅で、わたしはその時計を見つけた。

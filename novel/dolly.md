@@ -1,5 +1,7 @@
 ---
 title: 少女ドーリィ
+tags:
+  - book-paperplane
 ---
 
 　ドーリィは、その名が表すとおり、人形だった。

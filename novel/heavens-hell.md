@@ -1,5 +1,8 @@
 ---
 title: 昼の光から逃れるために
+tags:
+  - improvise
+  - book-eien
 ---
 
 　天国の片隅には秘密のプラネタリウムがある。

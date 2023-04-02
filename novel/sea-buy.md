@@ -1,5 +1,8 @@
 ---
 title: 海を商う
+tags:
+  - improvise
+  - book-eien
 ---
 
 　遠い未来、水は密猟の対象になった。

@@ -1,5 +1,8 @@
 ---
 title: 作家と刑罰
+tags:
+  - improvise
+  - book-eien
 ---
 
 　とある高名な作家が死んだ。

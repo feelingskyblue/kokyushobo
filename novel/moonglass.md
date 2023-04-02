@@ -1,5 +1,7 @@
 ---
 title: 新月をグラスに注いで
+tags:
+  - book-paperplane
 ---
 
 　あっ、ウィスキー割れた。
