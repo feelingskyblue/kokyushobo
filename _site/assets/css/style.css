@@ -311,6 +311,39 @@ a:hover {
 .home__news-body dt {
   padding-right: 0.5em;
 }
+.home__section {
+  margin-top: 4rem;
+}
+.home__section-heading {
+  color: #49aaa3;
+  font-weight: normal;
+  font-size: 2.4rem;
+}
+.home .book-tab {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  overflow-x: scroll;
+}
+.home .book-tab__item {
+  flex: none;
+}
+.home .book-tab__item button {
+  border: 2px solid transparent;
+}
+.home .book-tab__item button[aria-selected=true] {
+  border: 2px solid #49aaa3;
+}
+
+[aria-hidden=true] {
+  display: none;
+}
+
+[aria-hidden=false] {
+  display: block;
+}
 
 @media (max-width: 767px) {
   body {

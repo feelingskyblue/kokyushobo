@@ -216,6 +216,45 @@ a:hover {
 			}
 		}
 	}
+	&__section {
+		margin-top: 4rem;
+	}
+	&__section-title {
+		@include flex;
+		align-items: center;
+	}
+	&__section-heading {
+		color: $keyColor;
+		font-weight: normal;
+		font-size: 2.4rem;
+		margin-right: 1em;
+	}
+	.book-tab {
+		@include flex;
+		align-items: flex-end;
+		column-gap: 2rem;
+		overflow-x: scroll;
+		margin-bottom: 2rem;
+		&__item {
+			flex: none;
+			button {
+				border: 2px solid transparent;
+				background: transparent;
+				&[aria-selected="true"] {
+					border: 2px solid $keyColor;	
+				}
+			}
+			img {
+				display: block;
+			}
+		}
+	}
+}
+[aria-hidden="true"] {
+  display: none;
+}
+[aria-hidden="false"] {
+  display: block;
 }
 
 @media (max-width: $sp-width) {
