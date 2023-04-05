@@ -222,6 +222,10 @@ a:hover {
 	&__section-title {
 		@include flex;
 		align-items: center;
+		&-txt {
+			font-size: 1.3rem;
+			opacity: 0.8;
+		}
 	}
 	&__section-heading {
 		color: $keyColor;
@@ -249,12 +253,54 @@ a:hover {
 			}
 		}
 	}
+	.book-info {
+		padding: 0 2rem;
+		&__header {
+			@include flex;
+			align-items: center;
+			margin-bottom: 0.5rem;
+		}
+		&__title {
+			margin-right: 0.5em;
+		}
+		&__detail {
+			max-width: 80rem;
+			@media (max-width: $sp-width) {
+				max-width: inherit;
+			}
+		}
+		&__copy {
+			font-size: 1.4em;
+			margin-bottom: 2rem;
+			opacity: 0.4;
+			font-weight: bold;
+		}
+	}
 }
+
 [aria-hidden="true"] {
   display: none;
 }
 [aria-hidden="false"] {
   display: block;
+}
+hr {
+	margin: 2em 0;
+	opacity: 0.3;
+}
+blockquote {
+	border-left: 0.4rem solid #cccccc;
+	padding-left: 0.8em;
+	font-size: 1.05em;
+	opacity: 0.8;
+}
+.list__style--dot {
+	margin-bottom: 1.5em;
+	li {
+		&::before {
+			content: "・";
+		}
+	}
 }
 
 @media (max-width: $sp-width) {

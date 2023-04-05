@@ -46,7 +46,7 @@ layout: layout.liquid
   <section id="booklist" class="home__section page-width">
     <header class="home__section-title">
       <h2 class="heading home__section-heading">book-list</h2>
-      <p class="home__section-title-txt">書籍一覧</p>
+      <p class="home__section-title-txt">書籍一覧（表紙を選択すると詳細が表示されます）</p>
     </header>
     {%- assign novels-info-title = '『walking postcard vol.6』, 
     『彼らは唯の夢』, 
@@ -57,14 +57,14 @@ layout: layout.liquid
     『旅人よ立ち止まれ』, 
     『紙飛行機に眠る月』' | split: ', ' -%}
     {%- assign novels-info-handle = 'postcard-6, dream, tree, eien, aoakane, ryuyome, tabibito, airplane' | split: ', ' -%}
-    {%- assign novels-info-detail = '2022.11.20刊行/A5/62ページ, 
-    2021.11.23刊行/文庫判/54ページ, 
-    2020.11.22刊行/四六版/250ページ, 
-    2015.11.23刊行/文庫判/114ページ, 
-    2014.11.24刊行/新書版/76ページ, 
-    2014.11.24刊行（2017.3.26新装版刊行）/新書版/178ページ, 
-    2012.11.18刊行（2016.9.4新装版刊行）/B6/128ページ, 
-    2012.11.18刊行（2014.5.10新装版刊行）/文庫判/134ページ' | split: ', ' -%}
+    {%- assign novels-info-detail = '2022.11.20刊行, 
+    2021.11.23刊行, 
+    2020.11.22刊行, 
+    2015.11.23刊行, 
+    2014.11.24刊行, 
+    2014.11.24刊行（2017.3.26新装版刊行）, 
+    2012.11.18刊行（2016.9.4新装版刊行）, 
+    2012.11.18刊行（2014.5.10新装版刊行）' | split: ', ' -%}
     <div id="tabBookList">
       <ul role="tablist" class="book-tab">
         {%- for book in novels-info-title -%}
@@ -82,9 +82,14 @@ layout: layout.liquid
       </ul>
       <div class="book-tab__contents">
         {%- for book in novels-info-title -%}
-          <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item">
-            <div><h3>{{ book }}</h3><span>{{ novels-info-detail[forloop.index0] }}</span></div>
-            {%- include '_includes/info-{{novels-info-handle[forloop.index0]}}' -%}
+          <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item book-info">
+            <header class="book-info__header">
+              <h3 class="book-info__title">{{ book }}</h3>
+              <span class="book-info__data">{{ novels-info-detail[forloop.index0] }}</span>
+            </header>
+            <div class="book-info__detail">
+              {%- include '_includes/info-{{novels-info-handle[forloop.index0]}}' -%}
+            </div>
           </section>
         {%- endfor -%}
       </div>
