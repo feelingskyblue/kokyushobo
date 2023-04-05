@@ -46,7 +46,7 @@ layout: layout.liquid
   <section id="booklist" class="home__section page-width">
     <header class="home__section-title">
       <h2 class="heading home__section-heading">book-list</h2>
-      <p class="home__section-title-txt">書籍一覧（表紙を選択すると詳細が表示されます）</p>
+      <p class="home__section-title-txt">書籍情報（表紙を選択すると詳細が表示されます）</p>
     </header>
     {%- assign novels-info-title = '『walking postcard vol.6』, 
     『彼らは唯の夢』, 
@@ -95,8 +95,21 @@ layout: layout.liquid
       </div>
     </div>
   </section>
+  {% comment %}
+  <section class="random-novel bg__primary">
+    <div class="random-novel__inner font-serif">
+      <p>
+        　夜が明けると、村に人間は一人もいなかった。少年は、昨日まで人間だった蛾や蝙蝠や蛙の群れを引き連れて、森の奥へ帰っていった。彼らを近くの水辺に放し、昨日まで人間だった様々な種は、すべて母の根元に蒔いた。やがて、その一帯は花が咲き乱れ、蜜に誘われた鳥や獣の歌声で、いつまでも賑わうようになったという。<br>
+        　夜が明けると、村に人間は一人もいなかった。少年は、昨日まで人間だった蛾や蝙蝠や蛙の群れを引き連れて、森の奥へ帰っていった。彼らを近くの水辺に放し、昨日まで人間だった様々な種は、すべて母の根元に蒔いた。やがて、その一帯は花が咲き乱れ、蜜に誘われた鳥や獣の歌声で、いつまでも賑わうようになったという。（ランダムピックアップ）<a href="">続きを読む</a>
+      </p>
+    </div>
+  </section>
+  {% endcomment %}
   <section id="webnovel" class="home__section page-width">
-    <h2>web-novel</h2>
+    <header class="home__section-title">
+      <h2 class="heading home__section-heading">web-novel</h2>
+      <p class="home__section-title-txt">小説を読む</p>
+    </header>
     {%- for novel in collections.novel -%}
       {%- if novel.data.tags contains 'book-paperplane' -%}
         {% assign novels-paperplane = novels-paperplane | concat: novel %}
@@ -126,10 +139,17 @@ layout: layout.liquid
     </section>
   </section>
   <section id="otherwork" class="home__section page-width">
-    <h2>other-work</h2>
+    <header class="home__section-title">
+      <h2 class="heading home__section-heading">other-work</h2>
+      <p class="home__section-title-txt">紀行文・写真・朗読に触れる</p>
+    </header>
   </section>
   <section id="onlinestore" class="home__section page-width">
-    <h2>online-store</h2>
+    <header class="home__section-title">
+      <h2 class="heading home__section-heading">online-store</h2>
+      <p class="home__section-title-txt">書籍通販</p>
+    </header>
+    <p>以下ストアで書籍通販を承っております。</p>
     BOOTH
     架空ストア
   </section>

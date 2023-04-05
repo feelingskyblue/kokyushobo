@@ -317,7 +317,7 @@ a:hover {
 .home__section-title {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: baseline;
 }
 .home__section-title-txt {
   font-size: 1.3rem;
@@ -403,6 +403,21 @@ blockquote {
 }
 .list__style--dot li::before {
   content: "・";
+}
+
+.bg__primary {
+  background-color: rgba(198, 198, 198, 0.25);
+}
+
+.random-novel {
+  margin: 7rem 0;
+  padding: 6.5rem 4rem;
+}
+.random-novel__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.8;
 }
 
 @media (max-width: 767px) {

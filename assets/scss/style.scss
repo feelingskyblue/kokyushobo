@@ -221,7 +221,7 @@ a:hover {
 	}
 	&__section-title {
 		@include flex;
-		align-items: center;
+		align-items: baseline;
 		&-txt {
 			font-size: 1.3rem;
 			opacity: 0.8;
@@ -300,6 +300,19 @@ blockquote {
 		&::before {
 			content: "・";
 		}
+	}
+}
+.bg__primary {
+	background-color: rgba(198, 198, 198, 0.25);
+}
+.random-novel {
+	margin: 7rem 0;
+	padding: 6.5rem 4rem;
+	&__inner {
+		max-width: 80rem;
+		margin: 0 auto;
+		font-size: 1.6rem;
+		line-height: 1.8;
 	}
 }
 
