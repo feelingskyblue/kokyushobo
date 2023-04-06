@@ -10,7 +10,7 @@ html {
 	height: 100%;
 }
 body {
-  background-color: #fafafa;
+  background-color: $bgColor; //fcf8f3; //fcf8f3
   color: $textColor;
 	font-family: Cochin, "Helvetica Neue",
     Arial,
@@ -19,7 +19,7 @@ body {
     Meiryo,
     sans-serif;
   font-size: 1.4rem;
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-text-size-adjust: none;
   -ms-touch-action: none !important;
 	touch-action: none !important;
@@ -35,6 +35,8 @@ p:not(:last-child), blockquote:not(:last-child) {
 
 a {
   color: $keyColorDark;
+	text-decoration: none;
+	border-bottom: 1px solid rgba($color: $keyColorDark, $alpha: 0.3);
 }
 
 a:hover {
@@ -97,11 +99,84 @@ a:hover {
 	}
 }
 
+[aria-hidden="true"] {
+  display: none;
+}
+[aria-hidden="false"] {
+  display: block;
+}
+hr {
+	margin: 2em 0;
+	opacity: 0.3;
+}
+blockquote {
+	border-left: 0.4rem solid #cccccc;
+	padding-left: 0.8em;
+	font-size: 1.05em;
+	opacity: 0.8;
+}
+.list {
+	&__style--dot {
+		margin-bottom: 1.5em;
+		li {
+			&::before {
+				content: "・";
+			}
+		}
+	}
+	&__sns {
+		@include flex;
+		li {
+			&:not(:last-child)::after {
+				content: "/";
+				opacity: 0.3;
+				padding: 0 0.3em;
+			}
+		}
+	}
+}
+.bg {
+	&__primary {
+		background-color: rgba($color: #48423b, $alpha: 0.1);
+		//background-color: rgba(213, 216, 216, 0.25);
+	}
+}
+
 // Component
 .page-width {
 	max-width: 128rem;
 	margin: 0 auto;
 	padding: 0 4rem;
+}
+.flex {
+	@include flex;
+}
+
+// Common
+.header {
+
+}
+.footer {
+	margin-top: 7rem;
+	padding: 5rem 0;
+	.flex {
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.logo__image {
+		margin-left: auto;
+	}
+	&__nav-list {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		gap: 0.6rem 1.8rem;
+		font-size: 1.2rem;
+	}
+	&__info {
+		text-align: right;
+	}
 }
 
 // TOP
@@ -184,10 +259,6 @@ a:hover {
 		@include flex;
 		align-items: center;
 		margin: 2rem 0 0.5rem;
-		.heading::after {
-			content: "｜";
-			opacity: 0.5;
-		}
 		&-list {
 			@include flex;
 			font-size: 1.6rem;
@@ -222,6 +293,7 @@ a:hover {
 	&__section-title {
 		@include flex;
 		align-items: baseline;
+		margin-bottom: 2rem;
 		&-txt {
 			font-size: 1.3rem;
 			opacity: 0.8;
@@ -278,33 +350,7 @@ a:hover {
 	}
 }
 
-[aria-hidden="true"] {
-  display: none;
-}
-[aria-hidden="false"] {
-  display: block;
-}
-hr {
-	margin: 2em 0;
-	opacity: 0.3;
-}
-blockquote {
-	border-left: 0.4rem solid #cccccc;
-	padding-left: 0.8em;
-	font-size: 1.05em;
-	opacity: 0.8;
-}
-.list__style--dot {
-	margin-bottom: 1.5em;
-	li {
-		&::before {
-			content: "・";
-		}
-	}
-}
-.bg__primary {
-	background-color: rgba(198, 198, 198, 0.25);
-}
+
 .random-novel {
 	margin: 7rem 0;
 	padding: 6.5rem 4rem;

@@ -37,23 +37,26 @@
     <main class="main">
       {{ content }}
     </main>
-    <footer class="footer">
-      <nav>
-        <ul>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">about / 本サイトについて</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">blog / 雑記</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">event / イベント出店情報</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">contact / お問合せ・ご依頼など</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">privacy-policy / プライバシーポリシー</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">book-list / 書籍情報</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">web-novel / 小説を読む</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">other-work / 紀行文・写真・朗読に触れる</a></li>
-          <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">online-store / 書籍通販</a></li>
-        </ul>
-      </nav>
-
-      <div>呼吸書房</div>
-      <small>Copyright &copy; Minato Kazano All rights researved.</small>
+    <footer class="footer bg__primary">
+      <div class="page-width flex">
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">about / 本サイトについて</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">blog / 雑記</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">event / イベント出店情報</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">contact / お問合せ・ご依頼など</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">privacy-policy / プライバシーポリシー</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">book-list / 書籍情報</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">web-novel / 小説を読む</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">other-work / 紀行文・写真・朗読に触れる</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">online-store / 書籍通販</a></li>
+          </ul> 
+        </nav>
+        <div class="footer__info">
+          <img src="/assets/img/logo.png" alt="呼吸書房" loading="lazy" width="200" class="logo__image">
+          <small>Copyright &copy; Minato Kazano All rights researved.</small>
+        </div>
+      </div>
     </footer>
   </body>
 
