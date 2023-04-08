@@ -296,8 +296,11 @@ blockquote {
   flex-wrap: nowrap;
 }
 
+.main {
+  min-height: calc(100dvh - 20rem);
+}
+
 .footer {
-  margin-top: 4rem;
   padding: 4rem 0;
 }
 .footer .flex {

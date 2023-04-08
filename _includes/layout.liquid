@@ -30,7 +30,6 @@
     <meta name="twitter:site" content="@feelingskyblue" />
     <meta name="twitter:description" content="【ページの説明】" />
     <meta name="twitter:image:src" content="【サムネイル画像のURL】" />
-
   </head>
 
   <body class="{{ template | default: 'homePage' }}">
@@ -41,15 +40,15 @@
       <div class="page-width flex">
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">about / 本サイトについて</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">blog / 雑記</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">event / イベント出店情報</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">contact / お問合せ・ご依頼など</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/">home / トップページ</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/about">about / 本サイトについて</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/event">event / イベント出店情報</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/contact">contact / お問合せ・ご依頼など</a></li>
             <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="">privacy-policy / プライバシーポリシー</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/#booklist">book-list / 書籍情報</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/#webnovel">web-novel / 小説を読む</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/#otherwork">other-work / 紀行文・写真・朗読に触れる</a></li>
-            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/#onlinestore">online-store / 書籍販売</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/book">book-list / 書籍情報</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/novel">web-novel / 小説を読む</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/other">other-work / 紀行文・写真・朗読に触れる</a></li>
+            <li {% if page.url == post.url %} aria-current="page"{% endif %}><a href="/store">online-store / 書籍販売</a></li>
           </ul>
         </nav>
         <div class="footer__info">
