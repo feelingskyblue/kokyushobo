@@ -93,9 +93,35 @@ a:hover {
 }
 
 .heading {
+	&--primary {
+		font-size: 1.8rem;
+	}
+	&--secondary {
+		font-size: 1.6rem;
+	}
+	&--color {
+		color: $keyColor;
+	}
 	&--default {
 		font-size: 1.4rem;
 		font-weight: normal;
+	}
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 0.5rem;
+	&--medium {
+		padding: 0 1.5em;
+		min-width: 24rem;
+		height: 4rem;
+	}
+	&--color {
+		background-color: rgba($color: $keyColor, $alpha: 0.5);
+		color: #ffffff;
 	}
 }
 
@@ -107,7 +133,7 @@ a:hover {
 }
 hr {
 	margin: 2em 0;
-	opacity: 0.3;
+	opacity: 0.1;
 }
 blockquote {
 	border-left: 0.4rem solid #cccccc;
@@ -125,8 +151,10 @@ blockquote {
 		}
 	}
 	&__sns {
-		@include flex;
+		@include flex(wrap);
+		max-width: 60rem;
 		li {
+			margin-bottom: 0.5rem;
 			&:not(:last-child)::after {
 				content: "/";
 				opacity: 0.3;
@@ -134,10 +162,30 @@ blockquote {
 			}
 		}
 	}
+	&__flex {
+		@include flex;
+		li {
+			margin-right: 1em;
+		}
+	}
+	&__dl {
+		dt {
+			&:not(:first-child) {
+				margin-top: 2.5rem;
+			}
+		}
+		.btn {
+			margin: 0.8rem 0;
+		}
+	}
 }
 .bg {
 	&__primary {
 		background-color: rgba($color: #48423b, $alpha: 0.1);
+		//background-color: rgba(213, 216, 216, 0.25);
+	}
+	&__secondary {
+		background-color: rgba($color: $keyColor, $alpha: 0.05);
 		//background-color: rgba(213, 216, 216, 0.25);
 	}
 }
@@ -157,8 +205,8 @@ blockquote {
 
 }
 .footer {
-	margin-top: 7rem;
-	padding: 5rem 0;
+	margin-top: 4rem;
+	padding: 4rem 0;
 	.flex {
 		justify-content: space-between;
 		align-items: flex-end;
@@ -193,7 +241,7 @@ blockquote {
 		width: 100%;
 		position: relative;
 		background-color: $bgColor;
-		padding: 4rem;
+		padding: 4rem 0;
 		z-index: 10;
 	}
 	&__firstview-bg {
@@ -276,7 +324,8 @@ blockquote {
 		align-items: center;
 		.heading::after {
 			content: "｜";
-			opacity: 0.5;
+			opacity: 0.3;
+			padding: 0 0.3em;
 		}
 		&-body {
 			@include flex;
@@ -287,8 +336,18 @@ blockquote {
 			}
 		}
 	}
+	&__contents {
+	}
 	&__section {
-		margin-top: 4rem;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		&:not(:last-child):not(:first-child) {
+			//margin-top: 6.5rem;
+			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+		}
+		&__innner-sub {
+			padding-left: 1em;
+		}
 	}
 	&__section-title {
 		@include flex;
@@ -308,11 +367,12 @@ blockquote {
 	.book-tab {
 		@include flex;
 		align-items: flex-end;
-		column-gap: 2rem;
+		column-gap: 1.5rem;
 		overflow-x: scroll;
 		margin-bottom: 2rem;
 		&__item {
 			flex: none;
+			margin-bottom: 1rem;
 			button {
 				border: 2px solid transparent;
 				background: transparent;
@@ -322,6 +382,15 @@ blockquote {
 			}
 			img {
 				display: block;
+				&.book-image--big {
+					width: 20rem;
+				}
+				&.book-image--normal {
+					width: 17.5rem;
+				}
+				&.book-image--small {
+					width: 15rem;
+				}
 			}
 		}
 	}
@@ -336,7 +405,6 @@ blockquote {
 			margin-right: 0.5em;
 		}
 		&__detail {
-			max-width: 80rem;
 			@media (max-width: $sp-width) {
 				max-width: inherit;
 			}
@@ -352,12 +420,11 @@ blockquote {
 
 
 .random-novel {
-	margin: 7rem 0;
 	padding: 6.5rem 4rem;
 	&__inner {
-		max-width: 80rem;
+		max-width: 42em;
 		margin: 0 auto;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		line-height: 1.8;
 	}
 }
