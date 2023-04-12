@@ -1,0 +1,20 @@
+---
+layout: layout.liquid
+template: plainPage
+---
+
+<div class="page">
+  {% comment %}
+  サイドナビの中にいれよ
+  <header class="page__header">
+    <a href="/" class="page__header--link link--unstyle"><img src="/assets/img/logo.png" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></a>
+  </header>
+  {% endcomment %}
+  <section class="page__wrapper">
+    <header class="page__section-title page-width">
+      <h1 class="heading page__section-heading">{{ title }}</h1>
+      <p class="page__section-title-txt">{{ subtitle }}</p>
+    </header>
+    <div class="page__body page-width">{{ content }}</div>
+  </section>
+</div>

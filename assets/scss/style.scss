@@ -37,6 +37,9 @@ a {
   color: $keyColorDark;
 	text-decoration: none;
 	border-bottom: 1px solid rgba($color: $keyColorDark, $alpha: 0.3);
+	&.link--unstyle {
+		border-bottom: none;
+	}
 }
 
 a:hover {
@@ -120,7 +123,7 @@ a:hover {
 		height: 4rem;
 	}
 	&--color {
-		background-color: rgba($color: $keyColor, $alpha: 0.5);
+		background-color: rgba($color: $keyColor, $alpha: 0.7);
 		color: #ffffff;
 	}
 }
@@ -143,6 +146,7 @@ blockquote {
 }
 .list {
 	&__style--dot {
+		margin-top: 0.5rem;
 		margin-bottom: 1.5em;
 		li {
 			&::before {
@@ -199,6 +203,9 @@ blockquote {
 .flex {
 	@include flex;
 }
+.op_7 {
+	opacity: 0.7;
+}
 
 // Common
 .header {
@@ -215,6 +222,7 @@ blockquote {
 	}
 	.logo__image {
 		margin-left: auto;
+		margin-bottom: 0.8rem;
 	}
 	&__nav-list {
 		display: grid;
@@ -228,6 +236,58 @@ blockquote {
 		text-align: right;
 	}
 }
+.book-tab {
+	@include flex;
+	align-items: flex-end;
+	column-gap: 1.5rem;
+	overflow-x: scroll;
+	margin-bottom: 2rem;
+	&__item {
+		flex: none;
+		margin-bottom: 1rem;
+		button {
+			border: 2px solid transparent;
+			background: transparent;
+			&[aria-selected="true"] {
+				border: 2px solid $keyColor;	
+			}
+		}
+		img {
+			display: block;
+			&.book-image--big {
+				width: 20rem;
+			}
+			&.book-image--normal {
+				width: 17.5rem;
+			}
+			&.book-image--small {
+				width: 15rem;
+			}
+		}
+	}
+}
+.book-info {
+	&__header {
+		@include flex;
+		align-items: center;
+		margin-bottom: 0.5rem;
+	}
+	&__title {
+		margin-right: 0.5em;
+	}
+	&__detail {
+		@media (max-width: $sp-width) {
+			max-width: inherit;
+		}
+	}
+	&__copy {
+		font-size: 1.4em;
+		margin-bottom: 2rem;
+		opacity: 0.4;
+		font-weight: bold;
+	}
+}
+
 
 // TOP
 .home {
@@ -366,61 +426,7 @@ blockquote {
 		font-size: 2.4rem;
 		margin-right: 1em;
 	}
-	.book-tab {
-		@include flex;
-		align-items: flex-end;
-		column-gap: 1.5rem;
-		overflow-x: scroll;
-		margin-bottom: 2rem;
-		&__item {
-			flex: none;
-			margin-bottom: 1rem;
-			button {
-				border: 2px solid transparent;
-				background: transparent;
-				&[aria-selected="true"] {
-					border: 2px solid $keyColor;	
-				}
-			}
-			img {
-				display: block;
-				&.book-image--big {
-					width: 20rem;
-				}
-				&.book-image--normal {
-					width: 17.5rem;
-				}
-				&.book-image--small {
-					width: 15rem;
-				}
-			}
-		}
-	}
-	.book-info {
-		padding: 0 2rem;
-		&__header {
-			@include flex;
-			align-items: center;
-			margin-bottom: 0.5rem;
-		}
-		&__title {
-			margin-right: 0.5em;
-		}
-		&__detail {
-			@media (max-width: $sp-width) {
-				max-width: inherit;
-			}
-		}
-		&__copy {
-			font-size: 1.4em;
-			margin-bottom: 2rem;
-			opacity: 0.4;
-			font-weight: bold;
-		}
-	}
 }
-
-
 .random-novel {
 	padding: 6.5rem 4rem;
 	&__inner {
@@ -428,6 +434,37 @@ blockquote {
 		margin: 0 auto;
 		font-size: 1.5rem;
 		line-height: 1.8;
+	}
+}
+
+// 下層ページ
+.page {
+	padding: 4rem 0;
+	&__header {
+		@include flexCentering;
+		padding: 1rem 0;
+		&--link {
+			display: inline-flex;
+		}
+		img {
+			width: auto;
+			height: 3rem;
+		}
+	}
+	&__section-title {
+		@include flex;
+		align-items: baseline;
+		margin-bottom: 2rem;
+		&-txt {
+			font-size: 1.3rem;
+			opacity: 0.8;
+		}
+	}
+	&__section-heading {
+		color: $keyColor;
+		font-weight: normal;
+		font-size: 2.4rem;
+		margin-right: 1em;
 	}
 }
 

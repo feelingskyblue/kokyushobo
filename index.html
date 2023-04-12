@@ -6,7 +6,7 @@ layout: layout.liquid
   <div class="home__firstview">
     <section class="home__firstview-txt">
       <div class="page-width">
-        <h1><img src="/assets/img/logo.png" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></h1>
+        <h1><img src="/assets/img/logo.svg" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></h1>
         <p>呼吸書房へようこそ。当サイトでは、私、風野湊による制作物を公開しています。<br>小説・詩・紀行文のほか、旅先の写真や音楽、そして朗読音声もほんのすこし。<br>路上で出会った本棚のように、どうぞゆっくりとお楽しみください。</p>
         <p>書斎と書店、ふたつの意味を持つ「書房」の名のとおり、<br>一部の作品は書籍化し、販売を行っています。<br>出展イベントや委託販売先でもお買い求めいただけます。</p>
         <nav class="home__nav">
@@ -32,7 +32,7 @@ layout: layout.liquid
     <div class="home__firstview-bg__wrapper">
       <div class="home__firstview-bg">
         <figure class="home__firstview-image">
-          <img src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
+          <img src="/assets/img/mv_treeislight.jpg" alt="" width="2000">
           <figcaption>書籍表紙装画：佐野裕一さん</figcaption>
         </figure>
         <div class="home__firstview-image__txt font-serif">
@@ -51,54 +51,8 @@ layout: layout.liquid
         <p class="home__section-title-txt">書籍情報</p>
       </header>
       <p>これまでに制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p>
-      {%- assign novels-info-title = '『walking postcard vol.6』, 
-      『彼らは唯の夢』, 
-      『すべての樹木は光』, 
-      『永遠の不在をめぐる』, 
-      『青と茜と砂漠の国』, 
-      『竜の花嫁』, 
-      『旅人よ立ち止まれ』, 
-      『紙飛行機に眠る月』' | split: ', ' -%}
-      {%- assign novels-info-handle = 'postcard-6, dream, tree, eien, aoakane, ryuyome, tabibito, airplane' | split: ', ' -%}
-      {%- assign novels-info-size = 'big, small, normal, small, small, small, big, small' | split: ', ' -%}
-      {%- assign novels-info-detail = '2022.11.20刊行, 
-      2021.11.23刊行, 
-      2020.11.22刊行,
-      2015.11.23刊行,
-      2014.11.24刊行, 
-      2014.11.24刊行（2017.3.26新装版刊行）, 
-      2012.11.18刊行（2016.9.4新装版刊行）, 
-      2012.11.18刊行（2014.5.10新装版刊行）' | split: ', ' -%}
-      <div id="tabBookList">
-        <ul role="tablist" class="book-tab">
-          {%- for book in novels-info-title -%}
-            <li role="presentation" class="book-tab__item">
-              <button
-                role="tab"
-                aria-controls="panel{{ forloop.index }}"
-                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-                tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
-              >
-                <img src="/assets/img/hyoushi-{{ novels-info-handle[forloop.index0] }}.jpg" alt="{{ book }}表紙イメージ" loading="lazy" width="400" class="book-image--{{ novels-info-size[forloop.index0] }}">
-              </button>
-            </li> 
-          {%- endfor -%}
-        </ul>
-        <div class="book-tab__contents">
-          {%- for book in novels-info-title -%}
-            <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item book-info">
-              <header class="book-info__header">
-                <h3 class="book-info__title">{{ book }}</h3>
-                <span class="book-info__data">{{ novels-info-detail[forloop.index0] }}</span>
-              </header>
-              <div class="book-info__detail">
-                {%- include '_includes/info-{{novels-info-handle[forloop.index0]}}' -%}
-              </div>
-            </section>
-          {%- endfor -%} 
-        </div> 
-      </div>
-    </section> 
+      {%- include '_includes/section-books' -%}
+    </section>
     <section class="random-novel bg__secondary">
       <div class="random-novel__inner font-serif">
         <p>

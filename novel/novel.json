@@ -1,4 +1,4 @@
 {
-  "layout": "novel.liquid",
+  "layout": "layout-novel.liquid",
   "tags": "novel"
 }

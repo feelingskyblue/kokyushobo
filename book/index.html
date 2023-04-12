@@ -1,9 +1,10 @@
 ---
-layout: layout.liquid
+layout: layout-page.liquid
+title: book-list
+subtitle: 書籍情報
 ---
 
-<section>
-  やっぱり別ページの方が良いと思うのね
-  本の特設ページのディレクトリにもできるし
-  TOPと同一内容を読み込めるかなあ
-</section>
+<div id="booklist">
+  <p>これまでに制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p>
+  {%- include '_includes/section-books' -%}
+</div>
