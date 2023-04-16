@@ -9,31 +9,110 @@
 {%- endfor -%}
 
 <div class="novel-list__wrapper">
+{% comment %}
   <section class="novel-list__section">
-    <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
-    <ul class="list">
-      {% for novel in novels-paperplane %}
-        <li>
-          <a href="{{ novel.url }}">{{ novel.data.title }}</a>
-          <p class="novel-list__catchcopy">{{ novel.data.catch }}</p>
-        </li>
+    <h3 class="novel-list__title font-serif">彼らは唯の夢</h3>
+    <p class="novel-list__description">ランダムなお題を元に15分で執筆する「即興小説トレーニング（2023年サービス終了）」に投稿した掌編の一部を改稿・公開しています。</p>
+    <div class="list novel-list">
+      {% for novel in novels-improvise %}
+        <article class="novel-list__item">
+          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
+            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
+            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+            <ul class="novel-category">
+              {% for item in novel.data.category %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </a>
+        </article>
       {% endfor %}
-    </ul>
+    </div>
   </section>
-  <section class="novel-list__section">
-    <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
-    <ul class="list">
-      {% for novel in novels-eien %}
-        <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </section>
+{% endcomment %}
   <section class="novel-list__section">
     <h3 class="novel-list__title font-serif">即興小説</h3>
-    <ul class="list">
+    <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿・公開しています。<br>ランダムなお題を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
+    <div class="list novel-list">
       {% for novel in novels-improvise %}
-        <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        <article class="novel-list__item">
+          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
+            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
+            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+            <ul class="novel-category">
+              {% for item in novel.data.category %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </a>
+        </article>
       {% endfor %}
-    </ul>
-  </section> 
+    </div>
+  </section>
+  <section class="novel-list__section is-eien">
+    <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
+    <p class="novel-list__description">2015年に刊行した幻想短編集より、即興小説から生まれた4編を公開しています。</p>
+    <div class="list novel-list">
+      {% for novel in novels-eien %}
+        <article class="novel-list__item">
+          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
+            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
+            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+            <ul class="novel-category">
+              {% for item in novel.data.category %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </a>
+        </article>
+      {% endfor %}
+      <div class="novel-list__item for-btn">
+        <a href="/book/eien" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="novel-list__section is-paperplane">
+    <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
+    <p class="novel-list__description">呼吸書房の原点、2012年に刊行した短編集です。収録作品の一部を公開しています。</p>
+    <div class="list novel-list">
+      {% for novel in novels-paperplane %}
+        <article class="novel-list__item">
+          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
+            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
+            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+            <ul class="novel-category">
+              {% for item in novel.data.category %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </a>
+        </article>
+      {% endfor %}
+      <div class="novel-list__item for-btn">
+        <a href="/book/paperplane" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+      </div>
+    </div>
+  </section>
+{% comment %}
+  <section class="novel-list__section">
+    <h3 class="novel-list__title font-serif">寄稿・企画など</h3>
+    <p class="novel-list__description">依頼を元に執筆した短編、企画作品はこちらからどうぞ。</p>
+    <div class="list novel-list">
+      {% for novel in novels-improvise %}
+        <article class="novel-list__item">
+          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
+            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
+            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+            <ul class="novel-category">
+              {% for item in novel.data.category %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endcomment %}
+
 </div>

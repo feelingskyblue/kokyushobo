@@ -40,9 +40,13 @@ a {
 	&.link--unstyle {
 		border-bottom: none;
 	}
+	&.unstyle {
+		color: inherit;
+		border-bottom: none;
+	}
 }
 
-a:hover {
+a:not(.unstyle):hover {
   opacity: 0.8;
 }
 
@@ -117,6 +121,11 @@ a:hover {
 	justify-content: center;
 	border: none;
 	border-radius: 0.5rem;
+	transition: all 0.4s ease;
+	&--small {
+		padding: 0 1.5em;
+		height: 4rem;
+	}
 	&--medium {
 		padding: 0 1.5em;
 		min-width: 24rem;
@@ -125,6 +134,17 @@ a:hover {
 	&--color {
 		background-color: rgba($color: $keyColor, $alpha: 0.7);
 		color: #ffffff;
+	}
+	&--pale {
+		background-color: rgba($color: $keyColor, $alpha: 0.1);
+		&:hover {
+			opacity: 1;
+			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			color: #ffffff;
+		}
+	}
+	&--outlined {
+		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
 	}
 }
 
@@ -307,6 +327,20 @@ blockquote {
 	}
 }
 .book-info {
+	&__page-wrapper {
+		margin-top: 4rem;
+		column-gap: 5%;
+		.book-info__image {
+			width: 35%;
+		}
+		.book-info__content {
+			width: 60%;
+		}
+		.list__flex {
+			flex-wrap: wrap;
+			row-gap: 1.5rem
+		}
+	}
 	&__header {
 		@include flex;
 		align-items: center;
@@ -327,22 +361,134 @@ blockquote {
 		font-weight: bold;
 	}
 }
-.novel-list__wrapper {
-	@include flex;
-	flex-wrap: wrap;
-	.novel-list__section {
-		width: 50%;
-		&:not(:last-child) {
-			margin-bottom: 4rem;
+.novel-list {
+	&__item {
+		border-top: 1px solid rgba($color: #48423b, $alpha: 0.1);
+		position: relative;
+		&-link {
+			display: block;
+			padding: 1rem;
+			transition: 0.3s ease-in-out;
+			&:hover {
+				background-color: rgba($color: $keyColor, $alpha: 0.05);	
+			}	
+		}
+		&-title {
+			font-weight: normal;
+			font-size: inherit;
+			margin-bottom: 0;
+			color: $keyColorDark;
+			span {
+				line-height: 1;
+				//border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			}
+		}
+		&.for-btn {
+			padding-top: 1.5rem;
+			padding-bottom: 0.5rem;
+			text-align: right
+		}
+		.btn {
+			font-size: 0.8em;
+			&:not(:hover) {
+				span {
+					opacity: 0.7;
+				}	
+			}
 		}
 	}
-	.novel-list__title {
+	&__wrapper {
+		//@include flex;
+		//flex-wrap: wrap;
+		//justify-content: space-between;
+		//align-items: flex-start;
+		column-count: 1;
+	  //column-gap: 1rem;
+	}
+	&__section {
+		//width: 48%;
+		width: 100%;
+		max-width: 80rem;
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		padding: 2rem 2rem 1rem;
+		//padding: 2rem 0rem 2rem 1rem;
+		position: relative;
+		@media (max-width: $sp-width) {
+			width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+		.novel-list__description {
+			margin-bottom: 1rem;
+			font-size: 0.9em;
+			opacity: 0.6;
+			line-height: 1.5;
+		}
+		&::before {
+			width: 20rem;
+			height: 1rem;
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			background-color: $keyColor;
+			display: block;
+			content: "";
+		}
+		&.is-paperplane {
+			&::before {
+				background: url("/assets/img/hyoushi-airplane.jpg") no-repeat top center;
+				background-size: cover;
+			}
+		}
+		&.is-eien {
+			&::before {
+				background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
+				background-size: cover;
+			}
+		}
+	}
+	&__title {
 		font-size: 1.1em;
 		opacity: 0.8;
+		margin-bottom: 0.3rem;
+		font-weight: normal;
 	}
-	.novel-list__catchcopy {
-		font-size: 0.8em;
+	&__catchcopy {
+		display: block;
+		font-size: 0.9em;
 		opacity: 0.5;
+		margin-bottom: 0;
+		line-height: 1.5;
+	}
+	.novel-category {
+		font-size: 0.8em;
+		opacity: 0.4;
+		margin-bottom: 0;
+		line-height: 1.5;
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		@include flex;
+		flex-wrap: wrap;
+		max-width: 50%;
+		@media (max-width: $sp-width) {
+			max-width: inherit;
+			position: relative;
+			top: inherit;
+			right: inherit;
+			justify-content: flex-end;
+		}
+		li {
+			&:not(:last-child)::after {
+				content: "/";
+				opacity: 0.8;
+				padding: 0 0.3em;
+			}
+		}
 	}
 }
 .form {

@@ -3,6 +3,9 @@ title: 父の転生
 date: 2012-11-18
 catch: 病室には、ベッドが二つ。そのどちらにも、父の身体が横たえられているのを、私はしげしげと眺めた。
 permalink: "novel/father/"
+category:
+  - SF
+  - 掌編
 tags:
   - book-paperplane
 ---

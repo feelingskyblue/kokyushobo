@@ -2,6 +2,10 @@
 title: 新月をグラスに注いで
 date: 2012-11-21
 catch: 私の日常。女子高生をたまに家にあげる。くだらないお喋りをする。ちなみに彼女は透明人間だ。
+category:
+  - 現代
+  - ジュブナイル
+  - 短編
 permalink: "novel/moonglass/"
 tags:
   - book-paperplane

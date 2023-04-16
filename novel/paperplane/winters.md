@@ -3,6 +3,9 @@ title: ある冬の日の
 date: 2012-11-20
 catch: 冷たい風がきんきんと吹き荒ぶ、冬のある夜のことでした。
 permalink: "novel/winters/"
+category:
+  - 童話
+  - 掌編
 tags:
   - book-paperplane
 ---
