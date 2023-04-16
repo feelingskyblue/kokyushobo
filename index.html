@@ -6,7 +6,7 @@ layout: layout.liquid
   <div class="home__firstview">
     <section class="home__firstview-txt">
       <div class="page-width">
-        <h1><img src="/assets/img/logo.svg" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></h1>
+        <h1><img src="/assets/img/logo.svg" alt="呼吸書房"  width="150" height="40" class="logo__image" loading="lazy"></h1>
         <p>呼吸書房へようこそ。当サイトでは、私、風野湊による制作物を公開しています。<br>小説・詩・紀行文のほか、旅先の写真や音楽、そして朗読音声もほんのすこし。<br>路上で出会った本棚のように、どうぞゆっくりとお楽しみください。</p>
         <p>書斎と書店、ふたつの意味を持つ「書房」の名のとおり、<br>一部の作品は書籍化し、販売を行っています。<br>出展イベントや委託販売先でもお買い求めいただけます。</p>
         <nav class="home__nav">
@@ -23,8 +23,8 @@ layout: layout.liquid
         <div class="home__news">
           <h2 class="heading heading--default">News</h2>
           <dl class="home__news-body">
-            <dt>2023.2.26</dt>
-            <dd><a href="">出店予定：文学フリマ広島「い-16」呼吸書房</a></dd>
+            <dt>2023.5.21</dt>
+            <dd>出店予定：<a href="https://bunfree.net/event/tokyo36/" target="_blank" rel="noopenner noreferrer">文学フリマ東京36</a>｜呼吸書房</dd>
           </dl>
         </div>
       </div>
@@ -66,33 +66,7 @@ layout: layout.liquid
         <h2 class="heading home__section-heading">web-novel</h2>
         <p class="home__section-title-txt">小説を読む</p>
       </header>
-      {%- for novel in collections.novel -%}
-        {%- if novel.data.tags contains 'book-paperplane' -%}
-          {% assign novels-paperplane = novels-paperplane | concat: novel %}
-        {%- elsif novel.data.tags contains 'book-eien' -%}
-          {% assign novels-eien = novels-eien | concat: novel %}
-        {%- elsif novel.data.tags contains 'improvise' -%}
-          {% assign novels-improvise = novels-improvise | concat: novel %}
-        {%- endif -%}
-      {%- endfor -%}
-      <section>
-        <h3>紙飛行機に眠る月</h3>
-        {% for novel in novels-paperplane %}
-          <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-        {% endfor %}
-      </section>
-      <section>
-        <h3>永遠の不在をめぐる</h3>
-        {% for novel in novels-eien %}
-          <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-        {% endfor %}
-      </section>
-      <section>
-        <h3>即興小説</h3>
-        {% for novel in novels-improvise %}
-          <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-        {% endfor %}
-      </section> 
+      {%- include '_includes/section-novels' -%}
     </section>
     <section class="home__section page-width">
       <header class="home__section-title">
@@ -106,7 +80,7 @@ layout: layout.liquid
         <li><a href="https://misskey.cloud/@feelingskyblue" target="_blank" rel="noopenner noreferrer">Misskey(.cloud)</a></li>
         <li><a href="https://misskey.design/@feelingskyblue" target="_blank" rel="noopenner noreferrer">Misskey(.design)</a></li>
         <li><a href="https://novelskey.tarbin.net/@feelingskyblue" target="_blank" rel="noopenner noreferrer">Misskey(.novelskey)</a></li>
-        <li><a href="https://skeb.jp/@feelingskyblue" target="_blank" rel="noopenner noreferrer">skeb</a></li>
+        <li><a href="https://skeb.jp/@feelingskyblue" target="_blank" rel="noopenner noreferrer">Skeb</a></li>
         <li><a href="https://feelingskyblue.fanbox.cc/" target="_blank" rel="noopenner noreferrer">pixiv FANBOX</a></li>
         <li><a href="https://www.youtube.com/channel/UCE-QxzMvKYiWPL6puEiD3Tw" target="_blank" rel="noopenner noreferrer">YouTube</a></li>
         <li><a href="https://soundcloud.com/4erb0uzpdh6n" target="_blank" rel="noopenner noreferrer">SoundCloud</a></li>

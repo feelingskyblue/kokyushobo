@@ -182,6 +182,30 @@ blockquote {
 			margin: 0.8rem 0;
 		}
 	}
+	&__faq {
+		dt, dd {
+			padding-left: 2rem;
+			position: relative;
+			&::before {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				color: $keyColor;
+				width: 1em;
+				height: 1em;
+			}
+		}
+		dt:not(:first-child) {
+			margin-top: 2rem;
+		}
+		dt::before {
+			content: "Q";
+		}
+		dd::before {
+			content: "A";
+		}
+	}
 }
 .bg {
 	&__primary {
@@ -236,6 +260,19 @@ blockquote {
 		text-align: right;
 	}
 }
+.book-tab__wrapper {
+	position: relative;
+	&::after {
+		display: block;
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 3rem;
+		height: 100%;
+		background: transparent linear-gradient(90deg, rgba(254,251,249,0) 0%, rgba(254,251,249,1) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+	}
+}
 .book-tab {
 	@include flex;
 	align-items: flex-end;
@@ -264,6 +301,9 @@ blockquote {
 				width: 15rem;
 			}
 		}
+		&:last-child {
+			margin-right: 3rem;
+		}
 	}
 }
 .book-info {
@@ -287,6 +327,55 @@ blockquote {
 		font-weight: bold;
 	}
 }
+.novel-list__wrapper {
+	@include flex;
+	flex-wrap: wrap;
+	.novel-list__section {
+		width: 50%;
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+	.novel-list__title {
+		font-size: 1.1em;
+		opacity: 0.8;
+	}
+	.novel-list__catchcopy {
+		font-size: 0.8em;
+		opacity: 0.5;
+	}
+}
+.form {
+	max-width: 60rem;
+	&__label {
+		display: block;
+		margin-bottom: 1.5rem;
+		&-txt {
+			font-size: 1.3rem;
+			display: block;
+		}
+	}
+	.btn {
+		margin-bottom: 1.5rem;
+	}
+	input, select, textarea {
+		width: 100%;
+		background-color: transparent;
+		box-shadow: none;
+		border: 1px solid $keyColorDark;
+		@media (max-width: $sp-width) {
+			font-size: 1.6rem;
+		}
+	}
+	input, select {
+		min-height: 3rem;
+		padding: 0.5rem 1rem;
+	}
+	textarea {
+		height: 10em;
+		padding: 1rem;
+	}
+}
 
 
 // TOP
@@ -305,6 +394,9 @@ blockquote {
 		background-color: $bgColor;
 		padding: 4rem 0;
 		z-index: 10;
+		.logo__image {
+			margin-bottom: 1.5rem;
+		}
 	}
 	&__firstview-bg {
 		//position: relative;
@@ -465,6 +557,33 @@ blockquote {
 		font-weight: normal;
 		font-size: 2.4rem;
 		margin-right: 1em;
+	}
+	.scroll__wrapper {
+		position: relative;
+		&::after {
+			display: block;
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 3rem;
+			background: transparent linear-gradient(180deg, rgba(254,251,249,0) 0%, rgba(254,251,249,0.5) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+			@media (max-width: $sp-width) {
+				display: none;
+			}
+		}
+	}
+	.event-log__wrapper {
+		max-height: 30rem;
+		overflow-y: scroll;
+		margin-bottom: 0;
+		@media (max-width: $sp-width) {
+			max-height: inherit;
+		}
+		li:last-child {
+			margin-bottom: 2rem;
+		}
 	}
 }
 

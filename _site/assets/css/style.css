@@ -281,6 +281,28 @@ blockquote {
 .list__dl .btn {
   margin: 0.8rem 0;
 }
+.list__faq dt, .list__faq dd {
+  padding-left: 2rem;
+  position: relative;
+}
+.list__faq dt::before, .list__faq dd::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #37807a;
+  width: 1em;
+  height: 1em;
+}
+.list__faq dt:not(:first-child) {
+  margin-top: 2rem;
+}
+.list__faq dt::before {
+  content: "Q";
+}
+.list__faq dd::before {
+  content: "A";
+}
 
 .bg__primary {
   background-color: rgba(72, 66, 59, 0.1);
@@ -331,6 +353,20 @@ blockquote {
   text-align: right;
 }
 
+.book-tab__wrapper {
+  position: relative;
+}
+.book-tab__wrapper::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+  height: 100%;
+  background: transparent linear-gradient(90deg, rgba(254, 251, 249, 0) 0%, rgb(254, 251, 249) 50%, rgb(254, 251, 249) 100%) 0% 0% no-repeat padding-box;
+}
+
 .book-tab {
   display: flex;
   flex-wrap: nowrap;
@@ -363,6 +399,9 @@ blockquote {
 .book-tab__item img.book-image--small {
   width: 15rem;
 }
+.book-tab__item:last-child {
+  margin-right: 3rem;
+}
 
 .book-info__header {
   display: flex;
@@ -385,6 +424,60 @@ blockquote {
   font-weight: bold;
 }
 
+.novel-list__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+}
+.novel-list__wrapper .novel-list__section {
+  width: 50%;
+}
+.novel-list__wrapper .novel-list__section:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.novel-list__wrapper .novel-list__title {
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+.novel-list__wrapper .novel-list__catchcopy {
+  font-size: 0.8em;
+  opacity: 0.5;
+}
+
+.form {
+  max-width: 60rem;
+}
+.form__label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.form__label-txt {
+  font-size: 1.3rem;
+  display: block;
+}
+.form .btn {
+  margin-bottom: 1.5rem;
+}
+.form input, .form select, .form textarea {
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid #29605c;
+}
+@media (max-width: 767px) {
+  .form input, .form select, .form textarea {
+    font-size: 1.6rem;
+  }
+}
+.form input, .form select {
+  min-height: 3rem;
+  padding: 0.5rem 1rem;
+}
+.form textarea {
+  height: 10em;
+  padding: 1rem;
+}
+
 .home__firstview {
   width: 100%;
   height: auto;
@@ -397,6 +490,9 @@ blockquote {
   background-color: #fefbf9;
   padding: 4rem 0;
   z-index: 10;
+}
+.home__firstview-txt .logo__image {
+  margin-bottom: 1.5rem;
 }
 .home__firstview-image {
   position: absolute;
@@ -559,6 +655,37 @@ blockquote {
   font-weight: normal;
   font-size: 2.4rem;
   margin-right: 1em;
+}
+.page .scroll__wrapper {
+  position: relative;
+}
+.page .scroll__wrapper::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  background: transparent linear-gradient(180deg, rgba(254, 251, 249, 0) 0%, rgba(254, 251, 249, 0.5) 50%, rgb(254, 251, 249) 100%) 0% 0% no-repeat padding-box;
+}
+@media (max-width: 767px) {
+  .page .scroll__wrapper::after {
+    display: none;
+  }
+}
+.page .event-log__wrapper {
+  max-height: 30rem;
+  overflow-y: scroll;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .page .event-log__wrapper {
+    max-height: inherit;
+  }
+}
+.page .event-log__wrapper li:last-child {
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 767px) {

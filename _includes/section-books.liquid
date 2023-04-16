@@ -17,20 +17,22 @@
 2012.11.18刊行（2016.9.4新装版刊行）, 
 2012.11.18刊行（2014.5.10新装版刊行）' | split: ', ' -%}
 <div id="tabBookList">
-  <ul role="tablist" class="book-tab">
-    {%- for book in novels-info-title -%}
-      <li role="presentation" class="book-tab__item">
-        <button
-          role="tab"
-          aria-controls="panel{{ forloop.index }}"
-          aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-          tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
-        >
-          <img src="/assets/img/hyoushi-{{ novels-info-handle[forloop.index0] }}.jpg" alt="{{ book }}表紙イメージ" loading="lazy" width="400" class="book-image--{{ novels-info-size[forloop.index0] }}">
-        </button>
-      </li> 
-    {%- endfor -%}
-  </ul>
+  <div class="book-tab__wrapper">
+    <ul role="tablist" class="book-tab">
+      {%- for book in novels-info-title -%}
+        <li role="presentation" class="book-tab__item">
+          <button
+            role="tab"
+            aria-controls="panel{{ forloop.index }}"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+            tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+          >
+            <img src="/assets/img/hyoushi-{{ novels-info-handle[forloop.index0] }}.jpg" alt="{{ book }}表紙イメージ" loading="lazy" width="400" class="book-image--{{ novels-info-size[forloop.index0] }}">
+          </button>
+        </li> 
+      {%- endfor -%}
+    </ul>
+  </div>
   <div class="book-tab__contents">
     {%- for book in novels-info-title -%}
       <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item book-info">

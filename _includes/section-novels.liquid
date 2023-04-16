@@ -1,0 +1,39 @@
+{%- for novel in collections.novel -%}
+  {%- if novel.data.tags contains 'book-paperplane' -%}
+    {% assign novels-paperplane = novels-paperplane | concat: novel %}
+  {%- elsif novel.data.tags contains 'book-eien' -%}
+    {% assign novels-eien = novels-eien | concat: novel %}
+  {%- elsif novel.data.tags contains 'improvise' -%}
+    {% assign novels-improvise = novels-improvise | concat: novel %}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="novel-list__wrapper">
+  <section class="novel-list__section">
+    <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
+    <ul class="list">
+      {% for novel in novels-paperplane %}
+        <li>
+          <a href="{{ novel.url }}">{{ novel.data.title }}</a>
+          <p class="novel-list__catchcopy">{{ novel.data.catch }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="novel-list__section">
+    <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
+    <ul class="list">
+      {% for novel in novels-eien %}
+        <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="novel-list__section">
+    <h3 class="novel-list__title font-serif">即興小説</h3>
+    <ul class="list">
+      {% for novel in novels-improvise %}
+        <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section> 
+</div>

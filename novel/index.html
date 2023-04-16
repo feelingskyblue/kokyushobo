@@ -1,37 +1,9 @@
 ---
-layout: layout.liquid
+layout: layout-page.liquid
+title: web-novel
+subtitle: 小説を読む
 ---
 
-<section id="webnovel" class="home__section page-width">
-  <header class="home__section-title">
-    <h2 class="heading home__section-heading">web-novel</h2>
-    <p class="home__section-title-txt">小説を読む</p>
-  </header>
-  {%- for novel in collections.novel -%}
-    {%- if novel.data.tags contains 'book-paperplane' -%}
-      {% assign novels-paperplane = novels-paperplane | concat: novel %}
-    {%- elsif novel.data.tags contains 'book-eien' -%}
-      {% assign novels-eien = novels-eien | concat: novel %}
-    {%- elsif novel.data.tags contains 'improvise' -%}
-      {% assign novels-improvise = novels-improvise | concat: novel %}
-    {%- endif -%}
-  {%- endfor -%}
-  <section>
-    <h3>紙飛行機に眠る月</h3>
-    {% for novel in novels-paperplane %}
-      <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-    {% endfor %}
-  </section>
-  <section>
-    <h3>永遠の不在をめぐる</h3>
-    {% for novel in novels-eien %}
-      <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-    {% endfor %}
-  </section>
-  <section>
-    <h3>即興小説</h3>
-    {% for novel in novels-improvise %}
-      <h4><a href="{{ novel.url }}">{{ novel.data.title }}</a></h4>
-    {% endfor %}
-  </section> 
-</section>
+<div id="webnovel">
+  {%- include '_includes/section-novels' -%}
+</div>
