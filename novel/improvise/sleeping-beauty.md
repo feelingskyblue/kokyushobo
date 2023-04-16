@@ -1,5 +1,6 @@
 ---
 title: 不在は悲しみではない。
+permalink: "novel/sleeping-beauty/"
 tags:
   - improvise
   - out-books

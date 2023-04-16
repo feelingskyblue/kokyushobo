@@ -1,5 +1,6 @@
 ---
 title: 昼の光から逃れるために
+permalink: "novel/heavens-hell/"
 tags:
   - improvise
   - book-eien

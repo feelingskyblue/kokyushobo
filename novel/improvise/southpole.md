@@ -1,5 +1,6 @@
 ---
 title: 北極の火
+permalink: "novel/southpole/"
 tags:
   - improvise
   - out-books

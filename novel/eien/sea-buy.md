@@ -1,5 +1,6 @@
 ---
 title: 海を商う
+permalink: "novel/sea-buy/"
 tags:
   - improvise
   - book-eien

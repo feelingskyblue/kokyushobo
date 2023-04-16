@@ -1,5 +1,6 @@
 ---
 title: 夢みる時差のために
+permalink: "novel/dreamtime/"
 tags:
   - improvise
   - book-eien

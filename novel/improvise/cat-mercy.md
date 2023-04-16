@@ -1,5 +1,6 @@
 ---
 title: 自由は罪も赦しも持たない
+permalink: "novel/cat-mercy/"
 tags:
   - improvise
   - out-books

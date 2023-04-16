@@ -1,5 +1,6 @@
 ---
 title: 作家と刑罰
+permalink: "novel/writer-crime/"
 tags:
   - improvise
   - book-eien

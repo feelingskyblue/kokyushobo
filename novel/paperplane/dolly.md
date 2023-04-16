@@ -1,6 +1,8 @@
 ---
 title: 少女ドーリィ
 catch: 人間に、どうか、誰か私を、人間にしてください。
+date: 2012-11-19
+permalink: "novel/dolly/"
 tags:
   - book-paperplane
 ---
