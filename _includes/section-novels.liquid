@@ -8,6 +8,61 @@
   {%- endif -%}
 {%- endfor -%}
 
+<header class="novel-list__category-header">
+  <h3 class="novel-list__title font-serif">長編小説</h3>
+</header>
+<div class="novel-list__wrapper">
+  <section class="novel-list__section is-tree">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">すべての樹木は光：試し読み</h3>
+      <p class="novel-list__description">熱帯雨林の樹木変身譚『すべての樹木は光』より、冒頭の約4万字をWeb上で公開しています。<br>本編は書籍の形で完結済みです。およそ3分の一地点、物語のターニングポイントまでをお読みいただけます。</p>
+      <a href="/book/trees_light" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+    </header>
+    <div class="list novel-list">
+      <article class="novel-list__item">
+        <a href="/book/trees_light/introduction" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">イントロダクション</span></h4>
+          <span class="novel-list__catchcopy">透明な街、うつくしい街、ちょうど日付が変わる頃のこと。</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="/book/trees_light/introduction" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">第一章　歌う雨の町</span></h4>
+          <span class="novel-list__catchcopy">「……この町では鉢植えをベッドに寝かせるの？」</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="/book/trees_light/introduction" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">第二章　あなたは孤独ではない</span></h4>
+          <span class="novel-list__catchcopy">雨音に紛れて歓声が聞こえた。腹の底から歌うような喜びの声だった。</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第三章　言葉のない世界<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">この町に、ゲアの兄のことをはっきりと覚えてる奴は誰もいないんだ。</span>
+        </div>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第四章　楽園の善良な樹木<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">ユハはこの家が好きだった。母の帰りを一人待ち続ける、狭く寂しい首都の家よりも、ずっと。</span>
+        </div>
+      </article>
+            <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">樹木たちは語る<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">そのようにして、魔法は失われた。</span>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<hr>
+<header class="novel-list__category-header">
+  <h3 class="novel-list__title font-serif">掌編・短編小説（一話完結）</h3>
+</header>
 <div class="novel-list__wrapper">
 {% comment %}
   <section class="novel-list__section">
@@ -15,82 +70,44 @@
     <p class="novel-list__description">ランダムなお題を元に15分で執筆する「即興小説トレーニング（2023年サービス終了）」に投稿した掌編の一部を改稿・公開しています。</p>
     <div class="list novel-list">
       {% for novel in novels-improvise %}
-        <article class="novel-list__item">
-          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
-            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
-            <ul class="novel-category">
-              {% for item in novel.data.category %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </a>
-        </article>
+        {%- include '_includes/snipet-novel-item' -%}
       {% endfor %}
     </div>
   </section>
 {% endcomment %}
   <section class="novel-list__section">
-    <h3 class="novel-list__title font-serif">即興小説</h3>
-    <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿・公開しています。<br>ランダムなお題を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">即興小説</h3>
+      <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿したものです。<br>ランダムな“お題”を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
+    </header>
     <div class="list novel-list">
       {% for novel in novels-improvise %}
-        <article class="novel-list__item">
-          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
-            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
-            <ul class="novel-category">
-              {% for item in novel.data.category %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </a>
-        </article>
+        {%- include '_includes/snipet-novel-item' -%}
       {% endfor %}
     </div>
   </section>
   <section class="novel-list__section is-eien">
-    <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
-    <p class="novel-list__description">2015年に刊行した幻想短編集より、即興小説から生まれた4編を公開しています。</p>
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
+      <p class="novel-list__description">2015年に刊行した幻想短編集より、即興小説から生まれた4編を公開しています。</p>
+      <a href="/book/eien" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+    </header>
     <div class="list novel-list">
       {% for novel in novels-eien %}
-        <article class="novel-list__item">
-          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
-            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
-            <ul class="novel-category">
-              {% for item in novel.data.category %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </a>
-        </article>
+        {%- include '_includes/snipet-novel-item' -%}
       {% endfor %}
-      <div class="novel-list__item for-btn">
-        <a href="/book/eien" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
-      </div>
     </div>
   </section>
   <section class="novel-list__section is-paperplane">
-    <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
-    <p class="novel-list__description">呼吸書房の原点、2012年に刊行した短編集です。収録作品の一部を公開しています。</p>
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
+      <p class="novel-list__description">呼吸書房の原点、2012年に刊行した短編集です。収録作品の一部を公開しています。</p>
+      <a href="/book/paperplane" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+    </header>
     <div class="list novel-list">
       {% for novel in novels-paperplane %}
-        <article class="novel-list__item">
-          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
-            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
-            <ul class="novel-category">
-              {% for item in novel.data.category %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </a>
-        </article>
+        {%- include '_includes/snipet-novel-item' -%}
       {% endfor %}
-      <div class="novel-list__item for-btn">
-        <a href="/book/paperplane" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
-      </div>
     </div>
   </section>
 {% comment %}
@@ -99,17 +116,7 @@
     <p class="novel-list__description">依頼を元に執筆した短編、企画作品はこちらからどうぞ。</p>
     <div class="list novel-list">
       {% for novel in novels-improvise %}
-        <article class="novel-list__item">
-          <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
-            <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-            <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
-            <ul class="novel-category">
-              {% for item in novel.data.category %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </a>
-        </article>
+        {%- include '_includes/snipet-novel-item' -%}
       {% endfor %}
     </div>
   </section>

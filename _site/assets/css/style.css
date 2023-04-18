@@ -292,6 +292,11 @@ blockquote {
   display: flex;
   flex-wrap: nowrap;
 }
+@media (max-width: 767px) {
+  .list__flex {
+    flex-wrap: wrap;
+  }
+}
 .list__flex li {
   margin-right: 1em;
 }
@@ -335,6 +340,11 @@ blockquote {
   max-width: 128rem;
   margin: 0 auto;
   padding: 0 4rem;
+}
+@media (max-width: 767px) {
+  .page-width {
+    padding: 0 4.266vw;
+  }
 }
 
 .flex {
@@ -459,9 +469,23 @@ blockquote {
   font-weight: bold;
 }
 
+.novel-list__category-header {
+  margin-bottom: 1rem;
+}
+.novel-list__category-header p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
 .novel-list__item {
-  border-top: 1px solid rgba(72, 66, 59, 0.1);
   position: relative;
+}
+.novel-list__item:not(:first-child) {
+  border-top: 1px solid rgba(72, 66, 59, 0.1);
+}
+@media (max-width: 767px) {
+  .novel-list__item:first-child {
+    border-top: 1px solid rgba(72, 66, 59, 0.1);
+  }
 }
 .novel-list__item-link {
   display: block;
@@ -471,53 +495,63 @@ blockquote {
 .novel-list__item-link:hover {
   background-color: rgba(55, 128, 122, 0.05);
 }
+.novel-list__item-unlink {
+  padding: 1rem;
+}
+.novel-list__item-unlink .novel-list__item-title {
+  color: inherit;
+}
+@media (max-width: 767px) {
+  .novel-list__item-unlink .novel-list__item-title span {
+    border-bottom: none;
+  }
+}
 .novel-list__item-title {
   font-weight: normal;
-  font-size: inherit;
+  font-size: 1.1em;
   margin-bottom: 0;
   color: #29605c;
 }
 .novel-list__item-title span {
   line-height: 1;
 }
-.novel-list__item.for-btn {
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  text-align: right;
-}
-.novel-list__item .btn {
-  font-size: 0.8em;
-}
-.novel-list__item .btn:not(:hover) span {
-  opacity: 0.7;
-}
-.novel-list__wrapper {
-  -moz-column-count: 1;
-       column-count: 1;
+@media (max-width: 767px) {
+  .novel-list__item-title span {
+    border-bottom: 1px solid rgba(41, 96, 92, 0.3);
+  }
 }
 .novel-list__section {
   width: 100%;
-  max-width: 80rem;
-  page-break-inside: avoid;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
   border: 1px solid rgba(55, 128, 122, 0.3);
-  padding: 2rem 2rem 1rem;
+  padding: 1rem 2rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 @media (max-width: 767px) {
   .novel-list__section {
     width: 100%;
+    flex-direction: column;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 1rem 0 2rem 0;
   }
 }
 .novel-list__section:not(:last-child) {
   margin-bottom: 2rem;
 }
 .novel-list__section .novel-list__description {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-size: 0.9em;
   opacity: 0.6;
   line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .novel-list__section .novel-list__description {
+    margin-bottom: 1rem;
+  }
 }
 .novel-list__section::before {
   width: 20rem;
@@ -536,6 +570,54 @@ blockquote {
 .novel-list__section.is-eien::before {
   background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
   background-size: cover;
+}
+.novel-list__section.is-tree::before {
+  background: url("/assets/img/hyoushi-tree.jpg") no-repeat center center;
+  background-size: cover;
+}
+.novel-list__header {
+  width: 30%;
+  min-width: 30rem;
+  flex: none;
+}
+@media (max-width: 767px) {
+  .novel-list__header {
+    width: 100%;
+    min-width: inherit;
+    padding: 1rem;
+  }
+}
+.novel-list__header + .list {
+  flex-grow: 1;
+  margin-right: 2rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(55, 128, 122, 0.2);
+}
+@media (max-width: 767px) {
+  .novel-list__header + .list {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+}
+.novel-list__header .btn {
+  font-size: 0.8em;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+@media (max-width: 767px) {
+  .novel-list__header .btn {
+    top: inherit;
+    right: inherit;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+.novel-list__header .btn:not(:hover) span {
+  opacity: 0.7;
 }
 .novel-list__title {
   font-size: 1.1em;
@@ -696,6 +778,11 @@ blockquote {
   flex-wrap: nowrap;
   font-size: 1.6rem;
 }
+@media (max-width: 767px) {
+  .home__nav-list {
+    flex-wrap: wrap;
+  }
+}
 .home__nav-list li:not(:last-child)::after {
   content: "/";
   opacity: 0.3;
@@ -723,6 +810,12 @@ blockquote {
 .home__section {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+@media (max-width: 767px) {
+  .home__section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 .home__section:not(:last-child):not(:first-child) {
   border-bottom: 1px solid rgba(55, 128, 122, 0.1);
