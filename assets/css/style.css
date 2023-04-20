@@ -965,6 +965,9 @@ blockquote {
     margin: 0 auto;
   }
 }
+.novel.font-serif .novel__body {
+  font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
 .novel__header {
   margin: 8rem 0;
 }

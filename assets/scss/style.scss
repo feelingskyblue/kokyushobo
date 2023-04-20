@@ -846,6 +846,11 @@ blockquote {
 		max-width: 24em;
 		margin: 0 auto;
 	}
+	&.font-serif {
+		.novel__body {
+			font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+		}
+	}
 	&__header {
 		margin: 8rem 0;
 		@media (max-width: $sp-width) {
