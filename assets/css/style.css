@@ -364,11 +364,6 @@ blockquote {
 .main {
   min-height: calc(100dvh - 20rem);
 }
-@media (max-width: 767px) {
-  .main {
-    padding-bottom: 2rem;
-  }
-}
 
 .footer {
   padding: 4rem 0;
@@ -843,6 +838,11 @@ blockquote {
 .home__news-body dt {
   padding-right: 0.5em;
 }
+@media (max-width: 767px) {
+  .home__contents {
+    padding-bottom: 2rem;
+  }
+}
 .home__section {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -880,6 +880,11 @@ blockquote {
   margin-bottom: 2rem;
   padding: 6.5rem 0;
 }
+@media (max-width: 767px) {
+  .random-novel {
+    padding: 4rem 0;
+  }
+}
 .random-novel__item {
   padding-top: 1em;
   max-width: 40em;
@@ -887,6 +892,13 @@ blockquote {
   font-size: 1.6rem;
   line-height: 1.8;
   font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
+@media (max-width: 767px) {
+  .random-novel__item {
+    font-size: min((100vw - 3rem) / 24, 1.6rem);
+    max-width: 24em;
+    margin: 0 auto;
+  }
 }
 .random-novel__item p {
   margin-bottom: 0;
@@ -903,6 +915,11 @@ blockquote {
 
 .page {
   padding: 4rem 0;
+}
+@media (max-width: 767px) {
+  .page {
+    padding: 3rem 0;
+  }
 }
 .page__header {
   display: flex;
@@ -923,6 +940,11 @@ blockquote {
   flex-wrap: nowrap;
   align-items: baseline;
   margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .page__section-title {
+    margin-bottom: 3rem;
+  }
 }
 .page__section-title-txt {
   font-size: 1.3rem;

@@ -269,9 +269,6 @@ blockquote {
 }
 .main {
 	min-height: calc(100dvh -  20rem);
-	@media (max-width: $sp-width) {
-		padding-bottom: 2rem;
-	}
 }
 .footer {
 	padding: 4rem 0;
@@ -734,6 +731,9 @@ blockquote {
 		}
 	}
 	&__contents {
+		@media (max-width: $sp-width) {
+			padding-bottom: 2rem;
+		}
 	}
 	&__section {
 		padding-top: 4rem;
@@ -769,6 +769,9 @@ blockquote {
 .random-novel {
 	margin-bottom: 2rem;
 	padding: 6.5rem 0;
+	@media (max-width: $sp-width) {
+		padding: 4rem 0;
+	}
 	&__item {
 		padding-top: 1em;
 		max-width: 40em;
@@ -776,6 +779,11 @@ blockquote {
 		font-size: 1.6rem;
 		line-height: 1.8;	
 		font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+		@media (max-width: $sp-width) {
+			font-size: min(calc((100vw - 3rem)/24), 1.6rem);
+			max-width: 24em;
+			margin: 0 auto;
+		}
 		p {
 			margin-bottom: 0;
 			&::before {
@@ -794,6 +802,9 @@ blockquote {
 // 下層ページ
 .page {
 	padding: 4rem 0;
+	@media (max-width: $sp-width) {
+		padding: 3rem 0;
+	}
 	&__header {
 		@include flexCentering;
 		padding: 1rem 0;
@@ -809,6 +820,9 @@ blockquote {
 		@include flex;
 		align-items: baseline;
 		margin-bottom: 2rem;
+		@media (max-width: $sp-width) {
+			margin-bottom: 3rem;
+		}
 		&-txt {
 			font-size: 1.3rem;
 			opacity: 0.8;
