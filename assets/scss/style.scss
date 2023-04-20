@@ -767,12 +767,27 @@ blockquote {
 	}
 }
 .random-novel {
-	padding: 6.5rem 4rem;
-	&__inner {
-		max-width: 42em;
+	margin-bottom: 2rem;
+	padding: 6.5rem 0;
+	&__item {
+		padding-top: 1em;
+		max-width: 40em;
 		margin: 0 auto;
-		font-size: 1.5rem;
-		line-height: 1.8;
+		font-size: 1.6rem;
+		line-height: 1.8;	
+		font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+		p {
+			margin-bottom: 0;
+			&::before {
+				content: "";
+				width: 1em;
+				height: 1em;
+				display: inline-block;
+			}
+		}
+	}
+	&__footer {
+		text-align: right;
 	}
 }
 

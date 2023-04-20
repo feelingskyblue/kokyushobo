@@ -72,3 +72,17 @@ function tab(wrapperId) {
 
 // Execute function
 tab('tabBookList');
+
+/**
+ * Random Novel Show
+ */
+function randomNovel() {
+  const target = document.getElementById('randomNovel');
+  if(target) {
+    const novels = target.querySelectorAll('.random-novel__item'),
+          total = novels.length;
+    let randomNum = Math.floor( Math.random() * total );
+    novels[randomNum].classList.remove('hidden');
+  }
+}
+randomNovel();

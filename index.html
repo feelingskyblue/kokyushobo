@@ -53,13 +53,8 @@ layout: layout.liquid
       <p>これまでに制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p>
       {%- include '_includes/section-books' -%}
     </section>
-    <section class="random-novel bg__secondary">
-      <div class="random-novel__inner font-serif">
-        <p>
-          　夜が明けると、村に人間は一人もいなかった。少年は、昨日まで人間だった蛾や蝙蝠や蛙の群れを引き連れて、森の奥へ帰っていった。彼らを近くの水辺に放し、昨日まで人間だった様々な種は、すべて母の根元に蒔いた。やがて、その一帯は花が咲き乱れ、蜜に誘われた鳥や獣の歌声で、いつまでも賑わうようになったという。<br>
-          　夜が明けると、村に人間は一人もいなかった。少年は、昨日まで人間だった蛾や蝙蝠や蛙の群れを引き連れて、森の奥へ帰っていった。彼らを近くの水辺に放し、昨日まで人間だった様々な種は、すべて母の根元に蒔いた。やがて、その一帯は花が咲き乱れ、蜜に誘われた鳥や獣の歌声で、いつまでも賑わうようになったという。（ランダムピックアップ）<a href="">続きを読む</a>
-        </p>
-      </div>
+    <section id="randomNovel" class="random-novel bg__secondary">
+      {%- include '_includes/snipet-novel-random' -%} 
     </section>
     <section id="webnovel" class="home__section">
       <div class="page-width">

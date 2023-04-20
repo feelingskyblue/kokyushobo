@@ -877,13 +877,28 @@ blockquote {
 }
 
 .random-novel {
-  padding: 6.5rem 4rem;
+  margin-bottom: 2rem;
+  padding: 6.5rem 0;
 }
-.random-novel__inner {
-  max-width: 42em;
+.random-novel__item {
+  padding-top: 1em;
+  max-width: 40em;
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.8;
+  font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
+.random-novel__item p {
+  margin-bottom: 0;
+}
+.random-novel__item p::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+.random-novel__footer {
+  text-align: right;
 }
 
 .page {
