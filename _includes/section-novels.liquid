@@ -8,6 +8,7 @@
   {%- endif -%}
 {%- endfor -%}
 
+{% comment %}
 <header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">長編小説</h3>
 </header>
@@ -58,8 +59,8 @@
     </div>
   </section>
 </div>
-
 <hr>
+{% endcomment %}
 <header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">掌編・短編小説（一話完結）</h3>
 </header>
@@ -75,7 +76,7 @@
     </div>
   </section>
 {% endcomment %}
-  <section class="novel-list__section">
+  <section class="novel-list__section" id="novelImprovise">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">即興小説</h3>
       <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿したものです。<br>ランダムな“お題”を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
@@ -86,7 +87,7 @@
       {% endfor %}
     </div>
   </section>
-  <section class="novel-list__section is-eien">
+  <section class="novel-list__section is-eien" id="novelEien">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
       <p class="novel-list__description">2015年に刊行した幻想短編集より、即興小説から生まれた4編を公開しています。</p>
@@ -98,7 +99,7 @@
       {% endfor %}
     </div>
   </section>
-  <section class="novel-list__section is-paperplane">
+  <section class="novel-list__section is-paperplane" id="novelPaperplane">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
       <p class="novel-list__description">呼吸書房の原点、2012年に刊行した短編集です。収録作品の一部を公開しています。</p>
@@ -110,16 +111,54 @@
       {% endfor %}
     </div>
   </section>
-{% comment %}
-  <section class="novel-list__section">
-    <h3 class="novel-list__title font-serif">寄稿・企画など</h3>
-    <p class="novel-list__description">依頼を元に執筆した短編、企画作品はこちらからどうぞ。</p>
+  <section class="novel-list__section" id="novelRequest">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">寄稿・企画など</h3>
+      <p class="novel-list__description">ご依頼を元に執筆した短編、企画作品です。<br>外部サイト掲載作品は別タブでリンクが開きます。</p>
+    </header>
     <div class="list novel-list">
-      {% for novel in novels-improvise %}
-        {%- include '_includes/snipet-novel-item' -%}
-      {% endfor %}
+      <article class="novel-list__item">
+        <a href="https://note.com/miraizmag/n/n0602dbda4875" target="_blank" rel="noopenner noreferrer" class="unstyle novel-list__item-link" >
+          <h4 class="novel-list__item-title"><span class="font-serif">Rihlaの頁が尽きるまで</span></h4>
+          <span class="novel-list__catchcopy">サハラ砂漠の片隅に、本まみれの変な安宿があるらしい。</span>
+          <ul class="novel-category">
+            <li>SF</li>
+            <li>幻想</li>
+            <li>依頼テーマ「未来の紀行文」</li>
+          </ul>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="/novel/plum" class="unstyle novel-list__item-link" >
+          <h4 class="novel-list__item-title"><span class="font-serif">幽霊を贈る</span></h4>
+          <span class="novel-list__catchcopy">昨日伐採した梅の木が、変わらず庭に立っている。</span>
+          <ul class="novel-category">
+            <li>幻想</li>
+            <li>依頼テーマ「花芽」</li>
+          </ul>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="https://libsy.net/komachi2023/un-bon-souvenir" target="_blank" rel="noopenner noreferrer" class="unstyle novel-list__item-link" >
+          <h4 class="novel-list__item-title"><span class="font-serif">un bon souvenir</span></h4>
+          <span class="novel-list__catchcopy">ほんとうはヨーロッパに行ってみたかったんだ。</span>
+          <ul class="novel-category">
+            <li>夢小説</li>
+            <li>お誕生日お祝い寄稿</li>
+          </ul>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="https://atsea.day/blogs/journal/novel_01" target="_blank" rel="noopenner noreferrer" class="unstyle novel-list__item-link" >
+          <h4 class="novel-list__item-title"><span class="font-serif">やさしい汽笛の鳴り響く</span></h4>
+          <span class="novel-list__catchcopy">昔からくりかえし見る夢がある。静まり返った大海原を、ひとりきりで歩く夢。</span>
+          <ul class="novel-category">
+            <li>夢</li>
+            <li>幻想</li>
+          </ul>
+        </a>
+      </article>
     </div>
   </section>
-{% endcomment %}
 
 </div>

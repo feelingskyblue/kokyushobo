@@ -1,0 +1,32 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+
+<article class="novel font-serif">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  {% comment %}
+    マウス動かしたらメニュー表示させたい　stoneぽく
+  {% endcomment %}
+  <div>
+    <p>以前には、この他人への心配りこそが彼の誇りだった。<br>
+    フランツ・カフカ『変身』</p>
+    <p>どうしてもどうしてもさびしくてたまらないときは<br>
+    ひとはみんなきっとこういうことになる<br>
+    きみたちとけふあうことができたので<br>
+    わたくしはこの巨きな旅のなかの一つづりから<br>
+    血みどろになって遁げなくてもいいのです<br>
+    宮沢賢治『小岩井農場　パート九』</p>
+{% comment %}
+スクロールで背景色の変わる仕組みを入れたいな。。
+ふむ、画像も置けるね　とはいえこのへんは専用レイアウトファイルにしてあげたいかな。。
+<img class="" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
+{% endcomment %}
+  </div>
+  <div class="novel__body">{{ content }}</div>
+  <div class="novel__footer">
+    <a href="/">TOPへ戻る</a>
+  </div>
+</article>
