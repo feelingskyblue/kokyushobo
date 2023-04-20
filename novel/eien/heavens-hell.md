@@ -2,6 +2,7 @@
 title: 昼の光から逃れるために
 permalink: "novel/heavens-hell/"
 catch: 天国の片隅には秘密のプラネタリウムがある。
+description: 天国の片隅には秘密のプラネタリウムがある。小ぶりなテントの中に設えられた座席の数は全部で六つ、上映回ごとにいつもあっという間に満席になる。
 improvise_theme: 昼間のパラダイス
 date: 2015-11-26
 category:

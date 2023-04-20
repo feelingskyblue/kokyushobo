@@ -2,6 +2,7 @@
 layout: layout-novel_tree.liquid
 title: すべての樹木は光｜冒頭試し読み
 permalink: "book/trees_light/introduction"
+description: 透明な街、うつくしい街、ちょうど日付が変わる頃のこと。休日を前に、人々は浮き足だっていた。ショーウィンドウを楽しげに覗く二人連れ、大声で笑いあう仕事帰りの酔っ払い、クラクションに追い散らされる行儀の悪い学生たち。
 tags:
   - book-treeslight
 ---
