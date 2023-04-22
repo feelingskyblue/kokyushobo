@@ -10,7 +10,7 @@ template: plainPage
     <a href="/" class="page__header--link link--unstyle"><img src="/assets/img/logo.png" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></a>
   </header>
   {% endcomment %}
-  <section class="page__wrapper">
+  <section class="page__wrapper" data-shadow="{{ boxshadow | default: false }}">
     <header class="page__section-title page-width">
       <h1 class="heading page__section-heading">{{ title }}</h1>
       <p class="page__section-title-txt">{{ subtitle }}</p>

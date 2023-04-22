@@ -208,9 +208,13 @@ a:not(.unstyle):hover {
 
 .heading--primary {
   font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 .heading--secondary {
   font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 .heading--color {
   color: #37807a;
@@ -659,7 +663,7 @@ blockquote {
 .novel-list__catchcopy {
   display: block;
   font-size: 0.9em;
-  opacity: 0.5;
+  opacity: 0.8;
   margin-bottom: 0;
   line-height: 1.5;
 }
@@ -824,6 +828,9 @@ blockquote {
   flex-wrap: nowrap;
   align-items: center;
 }
+.home__news + .home__news {
+  margin-top: 2rem;
+}
 .home__news .heading::after {
   content: "｜";
   opacity: 0.3;
@@ -856,9 +863,6 @@ blockquote {
 .home__section:not(:last-child):not(:first-child) {
   border-bottom: 1px solid rgba(55, 128, 122, 0.1);
 }
-.home__section__innner-sub {
-  padding-left: 1em;
-}
 .home__section-title {
   display: flex;
   flex-wrap: nowrap;
@@ -890,7 +894,7 @@ blockquote {
   max-width: 40em;
   margin: 0 auto;
   font-size: 1.6rem;
-  line-height: 1.8;
+  line-height: 2;
   font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
 }
 @media (max-width: 767px) {
@@ -913,12 +917,25 @@ blockquote {
   text-align: right;
 }
 
-.page {
+.page__wrapper {
   padding: 4rem 0;
 }
 @media (max-width: 767px) {
-  .page {
+  .page__wrapper {
     padding: 3rem 0;
+  }
+}
+.page__wrapper[data-shadow=true] {
+  max-width: 70rem;
+  margin-bottom: 4rem;
+  padding-right: 2rem;
+  box-shadow: 0 -5rem 5rem rgba(72, 66, 59, 0.1);
+}
+@media (max-width: 767px) {
+  .page__wrapper[data-shadow=true] {
+    padding-right: 0;
+    box-shadow: none;
+    margin-bottom: 2rem;
   }
 }
 .page__header {
@@ -986,6 +1003,9 @@ blockquote {
 }
 .page .event-log__wrapper li:last-child {
   margin-bottom: 2rem;
+}
+.page .text__wrapper {
+  max-width: 70rem;
 }
 
 .novel {

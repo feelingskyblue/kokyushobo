@@ -1,7 +1,30 @@
 ---
-layout: layout.liquid
+layout: layout-page.liquid
+title: about
+subtitle: このサイトについて
+description: 呼吸書房のイベント情報ページです。出店予定のイベントと、過去に出店したイベントのログをまとめています。
+boxshadow: true
 ---
 
-<section>
-  aboutページだよぉ
-</section>
+<div id="about">
+
+  <p>呼吸書房へようこそ。<br>此処は、私、風野湊による作品を公開するためのサイトです。<br>小説を中心に、詩や紀行文、旅先の写真、朗読音声などをお楽しみいただけます。<br>路上で本棚と出会ったときのように、どうかひととき足と手を休め、作品とともに時間を過ごして頂けたら嬉しいです。</p>
+  <p>作品情報に加え、各地でのイベント出店情報なども本サイト上で掲載しています。<br>もし、いつかどこかでお会いできたら、ぜひ書籍をお手に取って頂けますように。</p>
+
+  <hr>
+  <div class="text__wrapper">
+    <section>
+      <h2 class="heading--primary heading--color">attention</h2>
+      <p>当サイト kokyusyobo.com および、当サイトに掲載されているコンテンツ（小説・文章・写真・その他すべて）の著作権は、私、風野湊に帰属いたします。<br>当サイト上コンテンツの一部または全てを、引用の範囲を越えて無断で転載することはお止めください。<br>また、画像URLの直リンクもご遠慮ください。<br>
+        （※書籍の表紙装画など、私以外の方が制作された作品については、その方に著作権があります。TOPページおよび書籍情報ページにお名前とリンクをクレジットしているので、ぜひご覧ください）</p>
+    </section>
+  </div>
+  <hr>
+    <section>
+      <h2 class="heading--primary heading--color">profile</h2>
+      <p>ペンネーム：風野 湊（かざの みなと）。1990年4月29日生。<br>旅先で猫を愛でつつ読書に耽れたら幸福。<br>バックパックにかならず詰めるのは、宮沢賢治詩集、長田弘紀行文、P.ロスファス『風の名前』。<br>執筆のお供はポメラDM20からMacBook Airに変わりました。書きつづけています。</p>
+      <h3 class="heading--default">I'm here.</h3>
+      {%- include '_includes/snipet-sns-list' -%}  
+    </section>
+  
+</div>

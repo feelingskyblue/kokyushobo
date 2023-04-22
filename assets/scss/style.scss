@@ -107,9 +107,13 @@ a:not(.unstyle):hover {
 .heading {
 	&--primary {
 		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+		font-weight: normal;
 	}
 	&--secondary {
 		font-size: 1.6rem;
+		margin-bottom: 0.5rem;
+		font-weight: normal;
 	}
 	&--color {
 		color: $keyColor;
@@ -548,12 +552,9 @@ blockquote {
 	&__catchcopy {
 		display: block;
 		font-size: 0.9em;
-		opacity: 0.5;
+		opacity: 0.8;
 		margin-bottom: 0;
 		line-height: 1.5;
-		@media (max-width: $sp-width) {
-			//margin-bottom: 0.5rem;
-		}
 	}
 	.novel-category {
 		font-size: 0.8em;
@@ -716,6 +717,9 @@ blockquote {
 	&__news {
 		@include flex;
 		align-items: center;
+		& + .home__news {
+			margin-top: 2rem;
+		}
 		.heading::after {
 			content: "｜";
 			opacity: 0.3;
@@ -746,9 +750,6 @@ blockquote {
 			//margin-top: 6.5rem;
 			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.1);
 		}
-		&__innner-sub {
-			padding-left: 1em;
-		}
 	}
 	&__section-title {
 		@include flex;
@@ -777,7 +778,7 @@ blockquote {
 		max-width: 40em;
 		margin: 0 auto;
 		font-size: 1.6rem;
-		line-height: 1.8;	
+		line-height: 2;	
 		font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
 		@media (max-width: $sp-width) {
 			font-size: min(calc((100vw - 3rem)/24), 1.6rem);
@@ -801,9 +802,22 @@ blockquote {
 
 // 下層ページ
 .page {
-	padding: 4rem 0;
-	@media (max-width: $sp-width) {
-		padding: 3rem 0;
+	&__wrapper {
+		padding: 4rem 0;
+		@media (max-width: $sp-width) {
+			padding: 3rem 0;
+		}
+		&[data-shadow="true"] {
+			max-width: 70rem;
+			margin-bottom: 4rem;
+			padding-right: 2rem;
+			box-shadow: 0 -5rem 5rem rgba($color: #48423b, $alpha: 0.1);
+			@media (max-width: $sp-width) {
+				padding-right: 0;
+				box-shadow: none;
+				margin-bottom: 2rem;
+			}
+		}
 	}
 	&__header {
 		@include flexCentering;
@@ -860,6 +874,9 @@ blockquote {
 		li:last-child {
 			margin-bottom: 2rem;
 		}
+	}
+	.text__wrapper {
+		max-width: 70rem;
 	}
 }
 
