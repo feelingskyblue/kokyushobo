@@ -301,11 +301,8 @@ blockquote {
 .list__flex {
   display: flex;
   flex-wrap: nowrap;
-}
-@media (max-width: 767px) {
-  .list__flex {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
+  row-gap: 1rem;
 }
 .list__flex li {
   margin-right: 1em;
@@ -480,10 +477,6 @@ blockquote {
 }
 .book-info__page-wrapper .book-info__content {
   width: 60%;
-}
-.book-info .list__flex {
-  flex-wrap: wrap;
-  row-gap: 1rem;
 }
 .book-info__header {
   display: flex;

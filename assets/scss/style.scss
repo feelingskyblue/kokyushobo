@@ -198,9 +198,8 @@ blockquote {
 	}
 	&__flex {
 		@include flex;
-		@media (max-width: $sp-width) {
-			flex-wrap: wrap;
-		}
+		flex-wrap: wrap;
+		row-gap: 1rem;
 		li {
 			margin-right: 1em;
 		}
@@ -373,10 +372,6 @@ blockquote {
 		.book-info__content {
 			width: 60%;
 		}
-	}
-	.list__flex {
-		flex-wrap: wrap;
-		row-gap: 1rem
 	}
 	&__header {
 		@include flex;
