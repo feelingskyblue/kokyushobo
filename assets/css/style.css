@@ -124,7 +124,8 @@ body {
   color: #181614;
   font-family: Cochin, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 1.4rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
   -webkit-text-size-adjust: none;
   touch-action: none !important;
   -webkit-font-smoothing: antialiased;
@@ -209,7 +210,6 @@ a:not(.unstyle):hover {
 .heading--primary {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  font-weight: normal;
 }
 .heading--secondary {
   font-size: 1.6rem;
@@ -222,6 +222,7 @@ a:not(.unstyle):hover {
 .heading--default {
   font-size: 1.4rem;
   font-weight: normal;
+  line-height: 1.8;
 }
 
 .btn {
@@ -388,13 +389,13 @@ blockquote {
 }
 .footer .logo__image {
   margin-left: auto;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 @media (max-width: 767px) {
   .footer .logo__image {
     width: 12rem;
     height: auto;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.8rem;
   }
 }
 .footer__nav-list {
@@ -416,6 +417,7 @@ blockquote {
 }
 .footer__info {
   text-align: right;
+  line-height: 1.3;
 }
 
 .book-tab__wrapper {
@@ -971,7 +973,26 @@ blockquote {
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.page__section-title::before, .page__section-title::after {
+  content: "";
+  width: calc(100% - 8rem);
+  height: 1px;
+  display: block;
+  position: absolute;
+  left: 4rem;
+  background-color: #37807a;
+  opacity: 0.5;
+}
+.page__section-title::before {
+  top: 0;
+}
+.page__section-title::after {
+  bottom: 0;
 }
 @media (max-width: 767px) {
   .page__section-title {
@@ -981,6 +1002,16 @@ blockquote {
 .page__section-title-txt {
   font-size: 1.3rem;
   opacity: 0.8;
+}
+.page-txt__wrapper {
+  margin-top: 4rem;
+}
+.page-txt__wrapper.for-profile {
+  padding-top: 4rem;
+  border-top: 1px solid #37807a;
+}
+.page-txt__wrapper .logo__image {
+  margin: 1rem 0;
 }
 .page__section-heading {
   color: #37807a;
@@ -1019,8 +1050,28 @@ blockquote {
 .page .event-log__wrapper li:last-child {
   margin-bottom: 2rem;
 }
-.page .text__wrapper {
-  max-width: 70rem;
+.page .twitter__wrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #37807a;
+  width: 75%;
+  opacity: 0.9;
+}
+@media (max-width: 767px) {
+  .page .twitter__wrapper {
+    width: 100%;
+  }
+}
+.page .fleet__wrapper {
+  font-size: 0.9em;
+  margin-top: 4rem;
+  width: 75%;
+  opacity: 0.9;
+}
+@media (max-width: 767px) {
+  .page .fleet__wrapper {
+    width: 100%;
+  }
 }
 
 .novel {
@@ -1057,6 +1108,9 @@ blockquote {
     font-size: 1.3em;
     text-align: center;
   }
+}
+.novel__body {
+  letter-spacing: 0;
 }
 .novel__body h1, .novel__body h2, .novel__body h3, .novel__body h4, .novel__body h5, .novel__body h6 {
   font-weight: normal;
