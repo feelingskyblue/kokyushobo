@@ -36,6 +36,15 @@
     <meta name="twitter:site" content="@feelingskyblue" />
     <meta name="twitter:description" content="透明な街、うつくしい街、ちょうど日付が変わる頃のこと。休日を前に、人々は浮き足だっていた。ショーウィンドウを楽しげに覗く二人連れ、大声で笑いあう仕事帰りの酔っ払い、クラクションに追い散らされる行儀の悪い学生たち。穏やかな夜風がビルとアスファルトと雑踏の匂いを運び去る。群衆の声に掻き消され、足音はよく聞こえないかもしれない。ただ、その音に土の気配がないことだけは分かるはずだ。" />
     <meta name="twitter:image:src" content="/assets/img/ogp.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-08Z4HYPJRN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-08Z4HYPJRN');
+    </script>
   </head>
 
   <body class="novelPage">
