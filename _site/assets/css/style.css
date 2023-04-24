@@ -536,7 +536,7 @@ blockquote {
 }
 @media (max-width: 767px) {
   .novel-list__item-link {
-    padding: 1rem 0;
+    padding: 1rem 0.5rem;
   }
 }
 .novel-list__item-link:hover {
@@ -761,11 +761,28 @@ blockquote {
 }
 @media (max-width: 767px) {
   .home__firstview-txt {
-    padding: 2em 0;
+    padding: 2rem 0 8rem;
+  }
+}
+.home__firstview-txt .logo__wrapper {
+  position: absolute;
+  right: 4rem;
+  bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .home__firstview-txt .logo__wrapper {
+    bottom: 0.5rem;
+    right: 4.266vw;
   }
 }
 .home__firstview-txt .logo__image {
   margin-bottom: 1.5rem;
+}
+@media (max-width: 767px) {
+  .home__firstview-txt .logo__image {
+    width: 12rem;
+    height: auto;
+  }
 }
 .home__firstview-image {
   position: absolute;
