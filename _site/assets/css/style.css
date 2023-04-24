@@ -974,6 +974,8 @@ blockquote {
 @media (max-width: 767px) {
   .random-novel {
     padding: 4rem 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 }
 .random-novel__item {
