@@ -74,15 +74,16 @@ function tab(wrapperId) {
 tab('tabBookList');
 
 /**
- * Random Novel Show
+ * Random Show
  */
-function randomNovel() {
-  const target = document.getElementById('randomNovel');
+function randomShow(targetId, targetItem) {
+  const target = document.getElementById(targetId);
   if(target) {
-    const novels = target.querySelectorAll('.random-novel__item'),
-          total = novels.length;
+    const itemArray = target.querySelectorAll(targetItem),
+          total = itemArray.length;
     let randomNum = Math.floor( Math.random() * total );
-    novels[randomNum].classList.remove('hidden');
+    itemArray[randomNum].classList.remove('hidden');
   }
 }
-randomNovel();
+randomShow('randomNovel', '.random-novel__item');
+randomShow('homeFirstView', '.home__firstview-item');

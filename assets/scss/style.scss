@@ -104,6 +104,9 @@ a:not(.unstyle):hover {
 .font-serif {
 	font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
+.font-serif-jp {
+	font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
 
 .heading {
 	&--primary {
@@ -663,13 +666,17 @@ blockquote {
 			z-index: 6;
 			opacity: 0.7;
 			font-size: 1.2rem;
+			a {
+				color: $bgColor;
+				border-color: $bgColor;
+			}
 		}
 		&::before {
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			background: transparent linear-gradient(180deg, #00000033 0%, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
-			opacity: 0.5;
+			opacity: 0.6;
 			top: 0;
 			left: 0;
 			content: "";
@@ -686,6 +693,7 @@ blockquote {
 			a {
 				color: $bgColor;
 				font-size: 1.8rem;
+				border-color: $bgColor;
 				span {
 					font-size: 1.2rem;
 				}
