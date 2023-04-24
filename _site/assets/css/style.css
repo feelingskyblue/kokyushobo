@@ -1101,8 +1101,21 @@ blockquote {
   padding-top: 4rem;
   border-top: 1px solid #37807a;
 }
-.page-txt__wrapper .logo__image {
+.page-txt__wrapper .logo__wrapper-outline {
+  width: 50%;
+  display: block;
+  padding: 2rem;
   margin: 1rem 0;
+  border: 1px solid rgba(55, 128, 122, 0.3);
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .page-txt__wrapper .logo__wrapper-outline {
+    width: 100%;
+  }
+}
+.page-txt__wrapper .logo__image {
+  margin: 0 auto;
 }
 .page__section-heading {
   color: #37807a;

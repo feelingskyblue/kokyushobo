@@ -945,8 +945,19 @@ blockquote {
 			padding-top: 4rem;
 			border-top: 1px solid $keyColor;
 		}
-		.logo__image {
+		.logo__wrapper-outline {
+			width: 50%;
+			display: block;
+			padding: 2rem;
 			margin: 1rem 0;
+			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			text-align: center;
+			@media (max-width: $sp-width) {
+				width: 100%;
+			}
+		}
+		.logo__image {
+			margin: 0 auto;
 		}
 	}
 	&__section-heading {
