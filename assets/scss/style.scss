@@ -808,8 +808,7 @@ blockquote {
 			padding-bottom: 2rem;
 		}
 		&:not(:last-child):not(:first-child) {
-			//margin-top: 6.5rem;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
 		}
 	}
 	&__section-title {
@@ -830,7 +829,6 @@ blockquote {
 }
 .random-novel {
 	margin-top: 2rem;
-	margin-bottom: 2rem;
 	padding: 6.5rem 0;
 	@media (max-width: $sp-width) {
 		padding: 4rem 0;

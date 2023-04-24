@@ -41,9 +41,6 @@ layout: layout.liquid
       <p>これまでに執筆・制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p>
       {%- include '_includes/section-books' -%}
     </section>
-    <section id="randomNovel" class="random-novel bg__secondary">
-      {%- include '_includes/snipet-novel-random' -%} 
-    </section>
     <section id="webnovel" class="home__section">
       <div class="page-width">
         <header class="home__section-title">
@@ -52,6 +49,9 @@ layout: layout.liquid
         </header>
         {%- include '_includes/section-novels' -%}  
       </div>
+    </section>
+    <section id="randomNovel" class="random-novel bg__secondary">
+      {%- include '_includes/snipet-novel-random' -%} 
     </section>
     <section class="home__section page-width">
       <header class="home__section-title">
