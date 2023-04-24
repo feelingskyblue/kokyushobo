@@ -127,7 +127,6 @@ body {
   line-height: 1.8;
   letter-spacing: 0.02em;
   -webkit-text-size-adjust: none;
-  touch-action: none !important;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -209,6 +208,10 @@ a:not(.unstyle):hover {
 
 .font-serif-jp {
   font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
+
+.font-sansserif-jp {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .heading--primary {
@@ -526,6 +529,11 @@ blockquote {
   padding: 1rem;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 767px) {
+  .novel-list__item-link {
+    padding: 1rem 0;
+  }
+}
 .novel-list__item-link:hover {
   background-color: rgba(55, 128, 122, 0.05);
 }
@@ -618,7 +626,7 @@ blockquote {
   .novel-list__header {
     width: 100%;
     min-width: inherit;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 }
 .novel-list__header + .list {
@@ -732,7 +740,12 @@ blockquote {
   width: 100%;
   height: auto;
   position: relative;
-  padding-top: 15vh;
+  padding-top: 15dvh;
+}
+@media (max-width: 767px) {
+  .home__firstview {
+    padding-top: 4rem;
+  }
 }
 .home__firstview-txt {
   width: 100%;
@@ -740,6 +753,11 @@ blockquote {
   background-color: #fefbf9;
   padding: 4rem 0;
   z-index: 10;
+}
+@media (max-width: 767px) {
+  .home__firstview-txt {
+    padding: 2em 0;
+  }
 }
 .home__firstview-txt .logo__image {
   margin-bottom: 1.5rem;
@@ -774,6 +792,12 @@ blockquote {
   opacity: 0.7;
   font-size: 1.2rem;
 }
+@media (max-width: 767px) {
+  .home__firstview-image figcaption {
+    left: initial;
+    right: 2rem;
+  }
+}
 .home__firstview-image figcaption a {
   color: #fefbf9;
   border-color: #fefbf9;
@@ -797,6 +821,21 @@ blockquote {
   color: #fefbf9;
   z-index: 10;
   font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  .home__firstview-image__txt {
+    margin: 3rem auto 0;
+    padding-bottom: calc(4rem + 1.5em);
+    width: 91.468vw;
+  }
+}
+.home__firstview-image__txt .home__firstview-morelink {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .home__firstview-image__txt .home__firstview-morelink {
+    text-align: left;
+  }
 }
 .home__firstview-image__txt a {
   color: #fefbf9;
@@ -845,6 +884,12 @@ blockquote {
   flex-wrap: nowrap;
   align-items: center;
   font-size: 1.3rem;
+}
+@media (max-width: 767px) {
+  .home__news-body {
+    display: block;
+    font-size: 1.25rem;
+  }
 }
 .home__news-body dt {
   padding-right: 0.5em;
@@ -990,6 +1035,12 @@ blockquote {
   background-color: #37807a;
   opacity: 0.5;
 }
+@media (max-width: 767px) {
+  .page__section-title::before, .page__section-title::after {
+    width: calc(100% - 8.532vw);
+    left: 4.266vw;
+  }
+}
 .page__section-title::before {
   top: 0;
 }
@@ -1047,6 +1098,7 @@ blockquote {
 @media (max-width: 767px) {
   .page .event-log__wrapper {
     max-height: inherit;
+    overflow: auto;
   }
 }
 .page .event-log__wrapper li:last-child {
@@ -1158,9 +1210,6 @@ blockquote {
 }
 
 @media (max-width: 767px) {
-  body {
-    font-size: 1.3rem;
-  }
   .hidden-desktop {
     display: inherit !important;
   }

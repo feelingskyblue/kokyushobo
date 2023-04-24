@@ -24,8 +24,6 @@ body {
   line-height: 1.8;
 	letter-spacing: 0.02em;
   -webkit-text-size-adjust: none;
-  -ms-touch-action: none !important;
-	touch-action: none !important;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -106,6 +104,9 @@ a:not(.unstyle):hover {
 }
 .font-serif-jp {
 	font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
+}
+.font-sansserif-jp {
+	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .heading {
@@ -418,6 +419,9 @@ blockquote {
 			display: block;
 			padding: 1rem;
 			transition: 0.3s ease-in-out;
+			@media (max-width: $sp-width) {
+				padding: 1rem 0;
+			}
 			&:hover {
 				background-color: rgba($color: $keyColor, $alpha: 0.05);	
 			}
@@ -510,7 +514,7 @@ blockquote {
 		@media (max-width: $sp-width) {
 			width: 100%;
 			min-width: inherit;
-			padding: 1rem;
+			padding: 1rem 0;
 		}
 		& + .list {
 			flex-grow: 1;
@@ -620,11 +624,12 @@ blockquote {
 .home {
 	&__firstview {
 		width: 100%;
-		//min-height: 95dvh;
-		//max-height: 80rem;
 		height: auto;
 		position: relative;
-		padding-top: 15vh;
+		padding-top: 15dvh;
+		@media (max-width: $sp-width) {
+			padding-top: 4rem;
+		}
 	}
 	&__firstview-txt {
 		width: 100%;
@@ -632,6 +637,9 @@ blockquote {
 		background-color: $bgColor;
 		padding: 4rem 0;
 		z-index: 10;
+		@media (max-width: $sp-width) {
+			padding: 2em 0;
+		}
 		.logo__image {
 			margin-bottom: 1.5rem;
 		}
@@ -639,7 +647,6 @@ blockquote {
 	&__firstview-bg {
 		//position: relative;
 		//画像中央クリッピング
-		
 	}
 	&__firstview-image {
 		position: absolute;
@@ -666,6 +673,10 @@ blockquote {
 			z-index: 6;
 			opacity: 0.7;
 			font-size: 1.2rem;
+			@media (max-width: $sp-width) {
+				left: initial;
+				right: 2rem;
+			}
 			a {
 				color: $bgColor;
 				border-color: $bgColor;
@@ -690,6 +701,17 @@ blockquote {
 			color: $bgColor;
 			z-index: 10;
 			font-size: 1.5rem;
+			@media (max-width: $sp-width) {
+				margin: 3rem auto 0;
+				padding-bottom: calc(4rem + 1.5em);
+				width: calc(100vw - (4.266vw * 2));
+			}
+			.home__firstview-morelink {
+				text-align: right;
+				@media (max-width: $sp-width) {
+					text-align: left;
+				}
+			}
 			a {
 				color: $bgColor;
 				font-size: 1.8rem;
@@ -734,6 +756,10 @@ blockquote {
 			@include flex;
 			align-items: center;
 			font-size: 1.3rem;
+			@media (max-width: $sp-width) {
+				display: block;
+				font-size: 1.25rem;
+			}
 			dt {
 				padding-right: 0.5em;
 			}
@@ -865,6 +891,10 @@ blockquote {
 			left: 4rem;
 			background-color: $keyColor;
 			opacity: 0.5;
+			@media (max-width: $sp-width) {
+				width: calc(100% - (4.266vw * 2));
+				left: 4.266vw;
+			}
 		}
 		&::before {
 			top: 0;
@@ -918,6 +948,7 @@ blockquote {
 		margin-bottom: 0;
 		@media (max-width: $sp-width) {
 			max-height: inherit;
+			overflow: auto;
 		}
 		li:last-child {
 			margin-bottom: 2rem;
@@ -1026,10 +1057,6 @@ blockquote {
 }
 
 @media (max-width: $sp-width) {
-  body {
-    font-size: 1.3rem;
-  }
-
 	.hidden-desktop {
     display: inherit !important;
   }
