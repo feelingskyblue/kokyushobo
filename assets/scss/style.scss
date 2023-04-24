@@ -877,7 +877,7 @@ blockquote {
 	&__wrapper {
 		padding: 4rem 0 0;
 		@media (max-width: $sp-width) {
-			padding: 3rem 0;
+			padding: 3rem 0 4rem;
 		}
 		&[data-shadow="true"] {
 			max-width: 72rem;
@@ -885,11 +885,10 @@ blockquote {
 			padding-bottom: 0;
 			box-shadow: 0 5rem 4rem rgba($color: #48423b, $alpha: 0.1);
 			position: relative;
-
 			@media (max-width: $sp-width) {
 				padding-right: 0;
 				box-shadow: none;
-				margin-bottom: 2rem;
+				padding-bottom: 4rem;
 			}
 		}
 	}
