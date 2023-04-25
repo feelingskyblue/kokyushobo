@@ -263,8 +263,8 @@ blockquote {
 	margin: 0 auto;
 	padding: 0 4rem;
 	@media (max-width: $sp-width) {
-		padding: 0 4.266vw;
-		//padding: 0 5.333vw;
+		//padding: 0 4.266vw;
+		padding: 0 1.5em;
 	}
 }
 .flex {
@@ -649,7 +649,8 @@ blockquote {
 	    bottom: 2rem;
 			@media (max-width: $sp-width) {
 				bottom: 0.5rem;
-				right: 4.266vw;
+				//right: 4.266vw;
+				right: 1.5em;
 			}
 		}
 		.logo__image {
@@ -734,7 +735,8 @@ blockquote {
 			@media (max-width: $sp-width) {
 				margin: 3rem auto 0;
 				padding-bottom: calc(4rem + 1.5em);
-				width: calc(100vw - (4.266vw * 2));
+				//width: calc(100vw - (4.266vw * 2));
+				width: calc(100vw - (1.5em * 2));
 			}
 			.home__firstview-morelink {
 				text-align: right;
@@ -928,8 +930,10 @@ blockquote {
 			background-color: $keyColor;
 			opacity: 0.5;
 			@media (max-width: $sp-width) {
-				width: calc(100% - (4.266vw * 2));
-				left: 4.266vw;
+				//width: calc(100% - (4.266vw * 2));
+				//left: 4.266vw;
+				width: calc(100% - (1.5em * 2));
+				left: 1.5em;
 			}
 		}
 		&::before {
@@ -1096,8 +1100,8 @@ blockquote {
 		margin-bottom: 4rem;
 		text-align: right;
 		@media (max-width: $sp-width) {
+			font-size: 1em;
 			margin-top: 4rem;
-			font-size: 0.7em;
 			text-align: left;
 		}
 	}

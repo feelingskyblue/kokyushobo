@@ -362,7 +362,7 @@ blockquote {
 }
 @media (max-width: 767px) {
   .page-width {
-    padding: 0 4.266vw;
+    padding: 0 1.5em;
   }
 }
 
@@ -772,7 +772,7 @@ blockquote {
 @media (max-width: 767px) {
   .home__firstview-txt .logo__wrapper {
     bottom: 0.5rem;
-    right: 4.266vw;
+    right: 1.5em;
   }
 }
 .home__firstview-txt .logo__image {
@@ -864,7 +864,7 @@ blockquote {
   .home__firstview-image__txt {
     margin: 3rem auto 0;
     padding-bottom: calc(4rem + 1.5em);
-    width: 91.468vw;
+    width: calc(100vw - 3em);
   }
 }
 .home__firstview-image__txt .home__firstview-morelink {
@@ -1083,8 +1083,8 @@ blockquote {
 }
 @media (max-width: 767px) {
   .page__section-title::before, .page__section-title::after {
-    width: calc(100% - 8.532vw);
-    left: 4.266vw;
+    width: calc(100% - 3em);
+    left: 1.5em;
   }
 }
 .page__section-title::before {
@@ -1262,8 +1262,8 @@ blockquote {
 }
 @media (max-width: 767px) {
   .novel__footer {
+    font-size: 1em;
     margin-top: 4rem;
-    font-size: 0.7em;
     text-align: left;
   }
 }
