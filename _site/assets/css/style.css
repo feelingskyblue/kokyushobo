@@ -131,6 +131,12 @@ body {
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+@media (max-width: 767px) {
+  body {
+    font-size: min((100vw - 3rem) / 24, 1.6rem);
+    letter-spacing: 0;
+  }
+}
 
 body.fixed {
   position: fixed;
@@ -419,6 +425,7 @@ blockquote {
   .footer__nav-list {
     display: block;
     margin-bottom: 2rem;
+    font-size: inherit;
   }
   .footer__nav-list li {
     margin-bottom: 0.8rem;
@@ -965,6 +972,14 @@ blockquote {
   font-weight: normal;
   font-size: 2.4rem;
   margin-right: 1em;
+}
+
+@media (max-width: 767px) {
+  .novel-list__section .novel-list__description {
+    font-size: 1em;
+    line-height: inherit;
+    margin-top: 1rem;
+  }
 }
 
 .random-novel {
