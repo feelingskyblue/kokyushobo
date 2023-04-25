@@ -24,7 +24,7 @@
           <button
             role="tab"
             aria-controls="panel{{ forloop.index }}"
-            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+            aria-selected="{% if forloop.first and page.fileSlug != blank %}true{% else %}false{% endif %}"
             tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
           >
             <img src="/assets/img/hyoushi-{{ novels-info-handle[forloop.index0] }}.jpg" alt="{{ book }}表紙イメージ" loading="lazy" width="400" class="book-image--{{ novels-info-size[forloop.index0] }}">
@@ -35,7 +35,7 @@
   </div>
   <div class="book-tab__contents">
     {%- for book in novels-info-title -%}
-      <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item book-info">
+      <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="{% if forloop.first and page.fileSlug != blank %}false{% else %}true{% endif %}" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
           <h3 class="book-info__title">{{ book }}</h3>
           <span class="book-info__data">{{ novels-info-detail[forloop.index0] }}</span>
