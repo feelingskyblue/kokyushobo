@@ -1038,8 +1038,8 @@ blockquote {
 	line-height: 1.8;
 	overflow-wrap: break-word;
 	@media (max-width: $sp-width) {
-		font-size: min(calc((100vw - 3rem)/24), 1.6rem);
-		max-width: 24em;
+		font-size: min(calc((100vw - 4rem)/23), 1.6rem);
+		max-width: 23em;
 		margin: 0 auto;
 	}
 	&.font-serif {
@@ -1097,7 +1097,7 @@ blockquote {
 		text-align: right;
 		@media (max-width: $sp-width) {
 			margin-top: 4rem;
-			font-size: 0.75em;
+			font-size: 0.7em;
 			text-align: left;
 		}
 	}
