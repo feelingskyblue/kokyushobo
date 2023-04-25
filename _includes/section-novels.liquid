@@ -1,3 +1,4 @@
+{%- if page.fileSlug != blank -%}
 {%- for novel in collections.novel -%}
   {%- if novel.data.tags contains 'book-paperplane' -%}
     {% assign novels-paperplane = novels-paperplane | concat: novel %}
@@ -7,7 +8,6 @@
     {% assign novels-improvise = novels-improvise | concat: novel %}
   {%- endif -%}
 {%- endfor -%}
-
 {% comment %}
 <header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">長編小説</h3>
@@ -162,3 +162,26 @@
   </section>
 
 </div>
+
+{%- else -%}
+{%- for novel in collections.novel -%}
+  {%- if novel.data.tags contains 'recommend' -%}
+    {% assign novels-recommend = novels-recommend | concat: novel %}
+  {%- endif -%}
+{%- endfor -%}
+{% assign novels-recommend = novels-recommend | reverse %}
+<div class="novel-list__wrapper">
+  <section class="novel-list__section">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">Recommend pickup</h3>
+      <p class="novel-list__description">当サイトで公開している小説の中から、おすすめの作品をトップページにピックアップしました。ときどき入れ替わります:) <br>もっと読みたい！という方は、<a href="/novel">小説一覧ページ</a>へどうぞ。当サイトのすべての小説を一覧にしてあります。</p>
+      <a href="/novel" class="btn btn--small btn--pale"><span>小説一覧ページへ</span></a>
+    </header>
+    <div class="list novel-list">
+      {% for novel in novels-recommend %}
+        {%- include '_includes/snipet-novel-item' -%}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{%- endif -%}

@@ -476,7 +476,7 @@ blockquote {
   width: 15rem;
 }
 .book-tab__item:last-child {
-  margin-right: 3rem;
+  padding-right: 3rem;
 }
 
 .book-info__page-wrapper {

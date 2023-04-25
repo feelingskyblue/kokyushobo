@@ -11,6 +11,7 @@ category:
 tags:
   - improvise
   - out-books
+  - recommend
 ---
 
 　寒い日には南国の物語を、暑い日には北国の物語を読みたいと思う。それはごく自然な願望だ。

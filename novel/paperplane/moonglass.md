@@ -10,6 +10,7 @@ category:
 permalink: "novel/moonglass/"
 tags:
   - book-paperplane
+  - recommend
 ---
 
 　あっ、ウィスキー割れた。
