@@ -1003,7 +1003,13 @@ blockquote {
   display: inline-block;
 }
 .random-novel__footer {
+  font-size: 0.9em;
   text-align: right;
+  margin-top: 1em;
+  line-height: 1.8;
+}
+.random-novel__title {
+  opacity: 0.5;
 }
 
 .page::after {

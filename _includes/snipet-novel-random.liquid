@@ -4,7 +4,7 @@
     <div class="random-novel__item hidden" data-index="{{ forloop.index }}">
       <p>{{ novel.data.description }}</p>
       <div class="random-novel__footer">
-        <a href="/{{ novel.data.permalink }}">続きを読む</a>
+        <span class="random-novel__title">『{{ novel.data.title }}』</span><a href="/{{ novel.data.permalink }}">続きを読む</a>
       </div>
     </div>
     {%- endif -%}
