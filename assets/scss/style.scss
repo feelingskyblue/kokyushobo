@@ -318,6 +318,7 @@ blockquote {
 			display: block;
 			margin-bottom: 2rem;
 			font-size: inherit;
+			font-size: 0.9em;
 			li {
 				margin-bottom: 0.8rem;
 			}
@@ -645,21 +646,24 @@ blockquote {
 		background-color: $bgColor;
 		padding: 4rem 0;
 		z-index: 10;
+		.page-width {
+			position: relative;
+		}
 		@media (max-width: $sp-width) {
 			padding: 2rem 0 8rem;
 		}
 		.logo__wrapper {
 			position: absolute;
 			right: 4rem;
-	    bottom: 2rem;
+	    bottom: -0.5rem;
 			@media (max-width: $sp-width) {
-				bottom: 0.5rem;
+				bottom: -5rem;
 				//right: 4.266vw;
 				right: 1.5em;
 			}
 		}
 		.logo__image {
-			margin-bottom: 1.5rem;
+			margin-bottom: 0;
 			@media (max-width: $sp-width) {
 				width: 12rem;
 				height: auto;
@@ -690,7 +694,8 @@ blockquote {
 		figcaption {
 			position: absolute;
 			bottom: 2rem;
-			left: 2rem;
+			//left: 2rem;
+			left: max(4rem, calc((100% - 128rem + 8rem) / 2));
 			color: $bgColor;
 			z-index: 6;
 			opacity: 0.7;
@@ -732,6 +737,7 @@ blockquote {
 		&__txt {
 			position: relative;
 			margin: 4rem 4rem 0 auto;
+			margin-right: max(4rem, calc((100% - 128rem + 8rem) / 2));
 			padding-bottom: 4rem;
 			max-width: 42rem;
 			color: $bgColor;
@@ -763,6 +769,10 @@ blockquote {
 		@include flex;
 		align-items: center;
 		margin: 2rem 0 0.5rem;
+		padding-right: 19rem;
+		@media (max-width: $sp-width) {
+			padding-right: 0;
+		}
 		&-list {
 			@include flex;
 			font-size: 1.6rem;
@@ -781,6 +791,10 @@ blockquote {
 	&__news {
 		@include flex;
 		align-items: center;
+		padding-right: 19rem;
+		@media (max-width: $sp-width) {
+			padding-right: 0;
+		}
 		& + .home__news {
 			margin-top: 2rem;
 		}
@@ -903,11 +917,14 @@ blockquote {
 		}
 		&[data-shadow="true"] {
 			max-width: 72rem;
-			padding-right: 2rem;
-			padding-bottom: 0;
-			box-shadow: 0 5rem 4rem rgba($color: #48423b, $alpha: 0.1);
+			margin: 0 auto;
+			margin-left: max(1px, calc((100% - 128rem) / 2));
+			//padding-right: 2rem;
+			//padding-bottom: 0;
+			//box-shadow: 0 5rem 4rem rgba($color: #48423b, $alpha: 0.1);
 			position: relative;
 			@media (max-width: $sp-width) {
+				margin-left: 0;
 				padding-right: 0;
 				box-shadow: none;
 				padding-bottom: 4rem;
@@ -1030,7 +1047,6 @@ blockquote {
 	.fleet__wrapper {
 		font-size: 0.9em;
 		margin-top: 4rem;
-		width: 75%;
 		opacity: 0.9;
 		@media (max-width: $sp-width) {
 			width: 100%;
@@ -1050,6 +1066,7 @@ blockquote {
 	max-width: 38em;
 	//margin: 0 auto;
 	margin-left: 8rem;
+	//margin-left: max(3rem, calc((100% - 128rem + 8rem) / 2));
 	font-size: 1.6rem;
 	line-height: 1.8;
 	overflow-wrap: break-word;

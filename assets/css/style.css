@@ -426,6 +426,7 @@ blockquote {
     display: block;
     margin-bottom: 2rem;
     font-size: inherit;
+    font-size: 0.9em;
   }
   .footer__nav-list li {
     margin-bottom: 0.8rem;
@@ -766,6 +767,9 @@ blockquote {
   padding: 4rem 0;
   z-index: 10;
 }
+.home__firstview-txt .page-width {
+  position: relative;
+}
 @media (max-width: 767px) {
   .home__firstview-txt {
     padding: 2rem 0 8rem;
@@ -774,16 +778,16 @@ blockquote {
 .home__firstview-txt .logo__wrapper {
   position: absolute;
   right: 4rem;
-  bottom: 2rem;
+  bottom: -0.5rem;
 }
 @media (max-width: 767px) {
   .home__firstview-txt .logo__wrapper {
-    bottom: 0.5rem;
+    bottom: -5rem;
     right: 1.5em;
   }
 }
 .home__firstview-txt .logo__image {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .home__firstview-txt .logo__image {
@@ -815,7 +819,7 @@ blockquote {
 .home__firstview-image figcaption {
   position: absolute;
   bottom: 2rem;
-  left: 2rem;
+  left: max(4rem, (100% - 128rem + 8rem) / 2);
   color: #fefbf9;
   z-index: 6;
   opacity: 0.7;
@@ -861,6 +865,7 @@ blockquote {
 .home__firstview-image__txt {
   position: relative;
   margin: 4rem 4rem 0 auto;
+  margin-right: max(4rem, (100% - 128rem + 8rem) / 2);
   padding-bottom: 4rem;
   max-width: 42rem;
   color: #fefbf9;
@@ -895,6 +900,12 @@ blockquote {
   flex-wrap: nowrap;
   align-items: center;
   margin: 2rem 0 0.5rem;
+  padding-right: 19rem;
+}
+@media (max-width: 767px) {
+  .home__nav {
+    padding-right: 0;
+  }
 }
 .home__nav-list {
   display: flex;
@@ -915,6 +926,12 @@ blockquote {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  padding-right: 19rem;
+}
+@media (max-width: 767px) {
+  .home__news {
+    padding-right: 0;
+  }
 }
 .home__news + .home__news {
   margin-top: 2rem;
@@ -1051,13 +1068,13 @@ blockquote {
 }
 .page__wrapper[data-shadow=true] {
   max-width: 72rem;
-  padding-right: 2rem;
-  padding-bottom: 0;
-  box-shadow: 0 5rem 4rem rgba(72, 66, 59, 0.1);
+  margin: 0 auto;
+  margin-left: max(1px, (100% - 128rem) / 2);
   position: relative;
 }
 @media (max-width: 767px) {
   .page__wrapper[data-shadow=true] {
+    margin-left: 0;
     padding-right: 0;
     box-shadow: none;
     padding-bottom: 4rem;
@@ -1193,7 +1210,6 @@ blockquote {
 .page .fleet__wrapper {
   font-size: 0.9em;
   margin-top: 4rem;
-  width: 75%;
   opacity: 0.9;
 }
 @media (max-width: 767px) {
