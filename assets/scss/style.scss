@@ -831,6 +831,13 @@ blockquote {
 		&:not(:last-child):not(:first-child) {
 			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
 		}
+		.btn__wrapper {
+			margin-top: 2rem;
+			@media (max-width: $sp-width) {
+				margin-top: 0;
+				margin-bottom: 2rem;
+			}
+		}
 	}
 	&__section-title {
 		@include flex;

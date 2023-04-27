@@ -974,6 +974,15 @@ blockquote {
 .home__section:not(:last-child):not(:first-child) {
   border-top: 1px solid rgba(55, 128, 122, 0.1);
 }
+.home__section .btn__wrapper {
+  margin-top: 2rem;
+}
+@media (max-width: 767px) {
+  .home__section .btn__wrapper {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
 .home__section-title {
   display: flex;
   flex-wrap: nowrap;
