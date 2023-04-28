@@ -20,7 +20,7 @@ body {
     "Hiragino Sans",
     Meiryo,
     sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.8;
 	letter-spacing: 0.02em;
   -webkit-text-size-adjust: none;
@@ -837,7 +837,7 @@ body {
 		}
 		&-list {
 			@include flex;
-			font-size: 1.6rem;
+			font-size: 1.7rem;
 			@media (max-width: $sp-width) {
 				flex-wrap: wrap;
 			}	
