@@ -45,5 +45,5 @@ webサービスにおける個人情報保護方針については、各サー�
 
 <hr>
 
-last update...2023.4.23
+last update...2023.4.29
 special thanks to <a href="https://libsy.net/" target="_blank" rel="noopenner noreferrer">Yodaka Yamakawa</a>（テンプレート提供）
