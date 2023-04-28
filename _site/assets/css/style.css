@@ -487,6 +487,12 @@ body:not(.homePage) .main {
   text-align: right;
   line-height: 1.3;
 }
+.footer__info a {
+  display: inline-block;
+}
+.footer__info small {
+  display: block;
+}
 
 .book-tab__wrapper {
   position: relative;
