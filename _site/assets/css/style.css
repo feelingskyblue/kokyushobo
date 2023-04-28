@@ -800,6 +800,14 @@ body:not(.homePage) .main {
   padding: 1rem;
 }
 
+.home__announce {
+  font-size: 0.7em;
+}
+@media (max-width: 767px) {
+  .home__announce {
+    font-size: 0.8em;
+  }
+}
 .home__firstview {
   width: 100%;
   height: auto;
@@ -827,26 +835,28 @@ body:not(.homePage) .main {
 }
 @media (max-width: 767px) {
   .home__firstview-txt {
-    padding: 2rem 0 8rem;
+    padding: 4rem 0 12rem;
   }
 }
-.home__firstview-txt .logo__wrapper {
+.home__firstview-txt .home__header {
   position: absolute;
   right: 4rem;
-  bottom: -0.5rem;
+  bottom: -0.2rem;
 }
 @media (max-width: 767px) {
-  .home__firstview-txt .logo__wrapper {
-    bottom: -5rem;
+  .home__firstview-txt .home__header {
+    bottom: -10rem;
     right: 1.5em;
   }
 }
 .home__firstview-txt .logo__image {
-  margin-bottom: 0;
+  margin-bottom: 0.8rem;
+  margin-left: auto;
 }
 @media (max-width: 767px) {
   .home__firstview-txt .logo__image {
     width: 12rem;
+    margin-bottom: 0.5rem;
     height: auto;
   }
 }
@@ -966,12 +976,12 @@ body:not(.homePage) .main {
 }
 .home__nav-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-size: 1.7rem;
 }
 @media (max-width: 767px) {
   .home__nav-list {
-    flex-wrap: wrap;
+    font-size: 1.6rem;
   }
 }
 .home__nav-list li:not(:last-child)::after {
@@ -980,9 +990,6 @@ body:not(.homePage) .main {
   padding: 0 0.3em;
 }
 .home__news {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
   padding-right: 19rem;
 }
 @media (max-width: 767px) {

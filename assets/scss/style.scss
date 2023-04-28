@@ -685,6 +685,12 @@ body {
 
 // TOP
 .home {
+	&__announce {
+		font-size: 0.7em;
+		@media (max-width: $sp-width) {
+			font-size: 0.8em;
+		}
+	}
 	&__firstview {
 		width: 100%;
 		height: auto;
@@ -709,23 +715,23 @@ body {
 			position: relative;
 		}
 		@media (max-width: $sp-width) {
-			padding: 2rem 0 8rem;
+			padding: 4rem 0 12rem;
 		}
-		.logo__wrapper {
+		.home__header {
 			position: absolute;
 			right: 4rem;
-	    bottom: -0.5rem;
-			//display: none;
+	    bottom: -0.2rem;
 			@media (max-width: $sp-width) {
-				bottom: -5rem;
-				//right: 4.266vw;
+				bottom: -10rem;
 				right: 1.5em;
 			}
 		}
 		.logo__image {
-			margin-bottom: 0;
+			margin-bottom: 0.8rem;
+			margin-left: auto;
 			@media (max-width: $sp-width) {
 				width: 12rem;
+				margin-bottom: 0.5rem;
 				height: auto;
 			}
 		}
@@ -836,10 +842,10 @@ body {
 			padding-right: 0;
 		}
 		&-list {
-			@include flex;
+			@include flex(wrap);
 			font-size: 1.7rem;
 			@media (max-width: $sp-width) {
-				flex-wrap: wrap;
+				font-size: 1.6rem;
 			}	
 			li {
 				&:not(:last-child)::after {
@@ -851,8 +857,6 @@ body {
 		}
 	}
 	&__news {
-		@include flex;
-		align-items: center;
 		padding-right: 19rem;
 		@media (max-width: $sp-width) {
 			padding-right: 0;
