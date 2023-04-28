@@ -42,20 +42,26 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: $keyColorDark;
+  color: $subColor;
 	text-decoration: none;
-	border-bottom: 1px solid rgba($color: $keyColorDark, $alpha: 0.3);
+	border-bottom: 1px solid rgba($color: $subColor, $alpha: 0.5);
+	transition: all 0.4s ease;
 	&.link--unstyle {
 		border-bottom: none;
+		&:hover {
+			background-color: inherit;
+		}
 	}
 	&.unstyle {
 		color: inherit;
 		border-bottom: none;
+		&:hover {
+			background-color: inherit;
+		}
 	}
-}
-
-a:not(.unstyle):hover {
-  opacity: 0.8;
+	&:hover {
+		background-color: rgba($color: $keyColor, $alpha: 0.2);
+	}
 }
 
 .hidden {
@@ -126,6 +132,9 @@ a:not(.unstyle):hover {
 	&--color {
 		color: $keyColor;
 	}
+	&--colorDark {
+		color: $keyColorDark;
+	}
 	&--default {
 		font-size: 1.4rem;
 		font-weight: normal;
@@ -152,6 +161,10 @@ a:not(.unstyle):hover {
 	&--color {
 		background-color: rgba($color: $keyColor, $alpha: 0.7);
 		color: #ffffff;
+		&:hover {
+			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			opacity: 0.7;
+		}
 	}
 	&--pale {
 		background-color: rgba($color: $keyColor, $alpha: 0.1);
@@ -252,7 +265,7 @@ blockquote {
 }
 .bg {
 	&__primary {
-		background-color: rgba($color: #48423b, $alpha: 0.1);
+		background-color: rgba($color: $subColor, $alpha: 0.1);
 		//background-color: rgba(213, 216, 216, 0.25);
 	}
 	&__secondary {
@@ -458,11 +471,11 @@ body {
 	&__item {
 		position: relative;
 		&:not(:first-child) {
-			border-top: 1px solid rgba($color: #48423b, $alpha: 0.1);
+			border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
 		}
 		@media (max-width: $sp-width) {
 			&:first-child {
-				border-top: 1px solid rgba($color: #48423b, $alpha: 0.1);
+				border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
 			}
 		}	
 		&-link {
@@ -473,7 +486,7 @@ body {
 				padding: 1rem 0.5rem;
 			}
 			&:hover {
-				background-color: rgba($color: $keyColor, $alpha: 0.05);	
+				background-color: rgba($color: $keyColor, $alpha: 0.1) !important;	
 			}
 		}
 		&-unlink {
@@ -949,6 +962,9 @@ body {
 	}
 	&__title {
 		opacity: 0.5;
+	}
+	a {
+		opacity: 0.8;
 	}
 }
 
