@@ -15,14 +15,14 @@ template: novelPage
     <hr>
     {%- for tag in tags -%}
       {%- if tag == 'book-eien' -%}
-        <p>短編集『永遠の不在をめぐる』掲載作品</p>
+        <p>短編集『<a href="/book/eien">永遠の不在をめぐる</a>』掲載作品</p>
       {%- elsif tag == 'book-paperplane' -%}
-        <p>短編集『紙飛行機に眠る月』掲載作品</p>
+        <p>短編集『<a href="/book/paperplane">紙飛行機に眠る月</a>』掲載作品</p>
       {%- endif -%}
     {%- endfor -%}
     {%- if improvise_theme != blank -%}
       <p>投稿元：即興小説トレーニング（サービス終了に伴いリンク切れ）<br>お題「{{improvise_theme}}」を元に執筆・改稿</p>
     {%- endif -%}
-    <a href="/">TOPへ戻る</a>
+    <a href="/novel/">小説一覧へ戻る</a>
   </div>
 </article>
