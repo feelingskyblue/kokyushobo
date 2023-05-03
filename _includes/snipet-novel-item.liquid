@@ -1,7 +1,7 @@
 <article class="novel-list__item">
   <a href="{{ novel.url }}" class="unstyle novel-list__item-link">
     <h4 class="novel-list__item-title"><span class="font-serif">{{ novel.data.title }}</span></h4>
-    <span class="novel-list__catchcopy">{{ novel.data.catch }}</span>
+    <span class="novel-list__catchcopy font-sansserif-jp">{{ novel.data.catch }}</span>
     <ul class="novel-category">
       {% for item in novel.data.category %}
         <li>{{ item }}</li>

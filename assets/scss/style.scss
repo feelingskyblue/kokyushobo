@@ -551,8 +551,8 @@ body {
 			width: 20rem;
 			height: 1rem;
 			position: absolute;
-			top: -1px;
-			right: -1px;
+			top: 0;
+			right: 0;
 			background-color: $keyColor;
 			display: block;
 			content: "";
@@ -566,6 +566,12 @@ body {
 		&.is-eien {
 			&::before {
 				background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
+				background-size: cover;
+			}
+		}
+		&.is-dream {
+			&::before {
+				background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
 				background-size: cover;
 			}
 		}
