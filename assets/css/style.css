@@ -1086,6 +1086,15 @@ body:not(.homePage) .main {
   margin-top: 2rem;
   padding: 6.5rem 0;
 }
+.novel-list__page .random-novel {
+  margin-top: 0;
+  padding: 6.5rem 0 0;
+}
+@media (max-width: 767px) {
+  .novel-list__page .random-novel {
+    border-top: 1px solid rgba(55, 128, 122, 0.1);
+  }
+}
 @media (max-width: 767px) {
   .random-novel {
     padding: 4rem 0;
