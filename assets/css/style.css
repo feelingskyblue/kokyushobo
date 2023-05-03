@@ -669,8 +669,8 @@ body:not(.homePage) .main {
   width: 20rem;
   height: 1rem;
   position: absolute;
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
   background-color: #37807a;
   display: block;
   content: "";
@@ -681,6 +681,10 @@ body:not(.homePage) .main {
 }
 .novel-list__section.is-eien::before {
   background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
+  background-size: cover;
+}
+.novel-list__section.is-dream::before {
+  background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
   background-size: cover;
 }
 .novel-list__section.is-tree::before {
@@ -1081,6 +1085,15 @@ body:not(.homePage) .main {
 .random-novel {
   margin-top: 2rem;
   padding: 6.5rem 0;
+}
+.novel-list__page .random-novel {
+  margin-top: 0;
+  padding: 6.5rem 0 0;
+}
+@media (max-width: 767px) {
+  .novel-list__page .random-novel {
+    border-top: 1px solid rgba(55, 128, 122, 0.1);
+  }
 }
 @media (max-width: 767px) {
   .random-novel {
