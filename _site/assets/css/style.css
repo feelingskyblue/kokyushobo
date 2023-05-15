@@ -1379,6 +1379,26 @@ body:not(.homePage) .main {
   height: 1em;
   display: inline-block;
 }
+.novel__body.tree_is_light__body h2 {
+  text-align: right;
+  opacity: 0.5;
+}
+.novel__body.tree_is_light__body h2 + h3 {
+  margin-top: 0;
+}
+.novel__body.tree_is_light__body h3 {
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: 6em;
+}
+.novel__body.tree_is_light__body h3 + h4 {
+  margin-top: 2em;
+}
+.novel__body.tree_is_light__body h4 {
+  margin-top: 4em;
+  font-size: 1.1em;
+  margin-bottom: 2em;
+}
 .novel__footer {
   font-size: 0.8em;
   opacity: 0.8;
