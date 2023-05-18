@@ -176,6 +176,7 @@ a {
 	}
 	&--outlined {
 		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		background-color: transparent;
 	}
 }
 
@@ -1187,6 +1188,73 @@ body {
 			@media (max-width: $sp-width) {
 				font-size: 1.3em;
 				text-align: center;
+			}
+		}
+	}
+	blockquote {
+		@media (max-width: $sp-width) {
+			font-size: 0.85em;
+		}
+	}
+	&__nav {
+		font-size: 0.9em;
+		margin: 8rem 0;
+		padding: 0 2em;
+		position: fixed;
+		top: 0;
+		right: 4rem;
+		opacity: 0.3;
+		transition: all 0.4s ease;
+		&:hover {
+			opacity: 1;
+		}
+		@media (max-width: $sp-width) {
+			position: relative;
+			top: initial;
+			right: initial;
+			opacity: 1;
+			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			padding: 2em;
+			margin: 4rem 0;
+		}
+		.heading {
+			font-weight: normal;
+			font-size: 0.9em;
+			margin-bottom: 1rem;
+		}
+		&-list {
+			line-height: 2;
+			.index-tree-1 {	
+			}
+			.index-tree-2 {
+				margin-left: 0em;
+			}
+			.index-tree-3 {
+				margin-left: 2.5em;
+			}
+			a {
+				border-bottom: none;
+			}
+		}
+		&-controller {
+			@include flex;
+			flex-direction: column;
+			row-gap: 1.6rem;
+			font-size: 0.9em;
+			margin-top: 4rem;
+			@media (max-width: $sp-width) {
+				margin-top: 2rem;
+			}
+			.btn {
+				height: auto;
+				line-height: 1;
+				padding: 1rem;
+				&.current {
+					background-color: rgba($color: $keyColor, $alpha: 0.2);
+				}
+			}
+			dt {
+				margin-bottom: 0.5rem;
 			}
 		}
 	}

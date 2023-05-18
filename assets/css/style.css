@@ -282,6 +282,7 @@ a:hover {
 }
 .btn--outlined {
   border: 1px solid rgba(55, 128, 122, 0.3);
+  background-color: transparent;
 }
 
 [aria-hidden=true] {
@@ -1352,6 +1353,76 @@ body:not(.homePage) .main {
     font-size: 1.3em;
     text-align: center;
   }
+}
+@media (max-width: 767px) {
+  .novel blockquote {
+    font-size: 0.85em;
+  }
+}
+.novel__nav {
+  font-size: 0.9em;
+  margin: 8rem 0;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  right: 4rem;
+  opacity: 0.3;
+  transition: all 0.4s ease;
+}
+.novel__nav:hover {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .novel__nav {
+    position: relative;
+    top: initial;
+    right: initial;
+    opacity: 1;
+    border: 1px solid rgba(55, 128, 122, 0.3);
+    padding: 2em;
+    margin: 4rem 0;
+  }
+}
+.novel__nav .heading {
+  font-weight: normal;
+  font-size: 0.9em;
+  margin-bottom: 1rem;
+}
+.novel__nav-list {
+  line-height: 2;
+}
+.novel__nav-list .index-tree-2 {
+  margin-left: 0em;
+}
+.novel__nav-list .index-tree-3 {
+  margin-left: 2.5em;
+}
+.novel__nav-list a {
+  border-bottom: none;
+}
+.novel__nav-controller {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  font-size: 0.9em;
+  margin-top: 4rem;
+}
+@media (max-width: 767px) {
+  .novel__nav-controller {
+    margin-top: 2rem;
+  }
+}
+.novel__nav-controller .btn {
+  height: auto;
+  line-height: 1;
+  padding: 1rem;
+}
+.novel__nav-controller .btn.current {
+  background-color: rgba(55, 128, 122, 0.2);
+}
+.novel__nav-controller dt {
+  margin-bottom: 0.5rem;
 }
 .novel__body {
   letter-spacing: 0;

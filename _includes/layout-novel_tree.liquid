@@ -27,6 +27,40 @@ template: novelPage
 ふむ、画像も置けるね　とはいえこのへんは専用レイアウトファイルにしてあげたいかな。。
 <img class="" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
 {% endcomment %}
+  <nav class="novel__nav">
+    <section class="novel__nav-index">
+      <h2 class="heading">本文目次</h2>
+      <ol class="novel__nav-list">
+        <li class="index-tree-1"><a href="#sectionMain1">introduction</a></li>
+        <li class="index-tree-2"><a href="#section1">第一章　歌う雨の町</a></li>
+        <li class="index-tree-3"><a href="#sectionSub1">1　いつか帰る場所</a></li>
+        <li class="index-tree-3"><a href="#sectionSub2">2　相槌と挨拶</a></li>
+        <li class="index-tree-2"><a href="#section2">第二章　歌う雨の町</a></li>
+        <li class="index-tree-3"><a href="#sectionSub3">3　鳥市場</a></li>
+        <li class="index-tree-3"><a href="#sectionSub4">4　雲と煙の兄弟</a></li>
+        <li class="index-tree-3"><a href="#sectionSub5">5　スコールと木々のダンス</a></li>
+      </ol>
+    </section>
+    {% comment %}
+    <dl class="novel__nav-controller">
+      <div>
+        <dt>本文の文字サイズ</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined"><span>大</span></button>
+          <button type="button" class="btn btn--small btn--outlined current"><span>中</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>小</span></button>
+        </dd>
+      </div>
+      <div>
+        <dt>本文のフォント</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined current"><span>明朝体</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>ゴシック体</span></button>
+        </dd>
+      </div>
+    </dl>
+    {% endcomment %}
+  </nav>
   <div class="novel__body tree_is_light__body">
   {{ content }}
   </div>
