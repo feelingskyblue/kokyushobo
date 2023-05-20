@@ -1,0 +1,47 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+<script src="/assets/js/novel_tree.js" defer></script>
+<article class="novel font-serif">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  <nav class="novel__nav">
+    <section class="novel__nav-index">
+      <h2 class="heading">本文目次</h2>
+      <ol class="novel__nav-list">
+        <li class="index-tree-1"><a href="#sectionMain1">名もなき竜の宮</a></li>
+        <li class="index-tree-1"><a href="#sectionMain2">竜の花嫁</a></li>
+        <li class="index-tree-3"><a href="#section1">第一章　嫁入りの日</a></li>
+        <li class="index-tree-3"><a href="#section2">第二章　金の瞳、遠雷の声</a></li>
+      </ol>
+    </section>
+    {% comment %}
+    <dl class="novel__nav-controller">
+      <div>
+        <dt>本文の文字サイズ</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined"><span>大</span></button>
+          <button type="button" class="btn btn--small btn--outlined current"><span>中</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>小</span></button>
+        </dd>
+      </div>
+      <div>
+        <dt>本文のフォント</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined current"><span>明朝体</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>ゴシック体</span></button>
+        </dd>
+      </div>
+    </dl>
+    {% endcomment %}
+  </nav>
+  <div class="novel__body tree_is_light__body">
+  {{ content }}
+  </div>
+  <div class="novel__footer">
+    <hr>
+    <a href="/book/bride/">『竜の花嫁』詳細ページへ</a>
+  </div>
+</article>
