@@ -6,12 +6,14 @@ https://github.com/iamdustan/smoothscroll
 
 // TOPへ戻る
 const pagetopBtn = document.querySelector('#btn-to-top');
-pagetopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
+if (pagetopBtn) {
+  pagetopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });  
+}
 
 /**
  * Tab Function
