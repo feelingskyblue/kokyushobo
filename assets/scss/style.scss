@@ -440,11 +440,21 @@ body {
 	&__page-wrapper {
 		margin-top: 4rem;
 		column-gap: 5%;
+		@media (max-width: $sp-width) {
+			flex-direction: column;
+			row-gap: 40px;
+		}
 		.book-info__image {
 			width: 35%;
+			@media (max-width: $sp-width) {
+				width: 100%;
+			}	
 		}
 		.book-info__content {
 			width: 60%;
+			@media (max-width: $sp-width) {
+				width: 100%;
+			}	
 		}
 	}
 	&__header {

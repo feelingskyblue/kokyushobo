@@ -87,8 +87,7 @@
 
 :where(hr) {
   border: none;
-  -webkit-border-before: 1px solid;
-          border-block-start: 1px solid;
+  border-block-start: 1px solid;
   color: inherit;
   block-size: 0;
   overflow: visible;
@@ -550,11 +549,27 @@ body:not(.homePage) .main {
   -moz-column-gap: 5%;
        column-gap: 5%;
 }
+@media (max-width: 767px) {
+  .book-info__page-wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
 .book-info__page-wrapper .book-info__image {
   width: 35%;
 }
+@media (max-width: 767px) {
+  .book-info__page-wrapper .book-info__image {
+    width: 100%;
+  }
+}
 .book-info__page-wrapper .book-info__content {
   width: 60%;
+}
+@media (max-width: 767px) {
+  .book-info__page-wrapper .book-info__content {
+    width: 100%;
+  }
 }
 .book-info__header {
   display: flex;
