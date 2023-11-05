@@ -548,6 +548,8 @@ body:not(.homePage) .main {
   margin-top: 4rem;
   -moz-column-gap: 5%;
        column-gap: 5%;
+  position: relative;
+  align-items: flex-start;
 }
 @media (max-width: 767px) {
   .book-info__page-wrapper {
@@ -557,9 +559,13 @@ body:not(.homePage) .main {
 }
 .book-info__page-wrapper .book-info__image {
   width: 35%;
+  position: sticky;
+  top: 40px;
 }
 @media (max-width: 767px) {
   .book-info__page-wrapper .book-info__image {
+    position: initial;
+    top: initial;
     width: 100%;
   }
 }
@@ -702,6 +708,10 @@ body:not(.homePage) .main {
 .novel-list__section.is-dream::before {
   background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
   background-size: cover;
+}
+.novel-list__section.is-november::before {
+  background: url("/assets/img/mv_november_pc.jpg") no-repeat top 25% right;
+  background-size: 200%;
 }
 .novel-list__section.is-tree::before {
   background: url("/assets/img/hyoushi-tree.jpg") no-repeat center center;

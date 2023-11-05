@@ -440,13 +440,19 @@ body {
 	&__page-wrapper {
 		margin-top: 4rem;
 		column-gap: 5%;
+		position: relative;
+		align-items: flex-start;
 		@media (max-width: $sp-width) {
 			flex-direction: column;
 			row-gap: 40px;
 		}
 		.book-info__image {
 			width: 35%;
+			position: sticky;
+			top: 40px;
 			@media (max-width: $sp-width) {
+				position: initial;
+				top: initial;
 				width: 100%;
 			}	
 		}
@@ -584,6 +590,12 @@ body {
 			&::before {
 				background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
 				background-size: cover;
+			}
+		}
+		&.is-november {
+			&::before {
+				background: url("/assets/img/mv_november_pc.jpg") no-repeat top 25% right;
+				background-size: 200%;
 			}
 		}
 		&.is-tree {

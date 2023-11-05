@@ -6,6 +6,8 @@
     {% assign novels-eien = novels-eien | concat: novel %}
   {%- elsif novel.data.tags contains 'book-dream' -%}
     {% assign novels-dream = novels-dream| concat: novel %}
+  {%- elsif novel.data.tags contains 'book-november' -%}
+    {% assign novels-november = novels-november| concat: novel %}
   {%- elsif novel.data.tags contains 'improvise' -%}
     {% assign novels-improvise = novels-improvise | concat: novel %}
   {%- endif -%}
@@ -118,6 +120,18 @@
   <h3 class="novel-list__title font-serif">掌編・短編小説（一話完結）</h3>
 </header>
 <div class="novel-list__wrapper">
+  <section class="novel-list__section is-november">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">十一月の春の庭</h3>
+      <p class="novel-list__description">「<a href="https://twitter.com/nike_nkx/status/1575362728063307781" target="_blank" rel="noopenner noreferrer">#novelmber</a>」ハッシュタグに投稿した掌編の再録短編集。二つのお題を組みあわせ、その偶然性を楽しみながら書き綴った掌編18本を掲載しています。文体も掌編ごとに様々です。</p>
+      <a href="/book/november" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+    </header>
+    <div class="list novel-list">
+      {% for novel in novels-november %}
+        {%- include '_includes/snipet-novel-item' -%}
+      {% endfor %}
+    </div>
+  </section>
   <section class="novel-list__section is-dream">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">彼らは唯の夢</h3>
