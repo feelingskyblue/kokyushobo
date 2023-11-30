@@ -183,6 +183,12 @@ body.for-cipher .novel__attention {
     font-size: 1.8rem;
   }
 }
+@media (max-width: 767px) {
+  .novel.novel__content {
+    font-size: min((100vw - 4rem) / 21, 1.6rem);
+    max-width: 21em;
+  }
+}
 .novel.novel__content .novel__body p.voice::before {
   display: none;
 }

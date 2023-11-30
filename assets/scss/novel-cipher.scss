@@ -78,6 +78,10 @@ body {
     @media (min-width: 768px) {
       font-size: 1.8rem;
     }
+    @media (max-width: $sp-width) {
+      font-size: min((100vw - 4rem) / 21, 1.6rem);
+      max-width: 21em;
+    }
     .novel__body p.voice::before {
       display: none;
     }
