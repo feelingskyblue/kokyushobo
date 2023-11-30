@@ -22,7 +22,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#37807a">
     <meta name="msapplication-TileColor" content="#f4f6f6">
-    <meta name="theme-color" content="#37807a">
+    {% unless title == "Gymnopedie" %}<meta name="theme-color" content="#37807a">{% else %}<meta name="theme-color" content="#000000">{% endunless %}
 
     <!-- Social -->
     <meta property="og:url" content="https://kokyushobo.com{{ page.url }}">
