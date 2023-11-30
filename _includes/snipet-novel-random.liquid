@@ -1,12 +1,14 @@
 <div class="random-novel__inner page-width">
+  {%- assign num = 1 -%}
   {%- for novel in collections.novel -%}
     {%- if novel.data.description != blank and novel.data.title != 'web-novel' -%}
-    <div class="random-novel__item hidden" data-index="{{ forloop.index }}">
+    <div class="random-novel__item hidden" data-index="{{ num }}">
       <p>{{ novel.data.description }}</p>
       <div class="random-novel__footer">
         <span class="random-novel__title">『{{ novel.data.title }}』</span><a href="/{{ novel.data.permalink }}">続きを読む</a>
       </div>
     </div>
+    {%- assign num = num | plus: 1 -%}
     {%- endif -%}
   {%- endfor -%}
 </div>

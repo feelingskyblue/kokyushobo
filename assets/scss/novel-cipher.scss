@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+@import "core/reset";
+@import "core/utility";
+
+body {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  .novel__introduction--wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    max-width: inherit;
+    height: 100dvh;
+    overflow: scroll;
+    z-index: 10;
+    background-color: #fefbf9;
+    transition: all 1s ease-in;
+  }
+
+  &:not(.for-cipher) {
+    overflow: hidden;
+    .novel__attention {
+      border: 1px solid #000000;
+    }
+  }
+
+  &.for-cipher {
+    background-color: #000;
+    color: #c3abac;
+    .novel__introduction--wrapper {
+      opacity: 0;
+      z-index: -1;
+    }
+    .novel {
+      a {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+    }
+    .novel__attention {
+      border: 1px solid #ffffff;
+    }
+  }
+
+}
+
+.header, .footer {
+  display: none;
+}
+
+.novel {
+  margin: 0 auto;
+  .novel__greeting {
+    width: 30em;
+    height: 85dvh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.5;
+    @media (max-width: $sp-width) {
+      width: 20em;
+      max-width: 100%;
+    }
+  }
+  .novel__attention {
+    padding: 60px 40px;
+    margin: 0 0 80px;
+    @media (max-width: $sp-width) {
+      padding: 30px 20px;
+      margin: 0 0 50px;
+    }
+  }
+  &.novel__content {
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+    .novel__body p.voice::before {
+      display: none;
+    }
+  }
+  .btn__wrapper {
+    margin: 80px auto 160px;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    @media (max-width: $sp-width) {
+      margin: 40px auto 80px;
+    }
+    .cat_select {
+      display: block;
+      padding: 10px;
+      height: 40px;
+      border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+    }
+    .btn {
+      background-color: #000;
+      color: #ffffff;
+      &:disabled {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  .novel__footer {
+    padding-bottom: 8rem;
+  }
+
+}

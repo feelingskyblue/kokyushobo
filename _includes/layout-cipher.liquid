@@ -1,0 +1,49 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+<link rel="stylesheet" href="/assets/css/novel-cipher.css">
+<script src="/assets/js/novel_cipher.js" defer></script>
+<div class="novel__introduction--wrapper">
+  <div class="novel novel__introduction">
+    <div class="novel__body novel__greeting font-serif">
+      <p>人間が大勢暮らすところには猫がいる。これは必ずと言っても過言じゃない、どんな世界でも不変の法則だ。もし例外が存在するとしたらそうだな、地獄くらいじゃないか。行ったことないから知らないけど。でも、もしほんとうに、地獄が数多の罪人でごったかえす大都会だったとしても、そこに猫はいないだろう。そういうことになっている。</p>
+      <p>だからその街にも猫はいた。極彩色のパレードが連日ひしめく娯楽の街、劇場に支配された演劇の街、虚構と快楽の魔法の街に。</p>
+    </div>
+    <div class="novel__attention">
+      <p>本ページでは<a href="https://libsy.net"  target="_blank" rel="noopenner noreferrer">山川夜高さん</a>のお誕生日祝いとして『<a href="https://libsy.net/cipher/" target="_blank" rel="noopenner noreferrer">Cipher</a>』の二次創作小説を掲載しています。</p>
+      <p>私個人の解釈、読解、IF妄想、原作に存在しない人物の描写、原作に存在しない生物と登場人物の接触（による若干の夢小説味）、想像に基づく登場人物たちの嗜好にまつわる描写が含まれます。『Cipher』原作とは切り離してお読みいただくようにお願いいたします。</p>
+      <p>原作結末への言及はありませんが、原作を読了された上で閲覧されることを強く推奨します。（というか原作未読でこのページを見てる方はいらっしゃるのか？　もしいたら今すぐに<a href="https://libsy.net/cipher/" rel="noopenner noreferrer">Cipher紹介ページに移動</a>した方が良いと思う！！！）</p>
+      <p>本ページは、原作者の山川夜高さんから要望があれば、すぐに修正・または公開を停止します。</p>
+    </div>
+    <div class="novel__body">
+      <p>という訳で。</p>
+      <p>「<a href="https://misskey.design/notes/9ickvbptwn" rel="noopenner noreferrer">ドタバタシリアス小説が読みたい</a>」とのリクエストを頂いてから数ヶ月、私に出力できるものはこれが限界でした。文体が複雑骨折しているかもしれませんがどうか許してください。親愛を込めて。</p>
+    </div>
+
+    <div class="btn__wrapper">
+      <select name="cat_color" id="cat_color" class="cat_select">
+        <option value="">好きな柄を選んでね♡</option>
+        <option value="真っ黒な">黒</option>
+        <option value="白と黒の">シャム</option>
+        <option value="真っ白な">白</option>
+        <option value="鮮やかな">キジトラ</option>
+      </select>
+      <button type="button" id="read_btn" class="btn btn--small btn--outlined" disabled>読む</button>
+    </div>
+  </div>
+</div>
+
+<article class="novel font-serif novel__content">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  <div class="novel__body">
+  {{ content }}
+  </div>
+  <div class="novel__footer">
+    <hr>
+    <p>Happy Birthday!</p>
+    <a href="/novel/">小説一覧へ戻る</a>
+  </div>
+</article>
