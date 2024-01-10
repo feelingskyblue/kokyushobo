@@ -509,7 +509,7 @@ body:not(.homePage) .main {
     z-index: 30;
     top: 0;
     right: -100dvw;
-    transition: all 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
   }
   .open + .header__nav {
     right: 0;
