@@ -506,7 +506,6 @@ body:not(.homePage) .main {
     width: calc(100vw - 12rem);
     height: 100vh;
     height: 100lvh;
-    overflow: scroll;
     background-color: rgba(254, 251, 249, 0.95);
     z-index: 30;
     top: 0;
@@ -528,10 +527,26 @@ body:not(.homePage) .main {
   .header__nav-list {
     display: block;
     padding: 5rem 0;
+    overflow: scroll;
   }
 }
-.header__nav-list .hasmenu {
+.header__nav-list > li {
   position: relative;
+}
+@media (max-width: 767px) {
+  .header__nav-list .hasmenu {
+    margin-bottom: 1rem;
+  }
+  .header__nav-list .hasmenu::after {
+    display: block;
+    content: "";
+    width: calc(100% - 6rem);
+    height: 1px;
+    background-color: rgba(24, 22, 20, 0.1);
+    position: absolute;
+    left: 3rem;
+    bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   .header__nav-list .hasmenu:hover .header__nav-sublist {
@@ -539,20 +554,8 @@ body:not(.homePage) .main {
     border: 1px solid rgba(72, 66, 59, 0.2);
     border-top: none;
   }
-}
-@media (max-width: 767px) {
-  .header__nav-list .hasmenu {
-    margin-bottom: 2rem;
-  }
-  .header__nav-list .hasmenu::after {
-    display: block;
-    content: "";
-    width: calc(100% - 6rem);
-    height: 1px;
-    background-color: rgba(24, 22, 20, 0.2);
-    position: absolute;
-    left: 3rem;
-    bottom: -1.2rem;
+  .header__nav-list .hasmenu:hover .header__nav-booklist {
+    height: 315px;
   }
 }
 .header__nav-sublist {
@@ -561,15 +564,23 @@ body:not(.homePage) .main {
 @media (min-width: 768px) {
   .header__nav-sublist {
     position: absolute;
-    width: 100%;
+    width: auto;
+    min-width: 100%;
     height: 0px;
     overflow: hidden;
     background-color: #fefbf9;
     transition: height 0.4s ease;
   }
 }
+@media (max-width: 767px) {
+  .header__nav-sublist {
+    padding-bottom: 1rem;
+    opacity: 0.8;
+  }
+}
 .header__nav-sublist a {
   display: block;
+  white-space: nowrap;
   width: 100%;
   height: 40px;
   border-bottom: none;
@@ -581,6 +592,17 @@ body:not(.homePage) .main {
     height: auto;
     padding: 0.5rem calc(3rem + 1em);
     margin-top: -0.5rem;
+  }
+}
+.header__nav-sublist.header__nav-booklist a {
+  height: 35px;
+  font-size: 0.8em;
+}
+@media (max-width: 767px) {
+  .header__nav-sublist.header__nav-booklist a {
+    height: auto;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 }
 .header__nav .menu-item--parent {
