@@ -15,6 +15,12 @@ if (pagetopBtn) {
   });  
 }
 
+// グロナビ開閉
+const gnavBtn = document.querySelector('#mobileGnavBtn');
+gnavBtn?.addEventListener('click', function(){
+  this.classList.toggle("open")
+})
+
 /**
  * Tab Function
  */
