@@ -504,15 +504,14 @@ body:not(.homePage) .main {
     position: fixed;
     margin: 0;
     width: calc(100vw - 12rem);
-    height: auto;
-    max-height: 100vh;
-    max-height: 100dvh;
+    height: 100vh;
+    height: 100lvh;
     overflow: scroll;
     background-color: rgba(254, 251, 249, 0.95);
     z-index: 30;
     top: 0;
     right: -100vw;
-    transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out, height 0.1s ease;
   }
   .open + .header__nav {
     right: 0;
