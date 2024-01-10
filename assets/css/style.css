@@ -503,12 +503,15 @@ body:not(.homePage) .main {
   .header__nav {
     position: fixed;
     margin: 0;
-    width: calc(100dvw - 12rem);
-    height: 100%;
+    width: calc(100vw - 12rem);
+    height: auto;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow: scroll;
     background-color: rgba(254, 251, 249, 0.95);
     z-index: 30;
     top: 0;
-    right: -100dvw;
+    right: -100vw;
     transition: right 0.5s ease-in-out;
   }
   .open + .header__nav {
@@ -525,7 +528,7 @@ body:not(.homePage) .main {
 @media (max-width: 767px) {
   .header__nav-list {
     display: block;
-    padding-top: 5rem;
+    padding: 5rem 0;
   }
 }
 .header__nav-list .hasmenu {
