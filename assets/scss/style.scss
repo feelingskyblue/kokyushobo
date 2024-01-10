@@ -410,7 +410,7 @@ body {
 			z-index: 30;
 			top: 0;
 			right: -100vw;
-			transition: right 0.5s ease-in-out, height 0.1s ease;
+			transition: all 0.5s ease-in-out;
 			.open + & {
 				right: 0;
 				box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
