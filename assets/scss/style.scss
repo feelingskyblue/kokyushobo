@@ -402,9 +402,10 @@ body {
 		@media (max-width: $sp-width) {
 			position: fixed;
 			margin: 0;
+			padding-bottom: 5rem;
 			width: calc(100vw - 12rem);
-			height: 100vh;
-			height: 100lvh;
+			height: 100%;
+			overflow: scroll;
 			background-color: rgba($color: $bgColor, $alpha: 0.95);
 			z-index: 30;
 			top: 0;
@@ -421,8 +422,7 @@ body {
 			height: 100%;
 			@media (max-width: $sp-width) {
 				display: block;
-				padding: 5rem 0;
-				overflow: scroll;
+				padding-top: 5rem;
 			}
 			& > li {
 				position: relative;

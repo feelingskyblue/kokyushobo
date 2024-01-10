@@ -503,9 +503,10 @@ body:not(.homePage) .main {
   .header__nav {
     position: fixed;
     margin: 0;
+    padding-bottom: 5rem;
     width: calc(100vw - 12rem);
-    height: 100vh;
-    height: 100lvh;
+    height: 100%;
+    overflow: scroll;
     background-color: rgba(254, 251, 249, 0.95);
     z-index: 30;
     top: 0;
@@ -526,8 +527,7 @@ body:not(.homePage) .main {
 @media (max-width: 767px) {
   .header__nav-list {
     display: block;
-    padding: 5rem 0;
-    overflow: scroll;
+    padding-top: 5rem;
   }
 }
 .header__nav-list > li {
