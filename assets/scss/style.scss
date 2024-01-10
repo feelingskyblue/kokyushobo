@@ -402,7 +402,6 @@ body {
 		@media (max-width: $sp-width) {
 			position: fixed;
 			margin: 0;
-			padding-bottom: 5rem;
 			width: calc(100vw - 12rem);
 			height: 100%;
 			overflow: scroll;
@@ -423,6 +422,7 @@ body {
 			@media (max-width: $sp-width) {
 				display: block;
 				padding-top: 5rem;
+				margin-bottom: 10rem;
 			}
 			& > li {
 				position: relative;

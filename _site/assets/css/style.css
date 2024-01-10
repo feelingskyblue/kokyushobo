@@ -503,7 +503,6 @@ body:not(.homePage) .main {
   .header__nav {
     position: fixed;
     margin: 0;
-    padding-bottom: 5rem;
     width: calc(100vw - 12rem);
     height: 100%;
     overflow: scroll;
@@ -528,6 +527,7 @@ body:not(.homePage) .main {
   .header__nav-list {
     display: block;
     padding-top: 5rem;
+    margin-bottom: 10rem;
   }
 }
 .header__nav-list > li {
