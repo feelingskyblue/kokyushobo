@@ -621,6 +621,7 @@ body:not(.homePage) .main {
 }
 @media (max-width: 767px) {
   .header__nav .menu-item--parent {
+    color: #37807a;
     display: block;
     padding: 0.8rem 3rem;
   }
@@ -849,10 +850,18 @@ body:not(.homePage) .main {
 }
 .novel-list__item-title span {
   line-height: 1;
+  position: relative;
 }
 @media (max-width: 767px) {
-  .novel-list__item-title span {
-    border-bottom: 1px solid rgba(41, 96, 92, 0.3);
+  .novel-list__item-title span::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: "";
+    display: block;
+    background-color: rgba(41, 96, 92, 0.3);
+    left: 0;
+    bottom: 1px;
   }
 }
 .novel-list__section {
