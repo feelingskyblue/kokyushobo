@@ -21,7 +21,13 @@ boxshadow: true
       <span class="form__label-txt">本文</span>
       <textarea name="message" required></textarea>
     </label>
-    <button class="btn btn--medium btn--color" type="submit">メッセージを送る</button>
+    <label class="form__label-inline">
+      <input type="checkbox" name="noreplay">
+      <span class="form__label-txt">返信不要</span>
+    </label>
+    <div>
+      <button class="btn btn--medium btn--color" type="submit">メッセージを送る</button>
+    </div>
     <p>※送信ボタンを押すと、BOT防止のreCAPTHA画面（英語）に遷移する場合があります。画面の指示に従ってメッセージ送信を完了させてください。</p>
   </form>
   <hr>
