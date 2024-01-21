@@ -1575,6 +1575,12 @@ body {
 			text-align: left;
 		}
 	}
+	&__form {
+		text-align: left;
+		.form {
+			max-width: initial;
+		}
+	}
 }
 
 @media (max-width: $sp-width) {

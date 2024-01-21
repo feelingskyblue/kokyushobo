@@ -1754,6 +1754,12 @@ body:not(.homePage) .main {
     text-align: left;
   }
 }
+.novel__form {
+  text-align: left;
+}
+.novel__form .form {
+  max-width: initial;
+}
 
 @media (max-width: 767px) {
   .hidden-desktop {

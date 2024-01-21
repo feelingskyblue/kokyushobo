@@ -756,20 +756,17 @@
     <hr>
     <p>そのようにして、魔法は失われた。<br>以降の本文は書籍でお楽しみください。</p>
     <a href="/book/trees_light/">『すべての樹木は光』詳細ページへ</a>
+    <hr>
+    <div id="contact" class="novel__form">
+      <form name="clap" class="form" method="POST" action="/contact/thanks" netlify>
+        <input name="message" type="text" value="すべての樹木は光｜試し読み" class="visually-hidden">
+        <div>
+          <button class="btn btn--small btn--pale" type="submit">WebClap</button>
+        </div>
+      </form>
+    </div>
   </div>
 </article>
-
-<div id="contact">
-  <form name="clap" class="form" method="POST" action="/contact/thanks" netlify>
-  <label class="form__label">
-      <span class="form__label-txt">テスト</span>
-      <input name="message" type="text" value="すべての樹木は光｜試し読み">
-    </label>
-    <div>
-      <button class="btn btn--medium btn--color" type="submit">メッセージを送る</button>
-    </div>
-  </form>
-</div>
     </main>
     <footer class="footer bg__primary">
       <div class="page-width flex">
