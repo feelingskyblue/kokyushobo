@@ -70,3 +70,15 @@ template: novelPage
     <a href="/book/trees_light/">『すべての樹木は光』詳細ページへ</a>
   </div>
 </article>
+
+<div id="contact">
+  <form name="clap" class="form" method="POST" action="/contact/thanks" netlify>
+  <label class="form__label">
+      <span class="form__label-txt">テスト</span>
+      <input name="message" type="text" value="{{ title }}">
+    </label>
+    <div>
+      <button class="btn btn--medium btn--color" type="submit">メッセージを送る</button>
+    </div>
+  </form>
+</div>
