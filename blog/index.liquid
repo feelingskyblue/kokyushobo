@@ -12,23 +12,20 @@ pagination:
   reverse: true
 ---
 
-<div id="blog">
-  <p>ここにブログ記事を出すんだよお</p>
-
-
+<div id="blog" class="blog">
 {%- for article in articles -%}
   {%- if article.url != "/blog/" -%}
-    <article class="">
-      <header>
-        <h2>{{ article.data.title }}</h2>
+    <article class="blog-article">
+      <header class="blog-article__header bg__secondary">
+        <h2 class="heading--secondary  blog-article__header-title">{{ article.data.title }}</h2>
         <time datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
       </header>
-      <div>
-        {{ article.content }}
+      <div class="blog-article__body">
+        <div>{{ article.content | truncate: 300 }}</div>
       </div>
-      <a href="{{ article.url }}">More</a>
-      <footer>
-        <dl>
+      <footer class="blog-article__footer">
+        <a href="{{ article.url }}" class="btn btn--medium btn--pale">続きを読む</a>
+        <dl class="blog-article__footer-category">
           <dt>Category</dt>
           <dd>
             <a href="">{{ article.data.category }}</a>
@@ -49,16 +46,15 @@ pagination:
   {%- endif -%}
 {%- endfor -%}
 
-<nav>
-<ol class="inline-li">
+<nav class="breadcrumb__wrapper">
+  <ol class="breadcrumb">
     <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
     <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">⟨</a>{% else %}⟨{% endif %}</li>
-{%- for pageEntry in pagination.pages %}
-    <li><a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>{{ forloop.index }}</a></li>
-{%- endfor %}
+    {%- for pageEntry in pagination.pages %}
+      <li><a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>{{ forloop.index }}</a></li>
+    {%- endfor %}
     <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">⟩</a>{% else %}⟩{% endif %}</li>
     <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">⟫</a>{% else %}⟫{% endif %}</li>
   </ol>
 </nav>
-
 </div>

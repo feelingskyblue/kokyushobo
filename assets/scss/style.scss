@@ -1414,6 +1414,79 @@ body {
 	}
 }
 
+.blog {
+}
+.blog-article {
+	border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+	padding-bottom: 1em;
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em;
+		@media (max-width: $sp-width) {
+			margin: 2rem 0;
+		}
+		&-title {
+			margin: 0;
+		}
+	}
+	&__body {
+		padding: 2em 1em 1em 1em;
+		letter-spacing: 0;
+		&-more {
+			margin-top: 2rem;
+			text-align: right;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: normal;
+			font-size: 1em;
+			margin: 0;
+		}
+		h1 {
+			font-size: 1.1em;
+		}
+		h2 {
+			font-size: 1.1em;
+		}
+		h3 {
+			font-size: 1em;
+		}
+		hr {
+			margin-top: 4em;
+			margin-bottom: 4em;
+		}
+		p {
+			
+		}
+	}
+	&__footer {
+		padding: 1em;
+		font-size: 0.9em;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		&-category {
+			display: flex;
+			dt {
+				&::after {
+					content: "：";
+				}
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1em;
+}
+
 .novel {
 	max-width: 38em;
 	//margin: 0 auto;
