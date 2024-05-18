@@ -1,0 +1,56 @@
+---
+layout: layout.liquid
+template: articlePage
+---
+
+<div class="page">
+  <section class="page__wrapper" data-shadow="{{ boxshadow | default: true }}">
+    <header class="page__section-title page-width">
+      <h1 class="heading page__section-heading">blog</h1>
+      <p class="page__section-title-txt">ブログ</p>
+    </header>
+    <div class="page__body page-width">
+      <article class="blog-article">
+        <header class="blog-article__header bg__secondary">
+          <h2 class="heading--secondary  blog-article__header-title">{{ title }}</h2>
+          <time datatime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%Y.%m.%d %a" }}</time>
+        </header>
+        <div class="blog-article__body">
+          <div>{{ content }}</div>
+        </div>
+        <footer class="blog-article__footer">
+          {%- comment -%}
+          <dl class="blog-article__footer-category">
+            <dt>Category</dt>
+            <dd>
+              <a href="">{{ category }}</a>
+            </dd>
+            {%- if tags.size > 1 -%}
+              <dt>Tags</dt>
+              <dd>
+                {%- for tag in tags -%}
+                  {%- unless tag == "article" -%}
+                    <a href="">{{ tag }}</a>
+                  {%- endunless -%}
+                {%- endfor -%}
+              </dd>
+            {%- endif -%}
+          </dl>
+          {%- endcomment -%}
+        </footer>
+      </article>
+
+      {%- if collections.article %}
+        {%- assign previousPost = collections.article | getPreviousCollectionItem %}
+        {%- assign nextPost = collections.article | getNextCollectionItem %}
+        {%- if nextPost or previousPost %}
+          <ul class="links-nextprev">
+            {%- if previousPost %}<li>before: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+            {%- if nextPost %}<li>after: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          </ul>
+        {%- endif %}
+      {%- endif -%}
+
+    </div>
+  </section>
+</div>

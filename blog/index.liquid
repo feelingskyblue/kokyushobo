@@ -1,0 +1,64 @@
+---
+layout: layout-page.liquid
+title: blog
+subtitle: ブログ
+description: 呼吸書房のブログです。
+boxshadow: true
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.article
+  size: 5
+  alias: articles
+  reverse: true
+---
+
+<div id="blog" class="blog">
+{%- for article in articles -%}
+  {%- if article.url != "/blog/" -%}
+    <article class="blog-article">
+      <header class="blog-article__header bg__secondary">
+        <h2 class="heading--secondary  blog-article__header-title">{{ article.data.title }}</h2>
+        <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
+      </header>
+      <div class="blog-article__body">
+        <div>{{ article.content | truncate: 300 }}</div>
+      </div>
+      <footer class="blog-article__footer">
+        <a href="{{ article.url }}" class="btn btn--medium btn--pale">記事を読む</a>
+        {%- comment -%}
+        <dl class="blog-article__footer-category">
+          <dt>Category</dt>
+          <dd>
+            <a href="">{{ article.data.category }}</a>
+          </dd>
+          {%- if article.data.tags.size > 1 -%}
+            <dt>Tags</dt>
+            <dd>
+              {%- for tag in article.data.tags -%}
+                {%- unless tag == "article" -%}
+                  <a href="">{{ tag }}</a>
+                {%- endunless -%}
+              {%- endfor -%}
+            </dd>
+          {%- endif -%}
+        </dl>
+        {%- endcomment -%}
+      </footer>
+    </article>
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%}
+<nav class="breadcrumb__wrapper">
+  <ol class="breadcrumb">
+    <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">⟨</a>{% else %}⟨{% endif %}</li>
+    {%- for pageEntry in pagination.pages %}
+      <li><a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>{{ forloop.index }}</a></li>
+    {%- endfor %}
+    <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">⟩</a>{% else %}⟩{% endif %}</li>
+    <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">⟫</a>{% else %}⟫{% endif %}</li>
+  </ol>
+</nav>
+</div>
+{%- endcomment -%}
