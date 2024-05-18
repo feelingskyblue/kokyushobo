@@ -25,6 +25,7 @@ pagination:
       </div>
       <footer class="blog-article__footer">
         <a href="{{ article.url }}" class="btn btn--medium btn--pale">続きを読む</a>
+        {%- comment -%}
         <dl class="blog-article__footer-category">
           <dt>Category</dt>
           <dd>
@@ -41,6 +42,7 @@ pagination:
             </dd>
           {%- endif -%}
         </dl>
+        {%- endcomment -%}
       </footer>
     </article>
   {%- endif -%}
