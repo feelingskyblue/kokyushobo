@@ -6,7 +6,7 @@ template: articlePage
 <div class="page">
   <section class="page__wrapper" data-shadow="{{ boxshadow | default: true }}">
     <header class="page__section-title page-width">
-      <h1 class="heading page__section-heading">Blog</h1>
+      <h1 class="heading page__section-heading">blog</h1>
       <p class="page__section-title-txt">ブログ</p>
     </header>
     <div class="page__body page-width">
@@ -19,7 +19,7 @@ template: articlePage
           <div>{{ content }}</div>
         </div>
         <footer class="blog-article__footer">
-          
+          {%- comment -%}
           <dl class="blog-article__footer-category">
             <dt>Category</dt>
             <dd>
@@ -36,6 +36,7 @@ template: articlePage
               </dd>
             {%- endif -%}
           </dl>
+          {%- endcomment -%}
         </footer>
       </article>
 
@@ -43,10 +44,10 @@ template: articlePage
         {%- assign previousPost = collections.article | getPreviousCollectionItem %}
         {%- assign nextPost = collections.article | getNextCollectionItem %}
         {%- if nextPost or previousPost %}
-        <ul class="links-nextprev">
-          {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-          {%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-        </ul>
+          <ul class="links-nextprev">
+            {%- if previousPost %}<li>before: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+            {%- if nextPost %}<li>after: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+          </ul>
         {%- endif %}
       {%- endif -%}
 

@@ -7,7 +7,7 @@ boxshadow: true
 eleventyExcludeFromCollections: true
 pagination:
   data: collections.article
-  size: 2
+  size: 5
   alias: articles
   reverse: true
 ---
@@ -18,13 +18,13 @@ pagination:
     <article class="blog-article">
       <header class="blog-article__header bg__secondary">
         <h2 class="heading--secondary  blog-article__header-title">{{ article.data.title }}</h2>
-        <time datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
+        <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
       </header>
       <div class="blog-article__body">
         <div>{{ article.content | truncate: 300 }}</div>
       </div>
       <footer class="blog-article__footer">
-        <a href="{{ article.url }}" class="btn btn--medium btn--pale">続きを読む</a>
+        <a href="{{ article.url }}" class="btn btn--medium btn--pale">記事を読む</a>
         {%- comment -%}
         <dl class="blog-article__footer-category">
           <dt>Category</dt>
@@ -48,6 +48,7 @@ pagination:
   {%- endif -%}
 {%- endfor -%}
 
+{%- comment -%}
 <nav class="breadcrumb__wrapper">
   <ol class="breadcrumb">
     <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
@@ -60,3 +61,4 @@ pagination:
   </ol>
 </nav>
 </div>
+{%- endcomment -%}
