@@ -21,7 +21,14 @@ pagination:
         <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
       </header>
       <div class="blog-article__body">
-        <div>{{ article.content | truncate: 300 }}</div>
+        {%- assign introduction = article.content | truncate: 300 -%}
+        <div>
+          {%- if introduction contains "<hr>" -%}
+            {{ introduction | split: "<hr>" | first }}
+          {%- else -%}
+            {{ introduction }}
+          {%- endif -%}
+        </div>
       </div>
       <footer class="blog-article__footer">
         <a href="{{ article.url }}" class="btn btn--medium btn--pale">記事を読む</a>

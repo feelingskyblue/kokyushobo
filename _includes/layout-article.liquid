@@ -44,10 +44,24 @@ template: articlePage
         {%- assign previousPost = collections.article | getPreviousCollectionItem %}
         {%- assign nextPost = collections.article | getNextCollectionItem %}
         {%- if nextPost or previousPost %}
-          <ul class="links-nextprev">
-            {%- if previousPost %}<li>before: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-            {%- if nextPost %}<li>after: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-          </ul>
+          <dl class="blog-article__pager">
+            <div class="blog-article__pager-item blog-article__pager-item--new">
+              {%- if nextPost -%}
+                <a href="{{ nextPost.url }}">
+                  <dt>{{ nextPost.data.date | date: "%Y.%m.%d" }}</dt>
+                  <dd>{{ nextPost.data.title }}</dd>
+                </a>
+              {%- endif -%}
+            </div>
+            <div class="blog-article__pager-item blog-article__pager-item--old">
+              {%- if previousPost -%}
+                <a href="{{ previousPost.url }}">
+                  <dt>{{ previousPost.data.date | date: "%Y.%m.%d" }}</dt>
+                  <dd>{{ previousPost.data.title }}</dd>
+                </a>
+              {%- endif -%}
+            </div>
+          </dl>
         {%- endif %}
       {%- endif -%}
 

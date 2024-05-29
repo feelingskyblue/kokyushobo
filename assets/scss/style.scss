@@ -1500,6 +1500,70 @@ body {
 			}
 		}
 	}
+	&__pager {
+		display: flex;
+		justify-content: space-between;
+		line-height: 1.5;
+		@media (max-width: $sp-width) {
+			flex-direction: column;
+		}
+	}
+	&__pager-item {
+		width: 50%;
+		@media (max-width: $sp-width) {
+			width: 100%;
+		}
+		position: relative;
+		&:not(:empty) {
+			border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			& + &:not(:empty) {
+				@media (min-width: $pc-width) {
+					border-left: none;
+				}
+				@media (max-width: $sp-width) {
+					border-top: none;
+				}
+			}
+			&::after {
+				position: absolute;
+				display: block;
+				top: 50%;
+				transform: translateY(-50%);
+				color: rgba($color: $keyColor, $alpha: 0.5);
+			}
+		}
+		a {
+			padding: 1em;
+			display: block;
+			height: 100%;
+			border: none;
+		}
+		dt {
+			color: $keyColor;
+		}
+		dd {
+			//text-decoration: underline;
+		}
+		&--new:not(:empty) {
+			a {
+				padding-left: 2.5em;
+			}
+			&::after {
+				content: "〈";
+				left: 0;
+			}
+		}
+		&--old:not(:empty) {
+			a {
+				padding-right: 2.5em;
+			}
+			text-align: right;
+			&::after {
+				content: "〉";
+				right: 0;
+			}
+		}
+	}
 }
 
 .breadcrumb {
