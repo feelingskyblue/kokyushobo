@@ -13,14 +13,20 @@ layout: layout.liquid
       <div class="page-width">
         <p>呼吸書房へようこそ。当サイトでは、私、風野湊による作品を公開しています。<br class="hidden-phone">路上で出会った本棚のように、どうぞゆっくりとお楽しみください。</p>
         <p>書斎と書店、二つの意味を持つ「書房」の名のとおり、<br class="hidden-phone">一部の作品は書籍化し、販売を行っています。<br>出店イベントや委託販売先でもご購入頂けます。</p>
-        <p>活動の最新情報は<a href="/blog">ブログ</a>または<a href="https://twitter.com/feelingskyblue" target="_blank" rel="noopenner noreferrer">Twitter</a>からどうぞ。</p>
         <div class="home__news">
           <dl class="home__news-body">
             <dt>update:</dt>
-            <dd>2024.5.19 ブログ公開！</dd>
+            <dd>2024.05.29 イベント情報更新</dd>
             <dt>event:</dt>
-            <dd>2024.5.19 <a href="https://bunfree.net/event/tokyo38/" target="_blank" rel="noopenner noreferrer">文学フリマ東京38</a> 出店予定｜東京流通センター 第二展示場Eホール お-46 呼吸書房→<a href="https://c.bunfree.net/e/bfo" target="_blank" rel="noopenner noreferrer">Webカタログ</a></dd>
-            <!--<dd>2024.1.14 <a href="https://bunfree.net/event/kyoto08/" target="_blank" rel="noopenner noreferrer">文学フリマ京都8</a> 出店予定｜京都市勧業館みやこめっせ 1F 第二展示場 え-51 呼吸書房→<a href="https://c.bunfree.net/e/b5E" target="_blank" rel="noopenner noreferrer">Webカタログ</a></dd>-->
+            <dd>2024.06.16 <a href="https://bunfree.net/event/iwate09/" target="_blank" rel="noopenner noreferrer">文学フリマ岩手9</a> 委託参加予定</dd>
+            <dt>blog:</dt>
+            <dd>
+              {%- assign latestArticle = collections.article | reverse | first -%}
+              {{ latestArticle.data.date | date: "%Y.%m.%d" }} <a href="{{ latestArticle.url }}">{{ latestArticle.data.title }}</a>
+            </dd>
+            {%- comment -%}
+            <dd>2024.1.14 <a href="https://bunfree.net/event/kyoto08/" target="_blank" rel="noopenner noreferrer">文学フリマ京都8</a> 出店予定｜京都市勧業館みやこめっせ 1F 第二展示場 え-51 呼吸書房→<a href="https://c.bunfree.net/e/b5E" target="_blank" rel="noopenner noreferrer">Webカタログ</a></dd>
+            {%- endcomment -%}
           </dl>
         </div>
       </div>
