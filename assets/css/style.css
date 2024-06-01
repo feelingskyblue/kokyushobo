@@ -1622,6 +1622,9 @@ body:not(.homePage) .main {
   display: block;
   text-align: right;
 }
+.blog-article__thumbnail {
+  margin-bottom: 2em;
+}
 .blog-article__body {
   padding: 2em 1em 1em 1em;
   letter-spacing: 0;
@@ -1656,6 +1659,16 @@ body:not(.homePage) .main {
 .blog-article__body hr {
   margin-top: 4em;
   margin-bottom: 4em;
+}
+.blog-article__body ul li {
+  position: relative;
+  padding-left: 1em;
+}
+.blog-article__body ul li::before {
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .blog-article__footer {
   padding: 1em;

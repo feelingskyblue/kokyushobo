@@ -1446,6 +1446,9 @@ body {
 			text-align: right;
 		}
 	}
+	&__thumbnail {
+		margin-bottom: 2em;
+	}
 	&__body {
 		padding: 2em 1em 1em 1em;
 		@media (max-width: $sp-width) {
@@ -1480,6 +1483,18 @@ body {
 		}
 		p {
 			
+		}
+		ul {
+			li {
+				position: relative;
+				padding-left: 1em;
+				&::before {
+					content: "・";
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
 		}
 	}
 	&__footer {

@@ -21,6 +21,11 @@ pagination:
         <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
       </header>
       <div class="blog-article__body">
+        {%- if article.data.thumbnail != blank -%}
+          <div class="blog-article__thumbnail">
+            <img src="{{ article.data.thumbnail }}" alt="{{ article.data.title }}" loading="lazy" width="800" class="">
+          </div>
+        {%- endif -%}
         {%- assign introduction = article.content | truncate: 300 -%}
         <div>
           {%- if introduction contains "<hr>" -%}

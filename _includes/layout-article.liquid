@@ -16,6 +16,11 @@ template: articlePage
           <time datatime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%Y.%m.%d %a" }}</time>
         </header>
         <div class="blog-article__body">
+          {%- if thumbnail != blank -%}
+            <div class="blog-article__thumbnail">
+              <img src="{{ thumbnail }}" alt="{{ title }}" loading="lazy" width="800" class="">
+            </div>
+          {%- endif -%}
           <div>{{ content }}</div>
         </div>
         <footer class="blog-article__footer">
