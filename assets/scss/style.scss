@@ -1448,6 +1448,14 @@ body {
 	}
 	&__thumbnail {
 		margin-bottom: 2em;
+		overflow: hidden;
+		position: relative;
+		img {
+			aspect-ratio: 16/9;
+			display: block;
+			object-fit: cover;
+			object-position: left center;
+		}
 	}
 	&__body {
 		padding: 2em 1em 1em 1em;
@@ -1472,10 +1480,18 @@ body {
 			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
 		}
 		h2 {
+			margin-top: 40px;
 			font-size: 1.1em;
+			padding-bottom: 5px;
+			margin-bottom: 1em;
+			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
 		}
 		h3 {
 			font-size: 1em;
+			margin-top: 40px;
+			padding-bottom: 5px;
+			margin-bottom: 1em;
+			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
 		}
 		hr {
 			margin-top: 4em;

@@ -1624,6 +1624,16 @@ body:not(.homePage) .main {
 }
 .blog-article__thumbnail {
   margin-bottom: 2em;
+  overflow: hidden;
+  position: relative;
+}
+.blog-article__thumbnail img {
+  aspect-ratio: 16/9;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left center;
+     object-position: left center;
 }
 .blog-article__body {
   padding: 2em 1em 1em 1em;
@@ -1651,10 +1661,18 @@ body:not(.homePage) .main {
   border-bottom: 1px solid rgba(55, 128, 122, 0.8);
 }
 .blog-article__body h2 {
+  margin-top: 40px;
   font-size: 1.1em;
+  padding-bottom: 5px;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(55, 128, 122, 0.8);
 }
 .blog-article__body h3 {
   font-size: 1em;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  margin-bottom: 1em;
+  border-bottom: 1px solid rgba(55, 128, 122, 0.8);
 }
 .blog-article__body hr {
   margin-top: 4em;
