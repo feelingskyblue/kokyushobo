@@ -1455,9 +1455,6 @@ body {
 		overflow: hidden;
 		position: relative;
 		border: none;
-		&:hover {
-			opacity: 0.8;
-		}
 		img {
 			aspect-ratio: 16/9;
 			display: block;
@@ -1466,14 +1463,17 @@ body {
 		}
 	}
 	&__body {
+		letter-spacing: 0;
 		padding: 2em 1em 1em 1em;
 		@media (max-width: $sp-width) {
 			padding: 1em 0;
 		}
-		letter-spacing: 0;
 		&-more {
 			margin-top: 2rem;
 			text-align: right;
+		}
+		a.blog-article__thumbnail:hover {
+			opacity: 0.8;
 		}
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: bold;
