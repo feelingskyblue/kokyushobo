@@ -1618,14 +1618,22 @@ body:not(.homePage) .main {
 .blog-article__header-title {
   margin: 0;
 }
+.blog-article__header-title a {
+  border: none;
+}
 .blog-article__header-time {
   display: block;
   text-align: right;
 }
 .blog-article__thumbnail {
+  display: block;
   margin-bottom: 2em;
   overflow: hidden;
   position: relative;
+  border: none;
+}
+.blog-article__thumbnail:hover {
+  opacity: 0.8;
 }
 .blog-article__thumbnail img {
   aspect-ratio: 16/9;
@@ -1687,6 +1695,11 @@ body:not(.homePage) .main {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (max-width: 767px) {
+  .blog-article__read-btn {
+    width: 100%;
+  }
 }
 .blog-article__footer {
   padding: 1em;
@@ -1772,12 +1785,27 @@ body:not(.homePage) .main {
   right: 0;
 }
 
-.breadcrumb {
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   -moz-column-gap: 1em;
        column-gap: 1em;
+}
+.pagination__item.is-transparent {
+  opacity: 0;
+}
+.pagination__inner {
+  color: #37807a;
+  display: block;
+  padding: 12px 10px;
+  line-height: 1;
+  border: 1px solid rgba(55, 128, 122, 0.3);
+}
+.pagination__inner[aria-current=page] {
+  background-color: rgba(55, 128, 122, 0.8);
+  color: #ffffff;
+  pointer-events: none;
 }
 
 .novel {

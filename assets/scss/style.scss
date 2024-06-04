@@ -1440,6 +1440,9 @@ body {
 		}
 		&-title {
 			margin: 0;
+			a {
+				border: none;
+			}
 		}
 		&-time {
 			display: block;
@@ -1447,9 +1450,14 @@ body {
 		}
 	}
 	&__thumbnail {
+		display: block;
 		margin-bottom: 2em;
 		overflow: hidden;
 		position: relative;
+		border: none;
+		&:hover {
+			opacity: 0.8;
+		}
 		img {
 			aspect-ratio: 16/9;
 			display: block;
@@ -1511,6 +1519,11 @@ body {
 					left: 0;
 				}
 			}
+		}
+	}
+	&__read-btn {
+		@media (max-width: $sp-width) {
+			width: 100%;
 		}
 	}
 	&__footer {
@@ -1597,11 +1610,28 @@ body {
 	}
 }
 
-.breadcrumb {
+.pagination {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	column-gap: 1em;
+	&__item {
+		&.is-transparent {
+			opacity: 0;
+		}
+	}
+	&__inner {
+		color: $keyColor;
+		display: block;
+		padding: 12px 10px;
+		line-height: 1;
+		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		&[aria-current="page"] {
+			background-color: rgba($color: $keyColor, $alpha: 0.8);
+			color: #ffffff;
+			pointer-events: none;
+		}
+	}
 }
 
 .novel {
