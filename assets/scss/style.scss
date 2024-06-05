@@ -1529,17 +1529,35 @@ body {
 	&__footer {
 		padding: 1em;
 		font-size: 0.9em;
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
 		@media (max-width: $sp-width) {
-			padding: 1em 0;
+			padding:  0;
+		}
+		&-inner {
 		}
 		&-category {
+			margin-top: 0.5em;
 			display: flex;
+			justify-content: end;
+			&:not(:first-child) {
+				padding-left: 1em;
+			}
 			dt {
+				&:not(:first-child) {
+					padding-left: 1em;
+				}
 				&::after {
 					content: "：";
+				}
+			}
+		}
+		&-share {
+			display: flex;
+			justify-content: end;
+			margin-top: 1em; //仮　カテゴリー表示時に追加調整しよう
+			dd:not(:last-child) {
+				padding-right: 5px;
+				&::after {
+					content: "/";
 				}
 			}
 		}

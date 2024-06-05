@@ -24,24 +24,36 @@ template: articlePage
           <div>{{ content }}</div>
         </div>
         <footer class="blog-article__footer">
-          {%- comment -%}
-          <dl class="blog-article__footer-category">
-            <dt>Category</dt>
-            <dd>
-              <a href="">{{ category }}</a>
-            </dd>
-            {%- if tags.size > 1 -%}
-              <dt>Tags</dt>
+          
+          <div class="blog-article__footer-inner">
+            <dl class="blog-article__footer-share">
+              <dt>Share：</dt>
               <dd>
-                {%- for tag in tags -%}
-                  {%- unless tag == "article" -%}
-                    <a href="">{{ tag }}</a>
-                  {%- endunless -%}
-                {%- endfor -%}
+                <a class="" href="https://twitter.com/intent/tweet?text={{ title }}&url=https://kokyushobo.com/{{ permalink }}" target="_blank" rel="noopener" aria-label="ツイートする">Twitter</a>
               </dd>
-            {%- endif -%}
-          </dl>
-          {%- endcomment -%}
+              <dd>
+                <a class="mobile-share-buttons__item mobile-share-buttons__item--facebook" href="https://www.facebook.com/sharer.php?u=https://kokyushobo.com/{{ permalink }}" target="_blank" rel="noopener" aria-label="Facebookでシェアする">Facebook</a>
+              </dd>
+            </dl>
+            {%- comment -%}
+            <dl class="blog-article__footer-category">
+              <dt>Category</dt>
+              <dd>
+                <a href="">{{ category }}</a>
+              </dd>
+              {%- if tags.size > 1 -%}
+                <dt>Tags</dt>
+                <dd>
+                  {%- for tag in tags -%}
+                    {%- unless tag == "article" -%}
+                      <a href="">{{ tag }}</a>{% unless forloop.last %}, {% endunless %} 
+                    {%- endunless -%}
+                  {%- endfor -%}
+                </dd>
+              {%- endif -%}
+            </dl>
+            {%- endcomment -%}
+          </div>
         </footer>
       </article>
 

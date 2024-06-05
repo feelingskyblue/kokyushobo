@@ -1704,20 +1704,36 @@ body:not(.homePage) .main {
 .blog-article__footer {
   padding: 1em;
   font-size: 0.9em;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 @media (max-width: 767px) {
   .blog-article__footer {
-    padding: 1em 0;
+    padding: 0;
   }
 }
 .blog-article__footer-category {
+  margin-top: 0.5em;
   display: flex;
+  justify-content: end;
+}
+.blog-article__footer-category:not(:first-child) {
+  padding-left: 1em;
+}
+.blog-article__footer-category dt:not(:first-child) {
+  padding-left: 1em;
 }
 .blog-article__footer-category dt::after {
   content: "：";
+}
+.blog-article__footer-share {
+  display: flex;
+  justify-content: end;
+  margin-top: 1em;
+}
+.blog-article__footer-share dd:not(:last-child) {
+  padding-right: 5px;
+}
+.blog-article__footer-share dd:not(:last-child)::after {
+  content: "/";
 }
 .blog-article__pager {
   display: flex;
