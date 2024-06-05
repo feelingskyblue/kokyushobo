@@ -25,9 +25,14 @@
     {% unless title == "Gymnopedie" %}<meta name="theme-color" content="#37807a">{% else %}<meta name="theme-color" content="#000000">{% endunless %}
 
     <!-- Social -->
+    {% if template == "articlePage" -%}
+      {%- assign og_type = "article" -%}
+    {%- else -%}
+      {%- assign og_type = "website" -%}
+    {%- endif -%}
     <meta property="og:url" content="https://kokyushobo.com{{ page.url }}">
     <meta property="og:title" content="{%- if title == blank -%}呼吸書房 // 風野湊 Official Website{%- else -%}{{ title }}｜呼吸書房{%- endif -%}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="{{ og_type }}" />
     <meta property="og:description" content="{%- if description == blank -%}風野湊によるオリジナル創作ウェブサイトです。小説と紀行文、朗読をメインに掲載しています。書籍通販・イベント出店の案内もこちらからどうぞ。{%- else -%}{{ description }}{%- endif -%}" />
     {% if thumbnail != blank -%}
       <meta property="og:image" content="https://kokyushobo.com{{ thumbnail }}" />
