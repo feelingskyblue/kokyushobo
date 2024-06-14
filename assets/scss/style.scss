@@ -1530,6 +1530,16 @@ body {
 		img:not(:last-child) {
 			margin-bottom: 1.5em;
 		}
+		.img__column-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			img {
+				width: 50%;
+				@media (max-width: $sp-width) {
+					width: 100%;
+				}
+			}
+		}
 		ul {
 			li {
 				position: relative;

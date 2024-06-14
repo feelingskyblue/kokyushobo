@@ -1709,6 +1709,18 @@ body:not(.homePage) .main {
 .blog-article__body img:not(:last-child) {
   margin-bottom: 1.5em;
 }
+.blog-article__body .img__column-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-article__body .img__column-wrapper img {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .blog-article__body .img__column-wrapper img {
+    width: 100%;
+  }
+}
 .blog-article__body ul li {
   position: relative;
   padding-left: 1em;
