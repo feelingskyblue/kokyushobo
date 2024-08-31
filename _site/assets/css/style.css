@@ -1703,6 +1703,11 @@ body:not(.homePage) .main {
   margin-top: 4em;
   margin-bottom: 4em;
 }
+.blog-article__body iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
 .blog-article__body p:not(:first-child) {
   margin-top: 1.5em;
 }
