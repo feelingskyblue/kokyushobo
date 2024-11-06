@@ -447,6 +447,7 @@ body {
 							height: calc(40px * 4);
 							border: 1px solid rgba($color: #48423b, $alpha: 0.2);
 							border-top: none;
+							z-index: 2;
 						}
 						.header__nav-booklist {
 							height: calc(35px * 9);
