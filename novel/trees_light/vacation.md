@@ -11,7 +11,18 @@ description: ベンチに樹木が座っている。もちろんそんなはず�
 ---
 
 <hr>
-<a href="/book/postcard_6/">『walking postcard vol.6』</a>掲載、『すべての樹木は光』</a>30年後の後日談です。<br>物語は既に幕を下ろした後。登場人物はチジュ、ニイジェ、本編未登場の新キャラクターのみ。本編『すべての樹木は光』結末への言及があるため、ネタバレを回避したい方はご留意ください。ささやかな再会のひとときを楽しんでいただけますように。
+<a href="/book/postcard_6/">『walking postcard vol.6』</a>掲載、『すべての樹木は光』</a>30年後の後日談です。<br>物語は既に幕を下ろした後。登場人物はチジュ、ニイジェ、本編未登場の新キャラクターのみ。本編結末への言及があるため、ネタバレを回避したい方はご留意ください。ささやかな再会のひとときを楽しんでいただけますように。
+<br><br>
+本編『すべての樹木は光』も冒頭40000字を公開しています。<br>
+ある魔法の喪失を描く、熱帯雨林の樹木変身譚です。未読の方はこちらもどうぞ。
+<br><br>
+<ul class="list__flex">
+  <li><a href="/book/trees_light/introduction" class="btn btn--medium btn--color">本編試し読み</a>
+  </li>
+    <li><a href="/book/trees_light/" class="btn btn--medium btn--color">書籍情報</a>
+  </li>
+</ul>
+
 <hr>
 
 　ベンチに樹木が座っている。
