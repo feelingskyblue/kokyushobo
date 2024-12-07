@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@import "core/reset";
+@import "core/utility";
+
+body {
+  .header, .footer {
+    display: none;
+  }
+  .main {
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    &.into-sea {
+      //background-color: #414fa3;
+      color: #fffef2;
+      .novel__background {
+        background-color: #1d1e36;
+      }
+    }
+  }
+  .novel {
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    &__background {
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: #adacb7;
+      top: 0;
+      left: 0;
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+    }
+    &.novel__content {
+      @media (min-width: 768px) {
+        font-size: 1.7rem;
+        line-height: 2.1;
+      }
+      @media (max-width: $sp-width) {
+        font-size: min((100vw - 4rem) / 21, 1.6rem);
+        max-width: 21em;
+      }
+    }
+  }
+  .meta-announce {
+    padding-block: 20vh;
+  }
+  .meta-music-info {
+    text-align: center;
+    padding-block: 3em;
+  }
+  .from-sea-to-sea {
+    padding-block: 25vh;
+    text-align: center;
+    letter-spacing: 1em;
+  }
+  .novel__footer {
+    padding-bottom: 8rem;
+  }
+}
