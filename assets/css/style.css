@@ -556,7 +556,7 @@ body:not(.homePage) .main {
     z-index: 2;
   }
   .header__nav-list .hasmenu:hover .header__nav-booklist {
-    height: 350px;
+    height: 385px;
   }
 }
 .header__nav-sublist {
