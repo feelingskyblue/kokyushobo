@@ -635,6 +635,14 @@ body {
 			width: 35%;
 			position: sticky;
 			top: 40px;
+			&--placeholder {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				background-color: #48423b33;
+				aspect-ratio: 1/1.41;
+			}
 			@media (max-width: $sp-width) {
 				position: initial;
 				top: initial;

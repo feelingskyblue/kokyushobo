@@ -765,6 +765,14 @@ body:not(.homePage) .main {
   position: sticky;
   top: 40px;
 }
+.book-info__page-wrapper .book-info__image--placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(72, 66, 59, 0.2);
+  aspect-ratio: 1/1.41;
+}
 @media (max-width: 767px) {
   .book-info__page-wrapper .book-info__image {
     position: initial;
