@@ -3,6 +3,20 @@
 @import "core/reset";
 @import "core/utility";
 
+/* Variables */
+:root {
+	--bgColor: #fefbf9;
+	--bgColorRgb: 254, 251, 249;
+	--textColor: #181614;
+	--textColorRgb: 24, 22, 20;
+	--keyColor: #37807a;
+	--keyColorRgb: 55, 128, 122;
+	--keyColorDark: #29605c;
+	--keyColorDarkRgb: 41, 96, 92;
+	--subColor: #48423b;
+	--subColorRgb: 72, 66, 59;
+}
+
 /* base CSS */
 html {
 	box-sizing: border-box;
@@ -12,8 +26,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background-color: $bgColor; //fcf8f3; //fcf8f3
-  color: $textColor;
+  background-color: var(--bgColor); //fcf8f3; //fcf8f3
+  color: var(--textColor);
 	font-family: Cochin, "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
@@ -42,9 +56,9 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: $subColor;
+  color: var(--subColor);
 	text-decoration: none;
-	border-bottom: 1px solid rgba($color: $subColor, $alpha: 0.5);
+	border-bottom: 1px solid rgba($color: var(--subColorRgb), $alpha: 0.5);
 	transition: all 0.4s ease;
 	&.link--unstyle {
 		border-bottom: none;
@@ -60,7 +74,7 @@ a {
 		}
 	}
 	&:hover {
-		background-color: rgba($color: $keyColor, $alpha: 0.2);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 	}
 }
 
@@ -130,10 +144,10 @@ a {
 		font-weight: normal;
 	}
 	&--color {
-		color: $keyColor;
+		color: var(--keyColor);
 	}
 	&--colorDark {
-		color: $keyColorDark;
+		color: var(--keyColorDark);
 	}
 	&--default {
 		font-size: 1.4rem;
@@ -159,23 +173,23 @@ a {
 		height: 4rem;
 	}
 	&--color {
-		background-color: rgba($color: $keyColor, $alpha: 0.7);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 		color: #ffffff;
 		&:hover {
-			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 			opacity: 0.7;
 		}
 	}
 	&--pale {
-		background-color: rgba($color: $keyColor, $alpha: 0.1);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		&:hover {
 			opacity: 1;
-			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 			color: #ffffff;
 		}
 	}
 	&--outlined {
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		background-color: transparent;
 	}
 }
@@ -248,7 +262,7 @@ blockquote {
 				position: absolute;
 				top: 0;
 				left: 0;
-				color: $keyColor;
+				color: var(--keyColor);
 				width: 1em;
 				height: 1em;
 			}
@@ -266,11 +280,11 @@ blockquote {
 }
 .bg {
 	&__primary {
-		background-color: rgba($color: $subColor, $alpha: 0.1);
+		background-color: rgba($color: var(--subColorRgb), $alpha: 0.1);
 		//background-color: rgba(213, 216, 216, 0.25);
 	}
 	&__secondary {
-		background-color: rgba($color: $keyColor, $alpha: 0.05);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.05);
 		//background-color: rgba(213, 216, 216, 0.25);
 	}
 }
@@ -301,7 +315,7 @@ body {
 	}
 	&:not(.homePage) {
 		.header {
-			//border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			//border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		}
 		.main {
 			padding-top: 12rem;
@@ -316,20 +330,20 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba($color: $bgColor, $alpha: 0.75);
+	background-color: rgba($color: var(--bgColorRgb), $alpha: 0.75);
 	z-index: 20;
 	width: 100%;
 	height: 6.5rem;
 	@include flex;
 	align-items: center;
-	//border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+	//border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 	transition: all 0.4s ease-in-out;
 	@media (max-width: $sp-width) {
 		height: 5rem;
-		background-color: rgba($color: $bgColor, $alpha: 0.85);
+		background-color: rgba($color: var(--bgColorRgb), $alpha: 0.85);
 	}
 	&:hover {
-		background-color: $bgColor;
+		background-color: var(--bgColor);
 	}
 	.logo__image {
 		width: 12rem;
@@ -363,11 +377,11 @@ body {
 				font-size: 1rem;
 				line-height: 1;
 				display: block;
-				color: $keyColor;
+				color: var(--keyColor);
 				transition: transform 0.4s ease;
 				&.btn__line {
 					height: 1px;
-					background-color: rgba($color: $keyColor, $alpha: 0.5);
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
 					margin-bottom: 0.3rem;
 					&:nth-child(2) {
 						width: 1.8rem;
@@ -405,7 +419,7 @@ body {
 			width: calc(100vw - 12rem);
 			height: 100%;
 			overflow: scroll;
-			background-color: rgba($color: $bgColor, $alpha: 0.95);
+			background-color: rgba($color: var(--bgColorRgb), $alpha: 0.95);
 			z-index: 30;
 			top: 0;
 			right: -100vw;
@@ -435,7 +449,7 @@ body {
 						content: "";
 						width: calc(100% - 6rem);
 						height: 1px;
-						background-color: rgba($color: $textColor, $alpha: 0.1);
+						background-color: rgba($color: var(--textColorRgb), $alpha: 0.1);
 						position: absolute;
 						left: 3rem;
 						bottom: 0;
@@ -464,7 +478,7 @@ body {
 				min-width: 100%;
 				height: 0px;
 				overflow: hidden;
-				background-color: $bgColor;
+				background-color: var(--bgColor);
 				transition: height 0.4s ease;	
 			}
 			@media (max-width: $sp-width) {
@@ -505,10 +519,10 @@ body {
 			cursor: pointer;
 			transition: all 0.4s ease;
 			&:hover {
-				background-color: rgba($color: $keyColor, $alpha: 0.2);
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 			}
 			@media (max-width: $sp-width) {
-				color: $keyColor;
+				color: var(--keyColor);
 				display: block;
 				padding: 0.8rem 3rem;
 			}
@@ -518,7 +532,7 @@ body {
 			padding-top: 2px;
 			padding-left: 5px;
 			line-height: 1;
-			color: rgba($color: $textColor, $alpha: 0.7);
+			color: rgba($color: var(--textColorRgb), $alpha: 0.7);
 		}
 	}
 }
@@ -601,7 +615,7 @@ body {
 			border: 2px solid transparent;
 			background: transparent;
 			&[aria-selected="true"] {
-				border: 2px solid $keyColor;	
+				border: 2px solid var(--keyColor);	
 			}
 		}
 		img {
@@ -687,11 +701,11 @@ body {
 	&__item {
 		position: relative;
 		&:not(:first-child) {
-			border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--subColorRgb), $alpha: 0.1);
 		}
 		@media (max-width: $sp-width) {
 			&:first-child {
-				border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
+				border-top: 1px solid rgba($color: var(--subColorRgb), $alpha: 0.1);
 			}
 		}	
 		&-link {
@@ -702,7 +716,7 @@ body {
 				padding: 1rem 0.5rem;
 			}
 			&:hover {
-				background-color: rgba($color: $keyColor, $alpha: 0.1) !important;	
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.1) !important;	
 			}
 		}
 		&-unlink {
@@ -720,7 +734,7 @@ body {
 			font-weight: normal;
 			font-size: 1.1em;
 			margin-bottom: 0;
-			color: $keyColorDark;
+			color: var(--keyColorDark);
 			span {
 				line-height: 1;
 				position: relative;
@@ -731,7 +745,7 @@ body {
 						height: 1px;
 						content: "";
 						display: block;
-						background-color: rgba($color: $keyColorDark, $alpha: 0.3);
+						background-color: rgba($color: var(--keyColorDarkRgb), $alpha: 0.3);
 						left: 0;
 						bottom: 1px;	
 					}
@@ -741,7 +755,7 @@ body {
 	}
 	&__section {
 		width: 100%;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		padding: 1rem 2rem;
 		position: relative;
 		display: flex;
@@ -773,7 +787,7 @@ body {
 			position: absolute;
 			top: 0;
 			right: 0;
-			background-color: $keyColor;
+			background-color: var(--keyColor);
 			display: block;
 			content: "";
 		}
@@ -821,7 +835,7 @@ body {
 			flex-grow: 1;
 			margin-right: 2rem;
 			padding-right: 2rem;
-			border-right: 1px solid rgba($color: $keyColor, $alpha: 0.2);	
+			border-right: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.2);	
 			@media (max-width: $sp-width) {
 				width: 100%;
 				margin-right: 0;
@@ -912,7 +926,7 @@ body {
 		width: 100%;
 		background-color: transparent;
 		box-shadow: none;
-		border: 1px solid $keyColorDark;
+		border: 1px solid var(--keyColorDark);
 		@media (max-width: $sp-width) {
 			font-size: 1.6rem;
 		}
@@ -924,7 +938,7 @@ body {
 	input[type="checkbox"] {
 		background-color: transparent;
 		box-shadow: none;
-		border: 1px solid $keyColorDark;
+		border: 1px solid var(--keyColorDark);
 	}
 	textarea {
 		height: 10em;
@@ -959,7 +973,7 @@ body {
 	&__firstview-txt {
 		width: 100%;
 		position: relative;
-		background-color: $bgColor;
+		background-color: var(--bgColor);
 		padding: 4rem 0;
 		z-index: 10;
 		.page-width {
@@ -1013,7 +1027,7 @@ body {
 			bottom: 2rem;
 			//left: 2rem;
 			right: max(4rem, calc((100% - 128rem + 8rem) / 2));
-			color: $bgColor;
+			color: var(--bgColor);
 			z-index: 11;
 			opacity: 0.7;
 			font-size: 1.2rem;
@@ -1023,8 +1037,8 @@ body {
 				right: 2rem;
 			}
 			a {
-				color: $bgColor;
-				border-color: $bgColor;
+				color: var(--bgColor);
+				border-color: var(--bgColor);
 			}
 		}
 		&::before {
@@ -1079,7 +1093,7 @@ body {
 			//padding-bottom: 4rem;
 			//max-width: 42rem;
 			padding: 4rem 4rem 4rem 8rem;
-			color: $bgColor;
+			color: var(--bgColor);
 			z-index: 10;
 			font-size: 1.5rem;
 			text-shadow: 0 0 0.15em #00000011, 0 0 0.5em #00000066;
@@ -1100,9 +1114,9 @@ body {
 				}
 			}
 			a {
-				color: $bgColor;
+				color: var(--bgColor);
 				font-size: 1.8rem;
-				border-color: $bgColor;
+				border-color: var(--bgColor);
 				span {
 					font-size: 1.2rem;
 				}
@@ -1135,7 +1149,7 @@ body {
 	&__news {
 		display: inline-block;
 		padding: 2rem;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		font-size: 1.3rem;
 		@media (max-width: $sp-width) {
 			padding: 1rem 1.5rem;
@@ -1172,7 +1186,7 @@ body {
 			padding-bottom: 2rem;
 		}
 		&:not(:last-child):not(:first-child) {
-			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 		.btn__wrapper {
 			margin-top: 2rem;
@@ -1192,7 +1206,7 @@ body {
 		}
 	}
 	&__section-heading {
-		color: $keyColor;
+		color: var(--keyColor);
 		font-weight: normal;
 		font-size: 2.4rem;
 		margin-right: 1em;
@@ -1212,7 +1226,7 @@ body {
 		margin-top: 0;
 		padding: 6.5rem 0 0;
 		@media (max-width: $sp-width) {
-			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 	}
 	@media (max-width: $sp-width) {
@@ -1262,7 +1276,7 @@ body {
 		position: relative;
 		content: "";
 		display: block;
-		background-color: $bgColor;
+		background-color: var(--bgColor);
 		width: 100%;
 		max-width: 72rem;
 		height: 8rem;
@@ -1317,7 +1331,7 @@ body {
 			display: block;
 			position: absolute;
 			left: 4rem;
-			background-color: $keyColor;
+			background-color: var(--keyColor);
 			opacity: 0.5;
 			@media (max-width: $sp-width) {
 				//width: calc(100% - (4.266vw * 2));
@@ -1344,14 +1358,14 @@ body {
 		margin-top: 4rem;
 		&.for-profile {
 			padding-top: 4rem;
-			border-top: 1px solid $keyColor;
+			border-top: 1px solid var(--keyColor);
 		}
 		.logo__wrapper-outline {
 			width: 50%;
 			display: block;
 			padding: 2rem;
 			margin: 1rem 0;
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 			text-align: center;
 			@media (max-width: $sp-width) {
 				width: 100%;
@@ -1362,7 +1376,7 @@ body {
 		}
 	}
 	&__section-heading {
-		color: $keyColor;
+		color: var(--keyColor);
 		font-weight: normal;
 		font-size: 2.4rem;
 		margin-right: 1em;
@@ -1398,7 +1412,7 @@ body {
 	.twitter__wrapper {
 		margin-top: 2rem;
 		margin-bottom: 2rem;
-		border: 1px solid $keyColor;
+		border: 1px solid var(--keyColor);
 		width: 75%;
 		opacity: 0.9;
 		@media (max-width: $sp-width) {
@@ -1426,10 +1440,10 @@ body {
 .blog {
 }
 .blog-article {
-	border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+	border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 	@media (max-width: $sp-width) {
 		border: none;
-		//border-bottom: 5px solid rgba($color: $keyColor, $alpha: 0.1);
+		//border-bottom: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 	}
 	&:not(:last-child) {
 		margin-bottom: 4rem;
@@ -1444,8 +1458,8 @@ body {
 			display: block;
 			padding: 1em 0;
 			background-color: transparent;
-			border-top: 5px solid rgba($color: $keyColor, $alpha: 0.1);
-			border-bottom: 5px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
+			border-bottom: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 		&-title {
 			margin: 0;
@@ -1494,21 +1508,21 @@ body {
 			font-size: 1.1em;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h2 {
 			margin-top: 40px;
 			font-size: 1.1em;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h3 {
 			font-size: 1em;
 			margin-top: 40px;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h4 {
 			font-size: 1em;
@@ -1524,7 +1538,7 @@ body {
 				flex: 1;
 				width: 100%;
 				height: 1px;
-				background-color: rgba($color: $keyColor, $alpha: 0.25);
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.25);
 			}
 		}
 		hr {
@@ -1623,7 +1637,7 @@ body {
 		}
 		position: relative;
 		&:not(:empty) {
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 			& + &:not(:empty) {
 				@media (min-width: $pc-width) {
 					border-left: none;
@@ -1637,7 +1651,7 @@ body {
 				display: block;
 				top: 50%;
 				transform: translateY(-50%);
-				color: rgba($color: $keyColor, $alpha: 0.5);
+				color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
 			}
 		}
 		a {
@@ -1647,7 +1661,7 @@ body {
 			border: none;
 		}
 		dt {
-			color: $keyColor;
+			color: var(--keyColor);
 		}
 		dd {
 			//text-decoration: underline;
@@ -1685,13 +1699,13 @@ body {
 		}
 	}
 	&__inner {
-		color: $keyColor;
+		color: var(--keyColor);
 		display: block;
 		padding: 12px 10px;
 		line-height: 1;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		&[aria-current="page"] {
-			background-color: rgba($color: $keyColor, $alpha: 0.8);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.8);
 			color: #ffffff;
 			pointer-events: none;
 		}
@@ -1752,7 +1766,7 @@ body {
 			top: initial;
 			right: initial;
 			opacity: 1;
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 			padding: 2em;
 			margin: 4rem 0;
 		}
@@ -1789,7 +1803,7 @@ body {
 				line-height: 1;
 				padding: 1rem;
 				&.current {
-					background-color: rgba($color: $keyColor, $alpha: 0.2);
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 				}
 			}
 			dt {
