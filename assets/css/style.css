@@ -123,6 +123,22 @@
   --subColorRgb: 72, 66, 59;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    --textColor: #fefbf9;
+    --textColorRgb: 254, 251, 249;
+    --bgColor: #3c3732;
+    --bgColorRgb: 24, 22, 20;
+    --keyColor: #37807a;
+    --keyColorRgb: 55, 128, 122;
+    --keyColorDark: #29605c;
+    --keyColorDarkRgb: 41, 96, 92;
+    --subColor: #48423b;
+    --subColorRgb: 72, 66, 59;
+    --linkColor: #fefbf9;
+    --linkColorRgb: 254, 251, 249;
+  }
+}
 /* base CSS */
 html {
   box-sizing: border-box;
@@ -160,9 +176,9 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: var(--subColor);
+  color: var(--linkColor);
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--subColorRgb), 0.5);
+  border-bottom: 1px solid rgba(var(--linkColorRgb), 0.5);
   transition: all 0.4s ease;
 }
 a.link--unstyle {
