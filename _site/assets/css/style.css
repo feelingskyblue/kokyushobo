@@ -127,16 +127,93 @@
   :root {
     --textColor: #fefbf9;
     --textColorRgb: 254, 251, 249;
-    --bgColor: #3c3732;
-    --bgColorRgb: 24, 22, 20;
+    --bgColor: #333939;
+    --bgColorRgb: 51, 57, 57;
     --keyColor: #37807a;
     --keyColorRgb: 55, 128, 122;
-    --keyColorDark: #29605c;
-    --keyColorDarkRgb: 41, 96, 92;
+    --keyColorDark: #4cb2a9;
+    --keyColorDarkRgb: 76, 178, 169;
     --subColor: #48423b;
     --subColorRgb: 72, 66, 59;
     --linkColor: #fefbf9;
     --linkColorRgb: 254, 251, 249;
+  }
+  body .header .mobile__nav-btn span {
+    color: var(--keyColorDark);
+  }
+  body .header .mobile__nav-btn span.btn__line {
+    background-color: rgba(var(--keyColorDarkRgb), 1);
+  }
+}
+@media (prefers-color-scheme: dark) and (max-width: 767px) {
+  body .header .header__nav .menu-item--parent {
+    color: var(--keyColorDark);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .main .heading--color {
+    color: var(--keyColorDark);
+  }
+  .main .page__section-heading {
+    color: var(--keyColorDark);
+  }
+  .main .home__section-heading {
+    color: var(--keyColorDark);
+  }
+  .main .btn--color {
+    background-color: rgba(var(--keyColorRgb), 0.7);
+  }
+  .main .btn--color:hover {
+    background-color: rgba(var(--keyColorRgb), 1);
+    opacity: 1;
+  }
+  .main .btn--pale {
+    background-color: rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .btn--pale:hover {
+    background-color: rgba(var(--keyColorRgb), 0.7);
+  }
+  .main .btn--outlined {
+    border: 1px solid rgba(var(--keyColorRgb), 0.7);
+  }
+  .main .home__news {
+    border: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .pagination__inner {
+    color: var(--keyColorDark);
+    border: 1px solid rgba(var(--keyColorRgb), 0.7);
+  }
+  .main .blog-article__pager-item:not(:empty) {
+    border: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .blog-article__pager-item dt {
+    color: var(--keyColorDark);
+  }
+  .main .blog-article__pager-item:not(:empty)::after {
+    color: var(--keyColor);
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 768px) {
+  .main .novel-list__section {
+    border: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .novel-list__header + .list {
+    border-right: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .blog-article {
+    border: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .blog-article__header.bg__secondary {
+    background-color: rgba(var(--keyColorRgb), 0.5);
+  }
+}
+@media (prefers-color-scheme: dark) and (max-width: 767px) {
+  .main .novel-list__section {
+    border-top: 1px solid rgba(var(--keyColorRgb), 0.5);
+  }
+  .main .blog-article__header {
+    border-top: 5px solid rgba(var(--keyColorRgb), 0.5);
+    border-bottom: 5px solid rgba(var(--keyColorRgb), 0.5);
   }
 }
 /* base CSS */
@@ -742,7 +819,7 @@ body:not(.homePage) .main {
   top: 0;
   width: 3rem;
   height: 100%;
-  background: transparent linear-gradient(90deg, rgba(254, 251, 249, 0) 0%, rgb(254, 251, 249) 50%, rgb(254, 251, 249) 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 }
 
 .book-tab {
@@ -1188,7 +1265,7 @@ body:not(.homePage) .main {
   position: absolute;
   bottom: 2rem;
   right: max(4rem, (100% - 128rem + 8rem) / 2);
-  color: var(--bgColor);
+  color: #fefbf9;
   z-index: 11;
   opacity: 0.7;
   font-size: 1.2rem;
@@ -1201,8 +1278,8 @@ body:not(.homePage) .main {
   }
 }
 .home__firstview-image figcaption a {
-  color: var(--bgColor);
-  border-color: var(--bgColor);
+  color: #fefbf9;
+  border-color: #fefbf9;
 }
 .home__firstview-image::before {
   width: 100%;
@@ -1254,7 +1331,7 @@ body:not(.homePage) .main {
 .home__firstview-image__txt {
   position: relative;
   padding: 4rem 4rem 4rem 8rem;
-  color: var(--bgColor);
+  color: #fefbf9;
   z-index: 10;
   font-size: 1.5rem;
   text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.0666666667), 0 0 0.5em rgba(0, 0, 0, 0.4);
@@ -1279,9 +1356,9 @@ body:not(.homePage) .main {
   }
 }
 .home__firstview-image__txt a {
-  color: var(--bgColor);
+  color: #fefbf9;
   font-size: 1.8rem;
-  border-color: var(--bgColor);
+  border-color: #fefbf9;
 }
 .home__firstview-image__txt a span {
   font-size: 1.2rem;
@@ -1557,6 +1634,7 @@ body:not(.homePage) .main {
   margin: 1rem 0;
   border: 1px solid rgba(var(--keyColorRgb), 0.3);
   text-align: center;
+  background-color: #ffffff;
 }
 @media (max-width: 767px) {
   .page-txt__wrapper .logo__wrapper-outline {
@@ -1583,7 +1661,7 @@ body:not(.homePage) .main {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  background: transparent linear-gradient(180deg, rgba(254, 251, 249, 0) 0%, rgba(254, 251, 249, 0.5) 50%, rgb(254, 251, 249) 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 }
 @media (max-width: 767px) {
   .page .scroll__wrapper::after {

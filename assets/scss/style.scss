@@ -20,16 +20,97 @@
 	:root {
 		--textColor: #fefbf9;
 		--textColorRgb: 254, 251, 249;
-		--bgColor: #3c3732;
-		--bgColorRgb: 24, 22, 20;
+		--bgColor: #333939; //#3c3732;
+		--bgColorRgb: 51, 57, 57; //24, 22, 20;
 		--keyColor: #37807a;
 		--keyColorRgb: 55, 128, 122;
-		--keyColorDark: #29605c;
-		--keyColorDarkRgb: 41, 96, 92;
+		--keyColorDark: #4cb2a9;
+		--keyColorDarkRgb: 76, 178, 169;
 		--subColor: #48423b;
 		--subColorRgb: 72, 66, 59;
 		--linkColor: #fefbf9;
 		--linkColorRgb: 254, 251, 249;
+	}
+	body .header {
+		.mobile__nav-btn span {
+			color: var(--keyColorDark);
+			&.btn__line {
+				background-color: rgba(var(--keyColorDarkRgb), 1);
+			}
+		}
+		@media (max-width: $sp-width) {
+			.header__nav .menu-item--parent {
+				color: var(--keyColorDark);
+			}	
+		}
+	}
+	.main {
+		.heading--color {
+			color: var(--keyColorDark);
+		}
+		.page__section-heading {
+			color: var(--keyColorDark);
+		}
+		.home__section-heading {
+			color: var(--keyColorDark);
+		}
+		.btn {
+			&--color {
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
+				&:hover {
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 1);
+					opacity: 1;
+				}
+			}
+			&--pale {
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
+				&:hover {
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
+				}
+			}
+			&--outlined {
+				border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.7);
+			}
+		}
+		.home__news {
+			border: 1px solid rgba(var(--keyColorRgb), 0.5);
+		}
+		.pagination__inner {
+			color: var(--keyColorDark);
+			border: 1px solid rgba(var(--keyColorRgb), 0.7);
+		}
+		.blog-article__pager-item:not(:empty) {
+			border: 1px solid rgba(var(--keyColorRgb), 0.5);
+		}
+		.blog-article__pager-item dt {
+			color: var(--keyColorDark);
+		}
+		.blog-article__pager-item:not(:empty)::after {
+			color: var(--keyColor);
+		}
+		@media (min-width: $pc-width) {
+			.novel-list__section {
+				border: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.novel-list__header + .list {
+				border-right: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article {
+				border: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article__header.bg__secondary {
+				background-color: rgba(var(--keyColorRgb), 0.5);
+			}
+		}
+		@media (max-width: $sp-width) {
+			.novel-list__section {
+				border-top: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article__header {
+				border-top: 5px solid rgba(var(--keyColorRgb), 0.5);
+				border-bottom: 5px solid rgba(var(--keyColorRgb), 0.5);	
+			}
+		}
 	}
 }
 
@@ -609,7 +690,7 @@ body {
 		top: 0;
 		width: 3rem;
 		height: 100%;
-		background: transparent linear-gradient(90deg, rgba(254,251,249,0) 0%, rgba(254,251,249,1) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+		background: transparent linear-gradient(90deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 	}
 }
 .book-tab {
@@ -971,8 +1052,6 @@ body {
 		height: auto;
 		position: relative;
 		padding-top: 15dvh;
-		//padding-top: 6rem;
-		//min-height: 100dvh;
 		@include flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -1037,7 +1116,7 @@ body {
 			bottom: 2rem;
 			//left: 2rem;
 			right: max(4rem, calc((100% - 128rem + 8rem) / 2));
-			color: var(--bgColor);
+			color: #fefbf9; //ここの色情報はダークモードでも固定
 			z-index: 11;
 			opacity: 0.7;
 			font-size: 1.2rem;
@@ -1047,8 +1126,8 @@ body {
 				right: 2rem;
 			}
 			a {
-				color: var(--bgColor);
-				border-color: var(--bgColor);
+				color: #fefbf9; //ここの色情報はダークモードでも固定
+				border-color: #fefbf9; //ここの色情報はダークモードでも固定
 			}
 		}
 		&::before {
@@ -1103,7 +1182,7 @@ body {
 			//padding-bottom: 4rem;
 			//max-width: 42rem;
 			padding: 4rem 4rem 4rem 8rem;
-			color: var(--bgColor);
+			color: #fefbf9; //ここの色情報はダークモードでも固定
 			z-index: 10;
 			font-size: 1.5rem;
 			text-shadow: 0 0 0.15em #00000011, 0 0 0.5em #00000066;
@@ -1124,9 +1203,9 @@ body {
 				}
 			}
 			a {
-				color: var(--bgColor);
+				color: #fefbf9; //ここの色情報はダークモードでも固定
 				font-size: 1.8rem;
-				border-color: var(--bgColor);
+				border-color: #fefbf9; //ここの色情報はダークモードでも固定
 				span {
 					font-size: 1.2rem;
 				}
@@ -1373,6 +1452,7 @@ body {
 			margin: 1rem 0;
 			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 			text-align: center;
+			background-color: #ffffff;
 			@media (max-width: $sp-width) {
 				width: 100%;
 			}
@@ -1397,7 +1477,7 @@ body {
 			bottom: 0;
 			width: 100%;
 			height: 3rem;
-			background: transparent linear-gradient(180deg, rgba(254,251,249,0) 0%, rgba(254,251,249,0.5) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(180deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 			@media (max-width: $sp-width) {
 				display: none;
 			}
