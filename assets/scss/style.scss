@@ -17,7 +17,7 @@
 	--subColorRgb: 72, 66, 59;
 }
 @media (prefers-color-scheme: dark) {
-	body {
+	:root {
 		--textColor: #fefbf9;
 		--textColorRgb: 254, 251, 249;
 		--bgColor: #3c3732;
@@ -297,11 +297,9 @@ blockquote {
 .bg {
 	&__primary {
 		background-color: rgba($color: var(--subColorRgb), $alpha: 0.1);
-		//background-color: rgba(213, 216, 216, 0.25);
 	}
 	&__secondary {
 		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.05);
-		//background-color: rgba(213, 216, 216, 0.25);
 	}
 }
 
@@ -1297,7 +1295,6 @@ body {
 		}
 	}
 	&__wrapper {
-		//padding: 4rem 0 0;
 		padding: 0;
 		@media (max-width: $sp-width) {
 			padding: 0 0 4rem;
@@ -1306,9 +1303,6 @@ body {
 			max-width: 72rem;
 			margin: 0 auto;
 			margin-left: max(1px, calc((100% - 128rem) / 2));
-			//padding-right: 2rem;
-			//padding-bottom: 0;
-			//box-shadow: 0 5rem 4rem rgba($color: #48423b, $alpha: 0.1);
 			position: relative;
 			@media (max-width: $sp-width) {
 				margin-left: 0;
@@ -1455,7 +1449,6 @@ body {
 	border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 	@media (max-width: $sp-width) {
 		border: none;
-		//border-bottom: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 	}
 	&:not(:last-child) {
 		margin-bottom: 4rem;
@@ -1466,7 +1459,6 @@ body {
 		justify-content: space-between;
 		padding: 1em;
 		@media (max-width: $sp-width) {
-			//margin: 2rem 0;
 			display: block;
 			padding: 1em 0;
 			background-color: transparent;
@@ -1726,8 +1718,6 @@ body {
 
 .novel {
 	max-width: 38em;
-	//margin: 0 auto;
-	//margin-left: 8rem;
 	margin-left: max(8rem, calc((100% - 128rem + 8rem) / 2));
 	font-size: 1.6rem;
 	line-height: 1.8;

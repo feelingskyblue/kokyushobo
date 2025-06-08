@@ -124,7 +124,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
+  :root {
     --textColor: #fefbf9;
     --textColorRgb: 254, 251, 249;
     --bgColor: #3c3732;
