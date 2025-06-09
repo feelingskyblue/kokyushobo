@@ -143,6 +143,12 @@
 [data-color-mode=dark] body .header .mobile__nav-btn span.btn__line {
   background-color: rgba(var(--keyColorDarkRgb), 1);
 }
+[data-color-mode=dark] body .header .header__shift-btn--sun {
+  opacity: 0.3;
+}
+[data-color-mode=dark] body .header .header__shift-btn--moon {
+  opacity: 1;
+}
 @media (max-width: 767px) {
   [data-color-mode=dark] body .header .header__nav .menu-item--parent {
     color: var(--keyColorDark);
@@ -567,8 +573,41 @@ body:not(.homePage) .main {
   padding: 1rem;
   z-index: 31;
 }
-.header__shift-btn .header__shift-btn--sun {
-  opacity: 0.3;
+.header__shift-btn::after {
+  display: block;
+  content: "背景色を変更する";
+  white-space: nowrap;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .header__shift-btn::after {
+    position: absolute;
+    bottom: -1em;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+.header__shift-btn:hover::after {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .header__shift-btn {
+    right: initial;
+    left: 1.8rem;
+    top: 0.8rem;
+    gap: 0.7rem;
+  }
+  .header__shift-btn svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.header__shift-btn--sun {
+  opacity: 0.8;
+}
+.header__shift-btn--moon {
+  opacity: 0.2;
 }
 .header .mobile__nav-btn {
   display: none;
