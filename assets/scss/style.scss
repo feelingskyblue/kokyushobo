@@ -16,21 +16,21 @@
 	--subColor: #48423b;
 	--subColorRgb: 72, 66, 59;
 }
-@media (prefers-color-scheme: dark) {
-	:root {
-		--textColor: #fefbf9;
-		--textColorRgb: 254, 251, 249;
-		--bgColor: #333939; //#3c3732;
-		--bgColorRgb: 51, 57, 57; //24, 22, 20;
-		--keyColor: #37807a;
-		--keyColorRgb: 55, 128, 122;
-		--keyColorDark: #4cb2a9;
-		--keyColorDarkRgb: 76, 178, 169;
-		--subColor: #48423b;
-		--subColorRgb: 72, 66, 59;
-		--linkColor: #fefbf9;
-		--linkColorRgb: 254, 251, 249;
-	}
+
+[data-color-mode="dark"] {
+	--textColor: #fefbf9;
+	--textColorRgb: 254, 251, 249;
+	--bgColor: #333939; //#3c3732;
+	--bgColorRgb: 51, 57, 57; //24, 22, 20;
+	--keyColor: #37807a;
+	--keyColorRgb: 55, 128, 122;
+	--keyColorDark: #4cb2a9;
+	--keyColorDarkRgb: 76, 178, 169;
+	--subColor: #48423b;
+	--subColorRgb: 72, 66, 59;
+	--linkColor: #fefbf9;
+	--linkColorRgb: 254, 251, 249;
+
 	body .header {
 		.mobile__nav-btn span {
 			color: var(--keyColorDark);
@@ -112,6 +112,7 @@
 			}
 		}
 	}
+		
 }
 
 /* base CSS */
@@ -422,19 +423,19 @@ body {
 	height: 6.5rem;
 	@include flex;
 	align-items: center;
-	transition: all 0.4s ease-in-out;
 	.homePage & {
 		box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
 		background-color: rgba($color: var(--bgColorRgb), $alpha: 0.75);
+		transition: background-color 0.4s ease-in-out;
+		&:hover {
+			background-color: var(--bgColor);
+		}
 		@media (max-width: $sp-width) {
 			background-color: rgba($color: var(--bgColorRgb), $alpha: 0.85);
 		}
 	}
 	@media (max-width: $sp-width) {
 		height: 5rem;
-	}
-	&:hover {
-		background-color: var(--bgColor);
 	}
 	.logo__image {
 		width: 12rem;
@@ -448,8 +449,26 @@ body {
 		height: 100%;
 		@include flex;
 		align-items: center;
+		position: relative;
 		@media (max-width: $sp-width) {
 			//justify-content: flex-end;
+		}
+	}
+	&__shift-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		top: 1.2rem;
+		right: 1.2rem;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		padding: 1rem;
+		z-index: 31;
+		.header__shift-btn--sun {
+			opacity: 0.3;
 		}
 	}
 	.mobile__nav-btn {

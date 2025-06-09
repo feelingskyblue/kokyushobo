@@ -11,6 +11,18 @@
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     {%- if canonical -%}<link rel="canonical" href="{{ canonical }}" />{%- endif %}
 
+    <script async>
+      "use strict";
+      (function () {
+          const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          const fromStorage = localStorage.getItem("kokyushobo-color-mode");
+          const colorMode = (fromStorage === "system" || fromStorage == null) ? prefers : fromStorage === "light" ? "light" : "dark";
+          window.document.documentElement.dataset.colorMode = colorMode;
+      })();
+    </script>
+
     <!-- Assets -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/global.js" defer></script>
@@ -110,6 +122,10 @@
             <li><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
             <li><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
           </ul>
+          <button id="modeChangeBtn" class="header__shift-btn" type="button">
+            {%- render 'icon-sun', className: "header__shift-btn--sun" -%}
+            {%- render 'icon-moon', className: "header__shift-btn--moon" -%}
+          </button>
         </nav>
       </div>
     </header>

@@ -123,99 +123,96 @@
   --subColorRgb: 72, 66, 59;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --textColor: #fefbf9;
-    --textColorRgb: 254, 251, 249;
-    --bgColor: #333939;
-    --bgColorRgb: 51, 57, 57;
-    --keyColor: #37807a;
-    --keyColorRgb: 55, 128, 122;
-    --keyColorDark: #4cb2a9;
-    --keyColorDarkRgb: 76, 178, 169;
-    --subColor: #48423b;
-    --subColorRgb: 72, 66, 59;
-    --linkColor: #fefbf9;
-    --linkColorRgb: 254, 251, 249;
-  }
-  body .header .mobile__nav-btn span {
-    color: var(--keyColorDark);
-  }
-  body .header .mobile__nav-btn span.btn__line {
-    background-color: rgba(var(--keyColorDarkRgb), 1);
-  }
+[data-color-mode=dark] {
+  --textColor: #fefbf9;
+  --textColorRgb: 254, 251, 249;
+  --bgColor: #333939;
+  --bgColorRgb: 51, 57, 57;
+  --keyColor: #37807a;
+  --keyColorRgb: 55, 128, 122;
+  --keyColorDark: #4cb2a9;
+  --keyColorDarkRgb: 76, 178, 169;
+  --subColor: #48423b;
+  --subColorRgb: 72, 66, 59;
+  --linkColor: #fefbf9;
+  --linkColorRgb: 254, 251, 249;
 }
-@media (prefers-color-scheme: dark) and (max-width: 767px) {
-  body .header .header__nav .menu-item--parent {
+[data-color-mode=dark] body .header .mobile__nav-btn span {
+  color: var(--keyColorDark);
+}
+[data-color-mode=dark] body .header .mobile__nav-btn span.btn__line {
+  background-color: rgba(var(--keyColorDarkRgb), 1);
+}
+@media (max-width: 767px) {
+  [data-color-mode=dark] body .header .header__nav .menu-item--parent {
     color: var(--keyColorDark);
   }
 }
-@media (prefers-color-scheme: dark) {
-  .main .heading--color {
-    color: var(--keyColorDark);
-  }
-  .main .page__section-heading {
-    color: var(--keyColorDark);
-  }
-  .main .home__section-heading {
-    color: var(--keyColorDark);
-  }
-  .main .btn--color {
-    background-color: rgba(var(--keyColorRgb), 0.7);
-  }
-  .main .btn--color:hover {
-    background-color: rgba(var(--keyColorRgb), 1);
-    opacity: 1;
-  }
-  .main .btn--pale {
-    background-color: rgba(var(--keyColorRgb), 0.5);
-  }
-  .main .btn--pale:hover {
-    background-color: rgba(var(--keyColorRgb), 0.7);
-  }
-  .main .btn--outlined {
-    border: 1px solid rgba(var(--keyColorRgb), 0.7);
-  }
-  .main .home__news {
-    border: 1px solid rgba(var(--keyColorRgb), 0.5);
-  }
-  .main .pagination__inner {
-    color: var(--keyColorDark);
-    border: 1px solid rgba(var(--keyColorRgb), 0.7);
-  }
-  .main .blog-article__pager-item:not(:empty) {
-    border: 1px solid rgba(var(--keyColorRgb), 0.5);
-  }
-  .main .blog-article__pager-item dt {
-    color: var(--keyColorDark);
-  }
-  .main .blog-article__pager-item:not(:empty)::after {
-    color: var(--keyColor);
-  }
+[data-color-mode=dark] .main .heading--color {
+  color: var(--keyColorDark);
 }
-@media (prefers-color-scheme: dark) and (min-width: 768px) {
-  .main .novel-list__section {
+[data-color-mode=dark] .main .page__section-heading {
+  color: var(--keyColorDark);
+}
+[data-color-mode=dark] .main .home__section-heading {
+  color: var(--keyColorDark);
+}
+[data-color-mode=dark] .main .btn--color {
+  background-color: rgba(var(--keyColorRgb), 0.7);
+}
+[data-color-mode=dark] .main .btn--color:hover {
+  background-color: rgba(var(--keyColorRgb), 1);
+  opacity: 1;
+}
+[data-color-mode=dark] .main .btn--pale {
+  background-color: rgba(var(--keyColorRgb), 0.5);
+}
+[data-color-mode=dark] .main .btn--pale:hover {
+  background-color: rgba(var(--keyColorRgb), 0.7);
+}
+[data-color-mode=dark] .main .btn--outlined {
+  border: 1px solid rgba(var(--keyColorRgb), 0.7);
+}
+[data-color-mode=dark] .main .home__news {
+  border: 1px solid rgba(var(--keyColorRgb), 0.5);
+}
+[data-color-mode=dark] .main .pagination__inner {
+  color: var(--keyColorDark);
+  border: 1px solid rgba(var(--keyColorRgb), 0.7);
+}
+[data-color-mode=dark] .main .blog-article__pager-item:not(:empty) {
+  border: 1px solid rgba(var(--keyColorRgb), 0.5);
+}
+[data-color-mode=dark] .main .blog-article__pager-item dt {
+  color: var(--keyColorDark);
+}
+[data-color-mode=dark] .main .blog-article__pager-item:not(:empty)::after {
+  color: var(--keyColor);
+}
+@media (min-width: 768px) {
+  [data-color-mode=dark] .main .novel-list__section {
     border: 1px solid rgba(var(--keyColorRgb), 0.5);
   }
-  .main .novel-list__header + .list {
+  [data-color-mode=dark] .main .novel-list__header + .list {
     border-right: 1px solid rgba(var(--keyColorRgb), 0.5);
   }
-  .main .blog-article {
+  [data-color-mode=dark] .main .blog-article {
     border: 1px solid rgba(var(--keyColorRgb), 0.5);
   }
-  .main .blog-article__header.bg__secondary {
+  [data-color-mode=dark] .main .blog-article__header.bg__secondary {
     background-color: rgba(var(--keyColorRgb), 0.5);
   }
 }
-@media (prefers-color-scheme: dark) and (max-width: 767px) {
-  .main .novel-list__section {
+@media (max-width: 767px) {
+  [data-color-mode=dark] .main .novel-list__section {
     border-top: 1px solid rgba(var(--keyColorRgb), 0.5);
   }
-  .main .blog-article__header {
+  [data-color-mode=dark] .main .blog-article__header {
     border-top: 5px solid rgba(var(--keyColorRgb), 0.5);
     border-bottom: 5px solid rgba(var(--keyColorRgb), 0.5);
   }
 }
+
 /* base CSS */
 html {
   box-sizing: border-box;
@@ -520,11 +517,14 @@ body:not(.homePage) .main {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  transition: all 0.4s ease-in-out;
 }
 .homePage .header {
   box-shadow: 0 0 2rem rgba(72, 66, 59, 0.15);
   background-color: rgba(var(--bgColorRgb), 0.75);
+  transition: background-color 0.4s ease-in-out;
+}
+.homePage .header:hover {
+  background-color: var(--bgColor);
 }
 @media (max-width: 767px) {
   .homePage .header {
@@ -535,9 +535,6 @@ body:not(.homePage) .main {
   .header {
     height: 5rem;
   }
-}
-.header:hover {
-  background-color: var(--bgColor);
 }
 .header .logo__image {
   width: 12rem;
@@ -554,6 +551,24 @@ body:not(.homePage) .main {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  position: relative;
+}
+.header__shift-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 1rem;
+  z-index: 31;
+}
+.header__shift-btn .header__shift-btn--sun {
+  opacity: 0.3;
 }
 .header .mobile__nav-btn {
   display: none;
