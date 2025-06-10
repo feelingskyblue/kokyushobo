@@ -98,7 +98,7 @@ body {
       display: block;
       padding: 10px;
       height: 40px;
-      border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+      border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
     }
     .btn {
       background-color: #000;

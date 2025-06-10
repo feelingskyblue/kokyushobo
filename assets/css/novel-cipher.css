@@ -208,7 +208,7 @@ body.for-cipher .novel__attention {
   display: block;
   padding: 10px;
   height: 40px;
-  border: 1px solid rgba(55, 128, 122, 0.3);
+  border: 1px solid rgba(var(--keyColorRgb), 0.3);
 }
 .novel .btn__wrapper .btn {
   background-color: #000;

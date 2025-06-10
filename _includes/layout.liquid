@@ -11,6 +11,18 @@
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     {%- if canonical -%}<link rel="canonical" href="{{ canonical }}" />{%- endif %}
 
+    <script async>
+      "use strict";
+      (function () {
+          const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          const fromStorage = localStorage.getItem("kokyushobo-color-mode");
+          const colorMode = (fromStorage === "system" || fromStorage == null) ? prefers : fromStorage === "light" ? "light" : "dark";
+          window.document.documentElement.dataset.colorMode = colorMode;
+      })();
+    </script>
+
     <!-- Assets -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/global.js" defer></script>
@@ -65,7 +77,14 @@
   <body class="{{ template | default: 'homePage' }}">
     <header class="header">
       <div class="header__inner page-width">
-        <a href="/" class="unstyle"><img src="/assets/img/logo.svg" alt="呼吸書房"  width="150" height="40" class="logo__image" loading="lazy"></a>
+        {%- if template == blank -%}
+          <h1 class="visually-hidden">呼吸書房</h1>
+        {%- else -%}
+          <p class="visually-hidden">呼吸書房</p>
+        {%- endif -%}
+        <a href="/" class="unstyle">
+          {%- render 'icon-logo', className: "logo__image" -%}
+        </a>
         <button id="mobileGnavBtn" class="mobile__nav-btn" type="button">
           <span class="btn__line"></span>
           <span class="btn__line"></span>
@@ -103,6 +122,10 @@
             <li><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
             <li><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
           </ul>
+          <button id="modeChangeBtn" class="header__shift-btn" type="button">
+            {%- render 'icon-sun', className: "header__shift-btn--sun" -%}
+            {%- render 'icon-moon', className: "header__shift-btn--moon" -%}
+          </button>
         </nav>
       </div>
     </header>
@@ -126,7 +149,9 @@
           </ul>
         </nav>
         <div class="footer__info">
-          <a href="/" class="unstyle"><img src="/assets/img/logo.svg" alt="呼吸書房" loading="lazy" width="150" class="logo__image"></a>
+          <a href="/" class="unstyle">
+            {%- render 'icon-logo', className: "logo__image" -%}
+          </a>
           <small><span class="font-serif">物語と旅人は、同じ国に住んでいる</span><br>Copyright &copy; Minato Kazano All rights researved.</small>
         </div>
       </div>

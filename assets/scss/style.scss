@@ -3,6 +3,124 @@
 @import "core/reset";
 @import "core/utility";
 
+/* Variables */
+:root {
+	--bgColor: #fefbf9;
+	--bgColorRgb: 254, 251, 249;
+	--textColor: #181614;
+	--textColorRgb: 24, 22, 20;
+	--keyColor: #37807a;
+	--keyColorRgb: 55, 128, 122;
+	--keyColorDark: #29605c;
+	--keyColorDarkRgb: 41, 96, 92;
+	--subColor: #48423b;
+	--subColorRgb: 72, 66, 59;
+}
+
+[data-color-mode="dark"] {
+	--textColor: #fefbf9;
+	--textColorRgb: 254, 251, 249;
+	--bgColor: #333939; //#3c3732;
+	--bgColorRgb: 51, 57, 57; //24, 22, 20;
+	--keyColor: #37807a;
+	--keyColorRgb: 55, 128, 122;
+	--keyColorDark: #4cb2a9;
+	--keyColorDarkRgb: 76, 178, 169;
+	--subColor: #48423b;
+	--subColorRgb: 72, 66, 59;
+	--linkColor: #fefbf9;
+	--linkColorRgb: 254, 251, 249;
+
+	body .header {
+		.mobile__nav-btn span {
+			color: var(--keyColorDark);
+			&.btn__line {
+				background-color: rgba(var(--keyColorDarkRgb), 1);
+			}
+		}
+		.header__shift-btn--sun {
+			opacity: 0.3;
+		}
+		.header__shift-btn--moon {
+			opacity: 1;
+		}
+		@media (max-width: $sp-width) {
+			.header__nav .menu-item--parent {
+				color: var(--keyColorDark);
+			}	
+		}
+	}
+	.main {
+		.heading--color {
+			color: var(--keyColorDark);
+		}
+		.page__section-heading {
+			color: var(--keyColorDark);
+		}
+		.home__section-heading {
+			color: var(--keyColorDark);
+		}
+		.btn {
+			&--color {
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
+				&:hover {
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 1);
+					opacity: 1;
+				}
+			}
+			&--pale {
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
+				&:hover {
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
+				}
+			}
+			&--outlined {
+				border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.7);
+			}
+		}
+		.home__news {
+			border: 1px solid rgba(var(--keyColorRgb), 0.5);
+		}
+		.pagination__inner {
+			color: var(--keyColorDark);
+			border: 1px solid rgba(var(--keyColorRgb), 0.7);
+		}
+		.blog-article__pager-item:not(:empty) {
+			border: 1px solid rgba(var(--keyColorRgb), 0.5);
+		}
+		.blog-article__pager-item dt {
+			color: var(--keyColorDark);
+		}
+		.blog-article__pager-item:not(:empty)::after {
+			color: var(--keyColor);
+		}
+		@media (min-width: $pc-width) {
+			.novel-list__section {
+				border: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.novel-list__header + .list {
+				border-right: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article {
+				border: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article__header.bg__secondary {
+				background-color: rgba(var(--keyColorRgb), 0.5);
+			}
+		}
+		@media (max-width: $sp-width) {
+			.novel-list__section {
+				border-top: 1px solid rgba(var(--keyColorRgb), 0.5);
+			}
+			.blog-article__header {
+				border-top: 5px solid rgba(var(--keyColorRgb), 0.5);
+				border-bottom: 5px solid rgba(var(--keyColorRgb), 0.5);	
+			}
+		}
+	}
+		
+}
+
 /* base CSS */
 html {
 	box-sizing: border-box;
@@ -12,8 +130,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  background-color: $bgColor; //fcf8f3; //fcf8f3
-  color: $textColor;
+  background-color: var(--bgColor); //fcf8f3; //fcf8f3
+  color: var(--textColor);
 	font-family: Cochin, "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
@@ -42,9 +160,9 @@ p:not(:last-child), blockquote:not(:last-child) {
 }
 
 a {
-  color: $subColor;
+  color: var(--linkColor);
 	text-decoration: none;
-	border-bottom: 1px solid rgba($color: $subColor, $alpha: 0.5);
+	border-bottom: 1px solid rgba($color: var(--linkColorRgb), $alpha: 0.5);
 	transition: all 0.4s ease;
 	&.link--unstyle {
 		border-bottom: none;
@@ -60,7 +178,7 @@ a {
 		}
 	}
 	&:hover {
-		background-color: rgba($color: $keyColor, $alpha: 0.2);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 	}
 }
 
@@ -130,10 +248,10 @@ a {
 		font-weight: normal;
 	}
 	&--color {
-		color: $keyColor;
+		color: var(--keyColor);
 	}
 	&--colorDark {
-		color: $keyColorDark;
+		color: var(--keyColorDark);
 	}
 	&--default {
 		font-size: 1.4rem;
@@ -159,23 +277,23 @@ a {
 		height: 4rem;
 	}
 	&--color {
-		background-color: rgba($color: $keyColor, $alpha: 0.7);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 		color: #ffffff;
 		&:hover {
-			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 			opacity: 0.7;
 		}
 	}
 	&--pale {
-		background-color: rgba($color: $keyColor, $alpha: 0.1);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		&:hover {
 			opacity: 1;
-			background-color: rgba($color: $keyColor, $alpha: 0.7);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
 			color: #ffffff;
 		}
 	}
 	&--outlined {
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		background-color: transparent;
 	}
 }
@@ -248,7 +366,7 @@ blockquote {
 				position: absolute;
 				top: 0;
 				left: 0;
-				color: $keyColor;
+				color: var(--keyColor);
 				width: 1em;
 				height: 1em;
 			}
@@ -266,12 +384,10 @@ blockquote {
 }
 .bg {
 	&__primary {
-		background-color: rgba($color: $subColor, $alpha: 0.1);
-		//background-color: rgba(213, 216, 216, 0.25);
+		background-color: rgba($color: var(--subColorRgb), $alpha: 0.1);
 	}
 	&__secondary {
-		background-color: rgba($color: $keyColor, $alpha: 0.05);
-		//background-color: rgba(213, 216, 216, 0.25);
+		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.05);
 	}
 }
 
@@ -294,15 +410,7 @@ blockquote {
 
 // Common
 body {
-	&.homePage {
-		.header {
-			box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
-		}
-	}
 	&:not(.homePage) {
-		.header {
-			//border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.3);
-		}
 		.main {
 			padding-top: 12rem;
 			@media (max-width: $sp-width) {
@@ -316,20 +424,24 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba($color: $bgColor, $alpha: 0.75);
 	z-index: 20;
 	width: 100%;
 	height: 6.5rem;
 	@include flex;
 	align-items: center;
-	//border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.3);
-	transition: all 0.4s ease-in-out;
+	.homePage & {
+		box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
+		background-color: rgba($color: var(--bgColorRgb), $alpha: 0.75);
+		transition: background-color 0.4s ease-in-out;
+		&:hover {
+			background-color: var(--bgColor);
+		}
+		@media (max-width: $sp-width) {
+			background-color: rgba($color: var(--bgColorRgb), $alpha: 0.85);
+		}
+	}
 	@media (max-width: $sp-width) {
 		height: 5rem;
-		background-color: rgba($color: $bgColor, $alpha: 0.85);
-	}
-	&:hover {
-		background-color: $bgColor;
 	}
 	.logo__image {
 		width: 12rem;
@@ -343,8 +455,80 @@ body {
 		height: 100%;
 		@include flex;
 		align-items: center;
+		position: relative;
 		@media (max-width: $sp-width) {
 			//justify-content: flex-end;
+		}
+	}
+	&__shift-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		top: 1.2rem;
+		right: 1.2rem;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		padding: 1rem;
+		z-index: 31;
+		&::before {
+			@media (min-width: $pc-width) {
+				content: "";
+				position: absolute;
+				bottom: -8px;
+				right: 50%;
+				transform: translateX(-50%);
+				opacity: 0;
+				transition: opacity 0.4s ease-in-out;
+				background-color: var(--keyColor);
+				height: calc(tan(60deg) * 10px / 2);
+				width: 10px;
+				clip-path: polygon(50% 0, 100% 100%, 0 100%);
+			}
+			@media (max-width: $sp-width) {
+				display: none;
+			}
+		}
+		&::after {
+			display: block;
+			content: "背景色を変更する";
+			white-space: nowrap;
+			font-size: 1rem;
+			line-height: 1;
+			@media (min-width: $pc-width) {
+				color: #ffffff;
+				position: absolute;
+				bottom: -3rem;
+				right: 0;
+				opacity: 0;
+				transition: opacity 0.4s ease-in-out;
+				background-color: var(--keyColor);
+				padding: 7px 5px;
+				box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
+			}
+		}
+		&:hover {
+			&::after, &::before {
+				opacity: 1;
+			}
+		}
+		@media (max-width: $sp-width) {
+			right: initial;
+			left: 1.8rem;
+			top: 0.8rem;
+			gap: 0.7rem;
+			svg {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+		}
+		&--sun {
+			opacity: 0.8;
+		}
+		&--moon {
+			opacity: 0.2;
 		}
 	}
 	.mobile__nav-btn {
@@ -363,11 +547,11 @@ body {
 				font-size: 1rem;
 				line-height: 1;
 				display: block;
-				color: $keyColor;
+				color: var(--keyColor);
 				transition: transform 0.4s ease;
 				&.btn__line {
 					height: 1px;
-					background-color: rgba($color: $keyColor, $alpha: 0.5);
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
 					margin-bottom: 0.3rem;
 					&:nth-child(2) {
 						width: 1.8rem;
@@ -405,7 +589,7 @@ body {
 			width: calc(100vw - 12rem);
 			height: 100%;
 			overflow: scroll;
-			background-color: rgba($color: $bgColor, $alpha: 0.95);
+			background-color: rgba($color: var(--bgColorRgb), $alpha: 0.95);
 			z-index: 30;
 			top: 0;
 			right: -100vw;
@@ -435,7 +619,7 @@ body {
 						content: "";
 						width: calc(100% - 6rem);
 						height: 1px;
-						background-color: rgba($color: $textColor, $alpha: 0.1);
+						background-color: rgba($color: var(--textColorRgb), $alpha: 0.1);
 						position: absolute;
 						left: 3rem;
 						bottom: 0;
@@ -464,7 +648,7 @@ body {
 				min-width: 100%;
 				height: 0px;
 				overflow: hidden;
-				background-color: $bgColor;
+				background-color: var(--bgColor);
 				transition: height 0.4s ease;	
 			}
 			@media (max-width: $sp-width) {
@@ -505,10 +689,10 @@ body {
 			cursor: pointer;
 			transition: all 0.4s ease;
 			&:hover {
-				background-color: rgba($color: $keyColor, $alpha: 0.2);
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 			}
 			@media (max-width: $sp-width) {
-				color: $keyColor;
+				color: var(--keyColor);
 				display: block;
 				padding: 0.8rem 3rem;
 			}
@@ -518,7 +702,7 @@ body {
 			padding-top: 2px;
 			padding-left: 5px;
 			line-height: 1;
-			color: rgba($color: $textColor, $alpha: 0.7);
+			color: rgba($color: var(--textColorRgb), $alpha: 0.7);
 		}
 	}
 }
@@ -585,7 +769,7 @@ body {
 		top: 0;
 		width: 3rem;
 		height: 100%;
-		background: transparent linear-gradient(90deg, rgba(254,251,249,0) 0%, rgba(254,251,249,1) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+		background: transparent linear-gradient(90deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 	}
 }
 .book-tab {
@@ -601,7 +785,7 @@ body {
 			border: 2px solid transparent;
 			background: transparent;
 			&[aria-selected="true"] {
-				border: 2px solid $keyColor;	
+				border: 2px solid var(--keyColor);	
 			}
 		}
 		img {
@@ -687,11 +871,11 @@ body {
 	&__item {
 		position: relative;
 		&:not(:first-child) {
-			border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--subColorRgb), $alpha: 0.1);
 		}
 		@media (max-width: $sp-width) {
 			&:first-child {
-				border-top: 1px solid rgba($color: $subColor, $alpha: 0.1);
+				border-top: 1px solid rgba($color: var(--subColorRgb), $alpha: 0.1);
 			}
 		}	
 		&-link {
@@ -702,7 +886,7 @@ body {
 				padding: 1rem 0.5rem;
 			}
 			&:hover {
-				background-color: rgba($color: $keyColor, $alpha: 0.1) !important;	
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.1) !important;	
 			}
 		}
 		&-unlink {
@@ -720,7 +904,7 @@ body {
 			font-weight: normal;
 			font-size: 1.1em;
 			margin-bottom: 0;
-			color: $keyColorDark;
+			color: var(--keyColorDark);
 			span {
 				line-height: 1;
 				position: relative;
@@ -731,7 +915,7 @@ body {
 						height: 1px;
 						content: "";
 						display: block;
-						background-color: rgba($color: $keyColorDark, $alpha: 0.3);
+						background-color: rgba($color: var(--keyColorDarkRgb), $alpha: 0.3);
 						left: 0;
 						bottom: 1px;	
 					}
@@ -741,7 +925,7 @@ body {
 	}
 	&__section {
 		width: 100%;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		padding: 1rem 2rem;
 		position: relative;
 		display: flex;
@@ -773,7 +957,7 @@ body {
 			position: absolute;
 			top: 0;
 			right: 0;
-			background-color: $keyColor;
+			background-color: var(--keyColor);
 			display: block;
 			content: "";
 		}
@@ -821,7 +1005,7 @@ body {
 			flex-grow: 1;
 			margin-right: 2rem;
 			padding-right: 2rem;
-			border-right: 1px solid rgba($color: $keyColor, $alpha: 0.2);	
+			border-right: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.2);	
 			@media (max-width: $sp-width) {
 				width: 100%;
 				margin-right: 0;
@@ -912,7 +1096,7 @@ body {
 		width: 100%;
 		background-color: transparent;
 		box-shadow: none;
-		border: 1px solid $keyColorDark;
+		border: 1px solid var(--keyColorDark);
 		@media (max-width: $sp-width) {
 			font-size: 1.6rem;
 		}
@@ -924,7 +1108,7 @@ body {
 	input[type="checkbox"] {
 		background-color: transparent;
 		box-shadow: none;
-		border: 1px solid $keyColorDark;
+		border: 1px solid var(--keyColorDark);
 	}
 	textarea {
 		height: 10em;
@@ -947,8 +1131,6 @@ body {
 		height: auto;
 		position: relative;
 		padding-top: 15dvh;
-		//padding-top: 6rem;
-		//min-height: 100dvh;
 		@include flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -959,7 +1141,7 @@ body {
 	&__firstview-txt {
 		width: 100%;
 		position: relative;
-		background-color: $bgColor;
+		background-color: var(--bgColor);
 		padding: 4rem 0;
 		z-index: 10;
 		.page-width {
@@ -1013,7 +1195,7 @@ body {
 			bottom: 2rem;
 			//left: 2rem;
 			right: max(4rem, calc((100% - 128rem + 8rem) / 2));
-			color: $bgColor;
+			color: #fefbf9; //ここの色情報はダークモードでも固定
 			z-index: 11;
 			opacity: 0.7;
 			font-size: 1.2rem;
@@ -1023,8 +1205,8 @@ body {
 				right: 2rem;
 			}
 			a {
-				color: $bgColor;
-				border-color: $bgColor;
+				color: #fefbf9; //ここの色情報はダークモードでも固定
+				border-color: #fefbf9; //ここの色情報はダークモードでも固定
 			}
 		}
 		&::before {
@@ -1079,7 +1261,7 @@ body {
 			//padding-bottom: 4rem;
 			//max-width: 42rem;
 			padding: 4rem 4rem 4rem 8rem;
-			color: $bgColor;
+			color: #fefbf9; //ここの色情報はダークモードでも固定
 			z-index: 10;
 			font-size: 1.5rem;
 			text-shadow: 0 0 0.15em #00000011, 0 0 0.5em #00000066;
@@ -1100,9 +1282,9 @@ body {
 				}
 			}
 			a {
-				color: $bgColor;
+				color: #fefbf9; //ここの色情報はダークモードでも固定
 				font-size: 1.8rem;
-				border-color: $bgColor;
+				border-color: #fefbf9; //ここの色情報はダークモードでも固定
 				span {
 					font-size: 1.2rem;
 				}
@@ -1135,7 +1317,7 @@ body {
 	&__news {
 		display: inline-block;
 		padding: 2rem;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		font-size: 1.3rem;
 		@media (max-width: $sp-width) {
 			padding: 1rem 1.5rem;
@@ -1172,7 +1354,7 @@ body {
 			padding-bottom: 2rem;
 		}
 		&:not(:last-child):not(:first-child) {
-			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 		.btn__wrapper {
 			margin-top: 2rem;
@@ -1192,7 +1374,7 @@ body {
 		}
 	}
 	&__section-heading {
-		color: $keyColor;
+		color: var(--keyColor);
 		font-weight: normal;
 		font-size: 2.4rem;
 		margin-right: 1em;
@@ -1212,7 +1394,7 @@ body {
 		margin-top: 0;
 		padding: 6.5rem 0 0;
 		@media (max-width: $sp-width) {
-			border-top: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 	}
 	@media (max-width: $sp-width) {
@@ -1262,7 +1444,7 @@ body {
 		position: relative;
 		content: "";
 		display: block;
-		background-color: $bgColor;
+		background-color: var(--bgColor);
 		width: 100%;
 		max-width: 72rem;
 		height: 8rem;
@@ -1271,7 +1453,6 @@ body {
 		}
 	}
 	&__wrapper {
-		//padding: 4rem 0 0;
 		padding: 0;
 		@media (max-width: $sp-width) {
 			padding: 0 0 4rem;
@@ -1280,9 +1461,6 @@ body {
 			max-width: 72rem;
 			margin: 0 auto;
 			margin-left: max(1px, calc((100% - 128rem) / 2));
-			//padding-right: 2rem;
-			//padding-bottom: 0;
-			//box-shadow: 0 5rem 4rem rgba($color: #48423b, $alpha: 0.1);
 			position: relative;
 			@media (max-width: $sp-width) {
 				margin-left: 0;
@@ -1317,7 +1495,7 @@ body {
 			display: block;
 			position: absolute;
 			left: 4rem;
-			background-color: $keyColor;
+			background-color: var(--keyColor);
 			opacity: 0.5;
 			@media (max-width: $sp-width) {
 				//width: calc(100% - (4.266vw * 2));
@@ -1344,15 +1522,16 @@ body {
 		margin-top: 4rem;
 		&.for-profile {
 			padding-top: 4rem;
-			border-top: 1px solid $keyColor;
+			border-top: 1px solid var(--keyColor);
 		}
 		.logo__wrapper-outline {
 			width: 50%;
 			display: block;
 			padding: 2rem;
 			margin: 1rem 0;
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 			text-align: center;
+			background-color: #ffffff;
 			@media (max-width: $sp-width) {
 				width: 100%;
 			}
@@ -1362,7 +1541,7 @@ body {
 		}
 	}
 	&__section-heading {
-		color: $keyColor;
+		color: var(--keyColor);
 		font-weight: normal;
 		font-size: 2.4rem;
 		margin-right: 1em;
@@ -1377,7 +1556,7 @@ body {
 			bottom: 0;
 			width: 100%;
 			height: 3rem;
-			background: transparent linear-gradient(180deg, rgba(254,251,249,0) 0%, rgba(254,251,249,0.5) 50%, rgba(254,251,249,1) 100%) 0% 0% no-repeat padding-box;
+			background: transparent linear-gradient(180deg, rgba(var(--bgColorRgb), 0) 0%, rgba(var(--bgColorRgb), 0.5) 50%, rgba(var(--bgColorRgb), 1) 100%) 0% 0% no-repeat padding-box;
 			@media (max-width: $sp-width) {
 				display: none;
 			}
@@ -1398,7 +1577,7 @@ body {
 	.twitter__wrapper {
 		margin-top: 2rem;
 		margin-bottom: 2rem;
-		border: 1px solid $keyColor;
+		border: 1px solid var(--keyColor);
 		width: 75%;
 		opacity: 0.9;
 		@media (max-width: $sp-width) {
@@ -1426,10 +1605,9 @@ body {
 .blog {
 }
 .blog-article {
-	border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+	border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 	@media (max-width: $sp-width) {
 		border: none;
-		//border-bottom: 5px solid rgba($color: $keyColor, $alpha: 0.1);
 	}
 	&:not(:last-child) {
 		margin-bottom: 4rem;
@@ -1440,12 +1618,11 @@ body {
 		justify-content: space-between;
 		padding: 1em;
 		@media (max-width: $sp-width) {
-			//margin: 2rem 0;
 			display: block;
 			padding: 1em 0;
 			background-color: transparent;
-			border-top: 5px solid rgba($color: $keyColor, $alpha: 0.1);
-			border-bottom: 5px solid rgba($color: $keyColor, $alpha: 0.1);
+			border-top: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
+			border-bottom: 5px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 		}
 		&-title {
 			margin: 0;
@@ -1494,21 +1671,21 @@ body {
 			font-size: 1.1em;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h2 {
 			margin-top: 40px;
 			font-size: 1.1em;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h3 {
 			font-size: 1em;
 			margin-top: 40px;
 			padding-bottom: 5px;
 			margin-bottom: 1em;
-			border-bottom: 1px solid rgba($color: $keyColor, $alpha: 0.8);
+			border-bottom: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.8);
 		}
 		h4 {
 			font-size: 1em;
@@ -1524,7 +1701,7 @@ body {
 				flex: 1;
 				width: 100%;
 				height: 1px;
-				background-color: rgba($color: $keyColor, $alpha: 0.25);
+				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.25);
 			}
 		}
 		hr {
@@ -1623,7 +1800,7 @@ body {
 		}
 		position: relative;
 		&:not(:empty) {
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.1);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
 			& + &:not(:empty) {
 				@media (min-width: $pc-width) {
 					border-left: none;
@@ -1637,7 +1814,7 @@ body {
 				display: block;
 				top: 50%;
 				transform: translateY(-50%);
-				color: rgba($color: $keyColor, $alpha: 0.5);
+				color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
 			}
 		}
 		a {
@@ -1647,7 +1824,7 @@ body {
 			border: none;
 		}
 		dt {
-			color: $keyColor;
+			color: var(--keyColor);
 		}
 		dd {
 			//text-decoration: underline;
@@ -1685,13 +1862,13 @@ body {
 		}
 	}
 	&__inner {
-		color: $keyColor;
+		color: var(--keyColor);
 		display: block;
 		padding: 12px 10px;
 		line-height: 1;
-		border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+		border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 		&[aria-current="page"] {
-			background-color: rgba($color: $keyColor, $alpha: 0.8);
+			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.8);
 			color: #ffffff;
 			pointer-events: none;
 		}
@@ -1700,8 +1877,6 @@ body {
 
 .novel {
 	max-width: 38em;
-	//margin: 0 auto;
-	//margin-left: 8rem;
 	margin-left: max(8rem, calc((100% - 128rem + 8rem) / 2));
 	font-size: 1.6rem;
 	line-height: 1.8;
@@ -1752,7 +1927,7 @@ body {
 			top: initial;
 			right: initial;
 			opacity: 1;
-			border: 1px solid rgba($color: $keyColor, $alpha: 0.3);
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.3);
 			padding: 2em;
 			margin: 4rem 0;
 		}
@@ -1789,7 +1964,7 @@ body {
 				line-height: 1;
 				padding: 1rem;
 				&.current {
-					background-color: rgba($color: $keyColor, $alpha: 0.2);
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
 				}
 			}
 			dt {
