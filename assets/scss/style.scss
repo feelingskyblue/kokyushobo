@@ -473,24 +473,44 @@ body {
 		box-shadow: none;
 		padding: 1rem;
 		z-index: 31;
+		&::before {
+			@media (min-width: $pc-width) {
+				content: "";
+				position: absolute;
+				bottom: -8px;
+				right: 50%;
+				transform: translateX(-50%);
+				opacity: 0;
+				transition: opacity 0.4s ease-in-out;
+				background-color: var(--keyColor);
+				height: calc(tan(60deg) * 10px / 2);
+				width: 10px;
+				clip-path: polygon(50% 0, 100% 100%, 0 100%);
+			}
+			@media (max-width: $sp-width) {
+				display: none;
+			}
+		}
 		&::after {
 			display: block;
 			content: "背景色を変更する";
 			white-space: nowrap;
 			font-size: 1rem;
+			line-height: 1;
 			@media (min-width: $pc-width) {
+				color: #ffffff;
 				position: absolute;
-				bottom: -1em;
-				right: 1rem;
+				bottom: -3rem;
+				right: 0;
 				opacity: 0;
-				transition: opacity 0.4s ease-in-out;					
-			}
-			@media (max-width: $sp-width) {
-
+				transition: opacity 0.4s ease-in-out;
+				background-color: var(--keyColor);
+				padding: 7px 5px;
+				box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
 			}
 		}
 		&:hover {
-			&::after {
+			&::after, &::before {
 				opacity: 1;
 			}
 		}

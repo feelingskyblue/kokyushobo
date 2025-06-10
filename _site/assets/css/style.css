@@ -573,22 +573,48 @@ body:not(.homePage) .main {
   padding: 1rem;
   z-index: 31;
 }
+@media (min-width: 768px) {
+  .header__shift-btn::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: var(--keyColor);
+    height: 8.6602540378px;
+    width: 10px;
+    -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+}
+@media (max-width: 767px) {
+  .header__shift-btn::before {
+    display: none;
+  }
+}
 .header__shift-btn::after {
   display: block;
   content: "背景色を変更する";
   white-space: nowrap;
   font-size: 1rem;
+  line-height: 1;
 }
 @media (min-width: 768px) {
   .header__shift-btn::after {
+    color: #ffffff;
     position: absolute;
-    bottom: -1em;
-    right: 1rem;
+    bottom: -3rem;
+    right: 0;
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
+    background-color: var(--keyColor);
+    padding: 7px 5px;
+    box-shadow: 0 0 2rem rgba(72, 66, 59, 0.15);
   }
 }
-.header__shift-btn:hover::after {
+.header__shift-btn:hover::after, .header__shift-btn:hover::before {
   opacity: 1;
 }
 @media (max-width: 767px) {
