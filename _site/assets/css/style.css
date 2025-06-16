@@ -121,6 +121,8 @@
   --keyColorDarkRgb: 41, 96, 92;
   --subColor: #48423b;
   --subColorRgb: 72, 66, 59;
+  --linkColor: #48423b;
+  --linkColorRgb: 72, 66, 59;
 }
 
 [data-color-mode=dark] {
@@ -1936,6 +1938,13 @@ body:not(.homePage) .main {
   position: absolute;
   top: 0;
   left: 0;
+}
+.blog-article__body pre {
+  padding: 1em;
+  background-color: rgba(var(--keyColorRgb), 0.1);
+}
+.blog-article__body pre code {
+  white-space: pre-wrap;
 }
 @media (max-width: 767px) {
   .blog-article__read-btn {

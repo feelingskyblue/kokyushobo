@@ -7,24 +7,19 @@ https://github.com/iamdustan/smoothscroll
 // 閲覧モードの管理
 function viewModeManager() {
   const viewModeBtn = document.querySelector('#modeChangeBtn');
-  let currentMode = window.document.documentElement.dataset.colorMode;
-
   // 閲覧モード切り替え
   if (viewModeBtn) {
-    function toggleViewMode() {
-      viewModeBtn.addEventListener('click', () => {
-        currentMode = window.document.documentElement.dataset.colorMode;
-        if (currentMode === 'dark') {
-          window.document.documentElement.dataset.colorMode = 'light';
-          localStorage.setItem('kokyushobo-color-mode', 'light');
-        }
-        else {
-          window.document.documentElement.dataset.colorMode = 'dark';
-          localStorage.setItem('kokyushobo-color-mode', 'dark');
-        }
-      });
-    }
-    toggleViewMode();
+    viewModeBtn.addEventListener('click', () => {
+      let currentMode = window.document.documentElement.dataset.colorMode;
+      if (currentMode === 'dark') {
+        window.document.documentElement.dataset.colorMode = 'light';
+        localStorage.setItem('kokyushobo-color-mode', 'light');
+      }
+      else {
+        window.document.documentElement.dataset.colorMode = 'dark';
+        localStorage.setItem('kokyushobo-color-mode', 'dark');
+      }
+    });
   }
 }
 

@@ -137,20 +137,141 @@
           <h2 class="heading--secondary  blog-article__header-title">ダークモード切り替え機能を実装しました</h2>
           <time datatime="2025-06-10">2025.06.10 Tue</time>
         </header>
-        <div class="blog-article__body"><div><p>以前から作ろう作ろうと思っていた、ダークモードの切り替え機能を実装しました！:)<br>
+        <div class="blog-article__body"><div><p>2025.6.16 技術面のTipsを追記しました。</p>
+<p>以前から作ろう作ろうと思っていた、ダークモードの切り替え機能を実装しました！:)<br>
 ヘッダーの切り替えボタンから、サイト全体の背景色を変更できます。夜間の読書などにお役立てください🌙</p>
-<p>変更した背景色はブラウザで記憶しているため、同じブラウザで閲覧すれば、設定した背景色がそのまま引き継がれます。初期設定はOS上の設定を参照しているので、iPhoneやPCなどのシステム設定をダークモードにしている方は、何もしなくても暗い背景色になっている…はず。<br>
-これまでと同様の色で閲覧したい方は、ヘッダーのボタンから切り替えることで元に戻せます。</p>
+<p>同じブラウザで閲覧すれば、設定した背景色が引き継がれます。初期設定はOS上の設定を参照しているので、iPhoneやPCなどのシステム設定をダークモードにしている方は、何もしなくても暗い背景色になっている…はず。これまでと同様の色で閲覧したい方は、ヘッダーのボタンから切り替えることで元に戻せます。</p>
 <hr>
-<p>以下はちょっと技術的な話。<br>
-今回のダークモード実装ではJavaScriptのLocalStorageを利用しています。<br>
+<p>以下は技術的な話。（2025.6.16 全体的に追記しました）</p>
+<p>今回のダークモード実装ではJavaScriptのLocalStorageを利用しています。<br>
 実装の参考にした記事はこちら。感謝です！</p>
 <ul>
-<li><a href="https://zenn.dev/k1350/articles/2e0c165d0cf943">個人サイトにダークモード（ダークテーマ）を実装する https://zenn.dev/k1350/articles/2e0c165d0cf943</a></li>
-<li><a href="https://blog.stin.ink/articles/how-to-implement-a-perfect-dark-mode">真にチラつかないダークモードをついに実現したぞ。実現方法と気付きを書く https://blog.stin.ink/articles/how-to-implement-a-perfect-dark-mode</a></li>
+<li><a href="https://zenn.dev/k1350/articles/2e0c165d0cf943">個人サイトにダークモード（ダークテーマ）を実装する</a></li>
+<li><a href="https://blog.stin.ink/articles/how-to-implement-a-perfect-dark-mode">真にチラつかないダークモードをついに実現したぞ。実現方法と気付きを書く</a></li>
 </ul>
 <p>サイトをリニューアルした際、ダークモード用の色は設計していなかったので、CSSを書き直しながら2年前の自分を正座させたい気持ちになりましたね…笑。<br>
 ダークモード切り替え処理に加えて、サイト内の色情報もCSS変数で参照するように変更しています。最初からそう書いとけば良かったよォ〜〜</p>
+<h3>ダークモード実装までの流れ</h3>
+<p>上記の参考記事を読んでいただくのが一番わかりやすいですが、当サイトにおけるダークモード実装までの流れも以下に残します。<br>
+CSSとJavaScriptの知識がなんとなくあり、個人サイト作るのが好きな方、ご参考までに。</p>
+<p>※前提<br>
+WordPress、またはHTMLファイル中心の個人サイトを所持している方向けです。<br>
+Astro.jsやNext.jsなどのフレームワークを利用している方は、ダークモード実装用のプラグインやオプションが用意されている可能性が高いため、そちらをまずチェックしてみてください。<br>
+※当サイトはEleventyによる静的サイト実装なので、専用プラグインは多分…無い！（調べてない）</p>
+<h4>1. CSS内のカラーコードをCSS変数に統一する</h4>
+<p>ダークモード実装に向けた下準備です。最初からCSS変数を取り入れていればこの作業は不要だった…！ ※<a href="https://developer.mozilla.org/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties">MDNによるCSS変数の解説はこちら</a> 。</p>
+<p><s>2年前の自分が何も考えていなかったので、</s>当サイト内の色指定はCSSに直接カラーコードを記述していました。正確にはSCSS変数を利用してたんですが、まあコンパイル後はこんな感じ。</p>
+<pre><code>body {
+  color: #181614;
+  background-color: #fefbf9;
+}
+.btn--color {
+  background-color: rgba(55, 128, 122, 0.7);
+}
+</code></pre>
+<p>rgba記述で透明化処理してた箇所も多々。SCSS変数だと <code>background-color: rgba($color: $keyColor, $alpha: 0.7);</code> みたいにザクザク書けるからつい…。<br>
+このままだとダークモード対応できないので、CSS全体の色指定を書き直します。rgba記述にも対応させるため、カラーコードとrgb数値の双方をCSS変数として定義。<br>
+※実際はもっと細々と定義してますが、一部抜粋</p>
+<pre><code>:root {
+  --bgColor: #fefbf9;
+  --bgColorRgb: 254, 251, 249;
+  --textColor: #181614;
+  --textColorRgb: 24, 22, 20;
+  --keyColor: #37807a;
+  --keyColorRgb: 55, 128, 122;
+}
+body {
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}
+.btn--color {
+  background-color: rgba(var(--keyColorRgb), 0.7);
+}
+</code></pre>
+<p>サイト内の色情報をある程度は設計していたのが功を奏し、一括置換でなんとかなる範囲で良かったです。SCSS変数使ってなかったり、無秩序に色増やしまくってたら挫折してたかもしれない。。</p>
+<h4>2. ダークモード用のCSS変数を書く</h4>
+<p>ここからが本番。<br>
+ダークモード閲覧が有効化された場合に参照するCSS変数を書きます。ユーザーの端末設定のみを参照する形なら、JavaScriptの記述は不要です。以下でOK。</p>
+<pre><code>@media (prefers-color-scheme: dark) {
+  :root {
+    --textColor: #fefbf9;
+    --textColorRgb: 254, 251, 249;
+    --bgColor: #333939;
+    --bgColorRgb: 51, 57, 57;
+    --keyColor: #37807a;
+    --keyColorRgb: 55, 128, 122;
+  }
+}
+</code></pre>
+<p>背景色は真っ黒にすると目に痛いため、森の林床をイメージしたダークグレーに調整。<br>
+最初はもうすこしブラウンがかったグレーも検討したんですが、最終的には、ロゴにも使っているキーカラーのグリーンを元にした色に落ち着きました。</p>
+<p>もちろんこれだけだと何かしらの色が破綻するので、ダークモード時のみ有効な調整用CSSもあれこれ書きます。ロゴもSVGコードにして文字色をCSS制御可能にしたり。<br>
+rgba系の記述がいちばんめんどくさかったな………（通常時とダークモードで同一のalpha値だと見づらい箇所が多々あったため、ほぼ全部微調整した）</p>
+<h4>3. ダークモード切り替え用のスイッチを実装する</h4>
+<p>ここまでで完成にしても良かったんですが、サイト上からダークモード切り替えできた方がやっぱり親切かな〜ということで、もうひとがんばり。<br>
+切り替えスイッチの選択情報は、JavaScriptのLocalStrageで保持します。<br>
+まずはサイト全ページのheadタグ内に以下コードをインラインで追加。</p>
+<pre><code>&lt;script async&gt;
+  &quot;use strict&quot;;
+  (function () {
+      const prefers = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;).matches
+          ? &quot;dark&quot;
+          : &quot;light&quot;;
+      const fromStorage = localStorage.getItem(&quot;kokyushobo-color-mode&quot;);
+      const colorMode = (fromStorage === &quot;system&quot; || fromStorage == null) ? prefers : fromStorage === &quot;light&quot; ? &quot;light&quot; : &quot;dark&quot;;
+      window.document.documentElement.dataset.colorMode = colorMode;
+  })();
+&lt;/script&gt;
+</code></pre>
+<p>上記コードの目的は以下。</p>
+<ul>
+<li>LocalStorageのダークモード情報を参照</li>
+<li>LocalStorageに保持情報がなければ、ユーザー端末のダークモード情報を参照</li>
+<li>参照した情報に沿って、html要素のdata属性を更新する</li>
+</ul>
+<p>こちらの記述が無いと、ダークモード情報参照に掛かるタイムラグにより、ページ遷移時にちらつきが発生します。こちらを真っ先に実行することで、htmlタグに閲覧モードの情報を付与して、こう。</p>
+<pre><code>&lt;html lang=&quot;ja&quot; data-color-mode=&quot;light&quot;&gt;
+</code></pre>
+<p>システムのダークモード有効時には <code>data-color-mode=&quot;dark&quot;</code> になっていたらOK。</p>
+<p>続けてLocalStorage更新用の関数を書きます。切り替えスイッチが押されたら、</p>
+<ul>
+<li>htmlタグに付与されている、現在の閲覧モードを表すdata属性を参照</li>
+<li>参照した情報とは異なるモードに切り替え、data属性を更新する</li>
+<li>新たな閲覧モードの情報をLocalStorageに保存する</li>
+</ul>
+<p>大まかな流れはそんな感じ。</p>
+<pre><code>function viewModeManager() {
+  const viewModeBtn = document.querySelector('#modeChangeBtn');
+  if (viewModeBtn) {
+    viewModeBtn.addEventListener('click', () =&gt; {
+      let currentMode = window.document.documentElement.dataset.colorMode;
+      if (currentMode === 'dark') {
+        window.document.documentElement.dataset.colorMode = 'light';
+        localStorage.setItem('kokyushobo-color-mode', 'light');
+      }
+      else {
+        window.document.documentElement.dataset.colorMode = 'dark';
+        localStorage.setItem('kokyushobo-color-mode', 'dark');
+      }
+    });
+  }
+}
+</code></pre>
+<p>最後に、先ほど書いたCSSを調整。<br>
+システムのダークモード情報を参照する <code>@media (prefers-color-scheme: dark)</code> ではなく、html要素に付与されたdata属性に基づいてCSS変数を変更するように書き換えます。</p>
+<pre><code>[data-color-mode=&quot;dark&quot;] {
+  --textColor: #fefbf9;
+  --textColorRgb: 254, 251, 249;
+  --bgColor: #333939;
+  --bgColorRgb: 51, 57, 57;
+  --keyColor: #37807a;
+  --keyColorRgb: 55, 128, 122;
+}
+</code></pre>
+<p>これにて完成！おおよそ二日くらいの作業でした👏<br>
+ほんとはtransitionと組み合わせて、モード切り替え時にサイト全体の色がふわーっと変化するようにしたかったのですが、body要素に後からtransitionを足すと、既存のheaderとかで使ってる背景色transitionに干渉してしまったため、そこは今回見送りました。<br>
+やっぱり後から付け足すと多少の技術的負債は残りますね。</p>
+<hr>
 <p>次はブログのカテゴリ機能とページネーション周りをなんとかしたいところ。<br>
 あとはLocalStorageを使って、小説ページのフォント切り替え機能も実装したいです。</p>
 </div>
