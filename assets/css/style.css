@@ -1943,8 +1943,16 @@ body:not(.homePage) .main {
   padding: 1em;
   background-color: rgba(var(--keyColorRgb), 0.1);
 }
-.blog-article__body pre code {
-  white-space: pre-wrap;
+@media (max-width: 767px) {
+  .blog-article__body pre {
+    overflow-x: scroll;
+  }
+}
+@media (min-width: 768px) {
+  .blog-article__body pre code {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
 }
 @media (max-width: 767px) {
   .blog-article__read-btn {

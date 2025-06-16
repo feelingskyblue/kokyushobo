@@ -1748,8 +1748,14 @@ body {
 		pre {
 			padding: 1em;
 			background-color: rgba($color: var(--keyColorRgb), $alpha: 0.1);
+			@media (max-width: $sp-width) {
+				overflow-x: scroll;
+			}
 			code {
-				white-space: pre-wrap;
+				@media (min-width: $pc-width) {
+					white-space: pre-wrap;
+					overflow-wrap: break-word;
+				}
 			}
 		}
 	}
