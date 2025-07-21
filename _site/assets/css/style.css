@@ -2066,6 +2066,12 @@ body:not(.homePage) .main {
   -moz-column-gap: 1em;
        column-gap: 1em;
 }
+@media (max-width: 767px) {
+  .pagination {
+    -moz-column-gap: 0.8em;
+         column-gap: 0.8em;
+  }
+}
 .pagination__item.is-transparent {
   opacity: 0;
 }

@@ -62,16 +62,6 @@ pagination:
 
 <nav class="pagination__wrapper">
   <ol class="pagination">
-    {% comment %}
-    今はいらない　ページ増えたら出す
-    <li class="pagination__item {% if page.url == pagination.href.first %}is-transparent{% endif %}">
-      {% if page.url != pagination.href.first %}
-        <a href="{{ pagination.href.first }}" class="pagination__inner">⟪</a>
-      {% else %}
-        <span class="pagination__inner">⟪</span>
-      {% endif %}
-    </li>
-    {% endcomment %}
     <li class="pagination__item {% unless pagination.href.previous %}is-transparent{% endunless %}">
       {% if pagination.href.previous %}
         <a class="pagination__inner" href="{{ pagination.href.previous }}">⟨</a>
@@ -79,12 +69,36 @@ pagination:
         <span class="pagination__inner">⟨</span>
       {% endif %}
     </li>
+    {%- liquid
+      assign currentPage = pagination.pageNumber
+      assign ellipsis_rendered_before = false
+      assign ellipsis_rendered_after = false
+      assign currentPage_plus2 = currentPage | plus: 2
+    -%}
     {%- for pageEntry in pagination.pages %}
-      <li class="pagination__item">
-        <a class="pagination__inner" href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>
-          {{ forloop.index }}
-        </a>
-      </li>
+      {%- if forloop.first or forloop.last -%}
+        <li class="pagination__item">
+          <a class="pagination__inner" href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>
+            {{ forloop.index }}
+          </a>
+        </li>
+      {%- elsif forloop.index >= currentPage and forloop.index <= currentPage_plus2 -%}
+        <li class="pagination__item">
+          <a class="pagination__inner" href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>
+            {{ forloop.index }}
+          </a>
+        </li>
+      {%- elsif forloop.index < currentPage and ellipsis_rendered_before == false -%}
+        <li class="pagination__item">
+          <span class="pagination__inner--ellipsis">…</span>
+        </li>
+        {%- assign ellipsis_rendered_before = true -%}
+      {%- elsif forloop.index > currentPage and ellipsis_rendered_after == false -%}
+        <li class="pagination__item">
+          <span class="pagination__inner--ellipsis">…</span>
+        </li>
+        {%- assign ellipsis_rendered_after = true -%}
+      {%- endif -%}
     {%- endfor %}
     <li class="pagination__item {% unless pagination.href.next %}is-transparent{% endunless %}">
       {% if pagination.href.next %}
@@ -93,15 +107,6 @@ pagination:
         <span class="pagination__inner" class="pagination__inner">⟩</span>
       {% endif %}
     </li>
-    {% comment %}
-    <li class="pagination__item {% if page.url == pagination.href.last %}is-transparent{% endif %}">
-      {% if page.url != pagination.href.last %}
-        <a class="pagination__inner" href="{{ pagination.href.last }}">⟫</a>
-      {% else %}
-        <span class="pagination__inner">⟫</span>
-      {% endif %}
-    </li>
-    {% endcomment %}
   </ol>
 </nav>
 </div>

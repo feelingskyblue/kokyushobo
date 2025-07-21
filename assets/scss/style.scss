@@ -1871,6 +1871,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	column-gap: 1em;
+	@media (max-width: $sp-width) {
+		column-gap: 0.8em;
+	}
 	&__item {
 		&.is-transparent {
 			opacity: 0;
