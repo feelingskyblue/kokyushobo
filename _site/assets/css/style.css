@@ -99,8 +99,7 @@
 }
 
 :where(.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden)) {
-  -webkit-clip-path: inset(50%) !important;
-          clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
   height: 1px !important;
   width: 1px !important;
   overflow: hidden !important;
@@ -587,8 +586,7 @@ body:not(.homePage) .main {
     background-color: var(--keyColor);
     height: 8.6602540378px;
     width: 10px;
-    -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
-            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
   }
 }
 @media (max-width: 767px) {

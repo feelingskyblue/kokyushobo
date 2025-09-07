@@ -98,14 +98,28 @@
 }
 
 :where(.visually-hidden:not(:focus, :active, :focus-within, .not-visually-hidden)) {
-  -webkit-clip-path: inset(50%) !important;
-          clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
   height: 1px !important;
   width: 1px !important;
   overflow: hidden !important;
   position: absolute !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+[data-color-mode=dark] {
+  --bgColor: #fefbf9;
+  --bgColorRgb: 254, 251, 249;
+  --textColor: #181614;
+  --textColorRgb: 24, 22, 20;
+  --keyColor: #37807a;
+  --keyColorRgb: 55, 128, 122;
+  --keyColorDark: #29605c;
+  --keyColorDarkRgb: 41, 96, 92;
+  --subColor: #48423b;
+  --subColorRgb: 72, 66, 59;
+  --linkColor: #48423b;
+  --linkColorRgb: 72, 66, 59;
 }
 
 body .header, body .footer {

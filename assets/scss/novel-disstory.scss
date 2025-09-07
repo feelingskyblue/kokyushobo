@@ -3,6 +3,21 @@
 @import "core/reset";
 @import "core/utility";
 
+[data-color-mode="dark"] {
+	--bgColor: #fefbf9;
+	--bgColorRgb: 254, 251, 249;
+	--textColor: #181614;
+	--textColorRgb: 24, 22, 20;
+	--keyColor: #37807a;
+	--keyColorRgb: 55, 128, 122;
+	--keyColorDark: #29605c;
+	--keyColorDarkRgb: 41, 96, 92;
+	--subColor: #48423b;
+	--subColorRgb: 72, 66, 59;
+	--linkColor: #48423b;
+	--linkColorRgb: 72, 66, 59;
+}
+
 body {
   .header, .footer {
     display: none;
