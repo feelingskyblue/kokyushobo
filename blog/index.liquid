@@ -13,12 +13,14 @@ pagination:
 ---
 
 <div id="blog" class="blog">
+{%- assign weekday = "Sun, Mon, Tue, Wed, Thu, Fri, Sat" | split: ", " -%}
 {%- for article in articles -%}
   {%- if article.url != "/blog/" -%}
+    {%- assign week_offset = article.date | date: "%w" -%}
     <article class="blog-article">
       <header class="blog-article__header bg__secondary">
         <h2 class="heading--secondary  blog-article__header-title"><a href="{{ article.url }}" >{{ article.data.title }}</a></h2>
-        <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d %a" }}</time>
+        <time class="blog-article__header-time" datatime="{{ article.date | date: '%Y-%m-%d' }}">{{ article.date | date: "%Y.%m.%d" }} {{ weekday[week_offset] }}</time>
       </header>
       <div class="blog-article__body">
         {%- if article.data.thumbnail != blank -%}
