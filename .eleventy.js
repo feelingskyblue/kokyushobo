@@ -1,7 +1,7 @@
-const markdownIt = require("markdown-it");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
+import markdownIt from "markdown-it";
+import { RenderPlugin } from "@11ty/eleventy";
 
-module.exports = function(eleventyConfig) {
+export default function (eleventyConfig) {
   // Output directory: _site
   eleventyConfig.addPassthroughCopy("assets/img");
   eleventyConfig.addPassthroughCopy("assets/css");
@@ -20,5 +20,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("assets/img/*.{svg,webp,png,jpeg}");
 
   // Render Plugin
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(RenderPlugin);
+
 };
+

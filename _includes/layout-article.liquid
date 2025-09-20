@@ -13,7 +13,9 @@ template: articlePage
       <article class="blog-article">
         <header class="blog-article__header bg__secondary">
           <h2 class="heading--secondary  blog-article__header-title">{{ title }}</h2>
-          <time datatime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%Y.%m.%d %a" }}</time>
+          {% assign weekday = "Sun, Mon, Tue, Wed, Thu, Fri, Sat" | split: ", " -%}
+          {%- assign week_offset = date | date: "%w" -%}
+          <time datatime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: "%Y.%m.%d" }} {{ weekday[week_offset] }}</time>
         </header>
         <div class="blog-article__body">
           {%- if thumbnail != blank -%}
