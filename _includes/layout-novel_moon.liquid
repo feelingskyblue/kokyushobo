@@ -1,0 +1,55 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+<script src="/assets/js/novel_tree.js" defer></script>
+<script defer>
+document.addEventListener("DOMContentLoaded", function() {
+  const startDate = new Date("2025-11-29T00:00:00Z");
+  const endDate = new Date("2025-11-30T23:59:59Z");
+  const currentDate = new Date();
+
+  if (currentDate < startDate || currentDate > endDate) {
+    const novelBody = document.querySelector(".novel__body");
+    if (novelBody) {
+      novelBody.innerHTML = "現在は非公開です。<br>公開期間は2025年11月29日0:00から11月30日23:59までとなります。";
+    }
+  }
+});
+</script>
+<article class="novel font-serif">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  <nav class="novel__nav">
+    <section class="novel__nav-index">
+      <h2 class="heading">本文目次</h2>
+      <ol class="novel__nav-list">
+        <li class="index-tree-1"><a href="#sectionMain1">父の転生</a></li>
+        <li class="index-tree-1"><a href="#sectionMain2">少女ドーリィ</a></li>
+        <li class="index-tree-1"><a href="#sectionMain3">青の国</a></li>
+        <li class="index-tree-1"><a href="#sectionMain4">花束マダム</a></li>
+        <li class="index-tree-1"><a href="#sectionMain5">竜退治の街グリムカルダ西小川通り商店街</a></li>
+        <li class="index-tree-1"><a href="#sectionMain6">砂漠と釣りびと</a></li>
+        <li class="index-tree-1"><a href="#sectionMain7">ある冬の日の</a></li>
+        <li class="index-tree-1"><a href="#sectionMain8">新月をグラスに注いで</a></li>
+        <li class="index-tree-1"><a href="#sectionMain9">紙飛行機に眠る月</a></li>
+      </ol>
+    </section>
+  </nav>
+  <div class="novel__body tree_is_light__body">
+  {{ content }}
+  </div>
+  <div class="novel__footer">
+    <hr>
+    <p>幻想は、その一瞬、紛れもなく、現実なのだと思います<br>あらゆる人に、優しい幻想がありますように<br>風野 湊</p>
+    <div id="contact" class="novel__form">
+      <form name="clap" class="form" method="POST" action="/contact/thanks" netlify>
+        <input name="message" type="text" value="{{ title }}" class="visually-hidden">
+        <div>
+          <button class="btn btn--small btn--pale" type="submit">WebClap</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</article>
