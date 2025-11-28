@@ -3,20 +3,6 @@ layout: layout.liquid
 template: novelPage
 ---
 <script src="/assets/js/novel_tree.js" defer></script>
-<script defer>
-document.addEventListener("DOMContentLoaded", function() {
-  const startDate = new Date("2025-11-29T00:00:00Z");
-  const endDate = new Date("2025-11-30T23:59:59Z");
-  const currentDate = new Date();
-
-  if (currentDate < startDate || currentDate > endDate) {
-    const novelBody = document.querySelector(".novel__body");
-    if (novelBody) {
-      novelBody.innerHTML = "現在は非公開です。<br>公開期間は2025年11月29日0:00から11月30日23:59までとなります。";
-    }
-  }
-});
-</script>
 <article class="novel font-serif">
   <header class="novel__header">
     <h1 class="novel__header-title">{{ title }}</h1>
