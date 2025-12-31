@@ -1,107 +1,115 @@
-title: 2025年の創作活動振り返り
-date: 2025-12-28
-permalink: "blog/20251228/"
+title: 2025年12月の活動報告
+date: 2025-12-31
+permalink: "blog/20251231/"
 category:
-  - 雑記
+  - 月報
 month:
-  - 2025年12月
+  - 2024年15月
 tags:
-  - 創作TALK
-thumbnail: "/assets/img/blog/sousaku-talk2025_4.png"
-description: "2025年もまもなく終わりですね。本年も、創作TALKさんのハッシュタグ #創作2025_26 をお借りして、一年をざっくり振り返りたいと思います:)"
+  - 進捗報告
+  - 樹木続編
+thumbnail: "/assets/img/blog/202412_osaka.jpeg"
+description: ""
 
-2025年もまもなく終わりですね。本年も、創作TALKさんのハッシュタグ #創作2025_26 をお借りして、一年をざっくり振り返りたいと思います:)
-12月の活動報告は年内にまた改めて。
+
+今年もこれで終わり、2025年12月の活動報告です。
 
 <hr>
 
-### 創作TALK概要
-創作TALKは、年末年始にTwitterで開催されている、創作記事をまとめる企画です。[主催の方のアカウントおよび2025年の企画概要はこちら](https://x.com/create_talk/status/1997659368687350092)。
-[2025年の参加記事一覧はこちらのposfie](https://posfie.com/@create_talk/p/BsOhyOS)にまとめられています。
-今年のオプションテーマは「2025年一番創作に影響を与えたコト・モノ」とのこと。
+### 12月の振り返り
+- 文学フリマ東京39に出店しました
+- 山川夜高さんお誕生日アンソロジーに参加しました
+- 国立民族学博物館企画展「吟遊詩人の世界」大満喫
+- DIC川村記念美術館へ
+- 2024年振り返りの記事を書けた
+- 樹木続編の第3章が一気に進んだ
 
-私は2021年から創作TALKのハッシュタグ企画に参加しています。過去に投稿した振り返りは以下のとおり。2024年からはブログ記事として投稿するようになりました。
+#### 文学フリマ東京39出店
+12月に文フリ東京があるの不思議な感じだ…！！
+初めてのビッグサイト開催にうろたえつつも、楽しい一日を過ごすことができました。
+[文学フリマ出店お礼の記事](/blog/20241207)はこちらからどうぞ。
 
-- [2024年振り返り（樹木続編執筆＆ヨーロッパ旅行記）](/blog/20241230/)
-- <a href="https://x.com/feelingskyblue/status/1741439485957799956" target="_blank" rel="noopenner noreferrer">2023年振り返り（個人サイト開設＆全身麻酔手術＆『十一月の春の庭』刊行）</a>
-- <a href="https://x.com/feelingskyblue/status/1609124867479310339" target="_blank" rel="noopenner noreferrer">2022年振り返り（「樹木のバカンス」執筆）</a>
-- <a href="https://x.com/feelingskyblue/status/1476848859280441347" target="_blank" rel="noopenner noreferrer">2021年振り返り（コロナ禍＆『彼らは唯の夢』刊行）</a>
+[『walking postcard vol.11』売り上げの寄付報告](/blog/20241225)についても記事を公開しています:)
 
+#### 山川夜高さんお誕生日アンソロジー参加
+> 液晶面を下に、音楽の信号を送りつづけながら墜落した小さな機械を、誰かが拾いあげた。
+> 音楽は流れつづける。自動的に生成されるミックスリストのアルゴリズムが、そのとき密かに歪んだのか、それとも確率的な偶然か、誰にも知る由はない。
+> 波音が生じた。
 
-#### さらりと自己紹介
-ハッシュタグ経由でいらしてくださった方に向けて、簡単な自己紹介を。
-本サイト「呼吸書房」の管理人、風野湊（かざの みなと）です。
-同名サークル「呼吸書房」として、2012年頃から文学フリマなどの文芸系イベントに参加しています。小説を書き続けてもう…中学時分も勘定に入れると20年くらい…？？
+お声がけいただき、友人の山川夜高さんのお誕生日祝いアンソロジーに短編「[Believe it or not.](/novel/for-disstory/)」を寄稿しました。サイト上でも公開済みです。
+寄稿短編を執筆してたのは11月なのですが、情報公開が12/1だったのでこちらで笑。仔細は以下のノートをどうぞ。
 
-主な執筆ジャンルは幻想文学とファンタジーです。紀行文などの散文もときどき。（今年はやりませんでしたが）朗読も好きです。
-現在は、2020年に刊行した『すべての樹木は光』の続編となる『すべての木陰に歌を』を執筆しています。ベースは幻想文学、ちょっとだけSF、どことなくジュブナイル、そんな感じのお話。
+<iframe src="https://misskey.design/embed/notes/a1ht0pjvp0v267tm" data-misskey-embed-id="v1_68534943-ab04-4f54-bfe3-f20902e1b726" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
 
-個人サイト作りも趣味なので、良かったらサイト内も見ていただけると嬉しいです！
-詳しい紹介は[Aboutページ](/about/)もご覧くださいませ。
+後書き（長い）もあるよ！
+Web公開にあたって、個人サイトだからこそできる遊びも盛り込めたのが楽しかったですね🌃
 
-### 2025年振り返り
-それでは毎年恒例、一年の振り返りから。
-創作TALKさんから提供されているテンプレートで、年間の活動内容をざっくりまとめてみました。今年も色々あったな〜〜
+<iframe src="https://misskey.design/embed/notes/a1ht58n5p0v2681d" data-misskey-embed-id="v1_552fb14e-846c-4cff-a96d-e2a9e49aab1c" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
 
-<img src="/assets/img/blog/sousaku-talk2025_1.png" alt="2025年1〜4月の振り返り" loading="lazy" width="800" class="">
-<img src="/assets/img/blog/sousaku-talk2025_2.png" alt="2025年5〜8月の振り返り" loading="lazy" width="800" class="">
-<img src="/assets/img/blog/sousaku-talk2025_3.png" alt="2025年9〜12月の振り返り" loading="lazy" width="800" class="">
+#### 国立民族学博物館企画展「吟遊詩人の世界」大満喫
+会期スケジュール的にもお財布的にも厳しいから諦めようかなと思ってた、みんぱく創設50周年記念特別展「<a href="https://www.minpaku.ac.jp/ai1ec_event/51494" target="_blank" rel="noopenner noreferrer">吟遊詩人の世界</a>」。
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A1uVqniALK0?si=s6bSGYkI3yiM-l5y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-#### 本年の執筆作品
-- 樹木続編：『すべての木陰に歌を』第二部〜第三部終盤まで
-- 新刊：『[本を片手に植物園 vol.1 Tokyo](/book/botanical_1/)』執筆＆刊行
-- 短編：[波とランプシェード](https://atsea.day/blogs/journal/novel_05)（寄稿作品）
-- 短編：[クリスマスを奏でた後に](https://atsea.day/blogs/journal/novel_06)（寄稿作品）
+しかしそのとき風野に電撃走る……長年貯めるだけ貯めてきたANAマイルを使えば航空券実質タダ！！！！行くしかねえ！！
 
-今年はひたすらに樹木続編を執筆してましたね…！ できれば年内に初稿完成までいきたかったですが、もうしばし掛かりそうです。物語の終盤には辿り着いているので、なんとかこのまま、ユハの旅の終わりを見届けたいと思います。
-あとは、『旅人よ立ち止まれ』新装版刊行に向けて、昨年執筆した2024年ヨーロッパ旅行記を全体的に手直ししたり、後書きを書き下ろしたりしています。こちらも来年刊行予定なので、どうぞお楽しみに。
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:qbxxhhl3rvgnzptnl6cpwocz/app.bsky.feed.post/3lcur2mltj22j" data-bluesky-cid="bafyreihtanlwucsr23ikd5e74eqfikrxc4qkknrtk7j3iig2mpqzwbkcyi"><p lang="ja">会期間際の滑り込みで、国立民族学博物館の企画展「吟遊詩人の世界」へ。いやぁ無理してでも来て良かった…！
 
-#### 本年の参加イベント
-- 2025.02 ZINEフェス 詩歌と日記
-- 2025.03 第10回TAMAコミ
-- 2025.05 文学フリマ東京40
-- 2025.11 文学フリマ東京41
-- 2025.11 オンライン即売会 みすけっと
+児童文学（というか『はるかな空の東』）の影響で吟遊詩人という概念を好きになってからかれこれ二十余年。中世の吟遊詩人/宮廷歌人たるトルバドゥールやジョングルールについては大学でちょっと齧ったものの、西洋以外の吟遊詩人についてはあまり知らないままだったんですよね。グリオやバウルを薄ら聞いたことあるくらいで…
 
-昨年末の抱負「文学フリマ以外のイベントにも出てみよう！」を実行した一年でした。
-TAMAコミに出られたのはかなり良かった！ 来年春のTAMAコミには早期満了で応募し損ねてしまったのが改めて悔やまれます。
-ZINEフェスはかなり文学フリマと客層が違うため、まだ馴染みきれていないですね…今年刊行した植物園BOOKはZINEフェス向きの気もするので、来年にまた一回くらいは参加してみようかしらと思っています。
-来年は『旅人よ立ち止まれ』新装版と『すべての木陰に歌を』を刊行したうえで、胸を張って各地の文学フリマに持っていきたいですね…！
+今回の企画展は、世界各地の近現代に生きる吟遊詩人にスポットが当てられ、実際の朗唱や演奏を映像で見られる！楽器と衣装までも！
+もうめちゃくちゃ面白かったです。私も朗読を再開したくなりました<br><br><a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz/post/3lcur2mltj22j?ref_src=embed">[image or embed]</a></p>&mdash; 風野湊 (<a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz?ref_src=embed">@feelingskyblue.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz/post/3lcur2mltj22j?ref_src=embed">2024年12月9日 21:49</a></blockquote>
 
-#### 2025年一番創作に影響を与えたコト・モノ
-これは「朝活ができるようになったこと」かなあと思います。
-【暑すぎる夏でもなんとか散歩時間を確保したい→もはや早朝しかない→一人暮らし11年目にして初、早寝早起き習慣が身につき、午前中の執筆ルーチンを確立】と、まあまあ大きな行動の変化がありました。わたしって早起きできたんだ……
-喫茶店でモーニングを楽しむようになれたのも地味に嬉しいところですね。寒くなってからは早起きモチベーションが崩れてしまい、夏ほどの早寝早起きはできていないのですが、それでも昨年よりは就寝・起床時間ともに早くなりました。これまではAM2時に寝るのがフツーくらいだったもんなあ。
-例年、夏に体調を崩していたのが、今年は健康なまま乗り切れたのも朝活散歩習慣のおかげかもしれないです。なお散歩習慣が根付いたのは昨年秋のヨーロッパ旅行からなので、やっぱ旅って良いもんだな！
+いや〜〜無理してでも行って良かったです、ほんと。
+吟遊詩人という存在が大好きなのに、風野名義の作品ではあまり書けていないので、樹木続編を書き終わったらチャレンジしたいですね。
+吟遊詩人のキャラクター自体は高校生の頃からずっと傍にいるんですが、出自が特殊ゆえに所属する本編を持っていないので、物語の表舞台にはなかなか上げられないという…（昔からTwitterフォローしてくれてる方はTLでイラストを見かけたことがあるかも？）。
+ともあれ企画展はほんとうに大満足でした。なんらか創作に活かせたらいいな！
 
-### 総括と来年の抱負
-今年はなにより健康でいられたのが嬉しいですね。月経困難症の治療に着手できたのも大きかったなあ…。創作からはちょっと外れますが、自動車免許の取得というチャレンジも達成できて良かったです。
+#### DIC川村記念美術館に（実質）初訪問
+前々から気になっていた<a href="https://kawamura-museum.dic.co.jp/" target="_blank" rel="noopenner noreferrer">DIC川村記念美術館</a>にようやく足を運べました！
+千葉県民なのに行ったことないんだよな〜〜と長年思っていたところ、じつは幼少期（たぶん美術館が開館したばかりのころ）に連れて行ってもらったことがあったそうです。なんも覚えてねえ。
 
-<img src="/assets/img/blog/sousaku-talk2025_4.png" alt="2025年まとめ、2025年の抱負" loading="lazy" width="800" class="">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:qbxxhhl3rvgnzptnl6cpwocz/app.bsky.feed.post/3ldsoaojpt22a" data-bluesky-cid="bafyreifssmq7chwznfc77ealkmqnnpnotic77qyffan7wxekhgvcm7rade"><p lang="ja">DIC川村記念美術館、やっと足を運べた〜！
+土曜は暖かくなると聞いて、今だわ！と勢いのまま片道2.5時間、長旅の甲斐がありました。森と庭園を散策するにもぴったりな陽気☀️
 
-一年間を通して樹木続編の執筆を続けられたのもしみじみと喜ばしく思います。
-来年はなにより樹木続編の刊行を優先しつつ、私生活の方も変えてゆきたいです。主に仕事まわりを…！！ 昨年よりは安定したとはいえ経済的にはやっぱり貧弱なので、転職かダブルワークを視野に、年始から何かしら動いていきたいと思います。そのために免許取った側面もあるし、マジで運転の練習もがんばろうね……。
+ロスコルームはゆったり座れたし（部屋に二人しか居ないタイミングもあり僥倖だった）、ちょうど快晴から薄曇りに天候が変わるタイミングだったので、自然光が差しこむ二階展示室の表情変化も大いに楽しめました。館内三周しちゃったよ:)
 
-### 独立した生活を愉快に維持する
-何年か前から、新年の目標はずっとこれです。愉快に、を忘れずにいたいなぁと思っています:)
-昨年に引き続き、やりたいことを片っ端から挙げてみましょう。これ、年末に昨年分を見返すとけっこう面白かったです。さて来年のわたしはどれくらい叶えてくれるかな？
+館内撮影禁止なのも鑑賞に集中できて良いですね。ロスコルームの赤は、炎を連想するには暗すぎて、どこか胎内のようでした<br><br><a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz/post/3ldsoaojpt22a?ref_src=embed">[image or embed]</a></p>&mdash; 風野湊 (<a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz?ref_src=embed">@feelingskyblue.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:qbxxhhl3rvgnzptnl6cpwocz/post/3ldsoaojpt22a?ref_src=embed">2024年12月21日 19:16</a></blockquote>
 
-- ★樹木続編の完結＆刊行！
-- ★旅人よ立ち止まれ新装版の刊行
-- ★仕事環境を変える（転職またはダブルワーク）
-- ★引き続き健康でいたい
-- 運動の趣味（SUP）も夏になったらまたやりたい
-- 運転の練習をなんとか継続してほしい
-- アコギものんびり楽しみたい
-- 引っ越しをそろそろ視野に入れて私生活を整える
+自然光が生かされた美術館の雰囲気もとても心地よかったですし、広大な庭園と森も散歩するのに素敵な場所でした:)　春にも訪れてみたかったなぁ〜〜
+ちょうど先週、都内への縮小移転が方針として最終決定したとのことで、残念ですね…。
+参考→<a href="https://www.chibanippo.co.jp/news/local/1320620" target="_blank" rel="noopenner noreferrer">【速報】川村記念美術館、都内縮小移転へ　作品売却し４分の１に　来年４月休館、佐倉市と庭園利用協議　ＤＩＣ方針（千葉日報）</a>
 
-以下は昨年から引き続き笑。
-- 樹木続編を書き終えたら執筆依頼をもっと受けたい、寄稿もしたい
-- 個人サイト改修（ブログのカテゴリ化をやりたいと言って2年…）
-- 本の書店委託にチャレンジしてみたい
-- 朗読配信コンテンツ作成
-- 旅行系コンテンツをTumblrから個人サイトに統合する
-- 電子書籍配信
-- もうすこし色んなコミュニティに参加する努力をしたい
+足を運べそうな機会がある方は、休館前にぜひ！
+<small>ぶっちゃけパリのオランジュリー美術館より鑑賞体験として良かったよ</small>
 
-来年も愉快に書き続けたいと思います。2026年も、どうぞ宜しくお願いします！
+#### 2024年振り返りの記事を書けた
+年内に間に合った！[2024年の創作活動振り返り記事](/blog/20241230)を昨日公開しています。
+来年も創作を楽しむ一年にしたいものです。
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">2024年の振り返り記事と来年の活動抱負を書きました🐈 <a href="https://t.co/Clm00niiVN">https://t.co/Clm00niiVN</a><br><br>本記事は創作TALKさんの <a href="https://twitter.com/hashtag/%E5%89%B5%E4%BD%9C2024_25?src=hash&amp;ref_src=twsrc%5Etfw">#創作2024_25</a> 振り返り企画に参加しています。<br>今年は樹木続編の執筆が軌道に乗ったのが何より嬉しい一年でした。来年も樹木変身譚を楽しむぞ〜！🌴🌴 <a href="https://t.co/SSgOhS2jaN">pic.twitter.com/SSgOhS2jaN</a></p>&mdash; 風野 湊🌿 (@feelingskyblue) <a href="https://twitter.com/feelingskyblue/status/1873741573512675481?ref_src=twsrc%5Etfw">December 30, 2024</a></blockquote>
+
+#### 樹木続編の第3章が一気に進んだ
+ヤッタ〜〜〜！！！！🌴🌴🌴
+
+### 樹木続編の進捗
+<img src="/assets/img/blog/commit_log_202412.png" alt="12月のコミットログ" loading="lazy" width="800" class="">
+
+先月はほぼ進捗報告できなかったからなおさら嬉しいぜ！
+10月〜11月にかけて執筆停滞していたのですが、お出かけから刺激を貰えたおかげか、12月中ばで一気に3章が書き終わりました。第1章は書き終わるのに半年かかったのに！！笑
+
+また、長いこと仮題のままだったタイトルもようやく最終決定しました。
+タイトル案をいくつ出しても全然しっくり来なかったのに、ひとたび思いついたら「いやコレ以外にはねえわ……」って感じの言葉に収束したので面白かったです。はやく発表してえ。
+
+ここまでの第1章〜第3章で第一部が終わり、以降は話の雰囲気が一気に変わります。
+というか2021年あたり？から構想してたパートや登場人物はほぼ第二部の存在なんですよ。ここまで長かった…やっと着いた〜！ウオ〜〜！！
+
+なお12月半ばの執筆は、午前中に散歩＆カフェで執筆→午後から仕事開始、という大変贅沢な時間の使い方をして書いたものです。
+めちゃくちゃ良かった。もう一年中これがいいよ。なお当然の帰結として仕事が終わらなくなり（愚か）、12月最終週に掛けては仕事に追われています。だからコミットログが途絶えているのだ……
+どうしたら良いんでしょうね、めちゃくちゃ朝方生活になったら良いのかな。無理そう。
+
+ともあれ来年もモリモリ書いていきたいと思います。
+今日はまだブログ更新できるかもです。また後ほど！
+
+<script defer src="https://misskey.design/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
