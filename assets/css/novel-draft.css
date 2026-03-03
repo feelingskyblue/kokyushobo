@@ -107,10 +107,6 @@
   border: 0 !important;
 }
 
-body .header {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .novel {
     max-width: calc(100vw - 24rem);
