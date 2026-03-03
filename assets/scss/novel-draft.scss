@@ -6,7 +6,10 @@
 
 body {
   .header {
-    //display: none;
+    display: none;
+  }
+  .main {
+    min-height: calc(100svh + 8rem);
   }
 }
 
@@ -25,7 +28,7 @@ body {
     padding-inline-end: 1em;
     writing-mode: vertical-rl;
     overflow: scroll;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
   }
 }
 

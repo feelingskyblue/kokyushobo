@@ -107,6 +107,13 @@
   border: 0 !important;
 }
 
+body .header {
+  display: none;
+}
+body .main {
+  min-height: calc(100svh + 8rem);
+}
+
 @media (min-width: 768px) {
   .novel {
     max-width: calc(100vw - 24rem);
@@ -123,6 +130,6 @@
     padding-inline-end: 1em;
     writing-mode: vertical-rl;
     overflow: scroll;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
   }
 }
