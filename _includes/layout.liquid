@@ -10,6 +10,7 @@
     <meta name="description" content="{%- if description == blank -%}風野湊によるオリジナル創作ウェブサイトです。小説と紀行文、朗読をメインに掲載しています。書籍通販・イベント出店の案内もこちらからどうぞ。{%- else -%}{{ description }}{%- endif -%}">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     {%- if canonical -%}<link rel="canonical" href="{{ canonical }}" />{%- endif %}
+    {%- if noindex -%}<meta name="robots" content="noindex,noarchive,nofollow,noimageindex">{%- endif %}
 
     <script async>
       "use strict";
