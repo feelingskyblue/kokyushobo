@@ -253,7 +253,7 @@ body.fixed {
 }
 
 p:not(:last-child), blockquote:not(:last-child) {
-  margin-bottom: 1.5em;
+  margin-block-end: 1.5em;
 }
 
 a {
@@ -409,8 +409,8 @@ hr {
 }
 
 blockquote {
-  border-left: 0.4rem solid #cccccc;
-  padding-left: 0.8em;
+  border-inline-start: 0.4rem solid #cccccc;
+  padding-inline-start: 0.8em;
   font-size: 1.05em;
   opacity: 0.8;
 }
@@ -2012,12 +2012,14 @@ body:not(.homePage) .main {
 }
 .blog-article__pager-item {
   width: 50%;
-  position: relative;
 }
 @media (max-width: 767px) {
   .blog-article__pager-item {
     width: 100%;
   }
+}
+.blog-article__pager-item {
+  position: relative;
 }
 .blog-article__pager-item:not(:empty) {
   border: 1px solid rgba(var(--keyColorRgb), 0.1);
@@ -2055,11 +2057,11 @@ body:not(.homePage) .main {
   content: "〈";
   left: 0;
 }
-.blog-article__pager-item--old:not(:empty) {
-  text-align: right;
-}
 .blog-article__pager-item--old:not(:empty) a {
   padding-right: 2.5em;
+}
+.blog-article__pager-item--old:not(:empty) {
+  text-align: right;
 }
 .blog-article__pager-item--old:not(:empty)::after {
   content: "〉";
@@ -2113,11 +2115,12 @@ body:not(.homePage) .main {
   font-family: "YuMincho", "Yu Mincho", "Hiragino Mincho Pr6N", "Hiragino Mincho ProN", "Hiragino Mincho StdN", serif;
 }
 .novel__header {
-  margin: 8rem 0;
+  margin-block: 8rem;
+  margin-inline: 0;
 }
 @media (max-width: 767px) {
   .novel__header {
-    margin: 4rem 0;
+    margin-block: 4rem;
   }
 }
 .novel__header-title {
@@ -2209,16 +2212,16 @@ body:not(.homePage) .main {
 }
 .novel__body h2 {
   font-size: 1.2em;
-  margin-top: 4em;
-  margin-bottom: 2em;
+  margin-block-start: 4em;
+  margin-block-end: 2em;
 }
 .novel__body h3 {
   font-size: 1em;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 }
 .novel__body hr {
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin-block-start: 4em;
+  margin-block-end: 4em;
 }
 .novel__body p::before {
   content: "";
@@ -2231,32 +2234,32 @@ body:not(.homePage) .main {
   opacity: 0.5;
 }
 .novel__body.tree_is_light__body h2 + h3 {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 .novel__body.tree_is_light__body h3 {
   font-size: 1.1em;
   text-align: right;
-  margin-top: 6em;
+  margin-block-start: 6em;
 }
 .novel__body.tree_is_light__body h3 + h4 {
-  margin-top: 2em;
+  margin-block-start: 2em;
 }
 .novel__body.tree_is_light__body h4 {
-  margin-top: 4em;
+  margin-block-start: 4em;
   font-size: 1.1em;
-  margin-bottom: 2em;
+  margin-block-end: 2em;
 }
 .novel__footer {
   font-size: 0.8em;
   opacity: 0.8;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
+  margin-block-start: 8rem;
+  margin-block-end: 4rem;
   text-align: right;
 }
 @media (max-width: 767px) {
   .novel__footer {
     font-size: 1em;
-    margin-top: 4rem;
+    margin-block-start: 4rem;
     text-align: left;
   }
 }
