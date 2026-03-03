@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import "core/reset";
+@import "core/utility";
+
+
+body {
+  .header {
+    display: none;
+  }
+}
+
+.novel {
+  @media (min-width: $pc-width) {
+    max-width: calc(100vw - 24rem);
+    //max-width: 32em;
+    max-height: 39em;
+    padding-inline-end: 1em;
+    writing-mode: vertical-rl;
+    overflow: scroll;
+    margin-bottom: 80px;
+  }
+  @media (max-width: $sp-width) {
+    max-height: 39em;
+    padding-inline-end: 1em;
+    writing-mode: vertical-rl;
+    overflow: scroll;
+    margin-bottom: 80px;
+  }
+}
+
