@@ -22,5 +22,9 @@ body {
   max-width: 100%;
   margin: auto;
   padding-block: 4em;
+  .novel__body.tree_is_light__body h3 {
+    text-align: left;
+    margin-block-end: 2em;
+  }
 }
 

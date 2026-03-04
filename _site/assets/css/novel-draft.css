@@ -124,3 +124,7 @@ body .main {
   margin: auto;
   padding-block: 4em;
 }
+.novel .novel__body.tree_is_light__body h3 {
+  text-align: left;
+  margin-block-end: 2em;
+}
