@@ -111,25 +111,16 @@ body .header {
   display: none;
 }
 body .main {
-  min-height: calc(100svh + 8rem);
+  max-width: 100vw;
+  min-height: 100svh;
+  padding-inline: 4rem !important;
+  writing-mode: vertical-rl;
+  overflow: scroll;
 }
 
-@media (min-width: 768px) {
-  .novel {
-    max-width: calc(100vw - 24rem);
-    max-height: 39em;
-    padding-inline-end: 1em;
-    writing-mode: vertical-rl;
-    overflow: scroll;
-    margin-bottom: 80px;
-  }
-}
-@media (max-width: 767px) {
-  .novel {
-    max-height: 39em;
-    padding-inline-end: 1em;
-    writing-mode: vertical-rl;
-    overflow: scroll;
-    margin-bottom: 0px;
-  }
+.novel {
+  max-height: 38em;
+  max-width: 100%;
+  margin: auto;
+  padding-block: 4em;
 }
