@@ -1375,6 +1375,10 @@ body:not(.homePage) .main {
   opacity: 0.7;
   background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 0%, #000000 100%) 0% 0% no-repeat padding-box;
 }
+.home__firstview-image.for-tree-shade::before {
+  opacity: 0.7;
+  background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 0%, #000000 100%) 0% 0% no-repeat padding-box;
+}
 .home__firstview-image.for-vacation::before {
   opacity: 0.8;
   background: transparent linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 0%, #000000 100%) 0% 0% no-repeat padding-box;

@@ -1225,6 +1225,12 @@ body {
 			opacity: 0.7;
 			background: transparent linear-gradient(180deg, #00000033 0%, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
 		}
+		&.for-tree-shade {
+			&::before {
+				opacity: 0.7;
+				background: transparent linear-gradient(180deg, #00000033 0%, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+			}
+		}
 		&.for-vacation::before {
 			opacity: 0.8;
 			background: transparent linear-gradient(180deg, #00000033 0%, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
