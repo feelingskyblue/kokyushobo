@@ -1,0 +1,79 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+<script src="/assets/js/novel_tree.js" defer></script>
+<article class="novel font-serif">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  {% comment %}
+    マウス動かしたらメニュー表示させたい　stoneぽく
+  {% endcomment %}
+  <blockquote>
+    <p>かわいそうに、わたしの影は狂ってしまった。<br>自分こそが人間で、わたしの方が影なのだと、思いこんでいるのですよ。<br>
+    ハンス・クリスチャン・アンデルセン『影』</p>
+  </blockquote>
+  <blockquote>
+    <p>思い出すんだ、どうやったら死なずにいられるかを。<br>
+    どうやってあかりを灯すかを。<br>
+    思い出すんだ。思い出すんだよ、木々の葉のつくる影を。<br>
+    あの森はどこまで続いているんだろう？<br>
+    心の届くかぎり。<br>
+    アーシュラ・K・ル＝グウィン『ゲド戦記』<br>第五巻『ドラゴンフライ』より「カワウソ」</p>
+  </blockquote>
+{% comment %}
+スクロールで背景色の変わる仕組みを入れたいな。。
+ふむ、画像も置けるね　とはいえこのへんは専用レイアウトファイルにしてあげたいかな。。
+<img class="" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
+{% endcomment %}
+  <nav class="novel__nav">
+    <section class="novel__nav-index">
+      <h2 class="heading">本文目次</h2>
+      <ol class="novel__nav-list">
+        <li class="index-tree-1"><a href="#sectionMain1">introduction</a></li>
+        <li class="index-tree-2"><a href="#sectionMain2">第一部　彼女について</a></li>
+        <li class="index-tree-3"><a href="#section1">1　トゥーリ</a></li>
+        <li class="index-tree-3"><a href="#section2">（幕間）</a></li>
+        <li class="index-tree-3"><a href="#section3">2　キオ</a></li>
+        <li class="index-tree-3"><a href="#section4">（幕間）</a></li>
+      </ol>
+    </section>
+    {% comment %}
+    <dl class="novel__nav-controller">
+      <div>
+        <dt>本文の文字サイズ</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined"><span>大</span></button>
+          <button type="button" class="btn btn--small btn--outlined current"><span>中</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>小</span></button>
+        </dd>
+      </div>
+      <div>
+        <dt>本文のフォント</dt>
+        <dd>
+          <button type="button" class="btn btn--small btn--outlined current"><span>明朝体</span></button>
+          <button type="button" class="btn btn--small btn--outlined"><span>ゴシック体</span></button>
+        </dd>
+      </div>
+    </dl>
+    {% endcomment %}
+  </nav>
+  <div class="novel__body tree_is_light__body">
+  {{ content }}
+  </div>
+  <div class="novel__footer">
+    <hr>
+    <p>以降の本文は書籍でお楽しみください。</p>
+    <a href="/book/trees_shade/">『すべての木陰に歌を』詳細ページへ</a>
+    <hr>
+    <div id="contact" class="novel__form">
+      <form name="clap" class="form" method="POST" action="/contact/thanks" netlify>
+        <input name="message" type="text" value="{{ title }}" class="visually-hidden">
+        <div>
+          <button class="btn btn--small btn--pale" type="submit">WebClap</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</article>
