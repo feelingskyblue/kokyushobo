@@ -993,6 +993,12 @@ body {
 				background-size: cover;
 			}
 		}
+		&.is-shade {
+			&::before {
+				background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 66% center;
+				background-size: cover;
+			}
+		}
 	}
 	&__header {
 		width: 30%;
