@@ -1,0 +1,36 @@
+{%- assign novels-info-title = '『すべての木陰に歌を』, 『すべての樹木は光』, 『樹木のバカンス』, ' | split: ', ' -%}
+{%- assign novels-info-handle = 'tree-shade, tree, postcard-6, ' | split: ', ' -%}
+{%- assign novels-info-size = 'big, big, big' | split: ', ' -%}
+{%- assign novels-info-detail = '2026.5.4刊行, 2020.11.22刊行, 
+2022.11.20刊行' | split: ', ' -%}
+<div id="tabBookList">
+  <div class="book-tab__wrapper">
+    <ul role="tablist" class="book-tab">
+      {%- for book in novels-info-title -%}
+        <li role="presentation" class="book-tab__item">
+          <button
+            role="tab"
+            aria-controls="panel{{ forloop.index }}"
+            aria-selected="false"
+            tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+          >
+            <img src="/assets/img/hyoushi-{{ novels-info-handle[forloop.index0] }}.jpg" alt="{{ book }}表紙イメージ" loading="lazy" width="400" class="book-image--{{ novels-info-size[forloop.index0] }}">
+          </button>
+        </li> 
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="book-tab__contents">
+    {%- for book in novels-info-title -%}
+      <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
+        <header class="book-info__header">
+          <h3 class="book-info__title">{{ book }}</h3>
+          <span class="book-info__data">{{ novels-info-detail[forloop.index0] }}</span>
+        </header>
+        <div class="book-info__detail">
+          {%- include '_includes/info-{{novels-info-handle[forloop.index0]}}' -%}
+        </div>
+      </section>
+    {%- endfor -%} 
+  </div> 
+</div>
