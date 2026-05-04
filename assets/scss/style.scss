@@ -120,6 +120,9 @@
 			}
 		}
 	}
+	.footer {
+		background-color: #353A39;
+	}
 		
 }
 
@@ -1127,7 +1130,53 @@ body {
 
 
 // TOP
+.footer {
+	position: relative;
+	z-index: 12;
+	background-color: #EBE8E6;
+}
 .home {
+	position: relative;
+	&__special-link {
+		position: fixed;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		z-index: 11;
+		line-height: 1.5;
+		padding: 1.5rem 2rem;
+		background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 66% center;
+		background-size: cover;
+		color: #ffffff;
+		text-decoration: none;
+		@media (max-width: $sp-width) {
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			text-align: center;
+			br {
+				display: none;
+			}
+		}
+		&--inner {
+			position: relative;
+			z-index: 1;
+			font-weight: bold;
+			p {
+				color: #ffffff;
+			}
+		}
+		&::before {
+			display: block;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.3);
+			z-index: 0;
+		}
+	}
 	&__announce {
 		font-size: 0.7em;
 		@media (max-width: $sp-width) {
