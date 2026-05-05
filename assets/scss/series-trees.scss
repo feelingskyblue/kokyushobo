@@ -15,6 +15,11 @@ body {
   .header {
     display: none;
   }
+  &.is-loaded {
+  }
+  .footer {
+		background-color: #353A39;
+	}
 }
 
 .trees-special {
@@ -97,6 +102,53 @@ body {
       display: none;
     }
   }
+  &__section {
+    position: relative;
+    overflow: hidden;
+    &:nth-of-type(even) {
+      .trees-special__section--image {
+        img {
+          object-position: bottom;
+        }
+      }
+    }
+    &--image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &--text {
+      position: relative;
+      z-index: 1;
+      margin-block: 4rem;
+      padding: 4rem 3rem;
+      background-color: rgba($color: var(--bgColorRgb), $alpha: 0.8);
+      max-width: 700px;
+      @media (max-width: $sp-width) {
+        //margin-block: 2rem;
+        padding: 4rem 2rem;
+        margin-block: 0;
+        //max-width: calc(100% - 4rem);
+      }
+      .heading {
+        margin-bottom: 1rem;
+      }
+      @media (min-width: $pc-width) {
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
   &__subsection {
     margin-bottom: 1rem;
     @media (max-width: $sp-width) {
@@ -105,24 +157,27 @@ body {
     .heading {
       margin-bottom: 1rem;
     }
-    details {
-      margin-left: 1em;
-      margin-bottom: 1rem;
-      @media (max-width: $sp-width) {
-        margin-left: 0.5em;
-      }
-    }
   }
   &__story {
+    margin-bottom: 4rem;
     span {
       display: block;
       text-align: right;
+      margin-top: 1rem;
+    }
+  }
+  details {
+    margin-left: 1em;
+    margin-bottom: 1rem;
+    @media (max-width: $sp-width) {
+      margin-left: 0.5em;
     }
   }
   &__character {
+
     &--detail {
       margin-left: 1em;
-      padding-bottom: 1rem;
+      padding-block-start: 1rem;
       @media (max-width: $sp-width) {
         margin-left: 0;
       }
@@ -130,7 +185,7 @@ body {
       dt {
         font-weight: bold;
       }
-      dd {
+      dd:not(:last-child) {
         margin-bottom: 1em;
       }
     }

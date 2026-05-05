@@ -1144,11 +1144,14 @@ body {
 		z-index: 11;
 		line-height: 1.5;
 		padding: 1.5rem 2rem;
-		background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 66% center;
+		background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 65% center;
+		border: none;
 		background-size: cover;
 		color: #ffffff;
 		text-decoration: none;
+		box-shadow: 0 0 1rem rgba($color: var(--textColorRgb), $alpha: 0.5);
 		@media (max-width: $sp-width) {
+			box-shadow: none;
 			bottom: 0;
 			right: 0;
 			width: 100%;
@@ -1175,6 +1178,12 @@ body {
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.3);
 			z-index: 0;
+			transition: background-color 0.4s ease-in-out;
+		}
+		&:hover {
+			&::before {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
 		}
 	}
 	&__announce {

@@ -151,3 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
   randomShow('homeFirstView', '.home__firstview-item');
   
 });
+
+window.addEventListener('load', () => {
+  document.body.classList.add('is-loaded');
+});

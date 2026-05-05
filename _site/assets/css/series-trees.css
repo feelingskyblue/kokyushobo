@@ -119,6 +119,9 @@
 body .header {
   display: none;
 }
+body .footer {
+  background-color: #353A39;
+}
 
 .trees-special__mv {
   display: flex;
@@ -203,6 +206,51 @@ body .header {
 .trees-special__content .book-info__aside {
   display: none;
 }
+.trees-special__section {
+  position: relative;
+  overflow: hidden;
+}
+.trees-special__section:nth-of-type(even) .trees-special__section--image img {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.trees-special__section--image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.trees-special__section--image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.trees-special__section--text {
+  position: relative;
+  z-index: 1;
+  margin-block: 4rem;
+  padding: 4rem 3rem;
+  background-color: rgba(var(--bgColorRgb), 0.8);
+  max-width: 700px;
+}
+@media (max-width: 767px) {
+  .trees-special__section--text {
+    padding: 4rem 2rem;
+    margin-block: 0;
+  }
+}
+.trees-special__section--text .heading {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .trees-special__section--text p {
+    margin-bottom: 0;
+  }
+}
 .trees-special__subsection {
   margin-bottom: 1rem;
 }
@@ -214,22 +262,26 @@ body .header {
 .trees-special__subsection .heading {
   margin-bottom: 1rem;
 }
-.trees-special__subsection details {
-  margin-left: 1em;
-  margin-bottom: 1rem;
-}
-@media (max-width: 767px) {
-  .trees-special__subsection details {
-    margin-left: 0.5em;
-  }
+.trees-special__story {
+  margin-bottom: 4rem;
 }
 .trees-special__story span {
   display: block;
   text-align: right;
+  margin-top: 1rem;
+}
+.trees-special details {
+  margin-left: 1em;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .trees-special details {
+    margin-left: 0.5em;
+  }
 }
 .trees-special__character--detail {
   margin-left: 1em;
-  padding-bottom: 1rem;
+  padding-block-start: 1rem;
 }
 @media (max-width: 767px) {
   .trees-special__character--detail {
@@ -239,6 +291,6 @@ body .header {
 .trees-special__character--detail dt {
   font-weight: bold;
 }
-.trees-special__character--detail dd {
+.trees-special__character--detail dd:not(:last-child) {
   margin-bottom: 1em;
 }
