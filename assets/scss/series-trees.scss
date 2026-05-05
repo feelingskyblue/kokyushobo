@@ -16,6 +16,11 @@ body {
     display: none;
   }
   &.is-loaded {
+    .trees-special__mv--item {
+      img {
+        opacity: 1;
+      }
+    }
   }
   .footer {
 		background-color: #353A39;
@@ -85,6 +90,8 @@ body {
         width: 100%;
         height: 100%;
         object-position: top;
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(.06,.69,.58,.99)
       }
     }
   }
