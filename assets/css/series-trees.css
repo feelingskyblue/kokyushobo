@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset CSS */
 *,
 *::before,
@@ -276,6 +277,20 @@ body .footer {
 .trees-special__subsection .heading {
   margin-bottom: 1rem;
 }
+.trees-special__subsection ul li {
+  padding-left: 1em;
+  position: relative;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.trees-special__subsection ul li::before {
+  content: "○";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1em;
+  height: 1em;
+}
 .trees-special__story {
   margin-bottom: 4rem;
 }
@@ -307,4 +322,36 @@ body .footer {
 }
 .trees-special__character--detail dd:not(:last-child) {
   margin-bottom: 1em;
+}
+.trees-special__special {
+  margin-block-start: 8rem;
+  margin-block-end: 4rem;
+}
+.trees-special__special .trees-special__subsection {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .trees-special__special {
+    margin-block-start: 6rem;
+    margin-block-end: 2rem;
+  }
+}
+.trees-special__thanks .trees-special__mv {
+  height: 150px;
+}
+.trees-special__thanks .trees-special__content {
+  max-width: 780px;
+}
+.trees-special__thanks .trees-special__subsection h3.heading {
+  font-size: 16px;
+}
+.trees-special__thanks .trees-special__subsection .heading + .heading {
+  margin-top: 2rem;
+}
+.trees-special__thanks ul {
+  margin-bottom: 4rem;
+}
+.trees-special__thanks .trees-special__back {
+  text-align: center;
+  margin-block: 6rem;
 }

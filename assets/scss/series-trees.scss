@@ -178,6 +178,22 @@ body {
     .heading {
       margin-bottom: 1rem;
     }
+    ul {
+      li {
+        padding-left: 1em;
+        position: relative;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        &::before {
+          content: "○";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1em;
+          height: 1em;
+        }
+      }
+    }
   }
   &__story {
     margin-bottom: 4rem;
@@ -209,6 +225,40 @@ body {
       dd:not(:last-child) {
         margin-bottom: 1em;
       }
+    }
+  }
+  &__special {
+    margin-block-start: 8rem;
+    margin-block-end: 4rem;
+    .trees-special__subsection {
+      margin-bottom: 0;
+    }
+    @media (max-width: $sp-width) {
+      margin-block-start: 6rem;
+      margin-block-end: 2rem;
+    }
+  }
+  &__thanks {
+    .trees-special__mv {
+      height: 150px;
+    }
+    .trees-special__content {
+      max-width: 780px;
+    }
+    .trees-special__subsection {
+      h3.heading {
+        font-size: 16px;
+      }
+      .heading + .heading {
+        margin-top: 2rem;
+      }
+    }
+    ul {
+      margin-bottom: 4rem;
+    }
+    .trees-special__back {
+      text-align: center;
+      margin-block: 6rem;
     }
   }
 }
