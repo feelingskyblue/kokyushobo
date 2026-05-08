@@ -241,6 +241,9 @@ body {
   &__thanks {
     .trees-special__mv {
       height: 150px;
+      @media (max-width: $sp-width) {
+        height: 60px;
+      }
     }
     .trees-special__content {
       max-width: 780px;

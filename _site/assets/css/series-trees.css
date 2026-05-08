@@ -339,6 +339,11 @@ body .footer {
 .trees-special__thanks .trees-special__mv {
   height: 150px;
 }
+@media (max-width: 767px) {
+  .trees-special__thanks .trees-special__mv {
+    height: 60px;
+  }
+}
 .trees-special__thanks .trees-special__content {
   max-width: 780px;
 }
