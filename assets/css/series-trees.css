@@ -356,6 +356,14 @@ body .footer {
 .trees-special__thanks ul {
   margin-bottom: 4rem;
 }
+.trees-special__thanks ul span {
+  display: block;
+  font-size: 0.9em;
+  padding: 10px;
+  margin-block-start: 5px;
+  margin-block-end: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .trees-special__thanks .trees-special__back {
   text-align: center;
   margin-block: 6rem;
