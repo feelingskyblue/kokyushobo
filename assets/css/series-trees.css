@@ -323,8 +323,16 @@ body .footer {
 .trees-special__character--detail dd:not(:last-child) {
   margin-bottom: 1em;
 }
-.trees-special__special {
+.trees-special__order {
   margin-block-start: 8rem;
+  margin-block-end: 2rem;
+}
+@media (max-width: 767px) {
+  .trees-special__order {
+    margin-block-start: 6rem;
+  }
+}
+.trees-special__special {
   margin-block-end: 4rem;
 }
 .trees-special__special .trees-special__subsection {
@@ -332,7 +340,6 @@ body .footer {
 }
 @media (max-width: 767px) {
   .trees-special__special {
-    margin-block-start: 6rem;
     margin-block-end: 2rem;
   }
 }

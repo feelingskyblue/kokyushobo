@@ -227,14 +227,19 @@ body {
       }
     }
   }
-  &__special {
+  &__order {
     margin-block-start: 8rem;
+    margin-block-end: 2rem;
+    @media (max-width: $sp-width) {
+      margin-block-start: 6rem;
+    }
+  }
+  &__special {
     margin-block-end: 4rem;
     .trees-special__subsection {
       margin-bottom: 0;
     }
     @media (max-width: $sp-width) {
-      margin-block-start: 6rem;
       margin-block-end: 2rem;
     }
   }
