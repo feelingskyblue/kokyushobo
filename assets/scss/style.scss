@@ -348,7 +348,7 @@ blockquote {
 		@include flex;
 		flex-wrap: wrap;
 		row-gap: 1rem;
-		li {
+		li:not(:last-child) {
 			margin-right: 1em;
 		}
 	}

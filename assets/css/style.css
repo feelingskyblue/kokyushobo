@@ -449,7 +449,7 @@ blockquote {
   flex-wrap: wrap;
   row-gap: 1rem;
 }
-.list__flex li {
+.list__flex li:not(:last-child) {
   margin-right: 1em;
 }
 .list__dl dt:not(:first-child) {
