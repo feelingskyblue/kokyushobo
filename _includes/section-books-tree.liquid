@@ -3,7 +3,7 @@
 {%- assign novels-info-size = 'big, big, big' | split: ', ' -%}
 {%- assign novels-info-detail = '2026.5.4刊行, 2020.11.22刊行, 
 2022.11.20刊行' | split: ', ' -%}
-<div id="tabBookList">
+<div id="tabBookList" class="book-tab__target">
   <div class="book-tab__wrapper">
     <ul role="tablist" class="book-tab">
       {%- for book in novels-info-title -%}

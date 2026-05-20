@@ -55,74 +55,80 @@ function toggleOpen(target) {
 }
 
 // Tab Function
-function tab(wrapperId) {
-  const element = document.getElementById(wrapperId);
-  if(element) {
-    const tabList = element?.querySelector('[role="tablist"]');
-    const tabButtonList = element?.querySelectorAll('[role="tab"]');
+function tab(wrapperClass) {
+  const elements = document.querySelectorAll(wrapperClass);
+  if (!elements.length) {
+    return;
+  }
+
+  elements.forEach((element) => {
+    const tabList = element.querySelector('[role="tablist"]');
+    const tabButtonList = element.querySelectorAll('[role="tab"]');
     const tabArrayList = [].slice.call(tabButtonList);
-  
+
+    if (!tabList || !tabButtonList.length) {
+      return;
+    }
+
     // Initialize tabFocus
-    const activeTab = element?.querySelector('[aria-selected="true"]');
+    const activeTab = element.querySelector('[aria-selected="true"]');
     const indexNum = tabArrayList.indexOf(activeTab);
-    let tabFocus = indexNum || 0;
-  
+    let tabFocus = indexNum >= 0 ? indexNum : 0;
+
     // Toggle function
     const toggleTab = (event) => {
       const eventTarget = event.currentTarget;
       const targetPanel = eventTarget.getAttribute('aria-controls');
-      const activeTab = element?.querySelector('[aria-selected="true"]');
-      const activeContent = element?.querySelector('[aria-hidden="false"]');
-  
+      const activeTab = element.querySelector('[aria-selected="true"]');
+      const activeContent = element.querySelector('[aria-hidden="false"]');
+
       // Toggle tab's aria-selected
       activeTab?.setAttribute('aria-selected', 'false');
       activeTab?.setAttribute('tabindex', '-1');
       eventTarget?.setAttribute('aria-selected', 'true');
       eventTarget?.setAttribute('tabindex', '0');
-      const indexNum = tabArrayList.indexOf(eventTarget);
-      tabFocus = indexNum;
-  
+      const newIndex = tabArrayList.indexOf(eventTarget);
+      tabFocus = newIndex >= 0 ? newIndex : 0;
+
       // Toggle content's aria-hidden
       activeContent?.setAttribute('aria-hidden', 'true');
-      element?.querySelector(`#${targetPanel || 'not-supplied'}`)?.setAttribute('aria-hidden', 'false');
+      element.querySelector(`#${targetPanel || 'not-supplied'}`)?.setAttribute('aria-hidden', 'false');
       event.preventDefault();
     };
-  
+
     // Tab click EventListener
-    tabButtonList?.forEach((item) => {
+    tabButtonList.forEach((item) => {
       item.addEventListener('click', toggleTab);
     });
-  
+
     // Keydown function
     const keydownFocus = (event) => {
-      // Detect arrow direction
-      if (event.code === 'ArrowRight' || event.code === 'ArrowLeft') {
-        // Reset tabindex
-        tabButtonList && tabButtonList[tabFocus].setAttribute('tabindex', '-1');
-        // Move Right
-        if (tabButtonList && event.code === 'ArrowRight') {
-          tabFocus += 1;
-          // If you are at the end, go back to the start
-          if (tabFocus >= tabButtonList.length) {
-            tabFocus = 0;
-          }
-        } else if (tabButtonList && event.code === 'ArrowLeft') {
-          tabFocus -= 1;
-          // If you are at the start, move to the end
-          if (tabFocus < 0) {
-            tabFocus = tabButtonList.length - 1;
-          }
-        }
-        // Change tabindex
-        const tabFocused = tabButtonList && (tabButtonList[tabFocus]);
-        tabFocused && tabFocused.setAttribute('tabindex', '0');
-        tabFocused && tabFocused.focus();
+      if (event.code !== 'ArrowRight' && event.code !== 'ArrowLeft') {
+        return;
       }
+
+      tabButtonList[tabFocus].setAttribute('tabindex', '-1');
+
+      if (event.code === 'ArrowRight') {
+        tabFocus += 1;
+        if (tabFocus >= tabButtonList.length) {
+          tabFocus = 0;
+        }
+      } else if (event.code === 'ArrowLeft') {
+        tabFocus -= 1;
+        if (tabFocus < 0) {
+          tabFocus = tabButtonList.length - 1;
+        }
+      }
+
+      const tabFocused = tabButtonList[tabFocus];
+      tabFocused.setAttribute('tabindex', '0');
+      tabFocused.focus();
     };
-  
+
     // Tab keydown EventListener
-    tabList?.addEventListener('keydown', keydownFocus);
-  }
+    tabList.addEventListener('keydown', keydownFocus);
+  });
 }
 
 // Random Show
@@ -145,7 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const gnavBtn = document.querySelector('#mobileGnavBtn');
   toggleOpen(gnavBtn) ;
 
-  tab('tabBookList');
+  tab('.book-tab__target');
 
   randomShow('randomNovel', '.random-novel__item');
   randomShow('homeFirstView', '.home__firstview-item');
