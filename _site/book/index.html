@@ -136,26 +136,17 @@
     </header>
     <div class="page__body page-width">
 <div id="booklist">
-  <p>これまでに執筆・制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p><div id="tabBookList">
+  <h2 class="heading heading--primary heading--color font-serif">book</h2>
+  <p>これまでに執筆・制作した書籍の一覧です。表紙を選択すると詳細が表示されます。</p><div id="tabBookList" class="book-tab__target">
   <div class="book-tab__wrapper">
     <ul role="tablist" class="book-tab"><li role="presentation" class="book-tab__item">
           <button
             role="tab"
             aria-controls="panel1"
-            aria-selected="true"
+            aria-selected="false"
             tabindex="0"
           >
             <img src="/assets/img/hyoushi-tree-shade.jpg" alt="『すべての木陰に歌を』表紙イメージ" loading="lazy" width="400" class="book-image--big">
-          </button>
-        </li><li role="presentation" class="book-tab__item">
-          <button
-            role="tab"
-            aria-controls="panel2"
-            aria-selected="false"
-            tabindex="-1"
-          >
-            <img src="/assets/img/hyoushi-postcard-12.jpg" alt="
-『walking postcard vol.12』表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -164,18 +155,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-botanical-vol1.jpg" alt="
-『本を片手に植物園 vol.1 Tokyo』表紙イメージ" loading="lazy" width="400" class="book-image--small">
-          </button>
-        </li><li role="presentation" class="book-tab__item">
-          <button
-            role="tab"
-            aria-controls="panel4"
-            aria-selected="false"
-            tabindex="-1"
-          >
-            <img src="/assets/img/hyoushi-postcard-11.jpg" alt="
-『walking postcard vol.11』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-botanical-vol1.jpg" alt="『本を片手に植物園 vol.1 Tokyo』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -184,18 +164,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-november.jpg" alt="
-『十一月の春の庭』表紙イメージ" loading="lazy" width="400" class="book-image--small">
-          </button>
-        </li><li role="presentation" class="book-tab__item">
-          <button
-            role="tab"
-            aria-controls="panel6"
-            aria-selected="false"
-            tabindex="-1"
-          >
-            <img src="/assets/img/hyoushi-postcard-6.jpg" alt="
-『walking postcard vol.6』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-november.jpg" alt="『十一月の春の庭』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -204,8 +173,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-dream.jpg" alt="
-『彼らは唯の夢』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-dream.jpg" alt="『彼らは唯の夢』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -214,8 +182,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-tree.jpg" alt="
-『すべての樹木は光』表紙イメージ" loading="lazy" width="400" class="book-image--normal">
+            <img src="/assets/img/hyoushi-tree.jpg" alt="『すべての樹木は光』表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -224,8 +191,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-eien.jpg" alt="
-『永遠の不在をめぐる』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-eien.jpg" alt="『永遠の不在をめぐる』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -234,8 +200,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-aoakane.jpg" alt="
-『青と茜と砂漠の国』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-aoakane.jpg" alt="『青と茜と砂漠の国』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -244,8 +209,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-ryuyome.jpg" alt="
-『竜の花嫁』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-ryuyome.jpg" alt="『竜の花嫁』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -254,8 +218,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-tabibito.jpg" alt="
-『旅人よ立ち止まれ』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-tabibito.jpg" alt="『旅人よ立ち止まれ』表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -264,12 +227,11 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-airplane.jpg" alt="
-『紙飛行機に眠る月』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-airplane.jpg" alt="『紙飛行機に眠る月』表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li></ul>
   </div>
-  <div class="book-tab__contents"><section id="panel1" role="tabpanel" aria-hidden="false" tabindex="0" class="book-tab__contents-item book-info">
+  <div class="book-tab__contents"><section id="panel1" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
           <h3 class="book-info__title">『すべての木陰に歌を』</h3>
           <span class="book-info__data">2026.5.4刊行</span>
@@ -325,35 +287,10 @@
     <dd>ジャケットデザイン：山川夜高さん <a href="https://libsy.net/" target="_blank" rel="noopenner noreferrer">https://libsy.net/</a></dd>
   </dl>
 </section></div>
-      </section><section id="panel2" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
-        <header class="book-info__header">
-          <h3 class="book-info__title">
-『walking postcard vol.12』</h3>
-          <span class="book-info__data">
-2025.11.23刊行</span>
-        </header>
-        <div class="book-info__detail"><p>【個人連載雑誌 / 第12号 / A5 / オンデマンドフルカラー表紙 / 72ページ / 小部数・再版予定なし】</p>
-<p>『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
-<ul class="list__flex">
-  <li><a href="https://kokyushobo.booth.pm/items/7657542" target="_blank" rel="noopenner noreferrer" class="btn btn--medium btn--color">書籍通販：BOOTH（外部サイトへ）</a></li>
-</ul>
-<hr>
-<section>
-  <header class="book-info__header">
-    <h4 class="font-serif">the letter from an "rain forest"</h4>
-  </header>
-  <p>現在執筆中の長編『すべての木陰に歌を』から、第一部「彼女について」を先行掲載します。<br>本当は2025年中に刊行したかったのですが、もうすこし時間が掛かりそうなので……申し訳ない。現在は第三部の終盤を執筆中です。</p>
-  <p>『すべての樹木は光』の続編となる『すべての木陰に歌を』は、樹木に変えられてから127年後、魔法が解けて人間に戻ったユハの物語です。 分量はおよそ37000字、物語全体の三分の一ほど。<br>彼女が辿りついた遠い未来の風景を、どうぞお楽しみください。<br>そして、どうかユハの物語を最後まで見届けて頂けますように。</p>
-  <blockquote>
-    <p>赤い足跡はまっすぐに森を貫き、どこまでも、どこまでも続いた。木漏れ日にきらめく鮮血のように艶やかでありながら、彼女の素足に踏まれても擦れず、滲まず、肌を汚しもしない。その歩幅は広く、枝葉や板根に行手を塞がれようとも、ただ先へと進んでゆく。時折、転んだような形跡があった。形の崩れた足跡と、赤い手形。地面に手をつき、跳ね起きて、また駆けていったのだろう。誰かが。どこかへ。<br>「どこに行くの？」<br>何かが彼女に声を掛けた。彼女は立ち止まらなかった。言葉を失った者にとって、その声は、鳥の囀りや、蛙の輪唱と同じものでしかなかった。<br>木陰に双眼が光り、歩きつづける娘を目で追った。</p>
-  </blockquote>
-</section></div>
       </section><section id="panel3" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『本を片手に植物園 vol.1 Tokyo』</h3>
-          <span class="book-info__data">
-2025.3.23刊行</span>
+          <h3 class="book-info__title">『本を片手に植物園 vol.1 Tokyo』</h3>
+          <span class="book-info__data">2025.3.23刊行</span>
         </header>
         <div class="book-info__detail"><p>【エッセイ＆ガイドブック / 文庫版 / 中綴じ本 / 24P（フルカラー）】</p>
 <p class="book-info__copy">植物園では、皆、思い思いに好きなことをしている。</p>
@@ -381,53 +318,10 @@
   <p><a href="https://koishikawa-bg.jp/" target="_blank" rel="noopenner noreferrer">小石川植物園</a>（文京区）<br>　日本最古の植物園/ 長閑な並木道/ 植物研究の最前線</p>
   <p><a href="https://www.ffpri.affrc.go.jp/tmk/" target="_blank" rel="noopenner noreferrer">森林総合研究所 多摩森林科学園</a>（八王子市）<br>　樹木繁れる山林を歩く/ ひとの暮らしと森の境</p>
 </section></div>
-      </section><section id="panel4" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
-        <header class="book-info__header">
-          <h3 class="book-info__title">
-『walking postcard vol.11』</h3>
-          <span class="book-info__data">
-2024.12.1刊行</span>
-        </header>
-        <div class="book-info__detail"><p>【個人連載雑誌 / 第11号 / A5 / オンデマンドフルカラー表紙 / 42ページ / 小部数・再版予定なし】</p>
-<p>『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
-<p>本書の売上はすべて、UNRWA（国連パレスチナ難民救済事業機関）およびUNHCR（国連難民高等弁務官事務所）に寄付します。</p>
-<ul class="list__flex">
-  <li><a href="https://kokyushobo.booth.pm/items/6326327" target="_blank" rel="noopenner noreferrer" class="btn btn--medium btn--color">書籍通販：BOOTH（外部サイトへ）</a></li>
-</ul>
-<hr>
-<section>
-  <header class="book-info__header">
-    <h4 class="font-serif">the letter from an attic</h4>
-  </header>
-  <p>日々書き連ねた小説から、単行本未収録の作品を掲載。<br>本作は今年の春、公募用に執筆した短編です。<br>自作『すべての樹木は光』と直接の関連はないものの、これもまた、ひとつの樹木変身譚であり、彼らと同じ世界の物語なのかもしれません。</p>
-  <p>＜掲載作品＞<br>
-・ダフネの子供たち<br>
-・後書き：ダフネに寄せて</p>
-  <blockquote>
-    <p>三番目の満月が欠けてゆき、沖合から生温かい南風が吹きはじめると、浜辺には毎日のように人間が流れつくようになった。<br>枯木のような老人から、一人歩きを覚えたばかりの子供まで、<br>誰もが鮮やかなオレンジ色のライフジャケットを身につけたまま波に漂い、やがて砂浜に打ちあげられる。</p>
-  </blockquote>
-</section>
-<hr>
-<section>
-  <header class="book-info__header">
-    <h4 class="font-serif">the letter from Europe</h4>
-  </header>
-  <p>2024年10月、三週間に渡って旅した、 フランスとスペイン（＋ロンドン）のささやかな記録。</p>
-  <p>＜掲載作品＞<br>
-・シャルル・ド・ゴールの夕焼け<br>
-・キューガーデンの大温室<br>
-・プロヴァンスの小さなカフェで<br>
-・ジローナと文机<br>
-・サラゴサとエレベーター<br>
-・グラナダと歩数計<br>
-・バルセロナと土砂降り</p>
-</section></div>
       </section><section id="panel5" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『十一月の春の庭』</h3>
-          <span class="book-info__data">
-2023.11.10刊行</span>
+          <h3 class="book-info__title">『十一月の春の庭』</h3>
+          <span class="book-info__data">2023.11.10刊行</span>
         </header>
         <div class="book-info__detail"><p>【#novelmber企画短編集 / 文庫判 / オンデマンドフルカラー表紙 / 88P】</p>
 <p class="book-info__copy">ごらんよ。入れ替わり立ち替わり、新たな物語がやってくるのを。</p>
@@ -480,37 +374,10 @@
   デザインアドバイザー：山川夜高さん <a href="https://libsy.net/" target="_blank" rel="noopenner noreferrer">https://libsy.net/</a>
   </p>
 </section></div>
-      </section><section id="panel6" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
-        <header class="book-info__header">
-          <h3 class="book-info__title">
-『walking postcard vol.6』</h3>
-          <span class="book-info__data">
-2022.11.20刊行</span>
-        </header>
-        <div class="book-info__detail"><p>【個人連載雑誌 / 第6号 / A5 / オンデマンドフルカラー表紙 / 62ページ / 小部数・再版予定なし】<br>※本書籍は販売を終了しました。完売に伴い掲載小説の本文を公開しています</p>
-<p class="book-info__aside">『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
-<ul class="list__flex">
-  <li><a href="/book/trees_light/vacation" class="btn btn--medium btn--color">本文公開中</a></li>
-</ul>
-<hr>
-<section>
-  <header class="book-info__header">
-    <h4 class="font-serif">樹木のバカンス</h4>
-  </header>
-  <p>既刊『すべての樹木は光』の30年後、ある町角での後日談。<br>大人になったチジュが、ニイジェと再会し、二人でひとときの旅行に出かけるお話です。</p>
-  <p>物語は既に幕を下ろした後。登場人物はチジュ、ニイジェ、本編未登場の新キャラクターのみ。<br>
-  本編を読んでくださったあなたへ、ささやかな再会のひとときを楽しんでいただけますように。<br>
-  ※文字数はおよそ30,000字ほどです。</p>
-  <blockquote>
-    <p>チジュはようやく、この二人旅がもうすぐ終わることを自覚した。気づけば言葉がこぼれおちていた。<br>「ニイ」<br>「なんだい」<br>「どうしてあのとき、いなくなってしまったの」</p>
-  </blockquote>
-</section></div>
       </section><section id="panel7" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『彼らは唯の夢』</h3>
-          <span class="book-info__data">
-2021.11.23刊行</span>
+          <h3 class="book-info__title">『彼らは唯の夢』</h3>
+          <span class="book-info__data">2021.11.23刊行</span>
         </header>
         <div class="book-info__detail"><p>【幻想掌編集 / 文庫判 / オンデマンドフルカラー表紙 / 54ページ】</p>
 <p class="book-info__copy">忘れがたい風景たちへ。</p>
@@ -547,10 +414,8 @@
 </section></div>
       </section><section id="panel8" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『すべての樹木は光』</h3>
-          <span class="book-info__data">
-2020.11.22刊行</span>
+          <h3 class="book-info__title">『すべての樹木は光』</h3>
+          <span class="book-info__data">2020.11.22刊行</span>
         </header>
         <div class="book-info__detail"><p>【長編小説 / 四六判 / オンデマンドフルカラー表紙 / 250ページ】</p>
 <p class="book-info__copy">そのようにして、魔法は失われた。</p>
@@ -606,10 +471,8 @@
 </section></div>
       </section><section id="panel9" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『永遠の不在をめぐる』</h3>
-          <span class="book-info__data">
-2015.11.23刊行</span>
+          <h3 class="book-info__title">『永遠の不在をめぐる』</h3>
+          <span class="book-info__data">2015.11.23刊行</span>
         </header>
         <div class="book-info__detail"><p>【幻想短編集Ⅱ / 文庫版 / オンデマンドフルカラー表紙 / 114ページ】</p>
 <p class="book-info__copy">あなたの不在を愛する。</p>
@@ -642,10 +505,8 @@
 </section></div>
       </section><section id="panel10" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『青と茜と砂漠の国』</h3>
-          <span class="book-info__data">
-2014.11.24刊行</span>
+          <h3 class="book-info__title">『青と茜と砂漠の国』</h3>
+          <span class="book-info__data">2014.11.24刊行</span>
         </header>
         <div class="book-info__detail"><p>【旅行記 / 新書版 / オンデマンドフルカラーカバー / 76ページ（内カラー10ページ）】</p>
 <p class="book-info__copy">崩壊する空想に、どうか歓声を</p>
@@ -683,10 +544,8 @@
 </section></div>
       </section><section id="panel11" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『竜の花嫁』</h3>
-          <span class="book-info__data">
-2014.11.24刊行（2017.3.26新装版刊行）</span>
+          <h3 class="book-info__title">『竜の花嫁』</h3>
+          <span class="book-info__data">2014.11.24刊行（2017.3.26新装版刊行）</span>
         </header>
         <div class="book-info__detail"><p>【長編小説 / 新書版 / オンデマンドフルカラー表紙 / 178ページ】</p>
 <p class="book-info__copy">どうしても死にたくない。</p>
@@ -722,10 +581,8 @@
 </section></div>
       </section><section id="panel12" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『旅人よ立ち止まれ』</h3>
-          <span class="book-info__data">
-2012.11.18刊行（2016.9.4新装版刊行）</span>
+          <h3 class="book-info__title">『旅人よ立ち止まれ』</h3>
+          <span class="book-info__data">2012.11.18刊行（2016.9.4新装版刊行）</span>
         </header>
         <div class="book-info__detail"><p>【旅行記 / B6版 / オンデマンドフルカラーカバー / 128ページ（内カラー18ページ）】</p>
 <p class="book-info__copy">旅人よ立ち止まれ。耳を澄ますために。</p>
@@ -768,10 +625,8 @@
 </section></div>
       </section><section id="panel13" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">
-『紙飛行機に眠る月』</h3>
-          <span class="book-info__data">
-2012.11.18刊行（2014.5.10新装版刊行）</span>
+          <h3 class="book-info__title">『紙飛行機に眠る月』</h3>
+          <span class="book-info__data">2012.11.18刊行（2014.5.10新装版刊行）</span>
         </header>
         <div class="book-info__detail"><p>【幻想短編集 / 文庫版 / オンデマンドフルカラー表紙 / 134ページ】<br>※本書籍は販売を終了しました。今後の増刷予定はありませんが、電子書籍化を検討中です</p>
 <p class="book-info__copy">それでも、君は飛べるんだ。本当は唯の紙切れだとしても。</p>
@@ -800,6 +655,154 @@
 </section></div>
       </section></div> 
 </div>
+<hr>
+  <h2 class="heading heading--primary heading--color font-serif">walking postcard</h2>
+  <p>不定期に刊行している個人誌『walking postcard』シリーズの一覧です。表紙を選択すると詳細が表示されます。</p><div id="tabBookList_sub" class="book-tab__target">
+  <div class="book-tab__wrapper">
+    <ul role="tablist" class="book-tab"><li role="presentation" class="book-tab__item">
+          <button
+            role="tab"
+            aria-controls="postcard-panel2"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            <img src="/assets/img/hyoushi-postcard-12.jpg" alt="『walking postcard vol.12』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+          </button>
+        </li><li role="presentation" class="book-tab__item">
+          <button
+            role="tab"
+            aria-controls="postcard-panel4"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            <img src="/assets/img/hyoushi-postcard-11.jpg" alt="『walking postcard vol.11』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+          </button>
+        </li><li role="presentation" class="book-tab__item">
+          <button
+            role="tab"
+            aria-controls="postcard-panel6"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            <img src="/assets/img/hyoushi-postcard-6.jpg" alt="『walking postcard vol.6』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+          </button>
+        </li></ul>
+  </div>
+  <div class="book-tab__contents"><section id="postcard-panel2" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
+        <header class="book-info__header">
+          <h3 class="book-info__title">『walking postcard vol.12』</h3>
+          <span class="book-info__data">2025.11.23刊行</span>
+        </header>
+        <div class="book-info__detail"><p>【個人連載雑誌 / 第12号 / A5 / オンデマンドフルカラー表紙 / 72ページ / 小部数・再版予定なし】</p>
+<p>『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
+<ul class="list__flex">
+  <li><a href="https://kokyushobo.booth.pm/items/7657542" target="_blank" rel="noopenner noreferrer" class="btn btn--medium btn--color">書籍通販：BOOTH（外部サイトへ）</a></li>
+</ul>
+<hr>
+<section>
+  <header class="book-info__header">
+    <h4 class="font-serif">the letter from an "rain forest"</h4>
+  </header>
+  <p>現在執筆中の長編『すべての木陰に歌を』から、第一部「彼女について」を先行掲載します。<br>本当は2025年中に刊行したかったのですが、もうすこし時間が掛かりそうなので……申し訳ない。現在は第三部の終盤を執筆中です。</p>
+  <p>『すべての樹木は光』の続編となる『すべての木陰に歌を』は、樹木に変えられてから127年後、魔法が解けて人間に戻ったユハの物語です。 分量はおよそ37000字、物語全体の三分の一ほど。<br>彼女が辿りついた遠い未来の風景を、どうぞお楽しみください。<br>そして、どうかユハの物語を最後まで見届けて頂けますように。</p>
+  <blockquote>
+    <p>赤い足跡はまっすぐに森を貫き、どこまでも、どこまでも続いた。木漏れ日にきらめく鮮血のように艶やかでありながら、彼女の素足に踏まれても擦れず、滲まず、肌を汚しもしない。その歩幅は広く、枝葉や板根に行手を塞がれようとも、ただ先へと進んでゆく。時折、転んだような形跡があった。形の崩れた足跡と、赤い手形。地面に手をつき、跳ね起きて、また駆けていったのだろう。誰かが。どこかへ。<br>「どこに行くの？」<br>何かが彼女に声を掛けた。彼女は立ち止まらなかった。言葉を失った者にとって、その声は、鳥の囀りや、蛙の輪唱と同じものでしかなかった。<br>木陰に双眼が光り、歩きつづける娘を目で追った。</p>
+  </blockquote>
+</section></div>
+      </section><section id="postcard-panel4" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
+        <header class="book-info__header">
+          <h3 class="book-info__title">『walking postcard vol.11』</h3>
+          <span class="book-info__data">2024.12.1刊行</span>
+        </header>
+        <div class="book-info__detail"><p>【個人連載雑誌 / 第11号 / A5 / オンデマンドフルカラー表紙 / 42ページ / 小部数・再版予定なし】</p>
+<p>『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
+<p>本書の売上はすべて、UNRWA（国連パレスチナ難民救済事業機関）およびUNHCR（国連難民高等弁務官事務所）に寄付します。</p>
+<ul class="list__flex">
+  <li><a href="https://kokyushobo.booth.pm/items/6326327" target="_blank" rel="noopenner noreferrer" class="btn btn--medium btn--color">書籍通販：BOOTH（外部サイトへ）</a></li>
+</ul>
+<hr>
+<section>
+  <header class="book-info__header">
+    <h4 class="font-serif">the letter from an attic</h4>
+  </header>
+  <p>日々書き連ねた小説から、単行本未収録の作品を掲載。<br>本作は今年の春、公募用に執筆した短編です。<br>自作『すべての樹木は光』と直接の関連はないものの、これもまた、ひとつの樹木変身譚であり、彼らと同じ世界の物語なのかもしれません。</p>
+  <p>＜掲載作品＞<br>
+・ダフネの子供たち<br>
+・後書き：ダフネに寄せて</p>
+  <blockquote>
+    <p>三番目の満月が欠けてゆき、沖合から生温かい南風が吹きはじめると、浜辺には毎日のように人間が流れつくようになった。<br>枯木のような老人から、一人歩きを覚えたばかりの子供まで、<br>誰もが鮮やかなオレンジ色のライフジャケットを身につけたまま波に漂い、やがて砂浜に打ちあげられる。</p>
+  </blockquote>
+</section>
+<hr>
+<section>
+  <header class="book-info__header">
+    <h4 class="font-serif">the letter from Europe</h4>
+  </header>
+  <p>2024年10月、三週間に渡って旅した、 フランスとスペイン（＋ロンドン）のささやかな記録。</p>
+  <p>＜掲載作品＞<br>
+・シャルル・ド・ゴールの夕焼け<br>
+・キューガーデンの大温室<br>
+・プロヴァンスの小さなカフェで<br>
+・ジローナと文机<br>
+・サラゴサとエレベーター<br>
+・グラナダと歩数計<br>
+・バルセロナと土砂降り</p>
+</section></div>
+      </section><section id="postcard-panel6" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
+        <header class="book-info__header">
+          <h3 class="book-info__title">『walking postcard vol.6』</h3>
+          <span class="book-info__data">2022.11.20刊行</span>
+        </header>
+        <div class="book-info__detail"><p>【個人連載雑誌 / 第6号 / A5 / オンデマンドフルカラー表紙 / 62ページ / 小部数・再版予定なし】<br>※本書籍は販売を終了しました。完売に伴い掲載小説の本文を公開しています</p>
+<p class="book-info__aside">『walking postcard』は、呼吸書房が2018年11月から発行している小さな雑誌です。<br>書き手はひとまず私ひとり。<br>一冊の本にまとまる前の、小説や旅行記、短編や掌編、散文、詩、独り言などなどを、<br class="hidden-phone">旅先から送る便りのように、気の向くままに、自由に、お届けできたらと思っています。</p>
+<ul class="list__flex">
+  <li><a href="/book/trees_light/vacation" class="btn btn--medium btn--color">本文公開中</a></li>
+</ul>
+<hr>
+<section>
+  <header class="book-info__header">
+    <h4 class="font-serif">樹木のバカンス</h4>
+  </header>
+  <p>既刊『すべての樹木は光』の30年後、ある町角での後日談。<br>大人になったチジュが、ニイジェと再会し、二人でひとときの旅行に出かけるお話です。</p>
+  <p>物語は既に幕を下ろした後。登場人物はチジュ、ニイジェ、本編未登場の新キャラクターのみ。<br>
+  本編を読んでくださったあなたへ、ささやかな再会のひとときを楽しんでいただけますように。<br>
+  ※文字数はおよそ30,000字ほどです。</p>
+  <blockquote>
+    <p>チジュはようやく、この二人旅がもうすぐ終わることを自覚した。気づけば言葉がこぼれおちていた。<br>「ニイ」<br>「なんだい」<br>「どうしてあのとき、いなくなってしまったの」</p>
+  </blockquote>
+</section></div>
+      </section></div> 
+</div>
+<hr>
+  <h2 class="heading heading--primary heading--color font-serif">publish list</h2>
+  <p>呼吸書房の刊行記録を時系列順にまとめました。リンクから各書籍の詳細ページにアクセスできます。</p>
+  <ul class="list__publish"><li>
+        <span class="book-info__data">2026.5.4</span>
+        <a href="/book/trees_shade">『すべての木陰に歌を』</a>刊行</li><li>
+        <span class="book-info__data">2025.11.23</span>
+        <a href="/book/postcard_12">『walking postcard vol.12』</a>刊行</li><li>
+        <span class="book-info__data">2025.3.23</span>
+        <a href="/book/botanical_1">『本を片手に植物園 vol.1 Tokyo』</a>刊行</li><li>
+        <span class="book-info__data">2024.12.1</span>
+        <a href="/book/postcard_11">『walking postcard vol.11』</a>刊行</li><li>
+        <span class="book-info__data">2023.11.10</span>
+        <a href="/book/november">『十一月の春の庭』</a>刊行</li><li>
+        <span class="book-info__data">2022.11.20</span>
+        <a href="/book/postcard_6">『walking postcard vol.6』</a>刊行</li><li>
+        <span class="book-info__data">2021.11.23</span>
+        <a href="/book/dream">『彼らは唯の夢』</a>刊行</li><li>
+        <span class="book-info__data">2020.11.22</span>
+        <a href="/book/trees_light">『すべての樹木は光』</a>刊行</li><li>
+        <span class="book-info__data">2015.11.23</span>
+        <a href="/book/eien">『永遠の不在をめぐる』</a>刊行</li><li>
+        <span class="book-info__data">2014.11.24</span>
+        <a href="/book/morocco">『青と茜と砂漠の国』</a>刊行</li><li>
+        <span class="book-info__data">2014.11.24</span>
+        <a href="/book/bride">『竜の花嫁』</a>刊行<span class="book-info__data--sub">（2017.3.26新装版刊行）</span></li><li>
+        <span class="book-info__data">2012.11.18</span>
+        <a href="/book/worldtrip">『旅人よ立ち止まれ』</a>刊行<span class="book-info__data--sub">（2016.9.4新装版刊行）</span></li><li>
+        <span class="book-info__data">2012.11.18</span>
+        <a href="/book/paperplane">『紙飛行機に眠る月』</a>刊行<span class="book-info__data--sub">（2014.5.10新装版刊行）</span></li></ul>
 </div></div>
   </section>
 </div>
