@@ -354,6 +354,9 @@ a:hover {
 .heading--colorDark {
   color: var(--keyColorDark);
 }
+.heading--normal {
+  font-weight: normal;
+}
 .heading--default {
   font-size: 1.4rem;
   font-weight: normal;
@@ -457,6 +460,21 @@ blockquote {
 }
 .list__dl .btn {
   margin: 0.8rem 0;
+}
+.list__publish li {
+  margin-bottom: 0.5rem;
+}
+.list__publish .book-info__data {
+  display: inline-block;
+  min-width: 75px;
+}
+.list__publish .book-info__data--sub {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .list__publish .book-info__data--sub {
+    padding-inline-start: 75px;
+  }
 }
 .list__faq dt, .list__faq dd {
   padding-left: 2rem;

@@ -2,6 +2,9 @@
   <div class="book-tab__wrapper">
     <ul role="tablist" class="book-tab">
       {%- for book in objects-book -%}
+        {%- if book.category == 'postcard' -%}
+          {%- continue -%}
+        {%- endif -%}
         <li role="presentation" class="book-tab__item">
           <button
             role="tab"
@@ -17,6 +20,9 @@
   </div>
   <div class="book-tab__contents">
     {%- for book in objects-book -%}
+      {%- if book.category == 'postcard' -%}
+        {%- continue -%}
+      {%- endif -%}
       <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
           <h3 class="book-info__title">{{ book.title }}</h3>
