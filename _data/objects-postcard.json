@@ -1,0 +1,24 @@
+[
+  {
+    "title": "『walking postcard vol.12』",
+    "handle": "postcard-12",
+    "size": "big",
+    "published": "2025-11-23",
+    "re-published": null
+  },
+  {
+    "title": "『walking postcard vol.11』",
+    "handle": "postcard-11",
+    "size": "big",
+    "published": "2024-12-01",
+    "re-published": null
+  },
+  {
+    "title": "『walking postcard vol.6』",
+    "handle": "postcard-6",
+    "size": "big",
+    "published": "2022-11-20",
+    "re-published": null,
+    "series": "tree-light-shade"
+  }
+]
