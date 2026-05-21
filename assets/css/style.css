@@ -463,18 +463,15 @@ blockquote {
 }
 .list__publish li {
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
 }
 .list__publish .book-info__data {
   display: inline-block;
-  min-width: 75px;
+  min-width: 80px;
 }
 .list__publish .book-info__data--sub {
   display: inline-block;
-}
-@media (max-width: 767px) {
-  .list__publish .book-info__data--sub {
-    padding-inline-start: 75px;
-  }
 }
 .list__faq dt, .list__faq dd {
   padding-left: 2rem;

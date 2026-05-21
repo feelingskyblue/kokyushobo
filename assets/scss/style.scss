@@ -368,16 +368,15 @@ blockquote {
 	&__publish {
 		li {
 			margin-bottom: 0.5rem;
+			display: flex;
+			align-items: flex-start;
 		}
 		.book-info__data {
 			display: inline-block;
-			min-width: 75px;
+			min-width: 80px;
 		}
 		.book-info__data--sub {
 			display: inline-block;
-			@media (max-width: $sp-width) {
-				padding-inline-start: 75px;
-			}
 		}
 	}
 	&__faq {
