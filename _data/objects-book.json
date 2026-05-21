@@ -35,12 +35,48 @@
     "re-published": null
   },
   {
+    "title": "『walking postcard vol.10』（無配ペーパー）",
+    "handle": "postcard-10",
+    "url": "",
+    "size": "big",
+    "published": "2024-9-8",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
+    "title": "『walking postcard vol.9』（無配ペーパー）",
+    "handle": "postcard-9",
+    "url": "",
+    "size": "big",
+    "published": "2024-5-19",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
     "title": "『十一月の春の庭』",
     "handle": "november",
     "url": "/book/november",
     "size": "small",
     "published": "2023-11-10",
     "re-published": null
+  },
+  {
+    "title": "『walking postcard vol.8』（無配ペーパー）",
+    "handle": "postcard-8",
+    "url": "",
+    "size": "big",
+    "published": "2023-11-10",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
+    "title": "『walking postcard vol.7』（無配ペーパー）",
+    "handle": "postcard-7",
+    "url": "",
+    "size": "big",
+    "published": "2023-5-21",
+    "re-published": null,
+    "category": "postcard"
   },
   {
     "title": "『walking postcard vol.6』",
@@ -51,6 +87,15 @@
     "re-published": null,
     "category": "postcard",
     "series": "tree-light-shade"
+  },
+  {
+    "title": "『walking postcard vol.5』",
+    "handle": "postcard-5",
+    "url": "",
+    "size": "big",
+    "published": "2022-5-29",
+    "re-published": null,
+    "category": "postcard"
   },
   {
     "title": "『彼らは唯の夢』",
@@ -68,6 +113,42 @@
     "published": "2020-11-22",
     "re-published": null,
     "series": "tree-light-shade"
+  },
+  {
+    "title": "『walking postcard vol.4』（無配ペーパー）",
+    "handle": "postcard-4",
+    "url": "",
+    "size": "big",
+    "published": "2020-11-22",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
+    "title": "『walking postcard vol.3』",
+    "handle": "postcard-3",
+    "url": "",
+    "size": "big",
+    "published": "2019-11-24",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
+    "title": "『walking postcard vol.2』",
+    "handle": "postcard-2",
+    "url": "",
+    "size": "big",
+    "published": "2019-5-6",
+    "re-published": null,
+    "category": "postcard"
+  },
+  {
+    "title": "『walking postcard vol.1』",
+    "handle": "postcard-1",
+    "url": "",
+    "size": "big",
+    "published": "2018-11-25",
+    "re-published": null,
+    "category": "postcard"
   },
   {
     "title": "『永遠の不在をめぐる』",

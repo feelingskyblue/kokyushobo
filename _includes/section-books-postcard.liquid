@@ -2,7 +2,7 @@
   <div class="book-tab__wrapper">
     <ul role="tablist" class="book-tab">
       {%- for book in objects-book -%}
-        {%- if book.category != 'postcard' -%}
+        {%- if book.category != 'postcard' or book.url == '' -%}
           {%- continue -%}
         {%- endif -%}
         <li role="presentation" class="book-tab__item">
@@ -20,7 +20,7 @@
   </div>
   <div class="book-tab__contents">
     {%- for book in objects-book -%}
-      {%- if book.category != 'postcard' -%}
+      {%- if book.category != 'postcard' or book.url == '' -%}
         {%- continue -%}
       {%- endif -%}
       <section id="postcard-panel{{ forloop.index }}" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
