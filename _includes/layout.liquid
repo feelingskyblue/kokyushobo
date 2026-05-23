@@ -139,6 +139,19 @@
                     {%- endif -%}
                   {%- endfor -%}
                 </dl>
+                <dl class="header__nav-booklist--item for-latest">
+                  <dt class="header__nav-booklist--category heading--color">new!</dt>
+                  {%- for book in objects-book limit: 1 -%}
+                    {%- if book.url != '' -%}
+                      <dd>
+                        <a href="{{ book.url }}">
+                          <img src="/assets/img/hyoushi-{{ book.handle }}.jpg" alt="{{ book.title }}表紙イメージ" loading="lazy" width="400">
+                          {{ book.published | date: "%Y.%-m.%-d" }}刊行<br>{{ book.title }}
+                        </a>
+                      </dd>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </dl>
               </div>
             </li>
             <li class="hasmenu" data-menu="novel">
