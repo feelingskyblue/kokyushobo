@@ -104,7 +104,7 @@
   {
     "title": "walking postcard vol.5",
     "handle": "postcard-5",
-    "url": "",
+    "url": "/book/postcard_5",
     "size": "big",
     "published": "2022-5-29",
     "re-published": null,
@@ -145,7 +145,7 @@
   {
     "title": "walking postcard vol.3",
     "handle": "postcard-3",
-    "url": "",
+    "url": "/book/postcard_3",
     "size": "big",
     "published": "2019-11-24",
     "re-published": null,
@@ -155,7 +155,7 @@
   {
     "title": "walking postcard vol.2",
     "handle": "postcard-2",
-    "url": "",
+    "url": "/book/postcard_2",
     "size": "big",
     "published": "2019-5-6",
     "re-published": null,
@@ -165,7 +165,7 @@
   {
     "title": "walking postcard vol.1",
     "handle": "postcard-1",
-    "url": "",
+    "url": "/book/postcard_1",
     "size": "big",
     "published": "2018-11-25",
     "re-published": null,
