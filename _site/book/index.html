@@ -71,7 +71,7 @@
         </button>
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="hasmenu">
+            <li class="hasmenu" data-menu="info">
               <a href="/about" class="menu-item--parent">info<span class="font-serif">活動情報</span></a>
               <ul class="header__nav-sublist">
                 <li><a href="/about">about<span class="font-serif">呼吸書房について</span></a></li>
@@ -80,27 +80,29 @@
                 <li><a href="/event">event<span class="font-serif">イベント出店情報</span></a></li>
               </ul>
             </li>
-            <li class="hasmenu">
+            <li class="hasmenu is-megamenu" data-menu="booklist">
               <a href="/book" class="menu-item--parent">book-list<span class="font-serif">書籍情報</span></a>
-              <ul class="header__nav-sublist header__nav-booklist font-serif">
-                <li><a href="/book/trees_shade">すべての木陰に歌を<span>幻想長編</span></a></li>
-                <li><a href="/book/postcard_12">walking postcard vol.12<span>個人誌</span></a></li>
-                <li><a href="/book/botanical_1">本を片手に植物園 vol.1 Tokyo<span>ガイドブック</span></a></li>
-                <li><a href="/book/postcard_11">walking postcard vol.11<span>個人誌</span></a></li>
-                <li><a href="/book/november">十一月の春の庭<span>短編集</span></a></li>
-                <li><a href="/book/postcard_6">walking postcard vol.6<span>個人誌</span></a></li>
-                <li><a href="/book/dream">彼らは唯の夢<span>短編集</span></a></li>
-                <li><a href="/book/trees_light">すべての樹木は光<span>幻想長編</span></a></li>
-                <li><a href="/book/eien">永遠の不在をめぐる<span>短編集</span></a></li>
-                <li><a href="/book/morocco">青と茜と砂漠の国<span>紀行文</span></a></li>
-                <li><a href="/book/bride">竜の花嫁<span>幻想長編</span></a></li>
-                <li><a href="/book/worldtrip">旅人よ立ち止まれ<span>紀行文</span></a></li>
-                <li><a href="/book/paperplane">紙飛行機に眠る月<span>短編集</span></a></li>
-              </ul>
+              <div class="header__nav-sublist header__nav-booklist font-serif">
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">novel</dt><dd><a href="/book/trees_shade">すべての木陰に歌を<span>幻想長編</span></a></dd><dd><a href="/book/november">十一月の春の庭<span>短編集</span></a></dd><dd><a href="/book/dream">彼らは唯の夢<span>短編集</span></a></dd><dd><a href="/book/trees_light">すべての樹木は光<span>幻想長編</span></a></dd><dd><a href="/book/eien">永遠の不在をめぐる<span>短編集</span></a></dd><dd><a href="/book/bride">竜の花嫁<span>幻想長編</span></a></dd><dd><a href="/book/paperplane">紙飛行機に眠る月<span>短編集</span></a></dd></dl>
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">essay</dt><dd><a href="/book/botanical_1">本を片手に植物園 vol.1 Tokyo<span>ガイドブック</span></a></dd><dd><a href="/book/morocco">青と茜と砂漠の国<span>紀行文</span></a></dd><dd><a href="/book/worldtrip">旅人よ立ち止まれ<span>紀行文</span></a></dd></dl>
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">zine</dt><dd><a href="/book/postcard_12">walking postcard vol.12<span>個人誌</span></a></dd><dd><a href="/book/postcard_11">walking postcard vol.11<span>個人誌</span></a></dd><dd><a href="/book/postcard_6">walking postcard vol.6<span>個人誌</span></a></dd></dl>
+                <dl class="header__nav-booklist--item for-latest">
+                  <dt class="header__nav-booklist--category heading--color">new!</dt><dd>
+                        <a href="/book/trees_shade">
+                          <img src="/assets/img/hyoushi-tree-shade.jpg" alt="すべての木陰に歌を表紙イメージ" loading="lazy" width="400">
+                          2026.5.4刊行<br>すべての木陰に歌を
+                        </a>
+                      </dd></dl>
+              </div>
             </li>
-            <li><a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説を読む</span></a></li>
-            <li><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
-            <li><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
+            <li class="hasmenu" data-menu="novel">
+              <a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説を読む</span></a>
+            </li>
+            <li data-menu="other"><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
+            <li data-menu="store"><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
           </ul>
           <button id="modeChangeBtn" class="header__shift-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 512 512" class="header__shift-btn--sun">
 <g>
@@ -146,7 +148,7 @@
             aria-selected="false"
             tabindex="0"
           >
-            <img src="/assets/img/hyoushi-tree-shade.jpg" alt="『すべての木陰に歌を』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-tree-shade.jpg" alt="すべての木陰に歌を表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -155,7 +157,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-botanical-vol1.jpg" alt="『本を片手に植物園 vol.1 Tokyo』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-botanical-vol1.jpg" alt="本を片手に植物園 vol.1 Tokyo表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -164,7 +166,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-november.jpg" alt="『十一月の春の庭』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-november.jpg" alt="十一月の春の庭表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -173,7 +175,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-dream.jpg" alt="『彼らは唯の夢』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-dream.jpg" alt="彼らは唯の夢表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -182,7 +184,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-tree.jpg" alt="『すべての樹木は光』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-tree.jpg" alt="すべての樹木は光表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -191,7 +193,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-eien.jpg" alt="『永遠の不在をめぐる』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-eien.jpg" alt="永遠の不在をめぐる表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -200,7 +202,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-aoakane.jpg" alt="『青と茜と砂漠の国』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-aoakane.jpg" alt="青と茜と砂漠の国表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -209,7 +211,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-ryuyome.jpg" alt="『竜の花嫁』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-ryuyome.jpg" alt="竜の花嫁表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -218,7 +220,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-tabibito.jpg" alt="『旅人よ立ち止まれ』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-tabibito.jpg" alt="旅人よ立ち止まれ表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -227,7 +229,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-airplane.jpg" alt="『紙飛行機に眠る月』表紙イメージ" loading="lazy" width="400" class="book-image--small">
+            <img src="/assets/img/hyoushi-airplane.jpg" alt="紙飛行機に眠る月表紙イメージ" loading="lazy" width="400" class="book-image--small">
           </button>
         </li></ul>
   </div>
@@ -666,7 +668,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-postcard-12.jpg" alt="『walking postcard vol.12』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-postcard-12.jpg" alt="walking postcard vol.12表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -675,7 +677,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-postcard-11.jpg" alt="『walking postcard vol.11』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-postcard-11.jpg" alt="walking postcard vol.11表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li><li role="presentation" class="book-tab__item">
           <button
@@ -684,7 +686,7 @@
             aria-selected="false"
             tabindex="-1"
           >
-            <img src="/assets/img/hyoushi-postcard-6.jpg" alt="『walking postcard vol.6』表紙イメージ" loading="lazy" width="400" class="book-image--big">
+            <img src="/assets/img/hyoushi-postcard-6.jpg" alt="walking postcard vol.6表紙イメージ" loading="lazy" width="400" class="book-image--big">
           </button>
         </li></ul>
   </div>
@@ -778,46 +780,46 @@
   <p>呼吸書房の刊行記録を時系列順にまとめました。リンクが貼ってある書籍は詳細ページにアクセスできます。</p>
   <ul class="list__publish"><li>
         <span class="book-info__data">2026.5.4</span>
-        <div class="book-info__detail"><a href="/book/trees_shade">『すべての木陰に歌を』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/trees_shade">すべての木陰に歌を</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2025.11.23</span>
-        <div class="book-info__detail"><a href="/book/postcard_12">『walking postcard vol.12』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/postcard_12">walking postcard vol.12</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2025.3.23</span>
-        <div class="book-info__detail"><a href="/book/botanical_1">『本を片手に植物園 vol.1 Tokyo』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/botanical_1">本を片手に植物園 vol.1 Tokyo</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2024.12.1</span>
-        <div class="book-info__detail"><a href="/book/postcard_11">『walking postcard vol.11』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/postcard_11">walking postcard vol.11</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2024.9.8</span>
-        <div class="book-info__detail">『walking postcard vol.10』（無配ペーパー）刊行</div>
+        <div class="book-info__detail">『walking postcard vol.10（無配ペーパー）』刊行</div>
       </li><li>
         <span class="book-info__data">2024.5.19</span>
-        <div class="book-info__detail">『walking postcard vol.9』（無配ペーパー）刊行</div>
+        <div class="book-info__detail">『walking postcard vol.9（無配ペーパー）』刊行</div>
       </li><li>
         <span class="book-info__data">2023.11.10</span>
-        <div class="book-info__detail"><a href="/book/november">『十一月の春の庭』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/november">十一月の春の庭</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2023.11.10</span>
-        <div class="book-info__detail">『walking postcard vol.8』（無配ペーパー）刊行</div>
+        <div class="book-info__detail">『walking postcard vol.8（無配ペーパー）』刊行</div>
       </li><li>
         <span class="book-info__data">2023.5.21</span>
-        <div class="book-info__detail">『walking postcard vol.7』（無配ペーパー）刊行</div>
+        <div class="book-info__detail">『walking postcard vol.7（無配ペーパー）』刊行</div>
       </li><li>
         <span class="book-info__data">2022.11.20</span>
-        <div class="book-info__detail"><a href="/book/postcard_6">『walking postcard vol.6』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/postcard_6">walking postcard vol.6</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2022.5.29</span>
         <div class="book-info__detail">『walking postcard vol.5』刊行</div>
       </li><li>
         <span class="book-info__data">2021.11.23</span>
-        <div class="book-info__detail"><a href="/book/dream">『彼らは唯の夢』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/dream">彼らは唯の夢</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2020.11.22</span>
-        <div class="book-info__detail"><a href="/book/trees_light">『すべての樹木は光』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/trees_light">すべての樹木は光</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2020.11.22</span>
-        <div class="book-info__detail">『walking postcard vol.4』（無配ペーパー）刊行</div>
+        <div class="book-info__detail">『walking postcard vol.4（無配ペーパー）』刊行</div>
       </li><li>
         <span class="book-info__data">2019.11.24</span>
         <div class="book-info__detail">『walking postcard vol.3』刊行</div>
@@ -829,19 +831,19 @@
         <div class="book-info__detail">『walking postcard vol.1』刊行</div>
       </li><li>
         <span class="book-info__data">2015.11.23</span>
-        <div class="book-info__detail"><a href="/book/eien">『永遠の不在をめぐる』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/eien">永遠の不在をめぐる</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2014.11.24</span>
-        <div class="book-info__detail"><a href="/book/morocco">『青と茜と砂漠の国』</a>刊行</div>
+        <div class="book-info__detail">『<a href="/book/morocco">青と茜と砂漠の国</a>』刊行</div>
       </li><li>
         <span class="book-info__data">2014.11.24</span>
-        <div class="book-info__detail"><a href="/book/bride">『竜の花嫁』</a>刊行<span class="book-info__data--sub">（2017.3.26新装版刊行）</span></div>
+        <div class="book-info__detail">『<a href="/book/bride">竜の花嫁</a>』刊行<span class="book-info__data--sub">（2017.3.26新装版刊行）</span></div>
       </li><li>
         <span class="book-info__data">2012.11.18</span>
-        <div class="book-info__detail"><a href="/book/worldtrip">『旅人よ立ち止まれ』</a>刊行<span class="book-info__data--sub">（2016.9.4新装版刊行）</span></div>
+        <div class="book-info__detail">『<a href="/book/worldtrip">旅人よ立ち止まれ</a>』刊行<span class="book-info__data--sub">（2016.9.4新装版刊行）</span></div>
       </li><li>
         <span class="book-info__data">2012.11.18</span>
-        <div class="book-info__detail"><a href="/book/paperplane">『紙飛行機に眠る月』</a>刊行<span class="book-info__data--sub">（2014.5.10新装版刊行）</span></div>
+        <div class="book-info__detail">『<a href="/book/paperplane">紙飛行機に眠る月</a>』刊行<span class="book-info__data--sub">（2014.5.10新装版刊行）</span></div>
       </li></ul>
 </div></div>
   </section>
