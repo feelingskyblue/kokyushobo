@@ -94,7 +94,7 @@
         </button>
         <nav class="header__nav">
           <ul class="header__nav-list">
-            <li class="hasmenu">
+            <li class="hasmenu" data-menu="info">
               <a href="/about" class="menu-item--parent">info<span class="font-serif">活動情報</span></a>
               <ul class="header__nav-sublist">
                 <li><a href="/about">about<span class="font-serif">呼吸書房について</span></a></li>
@@ -103,27 +103,49 @@
                 <li><a href="/event">event<span class="font-serif">イベント出店情報</span></a></li>
               </ul>
             </li>
-            <li class="hasmenu">
+            <li class="hasmenu is-megamenu" data-menu="booklist">
               <a href="/book" class="menu-item--parent">book-list<span class="font-serif">書籍情報</span></a>
-              <ul class="header__nav-sublist header__nav-booklist font-serif">
-                <li><a href="/book/trees_shade">すべての木陰に歌を<span>幻想長編</span></a></li>
-                <li><a href="/book/postcard_12">walking postcard vol.12<span>個人誌</span></a></li>
-                <li><a href="/book/botanical_1">本を片手に植物園 vol.1 Tokyo<span>ガイドブック</span></a></li>
-                <li><a href="/book/postcard_11">walking postcard vol.11<span>個人誌</span></a></li>
-                <li><a href="/book/november">十一月の春の庭<span>短編集</span></a></li>
-                <li><a href="/book/postcard_6">walking postcard vol.6<span>個人誌</span></a></li>
-                <li><a href="/book/dream">彼らは唯の夢<span>短編集</span></a></li>
-                <li><a href="/book/trees_light">すべての樹木は光<span>幻想長編</span></a></li>
-                <li><a href="/book/eien">永遠の不在をめぐる<span>短編集</span></a></li>
-                <li><a href="/book/morocco">青と茜と砂漠の国<span>紀行文</span></a></li>
-                <li><a href="/book/bride">竜の花嫁<span>幻想長編</span></a></li>
-                <li><a href="/book/worldtrip">旅人よ立ち止まれ<span>紀行文</span></a></li>
-                <li><a href="/book/paperplane">紙飛行機に眠る月<span>短編集</span></a></li>
-              </ul>
+              <div class="header__nav-sublist header__nav-booklist font-serif">
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">novel</dt>
+                  {%- for book in objects-book -%}
+                    {%- if book.category == 'postcard' -%}
+                      {%- continue -%}
+                    {%- endif -%}
+                    {%- if book.url != '' and book.category == 'novel' -%}
+                      <dd><a href="{{ book.url }}">{{ book.title }}<span>{{ book.genre }}</span></a></dd>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </dl>
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">essay</dt>
+                  {%- for book in objects-book -%}
+                    {%- if book.category == 'postcard' -%}
+                      {%- continue -%}
+                    {%- endif -%}
+                    {%- if book.url != '' and book.category != 'novel' -%}
+                      <dd><a href="{{ book.url }}">{{ book.title }}<span>{{ book.genre }}</span></a></dd>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </dl>
+                <dl class="header__nav-booklist--item">
+                  <dt class="header__nav-booklist--category heading--color">zine</dt>
+                  {%- for book in objects-book -%}
+                    {%- if book.category != 'postcard' -%}
+                      {%- continue -%}
+                    {%- endif -%}
+                    {%- if book.url != '' -%}
+                      <dd><a href="{{ book.url }}">{{ book.title }}<span>{{ book.genre }}</span></a></dd>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </dl>
+              </div>
             </li>
-            <li><a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説を読む</span></a></li>
-            <li><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
-            <li><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
+            <li class="hasmenu" data-menu="novel">
+              <a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説を読む</span></a>
+            </li>
+            <li data-menu="other"><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
+            <li data-menu="store"><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
           </ul>
           <button id="modeChangeBtn" class="header__shift-btn" type="button">
             {%- render 'icon-sun', className: "header__shift-btn--sun" -%}

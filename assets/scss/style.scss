@@ -608,7 +608,8 @@ body {
 		@media (max-width: $sp-width) {
 			position: fixed;
 			margin: 0;
-			width: calc(100vw - 12rem);
+			//width: calc(100vw - 12rem);
+			width: fit-content;
 			height: 100%;
 			overflow: scroll;
 			background-color: rgba($color: var(--bgColorRgb), $alpha: 0.95);
@@ -626,19 +627,25 @@ body {
 			font-size: 1.6rem;
 			height: 100%;
 			@media (max-width: $sp-width) {
-				display: block;
+				height: auto;
+				flex-direction: column;
 				padding-top: 5rem;
 				margin-bottom: 10rem;
 			}
 			& > li {
-				position: relative;
-			}
-			.hasmenu {
+				@media (min-width: $pc-width) {
+					&:not(.is-megamenu) {
+						position: relative;
+					}
+				}
 				@media (max-width: $sp-width) {
-					margin-bottom: 1rem;
+					position: relative;
+					&[data-menu="booklist"] {
+						order: 2;
+					}
 					&::after {
-						display: block;
-						content: "";
+						//display: block;
+						//content: "";
 						width: calc(100% - 6rem);
 						height: 1px;
 						background-color: rgba($color: var(--textColorRgb), $alpha: 0.1);
@@ -647,16 +654,33 @@ body {
 						bottom: 0;
 					}
 				}
+			}
+			.hasmenu {
+				@media (max-width: $sp-width) {
+					//margin-bottom: 1rem;
+				}
 				&:hover {
 					@media (min-width: $pc-width) {
-						.header__nav-sublist {
-							height: calc(40px * 4);
-							border: 1px solid rgba($color: #48423b, $alpha: 0.2);
-							border-top: none;
-							z-index: 2;
+						&:not(.is-megamenu) {
+							.header__nav-sublist {
+								height: calc(40px * 4);
+								border: 1px solid rgba($color: #48423b, $alpha: 0.2);
+								border-top: none;
+								z-index: 2;
+							}
+							.header__nav-booklist {
+								height: calc(35px * 13);
+							}
 						}
-						.header__nav-booklist {
-							height: calc(35px * 13);
+						&.is-megamenu {
+							.header__nav-sublist {
+								width: 100vw;
+								height: 300px;
+								border: 1px solid rgba($color: #48423b, $alpha: 0.2);
+								border-top: none;
+								z-index: 2;
+								overflow-y: scroll;
+							}
 						}
 					}
 				}
@@ -669,13 +693,14 @@ body {
 				width: auto;
 				min-width: 100%;
 				height: 0px;
+				left: 0;
 				overflow: hidden;
 				background-color: var(--bgColor);
 				transition: height 0.4s ease;	
 			}
 			@media (max-width: $sp-width) {
-				padding-bottom: 1rem;
-				opacity: 0.8;
+				//padding-bottom: 1rem;
+				//opacity: 0.8;
 			}
 			a {
 				display: block;
@@ -692,6 +717,19 @@ body {
 				}
 			}
 			&.header__nav-booklist {
+				@media (min-width: $pc-width) {
+					display: flex;
+					justify-content: center;
+					gap: 2rem;
+				}
+				.header__nav-booklist--category {
+					@media (min-width: $pc-width) {
+						padding: 0.7rem 1.5rem 0;
+					}
+					@media (max-width: $sp-width) {
+						padding: 0.5rem 3rem;
+					}
+				}
 				a {
 					height: 35px;
 					font-size: 0.8em;
@@ -716,7 +754,12 @@ body {
 			@media (max-width: $sp-width) {
 				color: var(--keyColor);
 				display: block;
-				padding: 0.8rem 3rem;
+				padding: 1rem 3rem;
+			}
+			& > span {
+				@media screen and (min-width: $pc-width) and (max-width: 1024px) {
+					display: none;
+				}
 			}
 		}
 		span {

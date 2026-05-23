@@ -1,193 +1,225 @@
 [
   {
-    "title": "『すべての木陰に歌を』",
+    "title": "すべての木陰に歌を",
     "handle": "tree-shade",
     "url": "/book/trees_shade",
     "size": "big",
     "published": "2026-05-04",
     "re-published": null,
-    "series": "tree-light-shade"
+    "series": "tree-light-shade",
+    "genre": "幻想長編",
+    "category": "novel"
   },
   {
-    "title": "『walking postcard vol.12』",
+    "title": "walking postcard vol.12",
     "handle": "postcard-12",
     "url": "/book/postcard_12",
     "size": "big",
     "published": "2025-11-23",
     "category": "postcard",
+    "genre": "個人誌",
     "re-published": null
   },
   {
-    "title": "『本を片手に植物園 vol.1 Tokyo』",
+    "title": "本を片手に植物園 vol.1 Tokyo",
     "handle": "botanical-vol1",
     "url": "/book/botanical_1",
     "size": "small",
     "published": "2025-03-23",
+    "genre": "ガイドブック",
+    "category": "essay",
     "re-published": null
   },
   {
-    "title": "『walking postcard vol.11』",
+    "title": "walking postcard vol.11",
     "handle": "postcard-11",
     "url": "/book/postcard_11",
     "size": "big",
     "published": "2024-12-01",
     "category": "postcard",
+    "genre": "個人誌",
     "re-published": null
   },
   {
-    "title": "『walking postcard vol.10』（無配ペーパー）",
+    "title": "walking postcard vol.10（無配ペーパー）",
     "handle": "postcard-10",
     "url": "",
     "size": "big",
     "published": "2024-9-8",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌（無配ペーパー）"
   },
   {
-    "title": "『walking postcard vol.9』（無配ペーパー）",
+    "title": "walking postcard vol.9（無配ペーパー）",
     "handle": "postcard-9",
     "url": "",
     "size": "big",
     "published": "2024-5-19",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌（無配ペーパー）"
   },
   {
-    "title": "『十一月の春の庭』",
+    "title": "十一月の春の庭",
     "handle": "november",
     "url": "/book/november",
     "size": "small",
     "published": "2023-11-10",
-    "re-published": null
+    "re-published": null,
+    "genre": "短編集",
+    "category": "novel"
   },
   {
-    "title": "『walking postcard vol.8』（無配ペーパー）",
+    "title": "walking postcard vol.8（無配ペーパー）",
     "handle": "postcard-8",
     "url": "",
     "size": "big",
     "published": "2023-11-10",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌（無配ペーパー）"
   },
   {
-    "title": "『walking postcard vol.7』（無配ペーパー）",
+    "title": "walking postcard vol.7（無配ペーパー）",
     "handle": "postcard-7",
     "url": "",
     "size": "big",
     "published": "2023-5-21",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌（無配ペーパー）"
   },
   {
-    "title": "『walking postcard vol.6』",
+    "title": "walking postcard vol.6",
     "handle": "postcard-6",
     "url": "/book/postcard_6",
     "size": "big",
     "published": "2022-11-20",
     "re-published": null,
     "category": "postcard",
+    "genre": "個人誌",
     "series": "tree-light-shade"
   },
   {
-    "title": "『walking postcard vol.5』",
+    "title": "walking postcard vol.5",
     "handle": "postcard-5",
     "url": "",
     "size": "big",
     "published": "2022-5-29",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌"
   },
   {
-    "title": "『彼らは唯の夢』",
+    "title": "彼らは唯の夢",
     "handle": "dream",
     "url": "/book/dream",
     "size": "small",
     "published": "2021-11-23",
-    "re-published": null
+    "re-published": null,
+    "genre": "短編集",
+    "category": "novel"
   },
   {
-    "title": "『すべての樹木は光』",
+    "title": "すべての樹木は光",
     "handle": "tree",
     "url": "/book/trees_light",
     "size": "big",
     "published": "2020-11-22",
     "re-published": null,
-    "series": "tree-light-shade"
+    "series": "tree-light-shade",
+    "genre": "幻想長編",
+    "category": "novel"
   },
   {
-    "title": "『walking postcard vol.4』（無配ペーパー）",
+    "title": "walking postcard vol.4（無配ペーパー）",
     "handle": "postcard-4",
     "url": "",
     "size": "big",
     "published": "2020-11-22",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌（無配ペーパー）"
   },
   {
-    "title": "『walking postcard vol.3』",
+    "title": "walking postcard vol.3",
     "handle": "postcard-3",
     "url": "",
     "size": "big",
     "published": "2019-11-24",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌"
   },
   {
-    "title": "『walking postcard vol.2』",
+    "title": "walking postcard vol.2",
     "handle": "postcard-2",
     "url": "",
     "size": "big",
     "published": "2019-5-6",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌"
   },
   {
-    "title": "『walking postcard vol.1』",
+    "title": "walking postcard vol.1",
     "handle": "postcard-1",
     "url": "",
     "size": "big",
     "published": "2018-11-25",
     "re-published": null,
-    "category": "postcard"
+    "category": "postcard",
+    "genre": "個人誌"
   },
   {
-    "title": "『永遠の不在をめぐる』",
+    "title": "永遠の不在をめぐる",
     "handle": "eien",
     "url": "/book/eien",
     "size": "small",
     "published": "2015-11-23",
-    "re-published": null
+    "re-published": null,
+    "genre": "短編集",
+    "category": "novel"
   },
   {
-    "title": "『青と茜と砂漠の国』",
+    "title": "青と茜と砂漠の国",
     "handle": "aoakane",
     "url": "/book/morocco",
     "size": "small",
     "published": "2014-11-24",
-    "re-published": null
+    "re-published": null,
+    "genre": "紀行文",
+    "category": "essay"
   },
   {
-    "title": "『竜の花嫁』",
+    "title": "竜の花嫁",
     "handle": "ryuyome",
     "url": "/book/bride",
     "size": "small",
     "published": "2014-11-24",
-    "re-published": "2017-3-26"
+    "re-published": "2017-3-26",
+    "genre": "幻想長編",
+    "category": "novel"
   },
   {
-    "title": "『旅人よ立ち止まれ』",
+    "title": "旅人よ立ち止まれ",
     "handle": "tabibito",
     "url": "/book/worldtrip",
     "size": "big",
     "published": "2012-11-18",
-    "re-published": "2016-09-04"
+    "re-published": "2016-09-04",
+    "genre": "紀行文",
+    "category": "essay"
   },
   {
-    "title": "『紙飛行機に眠る月』",
+    "title": "紙飛行機に眠る月",
     "handle": "airplane",
     "url": "/book/paperplane",
     "size": "small",
     "published": "2012-11-18",
-    "re-published": "2014-05-10"
+    "re-published": "2014-05-10",
+    "genre": "短編集",
+    "category": "novel"
   }
 ]

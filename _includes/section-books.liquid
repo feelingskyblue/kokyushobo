@@ -25,7 +25,7 @@
       {%- endif -%}
       <section id="panel{{ forloop.index }}" role="tabpanel" aria-hidden="true" tabindex="0" class="book-tab__contents-item book-info">
         <header class="book-info__header">
-          <h3 class="book-info__title">{{ book.title }}</h3>
+          <h3 class="book-info__title">『{{ book.title }}』</h3>
           <span class="book-info__data">{{ book.published | date: "%Y.%-m.%-d" }}刊行{%- if book['re-published'] %}（{{ book['re-published'] | date: "%Y.%-m.%-d" }}新装版刊行）{%- endif %}</span>
         </header>
         <div class="book-info__detail">
