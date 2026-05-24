@@ -1179,29 +1179,64 @@ body:not(.homePage) .main {
   display: block;
   content: "";
 }
+.novel-list__section .novel-list__copy {
+  margin-top: 0.5rem;
+  margin-bottom: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  gap: 2px;
+  line-height: 1.4;
+}
+.novel-list__section .novel-list__copy::before {
+  content: "";
+  width: 2em;
+  height: 1px;
+  display: inline-block;
+  background-color: currentColor;
+  opacity: 0.5;
+  margin-top: 0.6em;
+}
 .novel-list__section.is-paperplane::before {
   background: url("/assets/img/hyoushi-airplane.jpg") no-repeat top center;
   background-size: cover;
+}
+.novel-list__section.is-paperplane .novel-list__copy {
+  color: #3C6784;
 }
 .novel-list__section.is-eien::before {
   background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
   background-size: cover;
 }
+.novel-list__section.is-eien .novel-list__copy {
+  color: #000000;
+}
 .novel-list__section.is-dream::before {
   background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
   background-size: cover;
+}
+.novel-list__section.is-dream .novel-list__copy {
+  color: #E8960A;
 }
 .novel-list__section.is-november::before {
   background: url("/assets/img/mv_november_pc.jpg") no-repeat top 25% right;
   background-size: 200%;
 }
+.novel-list__section.is-november .novel-list__copy {
+  color: #DB8C98;
+}
 .novel-list__section.is-tree::before {
   background: url("/assets/img/hyoushi-tree.jpg") no-repeat center center;
   background-size: cover;
 }
+.novel-list__section.is-tree .novel-list__copy {
+  color: #537C37;
+}
 .novel-list__section.is-shade::before {
   background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 66% center;
   background-size: cover;
+}
+.novel-list__section.is-shade .novel-list__copy {
+  color: #295377;
 }
 .novel-list__header {
   width: 30%;
@@ -2406,6 +2441,55 @@ body:not(.homePage) .main {
 }
 .novel__form .form {
   max-width: initial;
+}
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+@media (min-width: 768px) {
+  .novel-list__page .novel-list__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .novel-list__page .novel-list {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+  }
+  .novel-list__page .novel-list__section {
+    width: calc(50% - 15px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    margin: 0;
+  }
+  .novel-list__page .novel-list__section.is-full {
+    width: 100%;
+  }
+  .novel-list__page .novel-list__section .novel-list__description {
+    margin-block-start: 1rem;
+  }
+  .novel-list__page .novel-list__section:hover .novel-list {
+    height: auto;
+  }
+  .novel-list__page .novel-list__header {
+    width: 100%;
+    min-width: inherit;
+    padding: 1rem 2rem;
+  }
+  .novel-list__page .btn {
+    height: 3rem;
+  }
+  .novel-list__page .novel-list__header + .list {
+    margin: 0;
+    padding: 0 2rem;
+    border: none;
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {

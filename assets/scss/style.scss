@@ -1044,10 +1044,30 @@ body {
 			display: block;
 			content: "";
 		}
+		.novel-list__copy {
+			margin-top: 0.5rem;
+			margin-bottom: 1.6rem;
+			font-weight: bold;
+			display: flex;
+			gap: 2px;
+			line-height: 1.4;
+			&::before {
+				content: "";
+				width: 2em;
+				height: 1px;
+				display: inline-block;
+				background-color: currentColor;
+				opacity: 0.5;
+				margin-top: 0.6em;
+			}
+		}
 		&.is-paperplane {
 			&::before {
 				background: url("/assets/img/hyoushi-airplane.jpg") no-repeat top center;
 				background-size: cover;
+			}
+			.novel-list__copy {
+				color: #3C6784;
 			}
 		}
 		&.is-eien {
@@ -1055,11 +1075,17 @@ body {
 				background: url("/assets/img/hyoushi-eien.jpg") no-repeat bottom 13% center;
 				background-size: cover;
 			}
+			.novel-list__copy {
+				color: #000000;
+			}
 		}
 		&.is-dream {
 			&::before {
 				background: url("/assets/img/mv_dream_sp.jpg") no-repeat top 23% center;
 				background-size: cover;
+			}
+			.novel-list__copy {
+				color: #E8960A;
 			}
 		}
 		&.is-november {
@@ -1067,17 +1093,26 @@ body {
 				background: url("/assets/img/mv_november_pc.jpg") no-repeat top 25% right;
 				background-size: 200%;
 			}
+			.novel-list__copy {
+				color: #DB8C98;
+			}
 		}
 		&.is-tree {
 			&::before {
 				background: url("/assets/img/hyoushi-tree.jpg") no-repeat center center;
 				background-size: cover;
 			}
+			.novel-list__copy {
+				color: #537C37;
+			}
 		}
 		&.is-shade {
 			&::before {
 				background: url("/assets/img/hyoushi-tree-shade.jpg") no-repeat top 66% center;
 				background-size: cover;
+			}
+			.novel-list__copy {
+				color: #295377;
 			}
 		}
 	}
@@ -2214,6 +2249,60 @@ body {
 		text-align: left;
 		.form {
 			max-width: initial;
+		}
+	}
+}
+
+// 2026.5.24 小説ページ改修
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+}
+.novel-list__page {
+	@media (min-width: $pc-width) {
+		.novel-list__wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			gap: 3rem;
+		}
+		.novel-list {
+			height: 0px;
+			overflow: hidden;
+			transition: all 0.4s ease-in-out;
+		}
+		.novel-list__section {
+			width: calc(50% - 15px);
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 1rem 0;
+			margin: 0;
+			&.is-full {
+				width: 100%;
+			}
+			.novel-list__description {
+				margin-block-start: 1rem;
+			}
+			&:hover {
+				.novel-list {
+					height: auto;
+				}
+			}
+		}
+		.novel-list__header {
+			width: 100%;
+			min-width: inherit;
+			padding: 1rem 2rem;
+		}
+		.btn {
+			height: 3rem;
+		}
+		.novel-list__header + .list {
+			margin: 0;
+			padding: 0 2rem;
+			border: none;
+			width: 100%;
 		}
 	}
 }
