@@ -1108,6 +1108,15 @@ body {
 				color: #DB8C98;
 			}
 		}
+		&.is-ryuyome {
+			&::before {
+				background: url("/assets/img/hyoushi-ryuyome.jpg") no-repeat top 20% center;
+				background-size: cover;
+			}
+			.novel-list__copy {
+				color: #79362F;
+			}
+		}
 		&.is-tree {
 			&::before {
 				background: url("/assets/img/hyoushi-tree.jpg") no-repeat center center;
@@ -2438,6 +2447,12 @@ body {
 					&::before {
 						background: url("/assets/img/mv_november_pc.jpg") no-repeat top 25% right;
 						background-size: 200%;
+					}
+				}
+				&.is-ryuyome {
+					&::before {
+						background: url("/assets/img/hyoushi-ryuyome.jpg") no-repeat top 20% center;
+						background-size: cover;
 					}
 				}
 				&.is-tree {
