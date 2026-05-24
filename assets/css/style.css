@@ -947,13 +947,15 @@ body:not(.homePage) .main {
 }
 @media (max-width: 767px) {
   .footer__nav-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
     margin-bottom: 2rem;
     font-size: inherit;
     font-size: 0.9em;
   }
-  .footer__nav-list li {
-    margin-bottom: 0.8rem;
+  .footer__nav-list li:has(a[href="/contact"]), .footer__nav-list li:has(a[href="/about/privacy"]), .footer__nav-list li:has(a[href="/event"]) {
+    order: 2;
   }
 }
 .footer__info {
