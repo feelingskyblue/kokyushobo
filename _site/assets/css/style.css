@@ -774,8 +774,7 @@ body:not(.homePage) .main {
 @media (min-width: 768px) {
   .header__nav-list .hasmenu:hover:not(.is-megamenu) .header__nav-sublist {
     height: 160px;
-    border: 1px solid rgba(72, 66, 59, 0.2);
-    border-top: none;
+    box-shadow: 0 1rem 2rem rgba(72, 66, 59, 0.15);
     z-index: 2;
   }
   .header__nav-list .hasmenu:hover:not(.is-megamenu) .header__nav-booklist {
@@ -786,8 +785,7 @@ body:not(.homePage) .main {
     width: fit-content;
     max-width: 128rem;
     height: 300px;
-    border: 1px solid rgba(72, 66, 59, 0.2);
-    border-top: none;
+    box-shadow: 0 1rem 2rem rgba(72, 66, 59, 0.15);
     z-index: 2;
     overflow-y: scroll;
   }

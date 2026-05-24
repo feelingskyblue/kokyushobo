@@ -672,8 +672,9 @@ body {
 						&:not(.is-megamenu) {
 							.header__nav-sublist {
 								height: calc(40px * 4);
-								border: 1px solid rgba($color: #48423b, $alpha: 0.2);
-								border-top: none;
+								//border: 1px solid rgba($color: #48423b, $alpha: 0.2);
+								//border-top: none;
+								box-shadow: 0 1rem 2rem rgba($color: #48423b, $alpha: 0.15);
 								z-index: 2;
 							}
 							.header__nav-booklist {
@@ -685,8 +686,9 @@ body {
 								width: fit-content;
 								max-width: 128rem;
 								height: 300px;
-								border: 1px solid rgba($color: #48423b, $alpha: 0.2);
-								border-top: none;
+								//border: 1px solid rgba($color: #48423b, $alpha: 0.2);
+								//border-top: none;
+								box-shadow: 0 1rem 2rem rgba($color: #48423b, $alpha: 0.15);
 								z-index: 2;
 								overflow-y: scroll;
 							}
