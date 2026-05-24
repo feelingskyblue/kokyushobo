@@ -1,6 +1,4 @@
 @charset "utf-8";
-
-@import "core/reset";
 @import "core/utility";
 
 :root {
@@ -211,7 +209,19 @@ body {
     }
   }
   &__character {
-
+    &::details-content {
+    transition:
+      height 0.4s ease,
+      opacity 0.4s ease,
+      content-visibility 0.4s allow-discrete;
+      height: 0;
+      opacity: 0;
+      overflow: clip;
+    }
+    &[open]::details-content {
+      opacity: 1;
+      height: auto;
+    }
     &--detail {
       margin-left: 1em;
       padding-block-start: 1rem;

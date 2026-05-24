@@ -137,14 +137,42 @@
       <p class="page__section-title-txt">小説を読む</p>
     </header>
     <div class="page__body page-width">
-<div id="webnovel" class="novel-list__page"><header class="novel-list__category-header">
+<div id="webnovel" class="novel-list__page">
+  <p>幻想小説・ファンタジーを中心に、様々な小説を公開しています。<br>書籍として刊行している小説は、一部を試し読みとしてお読みいただけます。</p>
+
+  <p class="hidden-phone">カーソルで各小説のエリアに触れると、目次が開きます:)</p>
+  <button type="button" class="btn btn--line novel-list__toggle-btn hidden-phone" id="novelToggleBtn">
+    <span class="for-open">すべての目次を開いた状態で固定するには、こちらをクリックしてください。</span>
+    <span class="for-close">すべての目次を閉じる</span>
+  </button>
+
+  <nav class="novel-list__nav hidden-desktop">
+    <dl class="novel-list__nav-list">
+      <dt class="font-serif">長編小説</dt>
+      <dd class="is-shade"><a href="#novelShade">すべての木陰に歌を</a><span>熱帯雨林の樹木変身譚</span></dd>
+      <dd class="is-tree"><a href="#novelTrees">すべての樹木は光</a><span>熱帯雨林の樹木変身譚</span></dd>
+      <dd class="is-ryuyome"><a href="#novelBride">竜の花嫁</a><span>炎と森の異類婚姻譚</span></dd>
+    </dl>
+    <dl class="novel-list__nav-list">
+      <dt class="font-serif">短編・掌編小説</dt>
+      <dd class="is-november"><a href="#novelNovember">十一月の春の庭</a><span>ショートショート掌編集</span></dd>
+      <dd class="is-dream"><a href="#novelDream">彼らは唯の夢</a><span>夢日記掌編集</span></dd>
+      <dd class="is-eien"><a href="#novelEien">永遠の不在をめぐる</a><span>幻想短編集</span></dd>
+      <dd class="is-paperplane"><a href="#novelPaperplane">紙飛行機に眠る月</a><span>幻想短編集</span></dd>
+      <dd class="is-webonly"><a href="#novelImprovise">即興小説</a></dd>
+      <dd class="is-webonly"><a href="#novelRequest">寄稿・企画など</a></dd>
+    </dl>
+  </nav>
+
+  <hr><header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">長編小説</h3>
 </header>
 <div class="novel-list__wrapper">
-  <section class="novel-list__section is-shade">
+  <section class="novel-list__section is-shade" id="novelShade">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">すべての木陰に歌を：試し読み</h3>
-      <p class="novel-list__description">熱帯雨林の樹木変身譚『すべての木陰に歌を』より、冒頭の約3万字をWeb上で公開しています。<br>本編は書籍の形で完結済みです。</p>
+      <p class="novel-list__copy font-serif">新たな芽を。魔法を。何度でも。</p>
+      <p class="novel-list__description">彼女を覚えている者はもう誰もいない。はるかな遠い未来、長い旅路の果てに、彼女はようやく思い出す。かつて手放した魔法のことを。<br>熱帯雨林の樹木変身譚、前作『すべての樹木は光』より127年後の物語。刊行書籍より第一部を公開中です。<a href="/series/trees_light_shade/">シリーズの特設ページはこちら</a>。</p>
       <a href="/book/trees_shade" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
     <div class="list novel-list">
@@ -174,12 +202,11 @@
       </article>
     </div>
   </section>
-  <section class="novel-list__section is-tree">
+  <section class="novel-list__section is-tree" id="novelTrees">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">すべての樹木は光：試し読み</h3>
-      <p class="novel-list__description">熱帯雨林の樹木変身譚『すべての樹木は光』より、冒頭の約4万字をWeb上で公開しています。<br>本編は書籍の形で完結済みです。およそ3分の一地点、物語のターニングポイントまでをお読みいただけます。</p>
-      <br>
-      <p class="novel-list__description">2024.11.28 後日談「樹木のバカンス」を公開しました。</p>
+      <p class="novel-list__copy font-serif">そのようにして、魔法は失われた。</p>
+      <p class="novel-list__description">透明な街、うつくしい街、ちょうど日付が変わる頃のこと。一人の優しい娘が、唐突に、身に覚えもなく、一本の樹木に変えられてしまう。<br>熱帯雨林の樹木変身譚です。刊行書籍より第二章までを公開中。Web公開の後日談も併せてどうぞ。<a href="/series/trees_light_shade/">シリーズの特設ページはこちら</a>です。</p>
       <a href="/book/trees_light" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
     <div class="list novel-list">
@@ -227,17 +254,69 @@
       </article>
     </div>
   </section>
-  
+  <section class="novel-list__section is-ryuyome" id="novelBride">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">竜の花嫁：試し読み</h3>
+      <p class="novel-list__copy font-serif">どうしても死にたくない。</p>
+      <p class="novel-list__description">守り神たる竜の在る世界。生贄に捧げられたのは、村でもっとも嫌われた娘。野火のように激しく、荒々しく、彼女は村を憎んだ。<br>炎と森の異類婚姻譚ファンタジーです。刊行書籍より第二章までを公開中。婚姻譚ですが恋愛要素は含まれません。</p>
+      <a href="/book/bride" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
+    </header>
+    <div class="list novel-list">
+      <article class="novel-list__item">
+        <a href="/book/bride/introduction" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">イントロダクション</span></h4>
+          <span class="novel-list__catchcopy">なぜ、あの竜は、私を食べようとしないのか。</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="/book/bride/introduction#section1" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">第一章　嫁入りの日</span></h4>
+          <span class="novel-list__catchcopy">古くからの盟約に従い、おまえを竜に嫁がせる。</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <a href="/book/bride/introduction#section2" class="unstyle novel-list__item-link">
+          <h4 class="novel-list__item-title"><span class="font-serif">第二章　金の瞳、遠雷の声</span></h4>
+          <span class="novel-list__catchcopy">心配せずともよい、娘。おまえは村へ帰っていいのだ。</span>
+        </a>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第三章　雨と眠りに安らぐもの<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">女ひとり、山で生き延びようなど、狂気の沙汰だと思うがね。</span>
+        </div>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第四章　かつて殺されたすべての私たちへ<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">私たちは今もここにいる。</span>
+        </div>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第五章　野火迫る<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">矢傷からこぼれおちる血は、花嫁が死ぬことを望んでいた。</span>
+        </div>
+      </article>
+      <article class="novel-list__item">
+        <div class="novel-list__item-unlink">
+          <h4 class="novel-list__item-title"><span class="font-serif">第六章　竜の花嫁<small class="op_7">（書籍収録）</small></span></h4>
+          <span class="novel-list__catchcopy">昔、昔、生け贄として竜に捧げられた最後の花嫁が、生き延びて、村を襲ったのだという。</span>
+        </div>
+      </article>
+    </div>
+  </section>
 </div>
 <hr>
 <header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">掌編・短編小説（一話完結）</h3>
 </header>
 <div class="novel-list__wrapper">
-  <section class="novel-list__section is-november">
+  <section class="novel-list__section is-november" id="novelNovember">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">十一月の春の庭</h3>
-      <p class="novel-list__description">「<a href="https://twitter.com/nike_nkx/status/1575362728063307781" target="_blank" rel="noopenner noreferrer">#novelmber</a>」ハッシュタグに投稿した掌編の再録短編集。二つのお題を組みあわせ、その偶然性を楽しみながら書き綴った掌編18本を掲載しています。文体も掌編ごとに様々です。</p>
+      <p class="novel-list__copy font-serif">入れ替わり立ち替わり、新たな物語がやってくる。</p>
+      <p class="novel-list__description">「<a href="https://twitter.com/nike_nkx/status/1575362728063307781" target="_blank" rel="noopenner noreferrer">#novelmber</a>」ハッシュタグに投稿した掌編の再録短編集。二つのお題を組みあわせ、その偶然性を楽しみながら書き綴った18編のうち3編を公開しています。文体も掌編ごとに様々です。</p>
       <a href="/book/november" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
     <div class="list novel-list">
@@ -284,9 +363,10 @@
 </article>
     </div>
   </section>
-  <section class="novel-list__section is-dream">
+  <section class="novel-list__section is-dream" id="novelDream">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">彼らは唯の夢</h3>
+      <p class="novel-list__copy font-serif">忘れがたい風景たちへ。</p>
       <p class="novel-list__description">夢日記に基づく幻想掌編集。収録作品6編のうち3編を公開しています。いずれも厳密には夢そのものではなく、物語としては筋書きが曖昧で、詩と呼ぶには長すぎる。最も近い言葉は「風景」なのだろうと思います。</p>
       <a href="/book/dream" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
@@ -338,54 +418,10 @@
 </article>
     </div>
   </section>
-  <section class="novel-list__section" id="novelImprovise">
-    <header class="novel-list__header">
-      <h3 class="novel-list__title font-serif">即興小説</h3>
-      <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿したものです。<br>ランダムな“お題”を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
-    </header>
-    <div class="list novel-list">
-      <article class="novel-list__item">
-  <a href="/novel/southpole/" class="unstyle novel-list__item-link">
-    <h4 class="novel-list__item-title"><span class="font-serif">北極の火</span></h4>
-    <span class="novel-list__catchcopy font-sansserif-jp">熱風に煽られたページは激しく、目まぐるしく時を進めた。</span>
-    <ul class="novel-category">
-      
-        <li>即興小説</li>
-      
-        <li>お題「小説の中の豪雪」</li>
-      
-    </ul>
-  </a>
-</article><article class="novel-list__item">
-  <a href="/novel/cat-mercy/" class="unstyle novel-list__item-link">
-    <h4 class="novel-list__item-title"><span class="font-serif">自由は罪も赦しも持たない</span></h4>
-    <span class="novel-list__catchcopy font-sansserif-jp">猫という生きものは、その毛先一本に至るまで、自らが自らの主である。</span>
-    <ul class="novel-category">
-      
-        <li>即興小説</li>
-      
-        <li>お題「猫の赦し」</li>
-      
-    </ul>
-  </a>
-</article><article class="novel-list__item">
-  <a href="/novel/sleeping-beauty/" class="unstyle novel-list__item-link">
-    <h4 class="novel-list__item-title"><span class="font-serif">不在は悲しみではない。</span></h4>
-    <span class="novel-list__catchcopy font-sansserif-jp">尖塔の残骸の中から、とうとう眠り姫の寝台が見つかった。</span>
-    <ul class="novel-category">
-      
-        <li>即興小説</li>
-      
-        <li>お題「運命の失踪」</li>
-      
-    </ul>
-  </a>
-</article>
-    </div>
-  </section>
   <section class="novel-list__section is-eien" id="novelEien">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">永遠の不在をめぐる</h3>
+      <p class="novel-list__copy font-serif">あなたの不在を愛する。</p>
       <p class="novel-list__description">「不在」をテーマにした、ふたつめの幻想短編集。収録作品7編のうち4編を公開しています。何かを失い、あるいは投げ捨て、もしくは奪われた人々の、永遠に埋まらない空席を眺めつづけるような物語。</p>
       <a href="/book/eien" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
@@ -444,6 +480,7 @@
   <section class="novel-list__section is-paperplane" id="novelPaperplane">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">紙飛行機に眠る月</h3>
+      <p class="novel-list__copy font-serif">それでも、君は飛べるんだ。本当は唯の紙切れだとしても。</p>
       <p class="novel-list__description">呼吸書房の原点、2012年に刊行した短編集です。収録作品9編のうち4編を公開しています。作品ジャンルはSF、寓話童話、ファンタジー、現代ものと様々で、各編ごとに文体も異なります。</p>
       <a href="/book/paperplane" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
@@ -495,6 +532,51 @@
         <li>ジュブナイル</li>
       
         <li>短編</li>
+      
+    </ul>
+  </a>
+</article>
+    </div>
+  </section>
+  <section class="novel-list__section" id="novelImprovise">
+    <header class="novel-list__header">
+      <h3 class="novel-list__title font-serif">即興小説</h3>
+      <p class="novel-list__description">「即興小説トレーニング（2023年サービス終了）」に投稿した作品の一部を改稿したものです。ランダムな“お題”を元に15分で執筆する、想像の跳躍をお楽しみください。</p>
+    </header>
+    <div class="list novel-list">
+      <article class="novel-list__item">
+  <a href="/novel/southpole/" class="unstyle novel-list__item-link">
+    <h4 class="novel-list__item-title"><span class="font-serif">北極の火</span></h4>
+    <span class="novel-list__catchcopy font-sansserif-jp">熱風に煽られたページは激しく、目まぐるしく時を進めた。</span>
+    <ul class="novel-category">
+      
+        <li>即興小説</li>
+      
+        <li>お題「小説の中の豪雪」</li>
+      
+    </ul>
+  </a>
+</article><article class="novel-list__item">
+  <a href="/novel/cat-mercy/" class="unstyle novel-list__item-link">
+    <h4 class="novel-list__item-title"><span class="font-serif">自由は罪も赦しも持たない</span></h4>
+    <span class="novel-list__catchcopy font-sansserif-jp">猫という生きものは、その毛先一本に至るまで、自らが自らの主である。</span>
+    <ul class="novel-category">
+      
+        <li>即興小説</li>
+      
+        <li>お題「猫の赦し」</li>
+      
+    </ul>
+  </a>
+</article><article class="novel-list__item">
+  <a href="/novel/sleeping-beauty/" class="unstyle novel-list__item-link">
+    <h4 class="novel-list__item-title"><span class="font-serif">不在は悲しみではない。</span></h4>
+    <span class="novel-list__catchcopy font-sansserif-jp">尖塔の残骸の中から、とうとう眠り姫の寝台が見つかった。</span>
+    <ul class="novel-category">
+      
+        <li>即興小説</li>
+      
+        <li>お題「運命の失踪」</li>
       
     </ul>
   </a>
