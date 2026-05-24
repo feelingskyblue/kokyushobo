@@ -149,7 +149,9 @@ window.addEventListener('DOMContentLoaded', () => {
   smoothscroll();
 
   const gnavBtn = document.querySelector('#mobileGnavBtn');
+  const novelToggleBtn = document.querySelector('#novelToggleBtn');
   toggleOpen(gnavBtn) ;
+  toggleOpen(novelToggleBtn);
 
   tab('.book-tab__target');
 

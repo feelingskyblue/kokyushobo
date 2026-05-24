@@ -138,12 +138,36 @@
     </header>
     <div class="page__body page-width">
 <div id="webnovel" class="novel-list__page">
-  <p>幻想小説・ファンタジーを中心に、様々な小説を公開しています。</p>
+  <p>幻想小説・ファンタジーを中心に、様々な小説を公開しています。<br>書籍として刊行している小説は、一部を試し読みとしてお読みいただけます。</p>
+
+  <p class="hidden-phone">カーソルで各小説のエリアに触れると、目次が開きます:)</p>
+  <button type="button" class="btn btn--line novel-list__toggle-btn hidden-phone" id="novelToggleBtn">
+    <span class="for-open">すべての目次を開いた状態で固定するには、こちらをクリックしてください。</span>
+    <span class="for-close">すべての目次を閉じる</span>
+  </button>
+
+  <nav class="novel-list__nav hidden-desktop">
+    <dl class="novel-list__nav-list">
+      <dt class="font-serif">長編小説</dt>
+      <dd class="is-shade"><a href="#novelShade">すべての木陰に歌を</a><span>熱帯雨林の樹木変身譚</span></dd>
+      <dd class="is-tree"><a href="#novelTrees">すべての樹木は光</a><span>熱帯雨林の樹木変身譚</span></dd>
+    </dl>
+    <dl class="novel-list__nav-list">
+      <dt class="font-serif">短編・掌編小説</dt>
+      <dd class="is-november"><a href="#novelNovember">十一月の春の庭</a><span>ショートショート掌編集</span></dd>
+      <dd class="is-dream"><a href="#novelDream">彼らは唯の夢</a><span>夢日記掌編集</span></dd>
+      <dd class="is-eien"><a href="#novelEien">永遠の不在をめぐる</a><span>幻想短編集</span></dd>
+      <dd class="is-paperplane"><a href="#novelPaperplane">紙飛行機に眠る月</a><span>幻想短編集</span></dd>
+      <dd class="is-webonly"><a href="#novelImprovise">即興小説</a></dd>
+      <dd class="is-webonly"><a href="#novelRequest">寄稿・企画など</a></dd>
+    </dl>
+  </nav>
+
   <hr><header class="novel-list__category-header">
   <h3 class="novel-list__title font-serif">長編小説</h3>
 </header>
 <div class="novel-list__wrapper">
-  <section class="novel-list__section is-shade">
+  <section class="novel-list__section is-shade" id="novelShade">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">すべての木陰に歌を：試し読み</h3>
       <p class="novel-list__copy font-serif">新たな芽を。魔法を。何度でも。</p>
@@ -177,12 +201,11 @@
       </article>
     </div>
   </section>
-  <section class="novel-list__section is-tree">
+  <section class="novel-list__section is-tree" id="novelTrees">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">すべての樹木は光：試し読み</h3>
       <p class="novel-list__copy font-serif">そのようにして、魔法は失われた。</p>
       <p class="novel-list__description">熱帯雨林の樹木変身譚『すべての樹木は光』より、冒頭の約4万字をWeb上で公開しています。<br>本編は書籍の形で完結済みです。およそ3分の一地点、物語のターニングポイントまでをお読みいただけます。</p>
-      <p class="novel-list__description">2024.11.28 後日談「樹木のバカンス」を公開しました。</p>
       <a href="/book/trees_light" class="btn btn--small btn--pale"><span>書籍紹介へ</span></a>
     </header>
     <div class="list novel-list">
@@ -237,7 +260,7 @@
   <h3 class="novel-list__title font-serif">掌編・短編小説（一話完結）</h3>
 </header>
 <div class="novel-list__wrapper">
-  <section class="novel-list__section is-november">
+  <section class="novel-list__section is-november" id="novelNovember">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">十一月の春の庭</h3>
       <p class="novel-list__copy font-serif">入れ替わり立ち替わり、新たな物語がやってくる。</p>
@@ -288,7 +311,7 @@
 </article>
     </div>
   </section>
-  <section class="novel-list__section is-dream">
+  <section class="novel-list__section is-dream" id="novelDream">
     <header class="novel-list__header">
       <h3 class="novel-list__title font-serif">彼らは唯の夢</h3>
       <p class="novel-list__copy font-serif">忘れがたい風景たちへ。</p>
