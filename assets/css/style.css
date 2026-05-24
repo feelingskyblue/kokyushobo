@@ -222,6 +222,9 @@
 [data-color-mode=dark] .footer {
   background-color: #353A39;
 }
+[data-color-mode=dark] .novel-list__section .novel-list__copy {
+  color: #ffffff !important;
+}
 
 /* base CSS */
 html {
@@ -1194,7 +1197,7 @@ body:not(.homePage) .main {
   margin-top: 0.5rem;
   margin-bottom: 1.6rem;
   font-weight: bold;
-  display: flex;
+  display: inline-flex;
   gap: 2px;
   line-height: 1.4;
 }
