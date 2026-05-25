@@ -295,6 +295,9 @@ a {
 		padding: 0 1.5em;
 		min-width: 24rem;
 		height: 4rem;
+		@media (max-width: $sp-width) {
+			min-width: 100%;
+		}
 	}
 	&--color {
 		background-color: rgba($color: var(--keyColorRgb), $alpha: 0.7);
@@ -369,6 +372,12 @@ blockquote {
 		row-gap: 1rem;
 		li:not(:last-child) {
 			margin-right: 1em;
+		}
+		@media (max-width: $sp-width) {
+			flex-direction: column;
+			li:not(:last-child) {
+				margin-right: 0;
+			}
 		}
 	}
 	&__dl {
