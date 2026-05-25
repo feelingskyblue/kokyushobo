@@ -150,8 +150,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const gnavBtn = document.querySelector('#mobileGnavBtn');
   const novelToggleBtn = document.querySelector('#novelToggleBtn');
+  const novelNavBtn = document.querySelector('#novelNavBtn');
   toggleOpen(gnavBtn) ;
   toggleOpen(novelToggleBtn);
+  toggleOpen(novelNavBtn);
 
   tab('.book-tab__target');
 

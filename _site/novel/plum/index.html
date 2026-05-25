@@ -128,7 +128,42 @@
       </div>
     </header>
     <main class="main">
-      
+      <script src="/assets/js/novel_tree.js" defer></script>
+<button id="novelNavBtn" class="novel__nav-btn" type="button">
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__text">menu</span>
+</button>
+<span class="novel__nav-btn--info">
+  本文設定と目次を表示できます
+</span>
+<aside class="novel__nav">
+  <dl class="novel__nav-controller">
+    <div>
+      <dt>本文の文字サイズ</dt>
+      <dd>
+        <button type="button" class="btn btn--small btn--outlined"><span>大</span></button>
+        <button type="button" class="btn btn--small btn--outlined current"><span>中</span></button>
+        <button type="button" class="btn btn--small btn--outlined"><span>小</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>本文のフォント</dt>
+      <dd>
+        <button type="button" class="btn btn--small btn--outlined current"><span>明朝体</span></button>
+        <button type="button" class="btn btn--small btn--outlined"><span>ゴシック体</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>文字組み</dt>
+      <dd>
+        <button type="button" class="btn btn--small btn--outlined current"><span>横組み</span></button>
+        <button type="button" class="btn btn--small btn--outlined"><span>縦組み</span></button>
+      </dd>
+    </div>
+  </dl>
+</aside>
 <article class="novel font-serif">
   <header class="novel__header">
     <h1 class="novel__header-title">幽霊を贈る</h1>
