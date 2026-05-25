@@ -214,6 +214,12 @@
   [data-color-mode=dark] .main .novel-list__section {
     border-top: 1px solid rgba(var(--keyColorRgb), 0.5);
   }
+  [data-color-mode=dark] .main .novel-list__item:first-child {
+    border-top: 1px solid rgba(var(--textColorRgb), 0.1);
+  }
+  [data-color-mode=dark] .main .novel-list__item:not(:first-child) {
+    border-top: 1px solid rgba(var(--textColorRgb), 0.1);
+  }
   [data-color-mode=dark] .main .blog-article__header {
     border-top: 5px solid rgba(var(--keyColorRgb), 0.5);
     border-bottom: 5px solid rgba(var(--keyColorRgb), 0.5);
@@ -1127,6 +1133,9 @@ body:not(.homePage) .main {
   .novel-list__item-unlink .novel-list__item-title span {
     border-bottom: none;
   }
+  .novel-list__item-unlink .novel-list__item-title span::after {
+    display: none;
+  }
 }
 .novel-list__item-title {
   font-weight: normal;
@@ -1194,8 +1203,7 @@ body:not(.homePage) .main {
   content: "";
 }
 .novel-list__section .novel-list__copy {
-  margin-top: 0.5rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 0;
   font-weight: bold;
   display: inline-flex;
   gap: 2px;
@@ -1342,6 +1350,7 @@ body:not(.homePage) .main {
     top: inherit;
     right: inherit;
     justify-content: flex-end;
+    margin-top: 0.3rem;
   }
 }
 .novel-list .novel-category li:not(:last-child)::after {
@@ -2500,6 +2509,9 @@ body:not(.homePage) .main {
   .novel-list__page .novel-list__section .btn--pale {
     height: 3rem;
   }
+  .novel-list__page .novel-list__section .novel-list__title {
+    margin: 0;
+  }
   .novel-list__page .novel-list__section .novel-list__description {
     margin-block-start: 1rem;
     opacity: 0.8;
@@ -2558,6 +2570,12 @@ body:not(.homePage) .main {
   }
 }
 @media (max-width: 767px) {
+  .novel-list__page .novel-list__title {
+    margin: 0;
+  }
+  .novel-list__page .novel-list__description {
+    margin-block-end: 1.4rem;
+  }
   .novel-list__page .novel-list__nav-list:not(:last-child) {
     margin-bottom: 2rem;
   }
