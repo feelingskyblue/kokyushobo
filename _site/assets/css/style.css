@@ -2661,21 +2661,20 @@ body.novelPage:not(.is-loaded) .novel__header, body.novelPage:not(.is-loaded) .n
 [data-text-layout=vertical] body.novelPage .main {
   padding: 0;
 }
+@media (max-width: 767px) {
+  [data-text-layout=vertical] body.novelPage .main {
+    padding-block: 4em;
+  }
+}
 [data-text-layout=vertical] body.novelPage .novel {
   writing-mode: vertical-rl;
   overflow: scroll;
   min-height: 100lvh;
   max-width: 100%;
   margin: auto;
-  padding-inline-start: 5em;
-  padding-inline-end: 3em;
+  padding-inline: 4em;
   padding-block: 4em;
   scroll-behavior: smooth;
-}
-@media (min-width: 768px) {
-  [data-text-layout=vertical] body.novelPage .novel {
-    padding-inline: 4em;
-  }
 }
 [data-text-layout=vertical] body.novelPage .novel .novel__body.tree_is_light__body h3 {
   text-align: left;
