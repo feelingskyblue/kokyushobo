@@ -2,14 +2,12 @@
 layout: layout.liquid
 template: novelPage
 ---
-
+<script src="/assets/js/novel_tree.js" defer></script>
+{% include '_includes/snippet-novel-nav' %}
 <article class="novel font-serif">
   <header class="novel__header">
     <h1 class="novel__header-title">{{ title }}</h1>
   </header>
-  {% comment %}
-    マウス動かしたらメニュー表示させたい　stoneぽく
-  {% endcomment %}
   <div class="novel__body">{{ content }}</div>
   <div class="novel__footer">
     <hr>

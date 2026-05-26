@@ -128,12 +128,95 @@
       </div>
     </header>
     <main class="main">
-      
+      <script src="/assets/js/novel_tree.js" defer></script>
+<button id="novelNavBtn" class="novel__nav-btn" type="button">
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__text">menu</span>
+</button>
+<span class="novel__nav-btn--info">
+  本文設定と目次を表示できます
+</span>
+<aside class="novel__nav">
+  <button id="modeChangeSubBtn" class="novel__shift-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 512 512" class="novel__shift-btn--sun">
+<g>
+	<path class="st0" d="M256,118.125c-76.156,0-137.875,61.719-137.875,137.875S179.844,393.875,256,393.875 S393.875,332.156,393.875,256S332.156,118.125,256,118.125z" fill="currentColor"></path>
+	<rect x="235.906" class="st0" width="40.156" height="77.297" fill="currentColor"></rect>
+	<rect x="235.906" y="434.703" class="st0" width="40.156" height="77.297" fill="currentColor"></rect>	
+	<rect x="63.657" y="82.229" transform="matrix(0.7071 0.7071 -0.7071 0.7071 102.3047 -42.376)" class="st0" width="77.296" height="40.15" fill="currentColor"></rect>
+	<polygon class="st0" points="368.156,396.547 422.828,451.219 451.219,422.813 396.563,368.156 	" fill="currentColor"></polygon>
+	<rect y="235.906" class="st0" width="77.281" height="40.156" fill="currentColor"></rect>
+	<polygon class="st0" points="434.688,235.922 434.688,276.078 512,276.063 512,235.906 	" fill="currentColor"></polygon>
+	<polygon class="st0" points="60.781,422.813 89.156,451.219 143.813,396.547 115.438,368.156 	" fill="currentColor"></polygon>
+	<polygon class="st0" points="451.219,89.156 422.813,60.781 368.156,115.438 396.563,143.844 	" fill="currentColor"></polygon>
+</g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 512 512" class="novel__shift-btn--moon">
+<g>
+	<path class="st0" d="M403.469,395.031c-129.203,0-233.938-104.75-233.938-233.953c0-62.438,24.5-119.125,64.375-161.078
+		C109.313,17.953,13.563,125.094,13.563,254.656C13.563,396.781,128.781,512,270.906,512c98.688,0,184.359-55.578,227.531-137.125
+		C469.406,387.781,437.297,395.031,403.469,395.031z" fill="currentColor"></path>
+</g>
+</svg></button>
+  <dl class="novel__nav-controller">
+    <div>
+      <dt>本文の文字サイズ</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文の文字サイズ">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="large"><span>大</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="medium"><span>中</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="small"><span>小</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>本文のフォント</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文のフォント">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="serif"><span>明朝体</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="sans-serif"><span>ゴシック体</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>文字組み</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="文字組み">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="horizontal"><span>横組み</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="vertical"><span>縦組み</span></button>
+      </dd>
+    </div>
+  </dl>
+  
+      <hr>
+      <p class="heading font-serif">『彼らは唯の夢』</p>
+      <ul class="novel__nav-series">
+        
+          <li><a href="/novel/desert/">砂漠と旅の話を</a></li>
+        
+          <li><a href="/novel/audience/">聴衆は生きている</a></li>
+        
+          <li><a href="/novel/end-of-the-world/">だから自由にどこまでも</a></li>
+        
+      </ul>
+    
+  
+  <hr>
+  <ul class="novel__nav-menu">
+    <li class="" data-menu="novel">
+      <a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説一覧TOPへ</span></a>
+    </li>
+    <li class="" data-menu="booklist">
+      <a href="/book" class="menu-item--parent">book-list<span class="font-serif">書籍情報</span></a>
+    </li>
+    <li data-menu="other"><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
+    <li data-menu="store"><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
+    <li><a href="/about">about<span class="font-serif">呼吸書房について</span></a></li>
+    <li><a href="/blog">blog<span class="font-serif">ブログ</span></a></li>
+    <li><a href="/contact">contact<span class="font-serif">お問合せ・ご感想</span></a></li>
+    <li><a href="/event">event<span class="font-serif">イベント出店情報</span></a></li>
+  </ul>
+</aside>
 <article class="novel font-serif">
   <header class="novel__header">
     <h1 class="novel__header-title">砂漠と旅の話を</h1>
   </header>
-  
   <div class="novel__body"><p>夜が砂丘を登ってくる。追いつかれる前に登頂しようと、私は足を速めた。夜の歩幅は広い。高さ数百メートルに及ぶこの大砂丘も、まもなくすべて夜に沈むだろう。<br>
 　一足ごとに、美しい風紋を踏み崩す。安定を失った砂は音もなく斜面に沿って流れ落ちる。初めは急速に、やがて緩やかに、遥か下まで。それは小川のようにも見え、けれども入日の深い茜に照らされた今は、むしろ出血を連想させた。一呼吸のあと、振り返って見下ろせば、砂漠の底は既に夕闇に包まれていた。<br>
 　砂丘の頂上まであと僅かだった。私は両手も使い、四つ足の獣のような体勢で最後の数メートルを登りきったが、危うくそのまま転落するところだった。反対側の斜面は恐ろしく急勾配で、およそ自然のものには思えず、まるでどこかの巨人が砂丘の半分をそっくりバターナイフで切り取ってしまったかのようだった。私はうつ伏せになり、なんとか砂丘の尾根にしがみついた。砂がとめどなく崩れ、夜に落ちていった。<br>

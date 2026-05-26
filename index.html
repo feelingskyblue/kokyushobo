@@ -21,14 +21,14 @@ layout: layout.liquid
         <div class="home__news">
           <dl class="home__news-body">
             <dt>update:</dt>
-            <dd>2026.5.8 <a href="/series/trees_light_shade/" class="link">熱帯雨林の樹木変身譚シリーズ特設ページ</a> Special Thanks更新</dd>
+            <dd>2026.5.26 小説ページのレイアウトをリニューアルしました</dd>
             <dt>event:</dt>
             <dd>2026.5.4 <a href="https://bunfree.net/event/tokyo42/" target="_blank" rel="noopenner noreferrer">文学フリマ東京42</a>｜東京ビッグサイト 南1-2ホール（1F）	J-81 呼吸書房→<a href="https://c.bunfree.net/e/hRe" target="_blank" rel="noopenner noreferrer">Webカタログ</a>
             </dd>
             <dt>blog:</dt>
             <dd>
               {%- assign latestArticle = collections.article | reverse | first -%}
-              {{ latestArticle.data.date | date: "%Y.%m.%d" }} <a href="{{ latestArticle.url }}">{{ latestArticle.data.title }}</a>
+              {{ latestArticle.data.date | date: "%Y.%-m.%-d" }} <a href="{{ latestArticle.url }}">{{ latestArticle.data.title }}</a>
             </dd>
             {%- comment -%}
             <dd>2024.1.14 <a href="https://bunfree.net/event/kyoto08/" target="_blank" rel="noopenner noreferrer">文学フリマ京都8</a> 出店予定｜京都市勧業館みやこめっせ 1F 第二展示場 え-51 呼吸書房→<a href="https://c.bunfree.net/e/b5E" target="_blank" rel="noopenner noreferrer">Webカタログ</a></dd>

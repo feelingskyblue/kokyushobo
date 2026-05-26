@@ -128,12 +128,95 @@
       </div>
     </header>
     <main class="main">
-      
+      <script src="/assets/js/novel_tree.js" defer></script>
+<button id="novelNavBtn" class="novel__nav-btn" type="button">
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__line"></span>
+  <span class="btn__text">menu</span>
+</button>
+<span class="novel__nav-btn--info">
+  本文設定と目次を表示できます
+</span>
+<aside class="novel__nav">
+  <button id="modeChangeSubBtn" class="novel__shift-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 512 512" class="novel__shift-btn--sun">
+<g>
+	<path class="st0" d="M256,118.125c-76.156,0-137.875,61.719-137.875,137.875S179.844,393.875,256,393.875 S393.875,332.156,393.875,256S332.156,118.125,256,118.125z" fill="currentColor"></path>
+	<rect x="235.906" class="st0" width="40.156" height="77.297" fill="currentColor"></rect>
+	<rect x="235.906" y="434.703" class="st0" width="40.156" height="77.297" fill="currentColor"></rect>	
+	<rect x="63.657" y="82.229" transform="matrix(0.7071 0.7071 -0.7071 0.7071 102.3047 -42.376)" class="st0" width="77.296" height="40.15" fill="currentColor"></rect>
+	<polygon class="st0" points="368.156,396.547 422.828,451.219 451.219,422.813 396.563,368.156 	" fill="currentColor"></polygon>
+	<rect y="235.906" class="st0" width="77.281" height="40.156" fill="currentColor"></rect>
+	<polygon class="st0" points="434.688,235.922 434.688,276.078 512,276.063 512,235.906 	" fill="currentColor"></polygon>
+	<polygon class="st0" points="60.781,422.813 89.156,451.219 143.813,396.547 115.438,368.156 	" fill="currentColor"></polygon>
+	<polygon class="st0" points="451.219,89.156 422.813,60.781 368.156,115.438 396.563,143.844 	" fill="currentColor"></polygon>
+</g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 512 512" class="novel__shift-btn--moon">
+<g>
+	<path class="st0" d="M403.469,395.031c-129.203,0-233.938-104.75-233.938-233.953c0-62.438,24.5-119.125,64.375-161.078
+		C109.313,17.953,13.563,125.094,13.563,254.656C13.563,396.781,128.781,512,270.906,512c98.688,0,184.359-55.578,227.531-137.125
+		C469.406,387.781,437.297,395.031,403.469,395.031z" fill="currentColor"></path>
+</g>
+</svg></button>
+  <dl class="novel__nav-controller">
+    <div>
+      <dt>本文の文字サイズ</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文の文字サイズ">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="large"><span>大</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="medium"><span>中</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="small"><span>小</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>本文のフォント</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文のフォント">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="serif"><span>明朝体</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="sans-serif"><span>ゴシック体</span></button>
+      </dd>
+    </div>
+    <div>
+      <dt>文字組み</dt>
+      <dd class="novel__mode-btn-group" role="group" aria-label="文字組み">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="horizontal"><span>横組み</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="vertical"><span>縦組み</span></button>
+      </dd>
+    </div>
+  </dl>
+  
+      <hr>
+      <p class="heading font-serif">『十一月の春の庭』</p>
+      <ul class="novel__nav-series">
+        
+          <li><a href="/novel/door-again/">ありとあらゆる扉の先に</a></li>
+        
+          <li><a href="/novel/haruka/">死よりも遥かに柔く</a></li>
+        
+          <li><a href="/novel/reborn/">再生</a></li>
+        
+      </ul>
+    
+  
+  <hr>
+  <ul class="novel__nav-menu">
+    <li class="" data-menu="novel">
+      <a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説一覧TOPへ</span></a>
+    </li>
+    <li class="" data-menu="booklist">
+      <a href="/book" class="menu-item--parent">book-list<span class="font-serif">書籍情報</span></a>
+    </li>
+    <li data-menu="other"><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
+    <li data-menu="store"><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
+    <li><a href="/about">about<span class="font-serif">呼吸書房について</span></a></li>
+    <li><a href="/blog">blog<span class="font-serif">ブログ</span></a></li>
+    <li><a href="/contact">contact<span class="font-serif">お問合せ・ご感想</span></a></li>
+    <li><a href="/event">event<span class="font-serif">イベント出店情報</span></a></li>
+  </ul>
+</aside>
 <article class="novel font-serif">
   <header class="novel__header">
     <h1 class="novel__header-title">ありとあらゆる扉の先に</h1>
   </header>
-  
   <div class="novel__body"><p>人間は扉が好きだ。扉の向こうに物語を夢見る。輝かしい夏への扉、魔法の国に通じる衣装箪笥の扉、扉の先にあるかもしれない、此処とは異なるどこかの世界。そんなものは存在しないと分かっていても、夢を見ずにはいられない——いいや、違う、そんなものは存在しないと分かっているから、安心して物語を託せるのだ。もし、万が一、天文学的な確率だとしても、世界に存在する扉のどれかがランダムで異なる場所へ繋がってしまうとしたら、落ちついて風呂にも入れやしない。下着姿でくぐった脱衣所のドアが、真っ昼間のサン・マルコ広場に通じていたらどうする？<br>
 　そんな奇跡は起こらない。だから私は今日も、心安らかに自室のドアを開き、トイレに鍵を掛け、洗面所の古い扉を片足で押し開け、のんびりと出社の支度ができる。魔法の世界に繋がる扉がこの世界のどこにもないと知りながら生きてゆくのは、すこしばかり寂しいけれども。<br>
 　寝癖直しに手間取り、普段の時間から数分遅れで、玄関扉を開ける。何の変哲もないアパートメントドアを。私は靴箱の脇にある全身鏡に視線を向けていた。だから気づくのが一拍遅れた。十一月の朝にふさわしくない、灼熱の日差しと、砂塵が、ばっと吹き込んだ。<br>

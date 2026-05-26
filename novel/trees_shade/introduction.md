@@ -12,6 +12,7 @@ category:
 tags:
   - book-treesshade
   - recommend
+has_outline: true
 ---
 
 
