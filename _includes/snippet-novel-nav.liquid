@@ -65,6 +65,61 @@
         {% endif %}
       </ol>
     </div>
+  {% else %}
+    {%- for novel in collections.novel -%}
+      {%- if novel.data.tags contains 'book-paperplane' -%}
+        {% assign novels-paperplane = novels-paperplane | concat: novel %}
+      {%- elsif novel.data.tags contains 'book-eien' -%}
+        {% assign novels-eien = novels-eien | concat: novel %}
+      {%- elsif novel.data.tags contains 'book-dream' -%}
+        {% assign novels-dream = novels-dream| concat: novel %}
+      {%- elsif novel.data.tags contains 'book-november' -%}
+        {% assign novels-november = novels-november| concat: novel %}
+      {%- elsif novel.data.tags contains 'improvise' -%}
+        {% assign novels-improvise = novels-improvise | concat: novel %}
+      {%- endif -%}
+    {%- endfor -%}
+    {% if tags contains 'book-paperplane' %}
+      <hr>
+      <p class="heading font-serif">『紙飛行機に眠る月』</p>
+      <ul class="novel__nav-series">
+        {% for novel in novels-paperplane %}
+          <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% elsif tags contains 'book-eien' %}
+      <hr>
+      <p class="heading font-serif">『永遠の不在をめぐる』</p>
+      <ul class="novel__nav-series">
+        {% for novel in novels-eien %}
+          <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% elsif tags contains 'book-dream' %}
+      <hr>
+      <p class="heading font-serif">『彼らは唯の夢』</p>
+      <ul class="novel__nav-series">
+        {% for novel in novels-dream %}
+          <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% elsif tags contains 'book-november' %}
+      <hr>
+      <p class="heading font-serif">『十一月の春の庭』</p>
+      <ul class="novel__nav-series">
+        {% for novel in novels-november %}
+          <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% elsif tags contains 'improvise' %}
+      <hr>
+      <p class="heading font-serif">即興小説一覧</p>
+      <ul class="novel__nav-series">
+        {% for novel in novels-improvise %}
+          <li><a href="{{ novel.url }}">{{ novel.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endif %}
   <hr>
   <ul class="novel__nav-menu">

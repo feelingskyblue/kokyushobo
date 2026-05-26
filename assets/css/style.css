@@ -2638,6 +2638,9 @@ body.novelPage .novel__nav-menu a span {
   font-size: 0.8em;
   padding-inline-start: 0.5em;
 }
+body.novelPage .novel__nav-series {
+  line-height: 2;
+}
 body.novelPage .open ~ .novel__nav {
   right: 0;
   box-shadow: 0 0 2rem rgba(72, 66, 59, 0.15);
