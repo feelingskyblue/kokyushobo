@@ -2456,8 +2456,21 @@ body.novelPage {
 		right: 0;
 		box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
 	}
-	&.is-loaded .novel__nav-btn--info {
-		opacity: 0;
+	.novel__header, .novel__body, .novel__footer {
+		transition: opacity 0.5s ease-in-out;
+	}
+	&.is-loaded {
+		.novel__header, .novel__body, .novel__footer {
+			opacity: 1;
+		}
+		.novel__nav-btn--info {
+			opacity: 0;
+		}
+	}
+	&:not(.is-loaded) {
+		.novel__header, .novel__body, .novel__footer {
+			opacity: 0;
+		}
 	}
 }
 
@@ -2472,9 +2485,13 @@ body.novelPage {
 		min-height: calc(100lvh);
 		max-width: 100%;
 		margin: auto;
+		padding-inline-start: 5em;
+		padding-inline-end: 3em;
 		padding-block: 4em;
-		padding-inline: 4em;
 		scroll-behavior: smooth;
+		@media (min-width: $pc-width) {
+			padding-inline: 4em;
+		}
 		.novel__body.tree_is_light__body h3 {
 			text-align: left;
 			margin-block-end: 2em;
@@ -2483,6 +2500,17 @@ body.novelPage {
 			height: 100%;
 			max-height: 38em;
 			margin-inline: auto;
+			a {
+				border: none;
+				color: var(--keyColor);
+			}
+		}
+		.novel__form {
+			text-align: right;
+			.btn--small {
+				writing-mode: horizontal-tb;
+				margin: 0;
+			}
 		}
 	}
 	.novel__nav-btn {
