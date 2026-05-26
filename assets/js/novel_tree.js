@@ -40,8 +40,65 @@ for (let i = 0; i < smoothScrollTrigger.length; i++){
 }
 */
 
+function novelViewModeManager() {
+  const viewModeBtn = document.querySelectorAll('.novel__mode-btn');
+  
+  if (viewModeBtn) {
+    // LocalStorageから保存された閲覧モードを読み込む
+    const savedFontSize = localStorage.getItem('kokyushobo-novel-font-size'),
+          savedFontFamily = localStorage.getItem('kokyushobo-novel-font-family'),
+          savedTextLayout = localStorage.getItem('kokyushobo-novel-text-layout');
+
+    if (savedFontSize) {
+      document.documentElement.dataset.fontSize = savedFontSize;
+      document.querySelector(`.novel__mode-btn[data-font-size="${savedFontSize}"]`).classList.add('current');
+    } else {
+      document.documentElement.dataset.fontSize = 'medium';
+    }
+    if (savedFontFamily) {
+      document.documentElement.dataset.fontFamily = savedFontFamily;
+      document.querySelector(`.novel__mode-btn[data-font-family="${savedFontFamily}"]`).classList.add('current'); 
+    } else {
+      document.documentElement.dataset.fontFamily = 'serif';
+    }
+    if (savedTextLayout) {
+      document.documentElement.dataset.textLayout = savedTextLayout;
+      document.querySelector(`.novel__mode-btn[data-text-layout="${savedTextLayout}"]`).classList.add('current');
+    } else {
+      document.documentElement.dataset.textLayout = 'horizontal';
+    }
+
+    viewModeBtn.forEach((btn) => {
+      btn.addEventListener('click', () => {
+
+        btn.parentElement.querySelectorAll('.novel__mode-btn').forEach((siblingBtn) => {
+          siblingBtn.classList.remove('current');
+        });
+        btn.classList.add('current');
+
+        if (btn.dataset.fontSize) {
+          document.documentElement.dataset.fontSize = btn.dataset.fontSize;
+          localStorage.setItem('kokyushobo-novel-font-size', btn.dataset.fontSize);
+        }
+
+        if (btn.dataset.fontFamily) {
+          document.documentElement.dataset.fontFamily = btn.dataset.fontFamily;
+          localStorage.setItem('kokyushobo-novel-font-family', btn.dataset.fontFamily);
+        }
+
+        if (btn.dataset.textLayout) {
+          document.documentElement.dataset.textLayout = btn.dataset.textLayout;
+          localStorage.setItem('kokyushobo-novel-text-layout', btn.dataset.textLayout);
+        }
+        
+      });
+    });
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   novelAnker();
+  novelViewModeManager();
 })
 
 window.addEventListener('load', () => {

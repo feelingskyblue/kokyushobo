@@ -13,27 +13,31 @@ template: novelPage
   本文設定と目次を表示できます
 </span>
 <aside class="novel__nav">
+  <button id="modeChangeSubBtn" class="novel__shift-btn" type="button">
+    {%- render 'icon-sun', className: "novel__shift-btn--sun" -%}
+    {%- render 'icon-moon', className: "novel__shift-btn--moon" -%}
+  </button>
   <dl class="novel__nav-controller">
     <div>
       <dt>本文の文字サイズ</dt>
-      <dd>
-        <button type="button" class="btn btn--small btn--outlined"><span>大</span></button>
-        <button type="button" class="btn btn--small btn--outlined current"><span>中</span></button>
-        <button type="button" class="btn btn--small btn--outlined"><span>小</span></button>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文の文字サイズ">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="large"><span>大</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="medium"><span>中</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-size" data-font-size="small"><span>小</span></button>
       </dd>
     </div>
     <div>
       <dt>本文のフォント</dt>
-      <dd>
-        <button type="button" class="btn btn--small btn--outlined current"><span>明朝体</span></button>
-        <button type="button" class="btn btn--small btn--outlined"><span>ゴシック体</span></button>
+      <dd class="novel__mode-btn-group" role="group" aria-label="本文のフォント">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="serif"><span>明朝体</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="font-family" data-font-family="sans-serif"><span>ゴシック体</span></button>
       </dd>
     </div>
     <div>
       <dt>文字組み</dt>
-      <dd>
-        <button type="button" class="btn btn--small btn--outlined current"><span>横組み</span></button>
-        <button type="button" class="btn btn--small btn--outlined"><span>縦組み</span></button>
+      <dd class="novel__mode-btn-group" role="group" aria-label="文字組み">
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="horizontal"><span>横組み</span></button>
+        <button type="button" class="btn btn--small btn--outlined novel__mode-btn" aria-control="text-layout" data-text-layout="vertical"><span>縦組み</span></button>
       </dd>
     </div>
   </dl>

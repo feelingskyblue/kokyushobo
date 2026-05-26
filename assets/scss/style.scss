@@ -2171,48 +2171,6 @@ body {
 			font-size: 0.85em;
 		}
 	}
-	&__nav {
-		.heading {
-			font-weight: normal;
-			font-size: 0.9em;
-			margin-bottom: 1rem;
-		}
-		&-list {
-			line-height: 2;
-			.index-tree-1 {	
-			}
-			.index-tree-2 {
-				margin-left: 0em;
-			}
-			.index-tree-3 {
-				margin-left: 2.5em;
-			}
-			a {
-				border-bottom: none;
-			}
-		}
-		&-controller {
-			@include flex;
-			flex-direction: column;
-			row-gap: 1.6rem;
-			font-size: 0.9em;
-			margin-top: 4rem;
-			@media (max-width: $sp-width) {
-				margin-top: 2rem;
-			}
-			.btn {
-				height: auto;
-				line-height: 1;
-				padding: 1rem;
-				&.current {
-					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
-				}
-			}
-			dt {
-				margin-bottom: 0.5rem;
-			}
-		}
-	}
 	&__body {
 		letter-spacing: 0;
 		h1, h2, h3, h4, h5, h6 {
@@ -2294,83 +2252,17 @@ body {
   }
 }
 
-// 縦書き設定
 body.novelPage {
 	.header {
 		height: 5rem;
 		.logo__image {
 			width: 8rem;
 		}
+		.page-width {
+			max-width: initial;
+		}
 		&__shift-btn {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 1rem;
-			position: absolute;
-			top: 1.2rem;
-			right: 1.2rem;
-			border: none;
-			background: transparent;
-			box-shadow: none;
-			padding: 1rem;
-			z-index: 31;
-			&::before {
-				@media (min-width: $pc-width) {
-					content: "";
-					position: absolute;
-					bottom: -8px;
-					right: 50%;
-					transform: translateX(-50%);
-					opacity: 0;
-					transition: opacity 0.4s ease-in-out;
-					background-color: var(--keyColor);
-					height: calc(tan(60deg) * 10px / 2);
-					width: 10px;
-					clip-path: polygon(50% 0, 100% 100%, 0 100%);
-				}
-				@media (max-width: $sp-width) {
-					display: none;
-				}
-			}
-			&::after {
-				display: block;
-				content: "背景色を変更する";
-				white-space: nowrap;
-				font-size: 1rem;
-				line-height: 1;
-				@media (min-width: $pc-width) {
-					color: #ffffff;
-					position: absolute;
-					bottom: -3rem;
-					right: 0;
-					opacity: 0;
-					transition: opacity 0.4s ease-in-out;
-					background-color: var(--keyColor);
-					padding: 7px 5px;
-					box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
-				}
-			}
-			&:hover {
-				&::after, &::before {
-					opacity: 1;
-				}
-			}
-			@media (max-width: $sp-width) {
-				right: initial;
-				left: 1.8rem;
-				top: 0.8rem;
-				gap: 0.7rem;
-				svg {
-					width: 1.6rem;
-					height: 1.6rem;
-				}
-			}
-			&--sun {
-				opacity: 0.8;
-			}
-			&--moon {
-				opacity: 0.2;
-			}
+			display: none;
 		}
 		.mobile__nav-btn {
 			display: none !important;
@@ -2380,12 +2272,42 @@ body.novelPage {
 		}
 	}
 	.main {
-		//padding: 0; 縦書きでは0にするが横書きでは不要
 		min-height: initial;
+	}
+	.novel__shift-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		left: 1.8rem;
+		top: 0.8rem;
+		gap: 0.7rem;
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		padding: 1rem;
+		&::after {
+			display: block;
+			content: "背景色を変更する";
+			white-space: nowrap;
+			font-size: 1rem;
+			line-height: 1;
+		}
+		svg {
+			width: 1.6rem;
+			height: 1.6rem;
+		}
+		&--sun {
+			opacity: 0.8;
+		}
+		&--moon {
+			opacity: 0.2;
+		}
 	}
 	.novel__nav-btn {
 		display: block;
-		position: fixed; //縦書きページならabsoluteでよい
+		position: fixed;
 		top: 0.5rem;
 		right: 1.2rem;
 		border: none;
@@ -2393,15 +2315,16 @@ body.novelPage {
 		box-shadow: none;
 		padding: 1rem;
 		z-index: 31;
+		opacity: 0.5;
 		span {
 			font-size: 1rem;
 			line-height: 1;
 			display: block;
-			color: var(--keyColor);
+			color: var(--textColor);
 			transition: transform 0.4s ease;
 			&.btn__line {
 				height: 1px;
-				background-color: rgba($color: var(--keyColorRgb), $alpha: 0.5);
+				background-color: rgba($color: var(--textColorRgb), $alpha: 0.5);
 				margin-bottom: 0.3rem;
 				&:nth-child(2) {
 					width: 1.8rem;
@@ -2463,14 +2386,52 @@ body.novelPage {
 		position: fixed;
 		margin: 0;
 		width: fit-content;
+		min-width: 240px;
 		height: 100%;
 		overflow: scroll;
 		background-color: rgba($color: var(--bgColorRgb), $alpha: 1);
 		z-index: 30;
 		top: 0;
 		right: -100vw;
-		transition: all 0.5s ease-in-out;
+		transition: right 0.5s ease-in-out;
 		padding-inline: 3rem;
+		font-size: 0.9em;
+		.heading {
+			font-weight: normal;
+			margin-bottom: 1rem;
+		}
+		&-list {
+			line-height: 2;
+			.index-tree-1 {	
+			}
+			.index-tree-2 {
+				margin-left: 0em;
+			}
+			.index-tree-3 {
+				margin-left: 2.5em;
+			}
+			a {
+				border-bottom: none;
+			}
+		}
+		&-controller {
+			@include flex;
+			flex-direction: column;
+			row-gap: 1.6rem;
+			font-size: 0.9em;
+			margin-top: 6rem;
+			.btn {
+				height: auto;
+				line-height: 1;
+				padding: 1rem;
+				&.current {
+					background-color: rgba($color: var(--keyColorRgb), $alpha: 0.2);
+				}
+			}
+			dt {
+				margin-bottom: 0.5rem;
+			}
+		}
 	}
 	.open ~ .novel__nav {
 		right: 0;
@@ -2480,23 +2441,49 @@ body.novelPage {
 		opacity: 0;
 	}
 }
-.novel {
-	writing-mode: vertical-rl;
-  overflow: scroll;
-	min-height: calc(100lvh);
-  max-width: 100%;
-  margin: auto;
-  padding-block: 4em;
-	padding-inline: 2em;
-	scroll-behavior: smooth;
-  .novel__body.tree_is_light__body h3 {
-    text-align: left;
-    margin-block-end: 2em;
-  }
-	.novel__header, .novel__body, .novel__footer {
-		height: 100%;
-	  max-height: 38em;
-		margin-inline: auto;
+
+// 縦書き設定
+[data-text-layout="vertical"] body.novelPage {
+	.main {
+		padding: 0;
+	}
+	.novel {
+		writing-mode: vertical-rl;
+		overflow: scroll;
+		min-height: calc(100lvh);
+		max-width: 100%;
+		margin: auto;
+		padding-block: 4em;
+		padding-inline: 4em;
+		scroll-behavior: smooth;
+		.novel__body.tree_is_light__body h3 {
+			text-align: left;
+			margin-block-end: 2em;
+		}
+		.novel__header, .novel__body, .novel__footer {
+			height: 100%;
+			max-height: 38em;
+			margin-inline: auto;
+		}
+	}
+	.novel__nav-btn {
+		position: absolute;
+	}
+}
+// レイアウト設定
+[data-font-family="sans-serif"] {	
+	.novel, .novel__body {
+		font-family: "Times New Roman", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "YuGothic", "Yu Gothic Medium", "Yu Gothic Regular", Meiryo, sans-serif !important;
+	}
+}
+[data-font-size="large"] {
+	.novel {
+		font-size: 1.8rem;
+	}
+}
+[data-font-size="small"] {
+	.novel {
+		font-size: 1.5rem;
 	}
 }
 
