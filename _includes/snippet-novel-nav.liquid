@@ -36,4 +36,49 @@
       </dd>
     </div>
   </dl>
+  {% if has_outline %}
+    <hr>
+    <div class="novel__nav-index">
+      <p class="heading font-serif">目次</p>
+      <ol class="novel__nav-list">
+        {% if tags contains 'book-treeslight' %}
+          <li class="index-tree-1"><a href="#sectionMain1">introduction</a></li>
+          <li class="index-tree-2"><a href="#section1">第一章　雨の歌う町</a></li>
+          <li class="index-tree-3"><a href="#sectionSub1">1　いつか帰る場所</a></li>
+          <li class="index-tree-3"><a href="#sectionSub2">2　相槌と挨拶</a></li>
+          <li class="index-tree-2"><a href="#section2">第二章　あなたは孤独ではない</a></li>
+          <li class="index-tree-3"><a href="#sectionSub3">3　鳥市場</a></li>
+          <li class="index-tree-3"><a href="#sectionSub4">4　雲と煙の兄弟</a></li>
+          <li class="index-tree-3"><a href="#sectionSub5">5　スコールと木々のダンス</a></li>
+        {% elsif tags contains 'book-treesshade' %}
+          <li class="index-tree-1"><a href="#sectionMain1">introduction</a></li>
+          <li class="index-tree-2"><a href="#sectionMain2">第一部　彼女について</a></li>
+          <li class="index-tree-3"><a href="#section1">1　トゥーリ</a></li>
+          <li class="index-tree-3"><a href="#section2">（幕間）</a></li>
+          <li class="index-tree-3"><a href="#section3">2　キオ</a></li>
+          <li class="index-tree-3"><a href="#section4">（幕間）</a></li>
+        {% elsif tags contains 'book-bride' %}
+          <li class="index-tree-1"><a href="#sectionMain1">名もなき竜の宮</a></li>
+          <li class="index-tree-1"><a href="#sectionMain2">竜の花嫁</a></li>
+          <li class="index-tree-3"><a href="#section1">第一章　嫁入りの日</a></li>
+          <li class="index-tree-3"><a href="#section2">第二章　金の瞳、遠雷の声</a></li>
+        {% endif %}
+      </ol>
+    </div>
+  {% endif %}
+  <hr>
+  <ul class="novel__nav-menu">
+    <li class="" data-menu="novel">
+      <a href="/novel" class="menu-item--parent">web-novel<span class="font-serif">小説一覧TOPへ</span></a>
+    </li>
+    <li class="" data-menu="booklist">
+      <a href="/book" class="menu-item--parent">book-list<span class="font-serif">書籍情報</span></a>
+    </li>
+    <li data-menu="other"><a href="/other" class="menu-item--parent">other-works<span class="font-serif">その他の作品</span></a></li>
+    <li data-menu="store"><a href="/store" class="menu-item--parent">online-store<span class="font-serif">書籍販売</span></a></li>
+    <li><a href="/about">about<span class="font-serif">呼吸書房について</span></a></li>
+    <li><a href="/blog">blog<span class="font-serif">ブログ</span></a></li>
+    <li><a href="/contact">contact<span class="font-serif">お問合せ・ご感想</span></a></li>
+    <li><a href="/event">event<span class="font-serif">イベント出店情報</span></a></li>
+  </ul>
 </aside>

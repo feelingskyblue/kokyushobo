@@ -1356,6 +1356,7 @@ body:not(.homePage) .main {
   flex-wrap: nowrap;
   flex-wrap: wrap;
   max-width: 50%;
+  justify-content: flex-end;
 }
 @media (max-width: 767px) {
   .novel-list .novel-category {
@@ -1363,7 +1364,6 @@ body:not(.homePage) .main {
     position: relative;
     top: inherit;
     right: inherit;
-    justify-content: flex-end;
     margin-top: 0.3rem;
   }
 }
@@ -2500,7 +2500,6 @@ body.novelPage .novel__nav-btn {
   box-shadow: none;
   padding: 1rem;
   z-index: 31;
-  opacity: 0.5;
 }
 body.novelPage .novel__nav-btn span {
   font-size: 1rem;
@@ -2516,6 +2515,9 @@ body.novelPage .novel__nav-btn span.btn__line {
 }
 body.novelPage .novel__nav-btn span.btn__line:nth-child(2) {
   width: 1.8rem;
+}
+body.novelPage .novel__nav-btn:not(.open) {
+  opacity: 0.5;
 }
 body.novelPage .novel__nav-btn.open {
   position: fixed;
@@ -2578,13 +2580,14 @@ body.novelPage .novel__nav {
   width: fit-content;
   min-width: 240px;
   height: 100%;
+  padding-block: 6rem;
+  padding-inline: 3rem;
   overflow: scroll;
   background-color: rgba(var(--bgColorRgb), 1);
   z-index: 30;
   top: 0;
   right: -100vw;
   transition: right 0.5s ease-in-out;
-  padding-inline: 3rem;
   font-size: 0.9em;
 }
 body.novelPage .novel__nav .heading {
@@ -2601,7 +2604,7 @@ body.novelPage .novel__nav-list .index-tree-3 {
   margin-left: 2.5em;
 }
 body.novelPage .novel__nav-list a {
-  border-bottom: none;
+  border: none;
 }
 body.novelPage .novel__nav-controller {
   display: flex;
@@ -2609,7 +2612,6 @@ body.novelPage .novel__nav-controller {
   flex-direction: column;
   row-gap: 1.6rem;
   font-size: 0.9em;
-  margin-top: 6rem;
 }
 body.novelPage .novel__nav-controller .btn {
   height: auto;
@@ -2621,6 +2623,20 @@ body.novelPage .novel__nav-controller .btn.current {
 }
 body.novelPage .novel__nav-controller dt {
   margin-bottom: 0.5rem;
+}
+body.novelPage .novel__nav-menu {
+  line-height: 2;
+}
+body.novelPage .novel__nav-menu a {
+  display: block;
+  border: none;
+  color: var(--keyColor);
+  padding-block: 0.5rem;
+}
+body.novelPage .novel__nav-menu a span {
+  color: var(--textColor);
+  font-size: 0.8em;
+  padding-inline-start: 0.5em;
 }
 body.novelPage .open ~ .novel__nav {
   right: 0;

@@ -1230,12 +1230,12 @@ body {
 		@include flex;
 		flex-wrap: wrap;
 		max-width: 50%;
+		justify-content: flex-end;
 		@media (max-width: $sp-width) {
 			max-width: inherit;
 			position: relative;
 			top: inherit;
 			right: inherit;
-			justify-content: flex-end;
 			margin-top: 0.3rem;
 		}
 		li {
@@ -2315,7 +2315,6 @@ body.novelPage {
 		box-shadow: none;
 		padding: 1rem;
 		z-index: 31;
-		opacity: 0.5;
 		span {
 			font-size: 1rem;
 			line-height: 1;
@@ -2330,6 +2329,9 @@ body.novelPage {
 					width: 1.8rem;
 				}
 			}
+		}
+		&:not(.open) {
+			opacity: 0.5;
 		}
 		&.open {
 			position: fixed;
@@ -2388,13 +2390,14 @@ body.novelPage {
 		width: fit-content;
 		min-width: 240px;
 		height: 100%;
+		padding-block: 6rem;
+		padding-inline: 3rem;
 		overflow: scroll;
 		background-color: rgba($color: var(--bgColorRgb), $alpha: 1);
 		z-index: 30;
 		top: 0;
 		right: -100vw;
 		transition: right 0.5s ease-in-out;
-		padding-inline: 3rem;
 		font-size: 0.9em;
 		.heading {
 			font-weight: normal;
@@ -2411,7 +2414,7 @@ body.novelPage {
 				margin-left: 2.5em;
 			}
 			a {
-				border-bottom: none;
+				border: none;
 			}
 		}
 		&-controller {
@@ -2419,7 +2422,6 @@ body.novelPage {
 			flex-direction: column;
 			row-gap: 1.6rem;
 			font-size: 0.9em;
-			margin-top: 6rem;
 			.btn {
 				height: auto;
 				line-height: 1;
@@ -2430,6 +2432,20 @@ body.novelPage {
 			}
 			dt {
 				margin-bottom: 0.5rem;
+			}
+		}
+		&-menu {
+			line-height: 2;
+			a {
+				display: block;
+				border: none;
+				color: var(--keyColor);
+				padding-block: 0.5rem;
+				span {
+					color: var(--textColor);
+					font-size: 0.8em;
+					padding-inline-start: 0.5em;
+				}
 			}
 		}
 	}
