@@ -2363,9 +2363,8 @@ body.novelPage {
 		line-height: 1;
 		color: #ffffff;
 		background-color: var(--keyColor);
-		opacity: 0.9;
 		transition: opacity 1s ease-in-out;
-		transition-delay: 4s;
+		transition-delay: 3s;
 		@media (max-width: $sp-width) {
 			padding: 0.5rem;
 		}
@@ -2456,11 +2455,11 @@ body.novelPage {
 		right: 0;
 		box-shadow: 0 0 2rem rgba($color: #48423b, $alpha: 0.15);
 	}
-	.novel__header, .novel__body, .novel__footer {
+	.novel {
 		transition: opacity 0.5s ease-in-out;
 	}
 	&.is-loaded {
-		.novel__header, .novel__body, .novel__footer {
+		.novel {
 			opacity: 1;
 		}
 		.novel__nav-btn--info {
@@ -2468,7 +2467,7 @@ body.novelPage {
 		}
 	}
 	&:not(.is-loaded) {
-		.novel__header, .novel__body, .novel__footer {
+		.novel {
 			opacity: 0;
 		}
 	}
