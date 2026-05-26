@@ -2480,7 +2480,7 @@ body.novelPage {
 	.main {
 		padding: 0;
 		@media (max-width: $sp-width) {
-			padding-block: 4em;
+			padding-block-start: 4em;
 		}
 	}
 	.novel {

@@ -2663,7 +2663,7 @@ body.novelPage:not(.is-loaded) .novel__header, body.novelPage:not(.is-loaded) .n
 }
 @media (max-width: 767px) {
   [data-text-layout=vertical] body.novelPage .main {
-    padding-block: 4em;
+    padding-block-start: 4em;
   }
 }
 [data-text-layout=vertical] body.novelPage .novel {

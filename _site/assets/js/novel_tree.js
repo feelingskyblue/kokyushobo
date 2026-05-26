@@ -54,18 +54,21 @@ function novelViewModeManager() {
       document.querySelector(`.novel__mode-btn[data-font-size="${savedFontSize}"]`).classList.add('current');
     } else {
       document.documentElement.dataset.fontSize = 'medium';
+      document.querySelector(`.novel__mode-btn[data-font-size="medium"]`).classList.add('current');
     }
     if (savedFontFamily) {
       document.documentElement.dataset.fontFamily = savedFontFamily;
       document.querySelector(`.novel__mode-btn[data-font-family="${savedFontFamily}"]`).classList.add('current'); 
     } else {
       document.documentElement.dataset.fontFamily = 'serif';
+      document.querySelector(`.novel__mode-btn[data-font-family="serif"]`).classList.add('current');
     }
     if (savedTextLayout) {
       document.documentElement.dataset.textLayout = savedTextLayout;
       document.querySelector(`.novel__mode-btn[data-text-layout="${savedTextLayout}"]`).classList.add('current');
     } else {
       document.documentElement.dataset.textLayout = 'horizontal';
+      document.querySelector(`.novel__mode-btn[data-text-layout="horizontal"]`).classList.add('current');
     }
 
     viewModeBtn.forEach((btn) => {
