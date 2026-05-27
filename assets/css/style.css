@@ -1201,11 +1201,6 @@ body:not(.homePage) .main {
   opacity: 0.6;
   line-height: 1.5;
 }
-@media (max-width: 767px) {
-  .novel-list__section .novel-list__description {
-    margin-bottom: 1rem;
-  }
-}
 .novel-list__section::before {
   width: 20rem;
   height: 1rem;
@@ -1286,6 +1281,26 @@ body:not(.homePage) .main {
 .novel-list__section.is-shade .novel-list__copy {
   color: #295377;
 }
+.novel-list__section .btn {
+  font-size: 0.8em;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+@media (max-width: 767px) {
+  .novel-list__section .btn {
+    top: inherit;
+    right: inherit;
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
+.novel-list__section .btn:not(:hover) span {
+  opacity: 0.7;
+}
 .novel-list__header {
   width: 30%;
   min-width: 30rem;
@@ -1311,25 +1326,6 @@ body:not(.homePage) .main {
     padding-right: 0;
     border-right: none;
   }
-}
-.novel-list__header .btn {
-  font-size: 0.8em;
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-}
-@media (max-width: 767px) {
-  .novel-list__header .btn {
-    top: inherit;
-    right: inherit;
-    position: relative;
-    width: 100%;
-    height: 3rem;
-    margin-bottom: 1rem;
-  }
-}
-.novel-list__header .btn:not(:hover) span {
-  opacity: 0.7;
 }
 .novel-list__title {
   font-size: 1.1em;
@@ -2802,7 +2798,7 @@ body.novelPage:not(.is-loaded) .novel {
     margin: 0;
   }
   .novel-list__page .novel-list__description {
-    margin-block-end: 1.4rem;
+    margin-block-end: 0.5rem;
   }
   .novel-list__page .novel-list__nav-list:not(:last-child) {
     margin-bottom: 2rem;
