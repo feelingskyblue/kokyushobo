@@ -2142,6 +2142,15 @@ body:not(.homePage) .main {
 .blog-article__body img:not(:last-child) {
   margin-bottom: 1.5em;
 }
+.blog-article__body .img__border {
+  border: 1px solid rgba(var(--keyColorRgb), 0.1);
+}
+.blog-article__body figcaption {
+  opacity: 0.8;
+  font-size: 0.9em;
+  margin-top: -1em;
+  text-align: center;
+}
 .blog-article__body .img__column-wrapper {
   display: flex;
   flex-wrap: wrap;
