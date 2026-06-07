@@ -1963,6 +1963,15 @@ body {
 		img:not(:last-child) {
 			margin-bottom: 1.5em;
 		}
+		.img__border {
+			border: 1px solid rgba($color: var(--keyColorRgb), $alpha: 0.1);
+		}
+		figcaption {
+			opacity: 0.8;
+			font-size: 0.9em;
+			margin-top: -1em;
+			text-align: center;
+		}
 		.img__column-wrapper {
 			display: flex;
 			flex-wrap: wrap;
