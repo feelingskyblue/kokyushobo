@@ -295,6 +295,7 @@ body {
     .nature-tab {
       margin-bottom: 2rem;
       @media (min-width: $pc-width) {
+        width: 110px;
         position: sticky;
         top: 30px;
       }
@@ -307,6 +308,7 @@ body {
       &__target {
         @media (min-width: $pc-width) {
           display: flex;
+          column-gap: 2rem;
         }
       }
       &__wrapper {
@@ -338,7 +340,9 @@ body {
           }
         }
         &:last-child {
-          padding-right: 3rem;
+          @media (max-width: $sp-width) {
+            padding-right: 3rem;
+          }
         }
       }
     }
@@ -365,6 +369,24 @@ body {
       &__detail {
         @media (max-width: $sp-width) {
           max-width: inherit;
+        }
+        blockquote {
+      	  //font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+          span {
+            display: block;
+            text-align: right;
+            font-size: 0.8em;
+          }
+        }
+        .trees-special__character {
+          summary {
+            text-decoration: underline;
+            text-underline-offset: 25%;
+            text-decoration-thickness: 1px;
+          }
+          & > div {
+            padding-block-start: 1rem;
+          }
         }
       }
     }

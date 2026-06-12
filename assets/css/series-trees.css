@@ -289,6 +289,7 @@ body .footer {
 }
 @media (min-width: 768px) {
   .trees-special__nature .nature-tab {
+    width: 110px;
     position: sticky;
     top: 30px;
   }
@@ -306,6 +307,8 @@ body .footer {
 @media (min-width: 768px) {
   .trees-special__nature .nature-tab__target {
     display: flex;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 .trees-special__nature .nature-tab__wrapper {
@@ -337,8 +340,10 @@ body .footer {
 .trees-special__nature .nature-tab__item button[aria-selected=true] {
   border-color: var(--keyColor);
 }
-.trees-special__nature .nature-tab__item:last-child {
-  padding-right: 3rem;
+@media (max-width: 767px) {
+  .trees-special__nature .nature-tab__item:last-child {
+    padding-right: 3rem;
+  }
 }
 .trees-special__nature .nature-info__header {
   display: flex;
@@ -364,6 +369,19 @@ body .footer {
   .trees-special__nature .nature-info__detail {
     max-width: inherit;
   }
+}
+.trees-special__nature .nature-info__detail blockquote span {
+  display: block;
+  text-align: right;
+  font-size: 0.8em;
+}
+.trees-special__nature .nature-info__detail .trees-special__character summary {
+  text-decoration: underline;
+  text-underline-offset: 25%;
+  text-decoration-thickness: 1px;
+}
+.trees-special__nature .nature-info__detail .trees-special__character > div {
+  padding-block-start: 1rem;
 }
 .trees-special__nature .trees-special__back {
   text-align: center;
