@@ -158,6 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleOpen(novelNavBtn);
 
   tab('.book-tab__target');
+  tab('.nature-tab__target');
 
   randomShow('randomNovel', '.random-novel__item');
   randomShow('homeFirstView', '.home__firstview-item');
