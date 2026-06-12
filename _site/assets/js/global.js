@@ -93,6 +93,16 @@ function tab(wrapperClass) {
       activeContent?.setAttribute('aria-hidden', 'true');
       element.querySelector(`#${targetPanel || 'not-supplied'}`)?.setAttribute('aria-hidden', 'false');
       event.preventDefault();
+
+      if(wrapperClass === '.nature-tab__target') {
+        const targetElement = document.getElementById(targetPanel);
+        const rect = targetElement.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const target = rect + offset - 50;
+        window.scrollTo({
+          top: target
+        });
+      }
     };
 
     // Tab click EventListener

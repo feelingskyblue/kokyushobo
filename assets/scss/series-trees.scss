@@ -367,6 +367,11 @@ body {
         position: relative;
         flex: none;
         @media (max-width: $sp-width) {
+          position: sticky;
+          top: 0px;
+          padding-top: 1rem;
+          background-color: rgba(var(--bgColorRgb), 0.9);
+          z-index: 3;
           &::after {
             display: block;
             content: "";

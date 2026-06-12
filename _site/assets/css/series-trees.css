@@ -373,6 +373,13 @@ body .footer {
   flex: none;
 }
 @media (max-width: 767px) {
+  .trees-special__nature .nature-tab__wrapper {
+    position: sticky;
+    top: 0px;
+    padding-top: 1rem;
+    background-color: rgba(var(--bgColorRgb), 0.9);
+    z-index: 3;
+  }
   .trees-special__nature .nature-tab__wrapper::after {
     display: block;
     content: "";
