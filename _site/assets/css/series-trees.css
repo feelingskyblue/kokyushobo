@@ -170,6 +170,16 @@ body .footer {
 .trees-special__subsection .heading {
   margin-bottom: 1rem;
 }
+.trees-special__subsection .novel__form .form textarea {
+  flex-grow: 1;
+  opacity: 1;
+  height: 5em;
+  background-color: #fefbf9;
+  opacity: 0.6;
+}
+.trees-special__subsection .novel__form .form textarea:focus, .trees-special__subsection .novel__form .form textarea:focus-within, .trees-special__subsection .novel__form .form textarea:focus-visible {
+  opacity: 1;
+}
 .trees-special__story {
   margin-bottom: 4rem;
 }
@@ -446,6 +456,13 @@ body .footer {
 }
 .trees-special__nature .nature-info__detail .trees-special__character > div {
   padding-block-start: 1rem;
+}
+.trees-special__nature .trees-special__subsection + hr {
+  margin-block-start: 8rem;
+}
+.trees-special__nature .trees-special__subsection + hr + .trees-special__subsection {
+  text-align: center;
+  font-size: 0.9em;
 }
 .trees-special__nature .trees-special__back {
   text-align: center;
