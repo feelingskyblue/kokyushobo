@@ -2436,6 +2436,27 @@ body:not(.homePage) .main {
 }
 .novel__form .form {
   max-width: initial;
+  display: flex;
+  justify-content: center;
+}
+.novel__form .form textarea {
+  height: auto;
+  border: 1px solid rgba(var(--keyColorRgb), 0.3);
+  border-right: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  transition: all 0.7s ease;
+  width: 50%;
+  opacity: 0.8;
+}
+.novel__form .form textarea:focus, .novel__form .form textarea:focus-within, .novel__form .form textarea:focus-visible {
+  flex-grow: 1;
+  opacity: 1;
+  height: 5em;
+}
+.novel__form .form .btn {
+  margin: 0;
+  height: 100%;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 @supports (interpolate-size: allow-keywords) {
@@ -2695,10 +2716,24 @@ body.novelPage:not(.is-loaded) .novel {
 }
 [data-text-layout=vertical] body.novelPage .novel .novel__form {
   text-align: right;
+  margin-inline-start: auto;
 }
-[data-text-layout=vertical] body.novelPage .novel .novel__form .btn--small {
-  writing-mode: horizontal-tb;
-  margin: 0;
+[data-text-layout=vertical] body.novelPage .novel .novel__form .form {
+  justify-content: flex-end;
+}
+[data-text-layout=vertical] body.novelPage .novel .novel__form .form textarea {
+  flex-grow: 1;
+  border: 1px solid rgba(var(--keyColorRgb), 0.3);
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: auto;
+}
+[data-text-layout=vertical] body.novelPage .novel .novel__form .form textarea:focus, [data-text-layout=vertical] body.novelPage .novel .novel__form .form textarea:focus-within, [data-text-layout=vertical] body.novelPage .novel .novel__form .form textarea:focus-visible {
+  width: 7em;
+}
+[data-text-layout=vertical] body.novelPage .novel .novel__form .form .btn {
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem;
+  width: 100%;
 }
 [data-text-layout=vertical] body.novelPage .novel__nav-btn {
   position: absolute;
