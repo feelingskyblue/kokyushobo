@@ -407,6 +407,8 @@ body .footer {
 }
 .trees-special__nature .nature-tab__item button {
   font-size: 14px;
+  line-height: 1.3;
+  text-align: left;
   border: none;
   border-bottom: 1px solid transparent;
   background: transparent;
