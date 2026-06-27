@@ -175,6 +175,7 @@ body .footer {
   opacity: 1;
   height: 5em;
   background-color: #fefbf9;
+  color: #0E2741;
   opacity: 0.6;
 }
 .trees-special__subsection .novel__form .form textarea:focus, .trees-special__subsection .novel__form .form textarea:focus-within, .trees-special__subsection .novel__form .form textarea:focus-visible {
@@ -438,6 +439,11 @@ body .footer {
   font-size: 13px;
   text-align: center;
 }
+@media (max-width: 767px) {
+  .trees-special__nature .nature-info__figure figcaption {
+    text-align: left;
+  }
+}
 .trees-special__nature .nature-info__title {
   font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
@@ -445,6 +451,9 @@ body .footer {
   .trees-special__nature .nature-info__detail {
     max-width: inherit;
   }
+}
+.trees-special__nature .nature-info__detail iframe {
+  max-width: 100%;
 }
 .trees-special__nature .nature-info__detail blockquote span {
   display: block;
@@ -465,6 +474,11 @@ body .footer {
 .trees-special__nature .trees-special__subsection + hr + .trees-special__subsection {
   text-align: center;
   font-size: 0.9em;
+}
+@media (max-width: 767px) {
+  .trees-special__nature .trees-special__subsection + hr + .trees-special__subsection {
+    text-align: left;
+  }
 }
 .trees-special__nature .trees-special__back {
   text-align: center;

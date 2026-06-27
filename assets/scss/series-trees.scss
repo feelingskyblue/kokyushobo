@@ -184,6 +184,7 @@ body {
 				opacity: 1;
         height: 5em;
         background-color: #fefbf9;
+        color: #0E2741;
         opacity: 0.6;
 				&:focus, &:focus-within, &:focus-visible {
 					opacity: 1;
@@ -432,6 +433,9 @@ body {
           margin-top: 0.5rem;
           font-size: 13px;
           text-align: center;
+          @media (max-width: $sp-width) {
+            text-align: left;
+          }
         }
       }
       &__title {
@@ -440,6 +444,9 @@ body {
       &__detail {
         @media (max-width: $sp-width) {
           max-width: inherit;
+        }
+        iframe {
+          max-width: 100%;
         }
         blockquote {
       	  //font-family: Cochin, "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -466,6 +473,9 @@ body {
       & + .trees-special__subsection {
         text-align: center;
         font-size: 0.9em;
+        @media (max-width: $sp-width) {
+          text-align: left;
+        }
       }
     }
     .trees-special__back {

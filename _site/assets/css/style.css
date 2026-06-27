@@ -2439,6 +2439,11 @@ body:not(.homePage) .main {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .novel__form .form {
+    flex-direction: column;
+  }
+}
 .novel__form .form textarea {
   height: auto;
   border: 1px solid rgba(var(--keyColorRgb), 0.3);
@@ -2448,15 +2453,46 @@ body:not(.homePage) .main {
   width: 50%;
   opacity: 0.8;
 }
+@media (max-width: 767px) {
+  .novel__form .form textarea {
+    width: 100%;
+    border: 1px solid rgba(var(--keyColorRgb), 0.3);
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: none;
+  }
+}
 .novel__form .form textarea:focus, .novel__form .form textarea:focus-within, .novel__form .form textarea:focus-visible {
   flex-grow: 1;
   opacity: 1;
   height: 5em;
 }
+.novel__form .form textarea:focus::-moz-placeholder, .novel__form .form textarea:focus-within::-moz-placeholder, .novel__form .form textarea:focus-visible::-moz-placeholder {
+  opacity: 0;
+}
+.novel__form .form textarea:focus::placeholder, .novel__form .form textarea:focus-within::placeholder, .novel__form .form textarea:focus-visible::placeholder {
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  .novel__form .form textarea::-moz-placeholder {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .novel__form .form textarea::placeholder {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+}
 .novel__form .form .btn {
   margin: 0;
   height: 100%;
   border-radius: 0 0.5rem 0.5rem 0;
+}
+@media (max-width: 767px) {
+  .novel__form .form .btn {
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.5rem 0;
+  }
 }
 
 @supports (interpolate-size: allow-keywords) {
@@ -2720,6 +2756,11 @@ body.novelPage:not(.is-loaded) .novel {
 }
 [data-text-layout=vertical] body.novelPage .novel .novel__form .form {
   justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  [data-text-layout=vertical] body.novelPage .novel .novel__form .form {
+    flex-direction: initial;
+  }
 }
 [data-text-layout=vertical] body.novelPage .novel .novel__form .form textarea {
   flex-grow: 1;
