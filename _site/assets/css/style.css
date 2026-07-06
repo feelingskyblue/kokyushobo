@@ -1065,6 +1065,23 @@ body:not(.homePage) .main {
   background-color: rgba(72, 66, 59, 0.2);
   aspect-ratio: 1/1.41;
 }
+.book-info__page-wrapper .book-info__image--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.book-info__page-wrapper .book-info__image--grid img {
+  border: 1px solid rgba(var(--keyColorRgb), 0.2);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .book-info__page-wrapper .book-info__image--grid {
+    grid-template-columns: auto;
+  }
+}
 @media (max-width: 767px) {
   .book-info__page-wrapper .book-info__image {
     position: initial;
