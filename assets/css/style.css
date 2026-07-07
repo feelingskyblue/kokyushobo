@@ -1648,18 +1648,19 @@ body:not(.homePage) .main {
   padding: 4rem 4rem 4rem 8rem;
   color: #fefbf9;
   z-index: 10;
-  font-size: 1.5rem;
-  text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.0666666667), 0 0 0.5em rgba(0, 0, 0, 0.4);
+  font-size: 1.6rem;
+  text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.0666666667), 0 0 0.5em rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 767px) {
   .home__firstview-image__txt {
+    font-size: 1.5rem;
     padding: 0;
     padding-bottom: calc(4rem + 1.5em);
     width: calc(100vw - 3em);
   }
 }
 .home__firstview-image__txt p {
-  max-width: 50rem;
+  max-width: 68rem;
 }
 .home__firstview-image__txt .home__firstview-morelink {
   text-align: right;

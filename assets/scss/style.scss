@@ -1510,16 +1510,17 @@ body {
 			padding: 4rem 4rem 4rem 8rem;
 			color: #fefbf9; //ここの色情報はダークモードでも固定
 			z-index: 10;
-			font-size: 1.5rem;
-			text-shadow: 0 0 0.15em #00000011, 0 0 0.5em #00000066;
+			font-size: 1.6rem;
+			text-shadow: 0 0 0.15em #00000011, 0 0 0.5em rgba(0, 0, 0, 0.7);
 			@media (max-width: $sp-width) {
+				font-size: 1.5rem;
 				padding: 0;
 				padding-bottom: calc(4rem + 1.5em);
 				//width: calc(100vw - (4.266vw * 2));
 				width: calc(100vw - (1.5em * 2));
 			}
 			p {
-				max-width: 50rem;
+				max-width: 68rem;
 			}
 			.home__firstview-morelink {
 				text-align: right;
