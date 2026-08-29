@@ -194,6 +194,11 @@ body {
   }
   &__story {
     margin-bottom: 4rem;
+    & > .trees-special__content {
+      @media (max-width: $sp-width) {
+        padding-block-end: 2rem;
+      }
+    }
     span {
       display: block;
       text-align: right;
@@ -238,14 +243,20 @@ body {
   }
   &__order {
     margin-block-end: 2rem;
+    @media (max-width: $sp-width) {
+      margin-block-end: 1rem;
+    }
   }
   &__voice {
     background-color: rgba(255, 255, 255, 0.1);
-    padding-block-start: 4rem;
-    margin-block-start: 6rem;
-    margin-block-end: 8rem;
+    padding-block-start: 6rem;
+    padding-block-end: 2rem;
+    margin-block-start: 4rem;
+    margin-block-end: 6rem;
     @media (max-width: $sp-width) {
-      margin-block-start: 2rem;
+      margin-block-start: 0rem;
+      padding-block-start: 4rem;
+      padding-block-end: 0rem;
       margin-block-end: 4rem;
     }
     &--content {
@@ -321,9 +332,9 @@ body {
   }
   &__nature {
     &.trees-special__content {
-      margin-block-start: 8rem;
+      margin-block-start: 6rem;
       @media (max-width: $sp-width) {
-        margin-block-start: 6rem;
+        margin-block-start: 4rem;
       }
     }
     &--banner {

@@ -184,6 +184,11 @@ body .footer {
 .trees-special__story {
   margin-bottom: 4rem;
 }
+@media (max-width: 767px) {
+  .trees-special__story > .trees-special__content {
+    padding-block-end: 2rem;
+  }
+}
 .trees-special__story span {
   display: block;
   text-align: right;
@@ -226,15 +231,23 @@ body .footer {
 .trees-special__order {
   margin-block-end: 2rem;
 }
+@media (max-width: 767px) {
+  .trees-special__order {
+    margin-block-end: 1rem;
+  }
+}
 .trees-special__voice {
   background-color: rgba(255, 255, 255, 0.1);
-  padding-block-start: 4rem;
-  margin-block-start: 6rem;
-  margin-block-end: 8rem;
+  padding-block-start: 6rem;
+  padding-block-end: 2rem;
+  margin-block-start: 4rem;
+  margin-block-end: 6rem;
 }
 @media (max-width: 767px) {
   .trees-special__voice {
-    margin-block-start: 2rem;
+    margin-block-start: 0rem;
+    padding-block-start: 4rem;
+    padding-block-end: 0rem;
     margin-block-end: 4rem;
   }
 }
@@ -309,11 +322,11 @@ body .footer {
   margin-block: 6rem;
 }
 .trees-special__nature.trees-special__content {
-  margin-block-start: 8rem;
+  margin-block-start: 6rem;
 }
 @media (max-width: 767px) {
   .trees-special__nature.trees-special__content {
-    margin-block-start: 6rem;
+    margin-block-start: 4rem;
   }
 }
 .trees-special__nature--banner {
