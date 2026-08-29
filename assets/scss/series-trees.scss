@@ -242,11 +242,15 @@ body {
   &__voice {
     background-color: rgba(255, 255, 255, 0.1);
     padding-block-start: 4rem;
-    //padding-block-end: 2rem;
     margin-block-start: 6rem;
     margin-block-end: 8rem;
+    @media (max-width: $sp-width) {
+      margin-block-start: 2rem;
+      margin-block-end: 4rem;
+    }
     &--content {
       margin-block-start: 4rem;
+      color: #ffffff;
       blockquote {
         margin-bottom: 0;
         font-size: 1.1em;
@@ -254,8 +258,6 @@ body {
       cite {
         display: block;
         text-align: right;
-      }
-      & + & {
       }
     }
   }
