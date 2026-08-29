@@ -1,0 +1,38 @@
+---
+layout: layout.liquid
+template: novelPage
+---
+<link rel="stylesheet" href="/assets/css/novel-draft.css">
+<article class="novel font-serif">
+  <header class="novel__header">
+    <h1 class="novel__header-title">{{ title }}</h1>
+  </header>
+  {% comment %}
+    マウス動かしたらメニュー表示させたい　stoneぽく
+  {% endcomment %}
+  <blockquote>
+    <p>かわいそうに、わたしの影は狂ってしまった。<br>
+自分こそが人間で、わたしの方が影なのだと、思いこんでいるのですよ。<br>
+    ハンス・クリスチャン・アンデルセン『影』</p>
+  </blockquote>
+  <blockquote>
+    <p>思い出すんだ、どうやったら死なずにいられるかを。<br>
+どうやってあかりを灯すかを。<br>
+思い出すんだ。思い出すんだよ、木々の葉のつくる影を。<br>
+あの森はどこまで続いているんだろう？<br>
+心の届くかぎり。<br>
+    アーシュラ・K・ル＝グウィン「カワウソ」（ゲド戦記第五巻）</p>
+  </blockquote>
+{% comment %}
+スクロールで背景色の変わる仕組みを入れたいな。。
+ふむ、画像も置けるね　とはいえこのへんは専用レイアウトファイルにしてあげたいかな。。
+<img class="" src="/assets/img/mv_treeislight.jpg" alt="" loading="lazy" width="2000">
+{% endcomment %}
+
+  <div class="novel__body tree_is_light__body">
+  {{ content }}
+  </div>
+  <div class="novel__footer">
+    <hr>
+  </div>
+</article>
