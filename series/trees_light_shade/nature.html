@@ -22,7 +22,7 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
       物語の舞台は、私たちの地球と同一の世界ではありません。大陸の形も、辿った歴史も異なります。それでも、私たちの世界とよく似ています。<br>
       私たちの世界にも存在するものたちと親しむきっかけとして、楽しんでいただけたら幸いです。</p>
       <p>各項には本編からの引用文を含みますが、大きなネタバレに抵触する箇所は畳んでいるので、本編未読でも閲覧いただけるかと思います:)<br>植物好きな方は<a href="https://x.com/feelingskyblue/status/1333053036919308288" target="_blank" rel="oopenner noreferrer">『すべての樹木は光』刊行時のツイートによる植物解説スレッド</a>も併せてどうぞ。</p>
-    <p>今後の主な追加予定：ヒスイカズラ・フィカス・ガジュマル・クロヒョウ・カエンボク<br>8/9 Update: モンステラ・マングローブ</p>
+    <p>今後の主な追加予定：フィカス・カエンボク<br>9/17 Update: ヒスイカズラ・クロヒョウ</p>
     <hr>
     <section class="trees-special__subsection">
       <div id="tabNatureList" class="nature-tab__target">
@@ -35,8 +35,16 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
               <button role="tab" aria-controls="panel_Fern"  aria-selected="false" tabindex="-1">シダ 🌿</button>
             </li>
             <li role="presentation" class="nature-tab__item">
+              <button role="tab" aria-controls="panel_Jadevine"  aria-selected="false" tabindex="-1">ヒスイカズラ 🌿</button>
+            </li>
+            <li role="presentation" class="nature-tab__item">
               <button role="tab" aria-controls="panel_Monstera"  aria-selected="false" tabindex="-1">モンステラ 🌿</button>
             </li>
+            {%- comment -%}
+            <li role="presentation" class="nature-tab__item">
+              <button role="tab" aria-controls="panel_Ficus"  aria-selected="false" tabindex="-1">フィカス 🌳</button>
+            </li>
+            {%- endcomment -%}
             <li role="presentation" class="nature-tab__item">
               <button role="tab" aria-controls="panel_Racemosa"  aria-selected="false" tabindex="-1">サガリバナ 🌳</button>
             </li>
@@ -48,6 +56,9 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
             </li>
             <li role="presentation" class="nature-tab__item">
               <button role="tab" aria-controls="panel_Cycads"  aria-selected="false" tabindex="-1">ソテツ 🌴</button>
+            </li>
+            <li role="presentation" class="nature-tab__item">
+              <button role="tab" aria-controls="panel_Leopard"  aria-selected="false" tabindex="-1">クロヒョウ 🐆</button>
             </li>
             <li role="presentation" class="nature-tab__item">
               <button role="tab" aria-controls="panel_Lory"  aria-selected="false" tabindex="-1">ゴシキセイガイインコ 🦜</button>
@@ -131,7 +142,7 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
                 </a>
                 <figcaption>Cycas mediaの写真。<a href="https://commons.wikimedia.org/wiki/File:Cycas_media.JPG" target="_blank" rel="noopenner noreferrer">Wikimedia Commons</a>よりCCライセンスに基づき引用<br>Tanetahi, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</figcaption>
               </figure>
-              <p>世界各地の神話や伝承に登場するヤシに比べ、ソテツが神話に語られることはどうやら少ないようです。分布域がヤシよりも限定的だからか、ヤシのように実を食べられる訳ではなく人間への恩恵が少なかったからか…（ソテツも食用可能とはいえ毒抜きの手間がめちゃくちゃ掛かる）。ソテツ、ヨーロッパや中東地域には自生してないんですよね。自生地である熱帯地域の神話には語られていそうな気がするのでいずれ調べてみたいなあ…。<br>ところで大阪には、無理やり移植されたものの泣き叫んで織田信長をビビらせたというソテツの伝承があるそうです。やっぱりかっこいいぜ笑。</p>
+              <p>世界各地の神話や伝承に登場するヤシに比べ、ソテツが神話に語られることはどうやら少ないようです。分布域がヤシよりも限定的だからか、ヤシのように実を食べられる訳ではなく人間への恩恵が少なかったからか…（ソテツも食用可能とはいえ毒抜きの手間がめちゃくちゃ掛かる）。ソテツ、ヨーロッパや中東地域には自生してないんですよね。自生地である熱帯地域の神話には語られていそうな気がするのでいずれ調べてみたいなあ…。<br>ところで大阪の堺市には、無理やり移植されたものの泣き叫んで織田信長をビビらせたというソテツの伝承があるそうです。やっぱりかっこいいぜ笑。</p>
             </div>
           </section>
           <section id="panel_Fern" role="tabpanel" aria-hidden="true" tabindex="0" class="nature-tab__contents-item nature-info">
@@ -175,6 +186,33 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
               <p>ところで、シダの漢字表記は「羊歯」です。わたしは大して疑いももたず、「ははぁん、羊の歯と似てるのね、なるほどね」と流していたのですが、改めて羊の歯列を画像検索してみたところ、言うほど…似てるか…？と大いに首を捻りました。たしかにまあ小さく並んだ歯列はちょっと似てるかもしれないけど…。</p>
               <p>どうやら、羊歯という漢字表記の元は中国に由来があるようです。なぜ「羊歯」表記になったのかはネット上でも諸説入り乱れていますが、<a href="https://ameblo.jp/saglasie/entry-12271672210.html" target="_blank" rel="noopenner noreferrer">こちらのブログで提唱されていた「江戸時代末期に翻訳によって作られた学術用語」という説</a>が資料調査も豊富で一番面白かったです。言葉ひとつにも歴史ありだねえ…。</p>
               <p>じゃあ中国で羊の字が当てられたのはなんで？というのもまた不思議ですが、検索してたら（私の大好きな）ストレイシープ公式サイトでの言及が出てきたのでこれも載せておきます。<a href="https://www.fujitv.co.jp/straysheep/youcan/yc010722.html" target="_blank" rel="noopenner noreferrer">中国では羊は土から生まれる精霊と信じられていたため、胞子で増えるシダと関連づけられた説</a>。バロメッツってコト！？</p>
+            </div>
+          </section>
+          <section id="panel_Jadevine" role="tabpanel" aria-hidden="true" tabindex="0" class="nature-tab__contents-item nature-info">
+            <header class="nature-info__header">
+              <h3 class="nature-info__title">ヒスイカズラ Jade Vine</h3>
+            </header>
+            <div class="nature-info__detail">
+              <blockquote>トゥーリの背後で誰かが興奮気味に指差すのは、ちょうど同時期に開花したヨウラクボクとヒスイカズラだ。降りそそぐように咲きこぼれる紅色と翡翠の花序は、連なる蝶のかたちにも似ていた。<span>『すべての木陰に歌を』第一部「彼女について」Pxx</span></blockquote>
+              <figure class="nature-info__figure">
+                <img src="/assets/img/nature/nature_jadevine_1.jpeg" alt="ヒスイカズラ" loading="lazy" width="800" class="img__border">
+                <figcaption>ヒスイカズラ、神代植物公園の観覧温室にて</figcaption>
+              </figure>
+              <p>（私たちの世界では）フィリピン原産、マメ科（マメ亜科）ヒスイカズラ属の常緑蔓植物。その名のとおり、翡翠色の鮮やかなブルーが目を惹きます。花期は2月下旬頃から5月に掛けてと長く、都内にある複数の植物園で見ることができます。</p>
+              <p>蔓を這わせ、長い花序を垂れ下がらせる様は、身近なところで言うとフジ（同じくマメ科）によく似ています。植物園によっては、ヒスイカズラを藤棚のように仕立てているところもありますね。</p>
+              <p>花弁は翅を畳んだ蝶のようで、蝶形花と呼ばれます。これはマメ亜科の植物にしばしば共通する形状です。スイートピー、エンドウ、クローバー、ソラマメなど……カラスノエンドウの花が一番身近でしょうか。</p>
+              <figure class="nature-info__figure">
+                <img src="/assets/img/nature/nature_jadevine_2.jpeg" alt="ヒスイカズラ" loading="lazy" width="800" class="img__border">
+                <figcaption>地面に落ちていたヒスイカズラの花弁</figcaption>
+              </figure>
+              <p>自然界においては紫の花もまあまあ珍しいのですが、青い花はさらに珍しいです。遺伝子組み換えによって品種改良された青いバラも、色味としては淡い紫色と言う方が近かったりする中、ヒスイカズラの色彩には何度見ても驚かされます。</p><p>この青は、花弁がアルカリ性であることと、アントシアニンとサポナリンによるコピグメント効果が合わさって生じたものです。花粉媒介者のオオコウモリが好む色である…という説明を各所で見かけますが、原産地では絶滅危惧種であるため調査不足で実際は良く分かっていない、という説もあるようです。まあ確かに、オオコウモリが吸蜜する花がみんな翡翠色かと言ったら、そうでもなさそうな気がするもんなあ……嗅覚に訴えてる花の方が多いとか？</p>
+              <p>作中における言及としては『すべての樹木は光』の怪談シーンが初出ですね。</p>
+              <blockquote>少年は、優しい村人たちに、母を今一度会わせようと思った。今度は二度と忘れ去られないように。<br>満月の晩、少年は、村人を一人一人、変身させていった。一瞬で。何の予兆もなく。ある者は蛍に、ある者は蛾に、ある者は蝙蝠に、ある者は蛙に、ある者はシダの胞子に、ある者は苔に、ある者は蘭の種、ブーゲンビレア、プルメリア、ジェードバイン、かつて母が愛していた大小様々な植物の種に。<span>『すべての樹木は光』第三章「言葉のない世界」P132</span></blockquote>
+              <p>あとは、『walking postcard vol.1』掲載の初期稿のみ、ユハには苗字設定があり、その苗字がヒスイカズラ由来だったりもしました。最終的にはボツとしたので、本シリーズの登場人物たちは皆、苗字の設定がありません（存在しない訳ではないが作中において登場しない）。</p>
+              <p>ジェードバインの存在を初めて知ったのは確かsea-noさんの楽曲由来だったかな。<a href="https://www.nicovideo.jp/watch/sm24137790" target="_blank" rel="noopenner noreferrer">温室魔法</a>もPV込みで好き…『樹木』執筆中はしばしば聞いていました。</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/kkvTzQu5GGc?si=hiWdJ9PNCYHXWnX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <br>
+              <p>本シリーズの植物描写では、意図的に、花言葉を遠ざけています。花言葉の意味を含ませるために登場させた植物は一種もありません。ただ、唯一の例外と言えなくもないのがこちらのヒスイカズラで、執筆当時は意識していなかったものの、無意識で覚えていて影響されたかもしれないな…とは思っています。ニイジェが語るソテツの昔話も、ユハも、その悲しみと切り離しては語れないので。<br>ヒスイカズラの花言葉は「私を忘れないで」です。</p>
             </div>
           </section>
           <section id="panel_Monstera" role="tabpanel" aria-hidden="true" tabindex="0" class="nature-tab__contents-item nature-info">
@@ -237,6 +275,41 @@ description: 呼吸書房が贈る、熱帯雨林の樹木変身譚『すべて�
                     <img src="/assets/img/nature/nature_sagaribana_3.jpeg" alt="サガリバナの樹皮" loading="lazy" width="800" class="img__border">
                     <figcaption>サガリバナの樹皮。神代植物公園の観覧温室にて</figcaption>
                   </figure>
+                </div>
+              </details>
+            </div>
+          </section>
+          <section id="panel_Leopard" role="tabpanel" aria-hidden="true" tabindex="0" class="nature-tab__contents-item nature-info">
+            <header class="nature-info__header">
+              <h3 class="nature-info__title">クロヒョウ Black Leopard</h3>
+            </header>
+            <div class="nature-info__detail">
+              <blockquote>トゥイを待っているあいだに日が暮れ、黒豹はすっかり夜に溶けこんだ。焚き火のゆらめきが毛並みに照り映え、黒の只中でしずかに光る金の瞳は、間近で見ると澄んだ翠色を帯びていた。<span>『すべての木陰に歌を』第二部「揺らぎの庭」Pxx</span></blockquote>
+              <p>（私たちの世界では）オーストラリア東海岸、およびオセアニア熱帯地域からインドネシアにかけての森林地帯に生息する、オウム目ヒインコ科（分類法によってはインコ科ヒインコ亜科）の鳥類。ローリーLoryまたはロリキートLorikeetと呼ばれる花蜜食雑食性のインコで、花の蜜や花粉、果物を主食としています。<br>吸蜜に適したブラシ状の長い舌を持ち、硬い穀物や木の実などはあまり食べないそう（昆虫はときどき食べるとか）。身近なところで言うとメジロやヒヨドリなども花の蜜が好きな鳥ですね。</p>
+              <p>体長は25-30cmほどで、中型インコに分類されます。緋鸚哥、五色青海鸚哥という漢字表記のとおり、体色はとても色鮮やかです。亜種によって体色も様々ですが、たとえばオーストラリアに生息するTrichoglossus moluccanusは、瞳と嘴は緋色、頭部は濃紺、首元は黄色、胸元は山吹色、翼の外側と背中と尾は緑色、翼の内側はオレンジと黄色です。カラフル〜</p>
+              <figure class="nature-info__figure">
+                <a title="Charles J. Sharp, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Rainbow_lorikeet_(Trichoglossus_moluccanus_moluccanus)_Sydney.jpg">
+                  <img src="/assets/img/nature/nature_lorikeet_1.jpg" alt="Cycus media" loading="lazy" width="800" class="img__border">
+                </a>
+                <figcaption>ゴシキセイガイインコ（Trichoglossus moluccanus）<br><a href="https://commons.wikimedia.org/wiki/File:Rainbow_lorikeet_(Trichoglossus_moluccanus_moluccanus)_Sydney.jpg" target="_blank" rel="noopenner noreferrer">Wikimedia Commons</a>よりCCライセンスに基づき引用<br>Charles J. Sharp, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons</figcaption>
+              </figure>
+
+              <p>オーストラリアのケアンズ周辺では普通に見られる鳥であり、2023年にケアンズを旅行した際にわたしも見ているはず……なのですが、当時は植物で頭がいっぱいだったため何も覚えていません。おろか！<br>せめて一枚くらい写真に残ってないかと探したところ、かろうじてありました。小さいけど…！　こうして見ると、五色の羽も森の中ではそれほど目立たないのがなんとなく想像できます。緑色ベースだしね。</p>
+              <figure class="nature-info__figure">
+                <img src="/assets/img/nature/nature_lorikeet_2.jpeg" alt="ゴシキセイガイインコ（おそらく）" loading="lazy" width="800" class="img__border">
+                <figcaption>キュランダ（ケアンズ近郊の村）にあるバードワールド・キュランダにて撮影<br>画面左の止まり木と、金網の下側にいるのがおそらくゴシキセイガイインコ</figcaption>
+              </figure>
+
+              <p>作中で描写するにあたっては、友人宅で飼われていたセキセイインコや、動物園の触れあいコーナーなどで触らせてもらった鳥の記憶を参考にしています。人生において鳥類を飼ったことがなくて……。<br>執筆期間中に中型インコを触れる機会が一度あり、嬉々として臨んだところメガネをめっちゃ齧られてすごかったです笑。実際に鳥と暮らしている方から見て、それほど不自然でないように書けていたら良いな…と願っています。</p>
+              <p>なお、ゴシキセイガイインコは陽気で人懐こく、コンパニオンバードとして人気が高いものの、飼育はかなり難しいのだそうです。蜜食なので糞がとても柔らかいのと、声が大きいのとで。<br>以下はオーストラリアのクイーンズランド州にあるBungalow Bay Koala Villageでの餌やりタイム動画です。すげ〜〜賑やか。人間の頭めっちゃ乗る。</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/4y2JvXoqVD4?si=jWry8hYpHaQV3RS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <br>
+              <details class="trees-special__character">
+                <summary>『木陰』第二部を読了された方へ</summary>
+                <div>
+                  <blockquote>見覚えのある五色の鳥が舞い降りてきて、トゥイの胸元にとまった。「ティリ？」と思わず呼びかけたユハに、鳥は一声鳴いて応えた。ティリは小さな鉤爪でトゥイの上を歩いてゆき、首元にうずくまった。トゥイは瞳を瞬かせ、崩れた左手で柔い羽毛をそっと抱いた。<br>「そこにいたら潰しちゃうよ、ティリ……」<span>『すべての木陰に歌を』第二部「揺らぎの庭」P146</span></blockquote>
+                  <p>第二部に登場する鸚哥のティリは、ゴシキセイガイインコを主なモデルとしています。ところどころ意図的な差異も加えてあり、その筆頭が鳴き声です。トゥイの名前は、ティリの鳴き声（トゥイ・トゥリ・トゥア）から取ったものですが、ゴシキセイガイインコの声はもうちょっと金切り声っぽい感じですね。<br>第二部では基本的に動植物の描写に固有名詞を使っていません。あの世界は常に揺らいでおり、私たちが用いている現実での分類法はほとんど意味を為さないからです（ただし庭の外で生まれたトゥイやグウェンはちょっと別）。</p>
+                  <p>「トゥイと親しい花蜜食の鳥」という設定が先にあり、当初の候補にはハチドリやタイヨウチョウも考えていました。ある程度は人間と親しめる（ユハにも友好的な）鳥、ということで最終的に花蜜食のインコに落ちついています。初期設定ではトゥイの恋人でもありました。どちらにせよ花粉媒介者であり、互いに互いが欠かせない存在ではあります。<br>なお、ティリが変身するコウモリには特定のモデルはないのですが、花蜜食のコウモリであるのは確かです。たぶん何らかのフルーツコウモリかな…。ケアンズの夜空で鳴き交わしていた小さなコウモリたちもうっすらイメージしています。</p>
                 </div>
               </details>
             </div>
